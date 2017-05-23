@@ -1,0 +1,13 @@
+.dropdown{ position: absolute; top:calc(100% + 14px); left: 50%; transform:translateX(-50%); display: none;
+  &:before{ content: ''; width: 11px; height: 11px; background-color: #fff; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.3); position: absolute; left: 50%; transform:translateX(-50%) rotate(45deg); top: -6px; z-index: 10;}
+  &__wrap{ background-color: #fff; border-radius: 2px; box-shadow: 0 1px 5px 0 rgba(0,0,0,0.3); z-index: 20; position: relative; padding: 10px;
+    &:before{ content: ''; width: 11px; height: 11px; background-color: #fff;  position: absolute; left: 50%; transform:translateX(-50%) rotate(45deg); top: -6px; z-index: 30;}
+  }
+  p{ text-align: center; font-size: 17px;line-height: 1.41;color: #000000; margin: 0;}
+
+}
+.hc-dropdown{
+  &__wrap{ min-width: 216px;  min-height: 120px;
+    a{ margin-top: 8px;}
+  }
+}
