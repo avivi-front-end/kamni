@@ -53,19 +53,39 @@
                     </div>
                 </div>
                 <div class="header-bot__right">
-                    <div class="header-bot__search"></div>
+                    <form class="header-bot__search" action="ajax.php">
+                        <input class="awesomplete" data-list="#mylist" type="text" placeholder="Поиск по каталогу, статьям, мероприятиям"/>
+                        <ul id="mylist" class="awesomplete-list" >
+                            <li>Ada</li>
+                            <li>Java</li>
+                            <li>JavaScript</li>
+                            <li>Brainfuck</li>
+                            <li>LOLCODE</li>
+                            <li>Node.js</li>
+                            <li>Ruby on Rails</li>
+                        </ul>
+                        <button type="submit"></button>
+                    </form>
                     <div class="header-bot__cabasket">
                         <div class="header-bot__cabinet">
                             <div class="header-bot__img">
                                 <img src="images/66.png" alt="">
+                                <div class="header-bot__pin" style="background-color: #85a943;">6%</div>
                             </div>
-                            <div class="header-bot__text"></div>
+                            <div class="header-bot__text">
+                                <p><b>Константин</b></p>
+                                <p>Ваша скидка 6%</p>
+                            </div>
                         </div>
                         <div class="header-bot__busket">
                             <div class="header-bot__img">
                                 <img src="images/cart.png" alt="">
+                                <div class="header-bot__pin" style="background-color: #ff5d00;">5</div>
                             </div>
-                            <div class="header-bot__text"></div>
+                            <div class="header-bot__text">
+                                <p><b>Моя корзина </b></p>
+                                <p>Отложено: 10</p>
+                            </div>
                             <div class="header-bot__items">
                                 <a href="#"><img src="images/photo.png" alt=""></a>
                                 <a href="#"><img src="images/photo.png" alt=""></a>

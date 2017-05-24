@@ -11,3 +11,9 @@
     a{ margin-top: 8px;}
   }
 }
+.cat-dropdown{ top: 100%; width: 100vw; background: transparent;
+  &:before{ display: none;}
+  &__wrap{max-width: 1400px; width: 100%; border:1px solid #e6e6e6; margin: 0 auto;
+    &:before{ display: none;}
+  }
+}
