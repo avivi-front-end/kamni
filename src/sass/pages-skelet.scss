@@ -1,0 +1,12 @@
+.main-page{ display: flex; justify-content:space-between; align-items: flex-start;
+  &__left{ width: 232px;}
+  &__right{width: calc(100% - 232px); padding-left: 56px;}
+}
+.dopmenu{
+  &__row{}
+  &__top{ display: flex; justify-content: flex-start; align-items: center; list-style-type: none; margin: 0; padding: 0; white-space: nowrap;
+    img{ vertical-align: middle;}
+    a{font-size: 14px; line-height: 1.14; text-align: left; color: #575757;}
+  }
+  &__bot{}
+}
