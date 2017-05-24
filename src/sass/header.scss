@@ -98,8 +98,8 @@ div.awesomplete ul{ list-style-type: none; position: absolute; left: 0; top: 100
 
   a{color: #575757;}
   li{ padding: 0;}
-
-  &__block{ width: 328px; border-bottom:1px solid #E6E6E6; padding-top: 18px;
+  &__col{width: 328px;}
+  &__block{ width: 100%; border-bottom:1px solid #E6E6E6; padding-top: 18px;
     &>ul{ margin-bottom: 15px; margin-top: -8px;}
   }
 }
