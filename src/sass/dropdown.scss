@@ -19,11 +19,11 @@
 }
 .lc-dropdown{
   &__wrap{ min-width: 208px; padding: 0;}
-  &__pin{height: 16px; display: inline-block; position: absolute; border-radius: 7px;   font-size: 12px; font-weight: bold; line-height: 1; color: #808080; top: 12px; right: 16px; padding:0 4px; background-color: #e6e6e6;}
+  &__pin{height: 16px; display: inline-block; position: absolute; border-radius: 7px;   font-size: 12px; font-weight: bold; line-height: 1; color: #808080; top: 12px; right: 16px; padding:2px 4px; background-color: #e6e6e6;}
   ul{ list-style-type: none; padding: 0; margin: 0; color: #3777b3; line-height: 1.5; font-size: 16px;}
-  li{ padding: 0 16px; border-bottom: 1px solid #E6E6E6; position: relative;
-    &.title{height: 24px; width: 100%; background-color: #f8f8f8;  border-bottom:none;font-size: 10px; font-weight: bold; line-height: 24px; letter-spacing: 2.2px;  text-align: left; color: #808080; text-transform: uppercase;}
+  li{     padding: 9px 16px 6px; border-bottom: 1px solid #E6E6E6; position: relative;
+    &.title{height: 24px; width: 100%; background-color: #f8f8f8;  border-bottom:none;font-size: 10px; font-weight: bold; line-height: 24px; letter-spacing: 2.2px;  text-align: left; color: #808080; text-transform: uppercase; padding: 0 16px;}
   }
   a{color: #3777b3;}
-  p{}
+  p{     margin: 2px 0 4px; font-size: 12px; line-height: 1.17; text-align: left; color: #808080;}
 }

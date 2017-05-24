@@ -44,12 +44,16 @@
     }
   }
   &__right{width: 904px;  border-radius: 2px;  background-color: #ffffff;  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: center;}
-  &__search{  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 15px;
+  &__search{ display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 15px;
     button{ background-image: url(../images/search-outlines.png); width: 24px; height: 24px; border:none; padding: 0; background-color: transparent;}
   }
   &__cabasket{ display: flex; justify-content: space-between; align-items: center;}
   &__cabinet{ width: 173px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content:flex-start; align-items: center; padding-left: 10px; cursor: pointer; position: relative;
-     .dropdowned{ display: block;}
+     &:hover{
+       &:before{ width: 100%; position: absolute; top: 100%; height: 50px; z-index: -1; content: ''; background: transparent;}
+       .dropdowned{ display: block;}
+     }
+
   }
   &__busket{ width: 213px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; padding-right: 7px; cursor: pointer;}
   &__items{
@@ -64,6 +68,7 @@
   &__pin{ height: 16px; display: inline-block; position: absolute; border-radius: 7px; color: #fff; font-size: 12px; font-weight: bold; top: 12px; right: 0; padding:0 4px;}
   &__text{   font-size: 14px; line-height: 1.15; text-align: left; color: #575757;
     b{font-size: 16px; line-height: 1.38;  color: #000000;}
+    a{ color: #000000;}
     p{ margin: 0;}
   }
 }
