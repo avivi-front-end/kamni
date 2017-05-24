@@ -1,5 +1,5 @@
-.header-top{
-  &__wrap{ display: flex; justify-content: space-between; align-items: center; height: 88px;}
+.header-top{ position: relative; z-index: 999;
+  &__wrap{ display: flex; justify-content: space-between; align-items: center; height: 90px; padding-bottom: 2px;}
   &__left{ display: flex; justify-content: flex-start; align-items: center;}
   &__right{ display: flex; justify-content: space-between; align-items: center; width: 577px; padding-top: 6px;}
   &__logo{margin-right: 10px; width: 215px;}
@@ -23,10 +23,10 @@
   &--ms{ background-image: url(../images/messenger.png);}
   &--wa{ background-image: url(../images/whats-app.png);}
 }
-.header-bot{ border-bottom:1px solid #e6e6e6;
+.header-bot{
   &__wrap{ display: flex; justify-content: space-between; align-items: center;}
   &__catalog{}
-  &__catalog-butt{ font-size: 17px; font-weight: bold; line-height: 1.41;  color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 232px; height: 56px;border-radius: 2px;    background-color: #51b37b;    box-shadow: 0 5px 7px 0 rgba(81, 179, 123, 0.26); cursor: pointer;
+  &__catalog-butt{ font-size: 17px; font-weight: bold; line-height: 1.41;  color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 232px; height: 56px;border-radius: 2px;    background-color: #51b37b;    box-shadow: 0 5px 7px 0 rgba(81, 179, 123, 0.26); cursor: pointer; padding: 0 15px;
     &.active{color: #3777b3; background-color: #fff; position: relative; z-index: 200; box-shadow: none; border:1px solid #e6e6e6; border-bottom:none;
       &:before{ width: 100%; height: 2px; background-color: #fff; content:''; position: absolute; top: 100%; left: 0;}
       .header-bot__catalog-icon{
@@ -37,30 +37,32 @@
       }
     }
   }
-  &__catalog-icon{ width: 18px; height: 14px; position: relative;
+  &__catalog-icon{ width: 18px; height: 18px; position: relative;
     span{ width: 100%; height: 2px; background-color: #fff; display: block; position: absolute; top: 0; left: 0; transition: all 200ms;
       &:nth-child(2){ top: 6px;}
       &:nth-child(3){ top: 12px;}
     }
   }
   &__right{width: 904px;  border-radius: 2px;  background-color: #ffffff;  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: center;}
-  &__search{  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; width: 100%;
+  &__search{  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; width: 100%; padding: 0 15px;
     button{ background-image: url(../images/search-outlines.png); width: 24px; height: 24px; border:none; padding: 0; background-color: transparent;}
   }
   &__cabasket{ display: flex; justify-content: space-between; align-items: center;}
-  &__cabinet{ width: 173px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center;}
-  &__busket{ width: 213px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center;}
+  &__cabinet{ width: 173px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content:flex-start; align-items: center; padding-left: 10px; cursor: pointer; position: relative;
+     .dropdowned{ display: block;}
+  }
+  &__busket{ width: 213px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; padding-right: 7px; cursor: pointer;}
   &__items{
     a{ width: 32px;height: 32px; border-radius: 2px; border: solid 1px #e6e6e6; z-index: 5; position: relative;
       &:nth-child(2){ z-index: 3;}
       &:nth-child(3){ z-index: 2;}
-      &:not(:last-child){ margin-right: -28px;}
+      &:not(:last-child){ margin-right: -33px;}
       &:hover{ z-index: 50;}
     }
   }
-  &__img{ position: relative;}
-  &__pin{ height: 16px; display: inline-block; position: absolute; border-radius: 7px; color: #fff; font-size: 12px; font-weight: bold; top: 0; right: 0; padding:0 4px;}
-  &__text{   font-size: 14px; line-height: 1.14; text-align: left; color: #575757;
+  &__img{ position: relative; width: 47px; height: 56px; display: flex; justify-content: center; align-items: center; margin-right: 8px;}
+  &__pin{ height: 16px; display: inline-block; position: absolute; border-radius: 7px; color: #fff; font-size: 12px; font-weight: bold; top: 12px; right: 0; padding:0 4px;}
+  &__text{   font-size: 14px; line-height: 1.15; text-align: left; color: #575757;
     b{font-size: 16px; line-height: 1.38;  color: #000000;}
     p{ margin: 0;}
   }
@@ -74,3 +76,33 @@ input.awesomplete{border:none; background-color: #fff; width: 100%;
 div.awesomplete{ position: relative; width:calc(100% - 30px);}
 div.awesomplete ul{ list-style-type: none; position: absolute; left: 0; top: 100%; padding: 10px;border-radius: 2px;  background-color: #ffffff;  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3); }
 .awesomplete-list{ display: none;}
+.catalog{
+  &__buttons{ display: flex; justify-content: space-between; align-items: center; width: 100%; padding-top: 5px;
+    .button span{ width: 142px;}
+  }
+  &__close{ width: 24px; height: 24px; position: relative; cursor: pointer;
+    span{ width: 32px; background-color: #979797; height: 2px; display: block; transform:rotate(45deg); position: absolute; top: 12px; left: -6px;
+      &:nth-child(2){ transform:rotate(-45deg); top: 10px; }
+    }
+  }
+  &__content{ width: 100%; display: flex; justify-content: space-between; align-items: flex-start; padding-right: 49px; }
+  h4{ font-weight: bold; color: #3777b3; text-align: left; margin-top: 0;
+    a{color: #3777b3;}
+  }
+  b{ display: block; padding-top: 17px; padding-bottom: 14px;
+    p{ text-align: left; line-height:1.9;}
+  }
+  ul{ margin: 0; color: #575757; list-style-type: none; line-height: 2; padding: 0;
+    ul{ padding-left: 24px; font-size: 14px; line-height: 1.75; display: none; padding-top: 8px;}
+  }
+
+  a{color: #575757;}
+  li{ padding: 0;}
+
+  &__block{ width: 328px; border-bottom:1px solid #E6E6E6; padding-top: 18px;
+    &>ul{ margin-bottom: 15px; margin-top: -8px;}
+  }
+}
+.arrow-circle{ background-image: url(../images/arrow-circle.png); width: 26px; height: 26px; display: inline-block;transition: all 200ms; transform:rotate(180deg); cursor: pointer; vertical-align: middle;
+  &.active{transform:rotate(360deg);}
+}

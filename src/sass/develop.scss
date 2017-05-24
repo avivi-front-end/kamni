@@ -75,6 +75,13 @@ input, textarea{
 /*buttons*/
 .button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400;
     &:hover{ text-decoration: underline;}
-    span{ width: 80px; height: 40px; border-radius: 2px; border:1px solid rgb(175, 201, 224); display: flex; justify-content: center; align-items: center; font-size: 17px;}
+    span{ width: 80px; height: 40px; border-radius: 2px; border:1px solid rgb(175, 201, 224); display: flex; justify-content: center; align-items: center; font-size: 17px; cursor: pointer;}
 }
 /*buttons*/
+h1{font-size: 56px; font-weight: 400;    line-height: 1.14;    text-align: center;    color: #000000;}
+h2{font-size: 40px; font-weight: 400;  line-height: 1.2; text-align: center; color: #000000;}
+h4{font-size: 24px; font-weight: 400; line-height: 1.33; text-align: center; color: #575757; margin:0.75em 0 0.65em;}
+h5{font-size: 20px; font-weight: 400; line-height: 1.4; text-align: center; color: #575757;}
+h1,h2,h3,h4,h5,h6{
+    &.blue, .blue{ color: #3777b3;}
+}
