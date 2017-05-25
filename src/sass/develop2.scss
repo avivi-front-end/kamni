@@ -8,8 +8,10 @@
 		&:hover{text-decoration: none;}
 	}
 }
-.social-links{list-style-type: none; display: flex; justify-content: center; padding-left: 0;
-	&__item{ border-radius: 50%; margin-right: 8px;}
+.social-links{list-style-type: none; display: flex; justify-content: center; padding-left: 0;margin-bottom: 0;
+	&__item{ border-radius: 50%;
+		&:not(:last-child){margin-right: 6px;}
+	}
 	&__link{display: block; width: 34px; height: 34px; background: url(../images/social-icons.png) no-repeat;}
 	&__vk{background-position: 0px 0px;}
 	&__fb{background-position: -40px 0px;}
@@ -18,9 +20,12 @@
 }
 .contacts{
 	&__title{max-width: 620px; margin: 0 auto;}
-	&__wrap{display:flex; justify-content: center;}
-	&__col{min-height: 80px; height: 100%; width: 300px; text-align: center; padding: 0 5px;
+	&__wrap{display:flex; justify-content: center; margin-bottom: 1.8em;}
+	&__col{min-height: 80px; height: 100%; width: 288px; text-align: center; padding: 0 5px;
 		&--center{border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
 	}
 	&__col-title{font-size: 18px; font-weight: bold;margin-bottom: 0.4em}
+	&__map{height: 480px;}
+	&__map-wrap{position: relative;}
 }
+.location-target{width: 280px; height: 220px; background: #fff; position: absolute; right: 175px; top: 80px;}
