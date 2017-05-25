@@ -1,0 +1,47 @@
+.breadcrumbs{
+	display: flex;
+	list-style-type: none;
+	padding-left: 0;
+
+	&__item{
+		display: inline-block;
+		position: relative;
+		&:first-child{
+			.breadcrumbs__link{
+				color: #3777b3;
+			}
+		}
+		&:not(:last-child){
+			margin-right: 15px;
+			&:after{
+				content: '/';
+				color: #808080;
+				font-size: 14px;
+				position: absolute;
+				right: -10px;
+				top: 0;
+			}
+		}
+	}
+
+	&__link{
+		font-size: 14px;
+		display: block;
+		color: #808080;
+		&:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+.contacts{
+	&__title{
+		padding: 0 19%;
+		h1{
+			margin-bottom: 0.1em;
+		}
+		h5{
+			margin-top: 0;
+		}
+	}
+}
