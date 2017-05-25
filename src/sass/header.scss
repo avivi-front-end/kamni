@@ -23,7 +23,7 @@
   &--ms{ background-image: url(../images/messenger.png);}
   &--wa{ background-image: url(../images/whats-app.png);}
 }
-.header-bot{
+.header-bot{ position: relative; z-index: 200;
   &__wrap{ display: flex; justify-content: space-between; align-items: center;}
   &__catalog{}
   &__catalog-butt{ font-size: 17px; font-weight: bold; line-height: 1.41;  color: #ffffff; display: flex; justify-content: space-between; align-items: center; width: 232px; height: 56px;border-radius: 2px;    background-color: #51b37b;    box-shadow: 0 5px 7px 0 rgba(81, 179, 123, 0.26); cursor: pointer; padding: 0 15px;
