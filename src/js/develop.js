@@ -15,6 +15,13 @@ function dropdowns() {
                 }
 
             });
+            $(document).on('click touchstart',function (event){
+                if (!but.is(event.target) && but.has(event.target).length === 0 && !cont.is(event.target) && cont.has(event.target).length === 0){
+                    but.removeClass('active');
+                    win.stop().slideUp(200);
+                }
+            });
+
         });
         $('.dropdown-close').click(function(){
             var cont = $(this).closest('.dropdown-container');
@@ -41,8 +48,17 @@ function catalogShowAll(){
 
     }
 }
-
+function sliderInit() {
+    var slider = $('.slider__wrap');
+    if(slider.length > 0){
+        slider.slick({
+            dots:true,
+            arrows:true
+        });
+    }
+}
 $(document).ready(function () {
     dropdowns();
+    sliderInit();
     catalogShowAll();
 });
