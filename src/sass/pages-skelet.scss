@@ -35,15 +35,35 @@
 .main-infoblock{ display: flex; justify-content: space-around; align-items: flex-start;
   &__left{ width: 50%; padding-right: 4px;}
   &__right{ width: 50%; padding-left: 4px;}
-  &__block{ position: relative; width: 100%; height: 424px; margin-bottom: 8px; background-position: 50%; background-size: 100%; display: block; cursor: pointer; color: #fff; padding: 32px; transition:all 200ms;
+  &__block{ position: relative; width: 100%; height: 424px; margin-bottom: 8px; background-position: 50%; background-size: 100%; display: block; cursor: pointer; color: #fff; padding:23px 32px; transition:all 200ms;
     &:before{ content: '';background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10;}
     &--half{ height: 208px;}
     &:hover{ text-decoration: none; background-size:120% }
     h4,
-    h2{position: relative; z-index: 30; text-align: left; color: #fff;}
-    h4{}
+    h2{position: relative; z-index: 30; text-align: left; color: #fff; margin: 0.2em 0 0.4em;}
+    h4{    margin: 0.25em 0px 0.75em;}
     p{ margin: 0;position: relative; z-index: 30;font-size: 20px; font-weight: bold;  line-height: 1.4; text-align: left; color: #ffffff;}
+    strike{ margin-right: 10px;}
   }
   &__title{font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px; text-align: left; color: #ffffff; text-transform: uppercase;}
 
+}
+.popcat{
+  h2{max-width: 877px;}
+  h5{max-width: 804px;}
+  &__content{ display: flex; justify-content: space-between; align-items: flex-start; padding-top: 23px;
+    ul{ list-style-type:none; padding: 0; margin: 0;}
+    a{font-size: 17px; line-height: 1.41; text-align: left; color: #3777b3;}
+    li{ display: flex; justify-content: flex-start; align-items: center; margin-bottom: 4px;
+      &.popcat__title{ margin-bottom: 14px;}
+    }
+  }
+  &__col{ width: 377px;}
+  &__title{ font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px; text-align: left; color: #808080; text-transform: uppercase; margin-bottom: 14px;}
+  &__img{ width: 52px; height: 52px; border-radius: 2px;  border: 1px  solid  #f0f0f0; display: block; margin-right: 11px;
+    img{ width: 100%; height: 100%;}
+  }
+}
+.new-items{
+  h5{max-width: 804px;}
 }
