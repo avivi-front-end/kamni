@@ -61,9 +61,10 @@
   &__col{ width: 377px;}
   &__title{ font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px; text-align: left; color: #808080; text-transform: uppercase; margin-bottom: 14px;}
   &__img{ width: 52px; height: 52px; border-radius: 2px;  border: 1px  solid  #f0f0f0; display: block; margin-right: 11px;
-    img{ width: 100%; height: 100%;}
+    img{ width: 100%; height: 100%; object-fit: cover;}
   }
 }
 .new-items{
-  h5{max-width: 804px;}
+  h5{max-width: 524px;}
+  &__content{ padding-top: 13px;}
 }
