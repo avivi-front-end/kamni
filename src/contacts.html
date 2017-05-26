@@ -27,19 +27,75 @@
           </div>
         </div>
         //= partials/map.html
+        <div class="contacts-guide">
+          <div class="mbox">
+            <h2>Мы записали для вас видео-путеводители к магазину</h2>
+            <div class="contacts-guide__wrap">
+              <div class="contacts-guide__col">
+                <a href="#" class="contacts-guide__video">
+                  <img src="images/video-1.jpg" alt="video">
+                </a>
+                <div class="contacts-guide__video-title">Пешком от ст.м. Дубровка</div>
+              </div>
+              <div class="contacts-guide__col">
+                <a href="#" class="contacts-guide__video">
+                  <img src="images/video-2.jpg" alt="video">
+                </a>
+                <div class="contacts-guide__video-title">На автомобиле с 3-го кольца</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="contacts-location">
+          <div class="mbox">
+            <div class="contacts-location__wrap">
+              <h2>
+                Отдел по обслуживанию заказов 
+                из интернет-магазина также находится 
+                на Дубровке
+              </h2>
+              <h5>
+                Если у вас возникли вопросы по оформлению заказа, есть уточнения, 
+                пожелания — позвоните в отдел обслуживания клиентов
+              </h5>
+              <div class="phone-workhours">
+                <div class="phone-workhours__phone">
+                  8 (800) 775-45-19
+                </div>
+                <div class="phone-workhours__workhours">
+                  (по будням с 10:00 до 21:00, в выходные с 11:00 до 19:00)
+                </div>
+              </div>
+              <h5>или задайте вопрос тут в любое время:</h5>
+            </div>
+            <div class="contacts-location__social">
+              <div class="bigsoc">
+                  <a href="#" target="_blank" class="bigsoc__item">
+                      <span class="bigsoc__img"><img src="images/iMessenger.png" alt=""></span>
+                      <span class="bigsoc__txt">Messenger</span>
+                  </a>
+                  <a href="#" target="_blank" class="bigsoc__item">
+                      <span class="bigsoc__img"><img src="images/ivk.png" alt=""></span>
+                      <span class="bigsoc__txt">ВКонтакте</span>
+                  </a>
+                  <a href="#" target="_blank" class="bigsoc__item">
+                      <span class="bigsoc__img"><img src="images/itelegram.png" alt=""></span>
+                      <span class="bigsoc__txt">Telegram</span>
+                  </a>
+                  <a href="#" target="_blank" class="bigsoc__item">
+                      <span class="bigsoc__img"><img src="images/iWhatsApp.png" alt=""></span>
+                      <span class="bigsoc__txt">WhatsApp</span>
+                  </a>
+              </div>
+            </div>
+          </div>
+        </div>
     </div>
     //= partials/hidden-block.html
     //= partials/footer.html
     <script>
-        var cordX = 55.762553;
-        var cordY = 37.620266;
-        var googleText = 'доров';
-    </script>
-    <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script>
-      $(document).ready(function(){
-          googleMap('map');
-      });
+      window.map_coords = "55.715797, 37.681662"; // [*map_coords*]
+      window.VERSION = "Основная";
     </script>
 </div>
 </body>
