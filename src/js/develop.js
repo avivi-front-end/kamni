@@ -56,6 +56,13 @@ function sliderInit() {
             arrows:true
         });
     }
+    var slider2 = $('.mailer__slider');
+    if(slider2.length > 0){
+        slider2.slick({
+            dots:false,
+            arrows:true
+        });
+    }
 }
 $(document).ready(function () {
     dropdowns();

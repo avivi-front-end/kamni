@@ -82,9 +82,7 @@ div.awesomplete{ position: relative; width:calc(100% - 30px);}
 div.awesomplete ul{ list-style-type: none; position: absolute; left: 0; top: 100%; padding: 10px;border-radius: 2px;  background-color: #ffffff;  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3); }
 .awesomplete-list{ display: none;}
 .catalog{
-  &__buttons{ display: flex; justify-content: space-between; align-items: center; width: 100%; padding-top: 5px;
-    .button span{ width: 142px;}
-  }
+  &__buttons{ display: flex; justify-content: space-between; align-items: center; width: 100%; padding-top: 5px;  }
   &__close{ width: 24px; height: 24px; position: relative; cursor: pointer;
     span{ width: 32px; background-color: #979797; height: 2px; display: block; transform:rotate(45deg); position: absolute; top: 12px; left: -6px;
       &:nth-child(2){ transform:rotate(-45deg); top: 10px; }
