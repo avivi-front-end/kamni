@@ -57,7 +57,7 @@ input, textarea{
 
 /*fonts*/
 @mixin font-face($style-name, $file:$style-name, $weight:normal, $style:normal) {
-    $filepath: "/fonts/" + $file;
+    $filepath: "../font/" + $file;
     @font-face {
         font-family: quote($style-name);
         src: url($filepath + ".eot");
@@ -70,7 +70,7 @@ input, textarea{
     }
 }
 
-//  example -> @include font-face('PFDinTextPro', 'PFDinTextPro-Bold', 700, italic);
+ @include font-face('emoji', 'EmojiSymbols-Regular');
 /*/fonts*/
 /*buttons*/
 .button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400;
@@ -88,3 +88,4 @@ h5{font-size: 20px; font-weight: 400; line-height: 1.4; text-align: center; colo
 h1,h2,h3,h4,h5,h6{
     &.blue, .blue{ color: #3777b3;}
 }
+.emoji{ font-family:'emoji';}

@@ -29,7 +29,9 @@
     a{ color: #575757;}
     p{ margin: 0;}
   }
-  &__year{ width: 417px;}
+  &__year{ width: 471px;
+    a{ margin-top: 9px; display: block;}
+  }
   &__pay{}
   &__design{ width: 417px; text-align: right;}
 }
@@ -40,4 +42,7 @@ ul.footer__social-links{ justify-content: flex-start; padding-top: 14px;}
     &:hover{ text-decoration: none; border-color: #4ea7f9;}
     &:last-child{ margin-right: 0;}
   }
+}
+.payment{ display: flex; justify-content: flex-start; align-items: center; padding-top: 3px;
+  a{ margin-right: 20px;}
 }

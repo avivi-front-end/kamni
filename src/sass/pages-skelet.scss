@@ -11,6 +11,7 @@
   &__menu-title{font-size: 12px; font-weight: bold; line-height: 32px; letter-spacing: 2.2px; text-align: left; color: #808080;height: 32px;  border-radius: 2px;  background-color: #f8f8f8; text-transform: uppercase; padding: 0 15px;}
 }
 .dopmenu{
+  &__wrapper{border-bottom: 1px solid #e6e6e6; padding: 17px 0 10px;}
   &__row{ padding: 4px 0 10px;}
   &__top{ display: flex; justify-content: flex-start; align-items: center; list-style-type: none; margin: 0; padding: 0; white-space: nowrap;
     img{ vertical-align: middle; margin-right: 6px;}
@@ -109,7 +110,7 @@
   &__slider-wrap{ width: 100%; max-width: 954px; margin: 0 auto -35px; position: relative;}
   &__slide{ width: 100%; height: 613px; border:1px solid #e6e6e6; border-radius: 4px;  }
   .slick-prev, .slick-next { width: 48px; height: 48px; top: 52.7%;
-    &:before{ width: 12px;}
+    &:before{ width: 12px; top: 4px; left: 16px;}
   }
   .slick-next{ right: -71px;
     &:before{ left: 20px;}
@@ -127,4 +128,25 @@
   p{font-size: 17px;  line-height: 1.41;  text-align: center; color: #000000; margin: 0;}
   b{ font-weight: bold;}
   a{ font-weight: bold; color: #3777b3;}
+}
+.category-page { display: flex; justify-content: space-between; align-items: flex-start; padding-top: 22px;
+  &__left { width: 232px; }
+  &__right { width: calc(100% - 232px); padding-left: 56px; }
+  h2{ text-align: left; margin-top: 2px;}
+  &__menu{ border-radius: 2px;  background-color: #ffffff; border: solid 1px #e6e6e6; width: 100%;
+    ul{ list-style-type:none; width: 100%; padding: 0; margin: 0;}
+    li{ width: 100%; display: flex; justify-content: flex-start; align-items: center;}
+    a{line-height: 2; text-align: left; color: #575757;}
+    .hidden{ display: none;}
+  }
+}
+.tags{ width: 100%; border:1px solid #E6E6E6; border-radius: 2px; margin-top: 22px; padding-top: 25px; padding-bottom: 5px;
+  &__row{ padding:0 24px 17px; display: flex; justify-content: flex-start; align-items: flex-start;}
+  &__title{font-size: 17px; line-height: 1.41; text-align: left; color: #575757; width: 167px; padding-right: 28px;
+    p{ margin:4px 0;}
+  }
+  &__list{ padding: 0; margin: 0; list-style-type: none; width:calc(100% - 167px);
+    li{ display: inline-block; margin-right: 14px;}
+    a{font-size: 17px; line-height: 1.88; text-align: left; color: #3777b3;}
+  }
 }

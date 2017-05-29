@@ -16,7 +16,8 @@ function dropdowns() {
 
             });
             $(document).on('click touchstart',function (event){
-                if (!but.is(event.target) && but.has(event.target).length === 0 && !cont.is(event.target) && cont.has(event.target).length === 0){
+                var ignore = $('.ignore-miss-click');
+                if (!but.is(event.target) && but.has(event.target).length === 0 && !cont.is(event.target) && cont.has(event.target).length === 0 && !ignore.is(event.target) && ignore.has(event.target).length === 0){
                     but.removeClass('active');
                     win.stop().slideUp(200);
                 }
@@ -34,15 +35,25 @@ function dropdowns() {
 }
 function catalogShowAll(){
     var but = $('.catalog-show-all');
-    var arrows = $('.catalog .arrow-circle');
+    var arrows = $('.arrow-circle');
     if(but.length > 0){
         but.click(function () {
             $(this).toggleClass('active');
-            arrows.trigger('click');
+
             if($(this).hasClass('active')){
                 but.find('span').text('Свернуть все');
+                arrows.each(function () {
+                   var cont = $(this).closest('.dropdown-container');
+                   $(this).addClass('active');
+                   cont.find('.dropdown').eq(0).stop().slideDown();
+                });
             }else{
                 but.find('span').text('Развернуть все');
+                arrows.each(function () {
+                    var cont = $(this).closest('.dropdown-container');
+                    $(this).removeClass('active');
+                    cont.find('.dropdown').eq(0).stop().slideUp();
+                });
             }
         });
 
