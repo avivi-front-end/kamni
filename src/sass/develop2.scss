@@ -9,12 +9,14 @@
 	}
 }
 .video-pop{text-align: center;
+	h2{margin-top: 0.5em;}
 	&__tabs{display: flex; justify-content: center; list-style-type: none; padding-left: 0;}
 	&__tab{border: 1px solid #C7C7C7; color: #C7C7C7; font-size: 17px; line-height: 2.2; white-space: nowrap; padding: 0 5px; cursor: pointer; border-radius: 2px;
 		&:hover, .active{border-color: #AFC9E0; color: #3777B3;}
 		&.active{border-color: #AFC9E0; color: #3777B3;}
 		&:not(:last-child){margin-right: 15px;}
 	}
+	&__video-wrap{width: 900px; height: 600px;}
 }
 .phone-workhours{text-align: center; margin: 2.5em 0 3em;
 	&__phone{font-size: 32px; font-weight: bold; line-height: 1.25; margin-bottom: 0.1em;}
