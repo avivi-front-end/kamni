@@ -1,11 +1,19 @@
 .breadcrumbs{display: flex; list-style-type: none; padding-left: 0;
-	&__item{display: inline-block; position: relative; color: #808080; font-size: 14px;
+	&__item{display: inline-block; position: relative; color: #575757; font-size: 14px;
 		&:not(:last-child){margin-right: 15px;
 			&:after{content:'/'; color: #808080; font-size: 14px; position: absolute; right: -10px; top: 0;}
 		}
 	}
 	&__link{display: block; color: #3777b3;
 		&:hover{text-decoration: none;}
+	}
+}
+.video-pop{text-align: center;
+	&__tabs{display: flex; justify-content: center; list-style-type: none; padding-left: 0;}
+	&__tab{border: 1px solid #C7C7C7; color: #C7C7C7; font-size: 17px; line-height: 2.2; white-space: nowrap; padding: 0 5px; cursor: pointer; border-radius: 2px;
+		&:hover, .active{border-color: #AFC9E0; color: #3777B3;}
+		&.active{border-color: #AFC9E0; color: #3777B3;}
+		&:not(:last-child){margin-right: 15px;}
 	}
 }
 .phone-workhours{text-align: center; margin: 2.5em 0 3em;
