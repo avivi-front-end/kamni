@@ -33,6 +33,13 @@
 		&__wrap{max-width: 640px;margin: 0 auto;}
 		&__social{max-width: 855px; margin: 0 auto;}
 	}
+	&-departments{padding-bottom: 4em;
+		h2{max-width: 800px;}
+		&__wrap{max-width: 854px; margin: 0 auto;}
+	}
+	&-question{background: #f5f5ff; border: 1px solid #e6e6e6; padding-bottom: 3em;
+		&__wrap{max-width: 700px; margin: 0 auto;}
+	}
 	&__title{max-width: 620px; margin: 0 auto;}
 	&__wrap{display:flex; justify-content: center; margin-bottom: 1.8em;}
 	&__col{min-height: 80px; height: 100%; width: 288px; text-align: center; padding: 0 5px;
@@ -50,5 +57,17 @@
 		&:hover{text-decoration: none;}
 		&:after{content: ''; width: 24px; height: 17px; background-size: cover; background: url(../images/youtube.png) no-repeat; position: absolute; left: 16px; top: 50%; transform: translateY(-50%);}
 	}
+}
+.departments{display: flex; justify-content: space-around;
+	&__col{text-align: center; width: 278px; box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; padding-bottom: 20px; border-radius: 2px; overflow: hidden;
+		&:hover img{opacity: 1; transform: scale(1.2); transition: all linear .3s;}
+	}
+	&__photo{height: 280px; position: relative; background: #000; overflow: hidden; margin-bottom: 1em;
+		img{object-fit: cover; height: 100%; width: 100%; opacity: 0.75; opacity: 0.75; transition: all linear .3s;}
+	}
+	&__name{color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-weight: 700; font-size: 24px; white-space: nowrap;}
+	&__phone{margin-bottom: 0em;}
+	&__email{margin-bottom: 0em; display: inline-block; margin-bottom: 1em; color: #3777B3;}
+	&__text{color: #808080; font-size: 14px; padding: 0 10px;}
 }
 
