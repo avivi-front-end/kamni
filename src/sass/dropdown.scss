@@ -31,18 +31,21 @@
   ul{ padding: 0 16px;}
   &__top{ display: flex; justify-content: flex-start; align-items: center;}
 }
+.mobile-mc{ padding-top: 35px;
+  ul{ padding: 0 16px;}
+}
 .mobile-sc{padding: 0 15px 51px;
  &__content{ padding-top: 48px;}
  &__input{ position: relative; display: flex; width: 100%; justify-content: space-between;border-radius: 2px; background-color: #ffffff;  border: solid 1px #e6e6e6; height: 40px;
-  input{border:none; background: transparent;  line-height: 1.5;  text-align: left; color: #000000; padding-left: 8px; }
+  input{border:none; background: transparent;  line-height: 1.5;  text-align: left; color: #000000; padding-left: 8px; width: calc(100% - 70px); }
  }
- &__del { width: 24px; height: 24px; cursor: pointer; position: absolute; top: 9px; right: 9px;
+ &__del { width: 24px; height: 24px; cursor: pointer; position: absolute; top: 7px; right: 42px;
    span { width: 20px; background-color: #979797; height: 2px; display: block; transform: rotate(45deg); position: absolute; top: 50%; left: 0;
      &:nth-child(2) { transform: rotate(-45deg); }
    }
  }
- &__search{}
-  &__result{
+ &__search{ padding: 8px; cursor: pointer; border:none; background: #fff;}
+  &__result{ padding-top: 24px;
     li{ padding: 8px 8px; border-top:1px solid #E6E6E6;
       &:last-child{border-bottom:1px solid #E6E6E6;}
       &.mobile-sc__result--title{font-size: 12px; font-weight: bold;  line-height: 1.33; letter-spacing: 2.2px;  text-align: left; text-transform: uppercase; color: #808080; padding-left: 0; border-top: none; margin-top: 17px;}
