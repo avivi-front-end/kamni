@@ -77,4 +77,30 @@
 	&__email{margin-bottom: 0em; display: inline-block; margin-bottom: 1em; color: #3777B3;}
 	&__text{color: #808080; font-size: 14px; padding: 0 10px;line-height: 1.43;}
 }
+.delivery{
+	&__title{max-width: 840px;
+		h1{text-align: left;
+			b{display: block;}
+		}
+		h5{text-align: left;}
+	}
+	&__navigation{margin: 2em 0 0em;}
+	&__decorations{border-bottom: 4px solid #51b37b;height: 86px; margin-top: 1em; background: url(../images/decorations-bg.png) center bottom no-repeat;}
+	&__content{text-align: left;
+		h2, h4{
+			text-align: left;
+		}
+	}
+	&__wrap{padding-left: 48px; max-width: 805px; padding-top: 10px;}
+	&__row{margin-bottom: 3em;
+		p{margin-bottom: 1.5em;}
+	}
+}
 
+.del-nav{
+	&__list{list-style-type: none; display: flex; padding-left: 0;}
+	&__item{
+		&:not(:last-child){margin-right: 35px;}
+	}
+	&__link{color: #3777b3; font-size: 17px; line-height: 1.41;}
+}
