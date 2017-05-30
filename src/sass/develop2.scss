@@ -64,16 +64,12 @@
 	&__img{margin-bottom: 1em;}
 	&__street{margin-bottom: 0.4em;}
 	&__info{margin-bottom: 1em;}
-	&__btn{display: inline-block; border: 1px solid #AFC9E0; border-radius: 2px; font-size: 17px; color: #3777B3; line-height: 2.2; padding: 0 16px 0 48px; position: relative;
-		&:hover{text-decoration: none;}
-		&:after{content: ''; width: 24px; height: 17px; background-size: cover; background: url(../images/youtube.png) no-repeat; position: absolute; left: 16px; top: 50%; transform: translateY(-50%);}
-	}
 }
 .departments{display: flex; justify-content: space-around;
 	&__col{text-align: center; width: 278px; box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; padding-bottom: 20px; border-radius: 2px; overflow: hidden;
 		&:hover img{transform: scale(1.2); transition: all linear .3s;}
 	}
-	&__photo{height: 280px; position: relative; background: #000; overflow: hidden; margin-bottom: 1em;
+	&__photo{height: 280px; position: relative; background: #000; overflow: hidden; margin-bottom: 1em; display: block;
 		img{object-fit: cover; height: 100%; width: 100%; opacity: 0.75; opacity: 0.75; transition: all linear .3s;}
 	}
 	&__name{color: #fff; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0px); font-weight: 700; font-size: 24px; white-space: nowrap;}
