@@ -18,11 +18,11 @@
 	}
 	&__video-wrap{width: 900px; height: 600px;}
 }
-.phone-workhours{text-align: center; margin: 2.5em 0 3em;
-	&__phone{font-size: 32px; font-weight: bold; line-height: 1.25; margin-bottom: 0.1em;}
+.phone-workhours{text-align: center; margin: 2.5em 0 2.5em;
+	&__phone{font-size: 32px; font-weight: bold; line-height: 1.25; margin-bottom: 0.3em;}
 	&__workhours{font-size: 16px; line-height: 1.5;}
 }
-.social-links{list-style-type: none; display: flex; justify-content: center; padding-left: 0;margin-bottom: 0;
+.social-links{list-style-type: none; display: flex; justify-content: center; padding-left: 0;margin: 0;
 	&__item{ border-radius: 50%;
 		&:not(:last-child){margin-right: 6px;}
 	}
@@ -37,12 +37,13 @@
 		h2{max-width:670px;}
 		&__wrap{display: flex; margin: 0 -4px;}
 		&__col{margin: 0 4px;}
-		&__video-title{font-size: 24px; line-height: 1.33; text-align: center; margin: 1em 0 0;}
+		&__video-title{font-size: 24px; line-height: 1.33; text-align: center; margin: 0.8em 0 0;}
 	}
 	&-location{border-bottom: 1px solid #e6e6e6; padding-bottom: 4em;
 		&__wrap{max-width: 640px;margin: 0 auto;}
 		&__social{max-width: 855px; margin: 0 auto;}
 	}
+	&__work-time{line-height: 1.5;}
 	&-departments{padding-bottom: 4em;
 		h2{max-width: 800px;}
 		&__wrap{max-width: 854px; margin: 0 auto;}
@@ -51,7 +52,7 @@
 		&__wrap{max-width: 700px; margin: 0 auto;}
 	}
 	&__title{max-width: 620px; margin: 0 auto;}
-	&__wrap{display:flex; justify-content: center; margin-bottom: 1.8em;}
+	&__wrap{display:flex; justify-content: center; margin: 4.5em 0 1.8em;}
 	&__col{min-height: 80px; height: 100%; width: 288px; text-align: center; padding: 0 5px;
 		&--center{border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6;}
 	}
@@ -70,14 +71,14 @@
 }
 .departments{display: flex; justify-content: space-around;
 	&__col{text-align: center; width: 278px; box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; padding-bottom: 20px; border-radius: 2px; overflow: hidden;
-		&:hover img{opacity: 1; transform: scale(1.2); transition: all linear .3s;}
+		&:hover img{transform: scale(1.2); transition: all linear .3s;}
 	}
 	&__photo{height: 280px; position: relative; background: #000; overflow: hidden; margin-bottom: 1em;
 		img{object-fit: cover; height: 100%; width: 100%; opacity: 0.75; opacity: 0.75; transition: all linear .3s;}
 	}
-	&__name{color: #fff; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-weight: 700; font-size: 24px; white-space: nowrap;}
+	&__name{color: #fff; position: absolute; left: 50%; top: 50%; transform: translate3d(-50%, -50%, 0px); font-weight: 700; font-size: 24px; white-space: nowrap;}
 	&__phone{margin-bottom: 0em;}
 	&__email{margin-bottom: 0em; display: inline-block; margin-bottom: 1em; color: #3777B3;}
-	&__text{color: #808080; font-size: 14px; padding: 0 10px;}
+	&__text{color: #808080; font-size: 14px; padding: 0 10px;line-height: 1.43;}
 }
 

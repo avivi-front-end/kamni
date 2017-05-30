@@ -36,15 +36,6 @@ var videoPop = (function(){
         $videoWrapper.append('<iframe width="100%" height="100%" src="' + $videoLink + '" frameborder="0" allowfullscreen></iframe>');
     });
 
-/*    function videoSwitch(){
-        $tab.removeClass('active');
-        $(this).addClass('active');
-        $videoWrapper.html('');
-        var $tabNumber = $(this).index();
-        var $videoLink = $tab.eq($tabNumber).attr('data-video');
-        $videoWrapper.append('<iframe width="100%" height="100%" src="' + $videoLink + '" frameborder="0" allowfullscreen></iframe>');
-    }*/
-
 })();
 
  window.Gmap = null;
