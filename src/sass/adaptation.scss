@@ -1,0 +1,14 @@
+@media screen and (max-width: 1070px) {
+  .main-page__right{ padding-left: 15px;}
+  .dopmenu__bot li:not(:last-child){ margin-right: 15px;}
+}@media screen and (max-width: 992px) {
+  .dopmenu,
+  .main-page__menu,
+  .header-top,
+  .header-bot{ display: none;}
+  .main-page__left{ display: none;}
+  .main-page__right{ width: 100%; padding-left: 0;}
+  .header-mobile__wrap{ display: block;}
+  .main-page{ padding-top: 0;}
+  .slider{ padding-top: 12px;}
+}

@@ -82,11 +82,15 @@ input, textarea{
     }
 }
 /*buttons*/
-h1{font-size: 56px; font-weight: 400;    line-height: 1.14;    text-align: center;    color: #000000; margin: 0.47em 0 0.3em;}
-h2{font-size: 40px; font-weight: 400;  line-height: 1.2; text-align: center; color: #000000;width: 100%;margin: 1.65em auto 0.4em; }
-h4{font-size: 24px; font-weight: 400; line-height: 1.33; text-align: center; color: #575757; margin:0.75em 0 0.65em;}
-h5{font-size: 20px; font-weight: 400; line-height: 1.4; text-align: center; color: #575757;width: 100%; margin: 0.8em auto 0.85em; }
-h1,h2,h3,h4,h5,h6{
+h1{font-size: 56px; line-height: 1.14; margin: 0.47em auto 0.3em;}
+h2{font-size: 40px; line-height: 1.2; margin: 1.65em auto 0.4em; }
+h3{font-size: 32px; line-height: 1.25;}
+h4{font-size: 24px; line-height: 1.33;   margin:0.75em 0 0.65em;}
+h5{font-size: 20px; line-height: 1.4;   margin: 0.8em auto 0.85em; }
+h6{font-size: 17px;  line-height: 1.41;}
+h1,h2,h3,h4,h5,h6{ font-weight: 400; text-align: center; color: #000000;width: 100%;
     &.blue, .blue{ color: #3777b3;}
 }
+p{ line-height: 1.5; margin:0 0 1.5em;}
 .emoji{ font-family:'emoji';}
+.global-wrapper{ overflow: hidden;}
