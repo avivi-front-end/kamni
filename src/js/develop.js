@@ -75,8 +75,34 @@ function sliderInit() {
         });
     }
 }
+function mobMenu(){
+    var buttons = $('.caller-mob-menu');
+    if(!buttons.length) return;
+    buttons.each(function(){
+        var rel = $(this).attr('data-relative')
+        $(this).click(function () {
+            $(this).toggleClass('active');
+
+            if($(this).hasClass('active')){
+                $('.mobile-menus__item[data-relative='+rel+']').addClass('show');
+            }else{
+                $('.mobile-menus__item[data-relative='+rel+']').removeClass('show');
+            }
+        });
+    });
+    var close = $('.mobile-menus__close');
+    if(!close.length) return;
+
+    close.click(function () {
+       buttons.removeClass('active');
+        $('.mobile-menus__item').removeClass('show');
+    });
+
+
+}
 $(document).ready(function () {
     dropdowns();
     sliderInit();
     catalogShowAll();
+    mobMenu();
 });
