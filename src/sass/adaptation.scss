@@ -1,8 +1,11 @@
 @media screen and (max-width: 1070px) {
   .main-page__right{ padding-left: 15px;}
   .dopmenu__bot li:not(:last-child){ margin-right: 15px;}
-  .footer__quest{ display: none;}
-}@media screen and (max-width: 992px) {
+  .footer__quest,
+  .footer__soc{ width: 100%;}
+  .footer__soc-big{flex-wrap: wrap;}
+}
+@media screen and (max-width: 992px) {
   .dopmenu,
   .main-page__menu,
   .header-top,
@@ -12,4 +15,14 @@
   .header-mobile__wrap{ display: block;}
   .main-page{ padding-top: 0;}
   .slider{ padding-top: 12px;}
+
+  .footer__col{ display: none;}
+  .footer__col--last{ display: block; width: 100%;}
+  .bigsoc{flex-wrap: wrap; max-width: 460px; margin: 0 auto;}
+  .bigsoc__item{ margin-right: 0; margin-bottom: 8px;}
+}
+@media screen and (max-width: 480px) {
+  .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
+  .bigsoc__img { width: 16px; height: 16px; padding: 0; margin-right: 8px;}
+  .bigsoc{ max-width: 216px; margin: 0;}
 }

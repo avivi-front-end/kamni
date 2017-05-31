@@ -75,6 +75,7 @@ function sliderInit() {
         });
     }
 }
+
 function mobMenu(){
     var buttons = $('.caller-mob-menu');
     if(!buttons.length) return;
