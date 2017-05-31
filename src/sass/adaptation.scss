@@ -6,6 +6,13 @@
   .footer__soc-big{flex-wrap: wrap;}
 }
 @media screen and (max-width: 992px) {
+  h1{font-size: 48px;}
+  h2{font-size: 32px;}
+  h3{font-size: 26px;}
+  h4{font-size: 18px;}
+  h5{font-size: 16px;}
+  h6{font-size: 14px;}
+  body{ font-size: 14px;}
   .dopmenu,
   .main-page__menu,
   .header-top,
@@ -24,5 +31,13 @@
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
   .bigsoc__img { width: 16px; height: 16px; padding: 0; margin-right: 8px;}
-  .bigsoc{ max-width: 216px; margin: 0;}
+   .bigsoc{ max-width: 216px;}
+  footer .bigsoc{  margin: 0;}
+  h1{font-size: 32px;}
+  h2{font-size: 26px;}
+  h3{font-size: 22px;}
+  h4{font-size: 16px;}
+  h5{font-size: 14px;}
+  h6{font-size: 12px;}
+  body{ font-size: 12px;}
 }
