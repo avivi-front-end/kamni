@@ -1,5 +1,5 @@
-.breadcrumbs{display: flex; list-style-type: none; padding-left: 0;
-	&__item{display: inline-block; position: relative; color: #575757; font-size: 14px;
+.breadcrumbs{display: flex; flex-wrap: wrap; list-style-type: none; padding-left: 0;
+	&__item{display: inline-block; position: relative; color: #575757; font-size: 14px; white-space: nowrap;
 		&:not(:last-child){margin-right: 15px;
 			&:after{content:'/'; color: #808080; font-size: 14px; position: absolute; right: -10px; top: 0;}
 		}
@@ -65,10 +65,11 @@
 	&__street{margin-bottom: 0.4em;}
 	&__info{margin-bottom: 1em;}
 }
-.departments{display: flex; justify-content: space-around;
-	&__col{text-align: center; width: 278px; box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; padding-bottom: 20px; border-radius: 2px; overflow: hidden;
+.departments{display: flex; justify-content: space-around; margin: 0 -5px;
+	&__col{width:33.33%; text-align: center; padding: 0 5px; border-radius: 2px; overflow: hidden;
 		&:hover img{transform: scale(1.2); transition: all linear .3s;}
 	}
+	&__item{box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; padding-bottom: 20px;}
 	&__photo{height: 280px; position: relative; background: #000; overflow: hidden; margin-bottom: 1em; display: block;
 		img{object-fit: cover; height: 100%; width: 100%; opacity: 0.75; opacity: 0.75; transition: all linear .3s;}
 	}
@@ -95,11 +96,11 @@
 	&__row{margin-bottom: 3em;}
 }
 .del-nav{
-	&__list{list-style-type: none; display: flex; padding-left: 0;}
+	&__list{list-style-type: none; display: flex; flex-wrap: wrap; padding-left: 0;}
 	&__item{
 		&:not(:last-child){margin-right: 35px;}
 	}
-	&__link{color: #3777b3; font-size: 17px; line-height: 1.41;}
+	&__link{color: #3777b3; font-size: 17px; line-height: 1.41; white-space: nowrap;}
 }
 .full-catalogue{
 	&__wrap{margin: 0 auto; max-width: 810px;}
