@@ -117,13 +117,17 @@ div.awesomplete ul{ list-style-type: none; position: absolute; left: 0; top: 100
   &__wrap{ display: none; position: relative; z-index: 9999;  top: 0; left: 0; width: 100%;}
 }
 .mobile-menus{ position: absolute; width: 100%; left: 0; top: 0;
-  &__item{ left: 100%; top: 0; position: absolute; transition: all 200ms; width: 100%;  background-color: #fff; max-height: 100vh; overflow-y:scroll ;
+  &__item{ left: 100%; top: 0; position: absolute; transition: all 200ms; width: 100%;  background-color: #fff; height: 100vh; overflow-y:scroll ;  padding:0 16px 20px;
     &.show{ left: 0;}
   }
   &__close{ width: 24px; height: 24px; cursor: pointer; position: absolute; top: 9px; right: 9px; z-index: 80;
     span{ width: 20px; background-color: #979797; height: 2px; display: block; transform:rotate(45deg); position: absolute; top: 50%; left: 0;
       &:nth-child(2){ transform:rotate(-45deg); }
     }
+  }
+  &__title{line-height: 1.5; text-align: center; color: #575757;padding: 14px 0 9px;}
+  &__back{ width: 30px; height: 20px; position: absolute; left: 13px;  top: 15px; z-index: 99;
+    &:before{content: '';  width: 11px; height: 11px; border-top:solid 2.3px #808080; border-left:solid 2.3px #808080; background: transparent; transform:rotate(-45deg); display: block; position: absolute; right: 10px; top: calc(50% - 7px);}
   }
 }
 .mobile-butter{ padding-top: 9px;}

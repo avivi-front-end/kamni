@@ -81,6 +81,8 @@ function mobMenu(){
     buttons.each(function(){
         var rel = $(this).attr('data-relative')
         $(this).click(function () {
+            buttons.removeClass('active');
+            $('.mobile-menus__item').removeClass('show');
             $(this).toggleClass('active');
 
             if($(this).hasClass('active')){

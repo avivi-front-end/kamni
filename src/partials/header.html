@@ -54,11 +54,11 @@
             <div class=" mobile-menus__item mobile-sc" data-relative="search">
                 <div class="mobile-menus__close"><span></span><span></span></div>
                 <div class="mobile-sc__content">
-                    <div class="mobile-sc__input">
+                    <form class="mobile-sc__input">
                         <input type="text" placeholder="Search">
                         <div class="mobile-sc__del"><span></span><span></span></div>
                         <button class="mobile-sc__search"><img src="images/search-outlines.png" alt=""></button>
-                    </div>
+                    </form>
                     <div class="mobile-sc__result">
                         <ul>
                             <li><a href="#">Аметист</a></li>
@@ -98,12 +98,12 @@
                     <ul>
                         <li class="mobile-mc__pin">
                             <img src="images/location.png" alt="">
-                            <a href="#" >Санкт-Петербург<p>Доставим 3 марта</p></a>
+                            <a href="#" class="caller-mob-menu" data-relative="city">Санкт-Петербург<p>Доставим 3 марта</p></a>
 
                         </li>
                         <li class="mobile-mc__butter">
                             <img src="images/buter-m.png" alt="">
-                            <a href="#">Каталог товаров</a>
+                            <a href="#" class="caller-mob-menu" data-relative="catalog">Каталог товаров</a>
                         </li>
                         <li><a href="#" style="color: #ff5d00;">Скидки и акции <span class="emoji">🔥</span></a></li>
                         <li><a href="#">Stone Box</a></li>
@@ -135,6 +135,84 @@
                         </div>
                     </div>
 
+                </div>
+            </div>
+            <div class="lc-dropdown mobile-menus__item mobile-city" data-relative="city">
+                <div class="mobile-menus__close"><span></span><span></span></div>
+                <div class="mobile-menus__title">Выбор города</div>
+                <div class="mobile-menus__back caller-mob-menu" data-relative="menu"></div>
+                <form class="mobile-sc__input">
+                    <input type="text" placeholder="Search">
+                    <div class="mobile-sc__del"><span></span><span></span></div>
+                    <button class="mobile-sc__search"><img src="images/search-outlines.png" alt=""></button>
+                </form>
+                <div class="lc-dropdown__wrap mobile-city__result">
+                    <ul>
+                        <li><a href="#">Саранск</a></li>
+                        <li><a href="#">Саратов</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lc-dropdown mobile-menus__item" data-relative="catalog">
+                <div class="mobile-menus__close"><span></span><span></span></div>
+                <div class="mobile-menus__title">Каталог товаров</div>
+                <div class="mobile-menus__back caller-mob-menu" data-relative="menu"></div>
+                <div class="lc-dropdown__wrap mobile-city__result">
+                    <ul>
+                        <li class="mobile-mc__butter">
+                            <a href="#" class="caller-mob-menu" data-relative="inner">Все камни и минералы</a>
+                        </li>
+                        <li class="mobile-mc__butter">
+                            <a href="#" class="caller-mob-menu" data-relative="inner2">Украшения</a>
+                        </li>
+                    </ul>
+                    <ul class="mobile-mc__blacklist">
+                        <li><a href="#">Новые поступления</a></li>
+                        <li><a href="#" style="color: #51b37b;">Лучшие предложения <span class="emoji">👍</span></a></li>
+                        <li><a href="#" style="color: #dba00f;">VIP<span class="emoji">👑</span></a></li>
+                        <li><a href="#">По гороскопу</a></li>
+                        <li><a href="#">Для интерьера</a></li>
+                        <li><a href="#">Для детей</a></li>
+                        <li><a href="#">Для мужчин</a></li>
+                        <li><a href="#">Для рукоделия</a></li>
+                        <li><a href="#">Для коллекционеров</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lc-dropdown mobile-menus__item" data-relative="inner">
+                <div class="mobile-menus__close"><span></span><span></span></div>
+                <div class="mobile-menus__title">Все камни и минералы</div>
+                <div class="mobile-menus__back caller-mob-menu" data-relative="catalog"></div>
+                <div class="lc-dropdown__wrap mobile-city__result">
+                    <ul class="mobile-mc__blacklist">
+                        <li><a href="#">Новые поступления</a></li>
+                        <li><a href="#" style="color: #51b37b;">Лучшие предложения <span class="emoji">👍</span></a></li>
+                        <li><a href="#" style="color: #dba00f;">VIP<span class="emoji">👑</span></a></li>
+                        <li><a href="#">По гороскопу</a></li>
+                        <li><a href="#">Для интерьера</a></li>
+                        <li><a href="#">Для детей</a></li>
+                        <li><a href="#">Для мужчин</a></li>
+                        <li><a href="#">Для рукоделия</a></li>
+                        <li><a href="#">Для коллекционеров</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lc-dropdown mobile-menus__item" data-relative="inner2">
+                <div class="mobile-menus__close"><span></span><span></span></div>
+                <div class="mobile-menus__title">Украшения</div>
+                <div class="mobile-menus__back caller-mob-menu" data-relative="catalog"></div>
+                <div class="lc-dropdown__wrap mobile-city__result">
+                    <ul class="mobile-mc__blacklist">
+                        <li><a href="#">Новые поступления</a></li>
+                        <li><a href="#" style="color: #51b37b;">Лучшие предложения <span class="emoji">👍</span></a></li>
+                        <li><a href="#" style="color: #dba00f;">VIP<span class="emoji">👑</span></a></li>
+                        <li><a href="#">По гороскопу</a></li>
+                        <li><a href="#">Для интерьера</a></li>
+                        <li><a href="#">Для детей</a></li>
+                        <li><a href="#">Для мужчин</a></li>
+                        <li><a href="#">Для рукоделия</a></li>
+                        <li><a href="#">Для коллекционеров</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
