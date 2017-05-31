@@ -38,6 +38,21 @@ var videoPop = (function(){
 
 })();
 
+var showCategore = (function(){
+    var $category = $('.js-category');
+
+    $category.on('click', function(e){
+        e.preventDefault();
+        if($(this).hasClass('active')){
+            return false;
+        } else {
+            $category.removeClass('active');
+            $(this).addClass('active');
+        }
+    });
+
+})();
+
  window.Gmap = null;
 
  var GMapHandler = function() {
