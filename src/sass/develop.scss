@@ -20,7 +20,7 @@ body{min-height:100%;width:100%;min-width:320px;font-family: 'PT Sans', sans-ser
     }
     /* /styles for wp-admin panel */
 }
-a{ text-decoration: none;
+a{ text-decoration: none; color: #3777b3;
     &:hover{ text-decoration: underline;}
 }
 .main{max-width: 1400px; width: 100%; margin: 0 auto; background-color: #fff;box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; margin-bottom: 40px;}
