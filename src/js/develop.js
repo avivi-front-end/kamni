@@ -103,9 +103,27 @@ function mobMenu(){
 
 
 }
+function footerhow() {
+    var but = $('.footer__category-title');
+    var cont = $('.footer__category-list');
+    if(but.length > 0){
+        but.click(function () {
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                cont.stop().slideDown();
+            }else{
+                cont.stop().slideUp();
+
+            }
+        });
+
+    }
+
+}
 $(document).ready(function () {
     dropdowns();
     sliderInit();
     catalogShowAll();
     mobMenu();
+    footerhow();
 });
