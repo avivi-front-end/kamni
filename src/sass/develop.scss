@@ -83,6 +83,7 @@ input, textarea{
     &__green{ color: #fff; background-color: #51b37b;
         span{ padding: 12px;font-size: 17px; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
     }
+    &--big{min-width: 159px; height: 48px;}
 }
 /*buttons*/
 .pseudoH1,
