@@ -65,7 +65,7 @@
     }
   }
   &__img{ position: relative; width: 47px; height: 56px; display: flex; justify-content: center; align-items: center; margin-right: 8px;
-    &--mobile{ width: 32px; height: 26px; margin-right: 0; }
+    &--mobile{ width: 32px; height: 26px; margin-right: 9px; }
   }
   &__pin{ height: 16px; display: inline-block; position: absolute; border-radius: 7px; color: #fff; font-size: 12px; font-weight: bold; top: 12px; right: 0; padding:0 4px;
     &--mobile{ top: -2px; right: -8px;}

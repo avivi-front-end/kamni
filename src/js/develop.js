@@ -71,7 +71,8 @@ function sliderInit() {
     if(slider2.length > 0){
         slider2.slick({
             dots:false,
-            arrows:true
+            arrows:true,
+            infinite:false
         });
     }
 }

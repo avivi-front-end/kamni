@@ -113,7 +113,7 @@
   &__content{  border: 8px solid red; border-image: repeating-linear-gradient( -45deg, red 0px, red 20px, white 20px, white 40px, blue 40px, blue 60px, white 60px, white 80px )  10; width: 100%;  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3); margin-top: 30px; padding-top: 48px; padding-bottom: 39px;
   }
   &__slider-wrap{ width: 100%; max-width: 954px; margin: 0 auto -35px; position: relative;}
-  &__slide{ width: 100%; height: 613px; border:1px solid #e6e6e6; border-radius: 4px;  }
+  &__slide{ width: 100%;  border:1px solid #e6e6e6; border-radius: 4px;  }
   .slick-prev, .slick-next { width: 48px; height: 48px; top: 52.7%;
     &:before{ width: 12px; top: 4px; left: 16px;}
   }
