@@ -11,7 +11,7 @@ var videoPop = (function(){
     var $tab = $('.js-tab');
     var $videoWrapper = $('.js-video-wrap');
 
-    $tab.on('click', function(e){
+    $tab.on('click touchstart', function(e){
         e.preventDefault();
         if($(this).hasClass('active')){
             return false;
@@ -25,7 +25,7 @@ var videoPop = (function(){
         }
     });
 
-    $targetBtn.on('click', function(e){
+    $targetBtn.on('click touchstart', function(e){
         e.preventDefault();
         var $targetNum = $(this).parent().index();
         console.log($targetNum);
