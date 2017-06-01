@@ -11,7 +11,7 @@ var videoPop = (function(){
     var $tab = $('.js-tab');
     var $videoWrapper = $('.js-video-wrap');
 
-    $tab.click(function(e){
+    $tab.on('click', function(e){
         e.preventDefault();
         if($(this).hasClass('active')){
             return false;
