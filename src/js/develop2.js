@@ -25,7 +25,7 @@ var videoPop = (function(){
         }
     });
 
-    $targetBtn.on('click touchstart', function(e){
+    $targetBtn.on('click ', function(e){
         e.preventDefault();
         var $targetNum = $(this).parent().index();
         console.log($targetNum);
