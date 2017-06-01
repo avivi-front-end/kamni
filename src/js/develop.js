@@ -119,7 +119,24 @@ function footerhow() {
         });
 
     }
+}
+function showmoreCategory(){
+    var but = $('.show-catmenu-items');
+    var cont = $('.category-page__menu .hidden');
+    if(but.length > 0){
+        but.click(function () {
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                cont.stop().slideDown();
+                but.find('span').text('Скрыть');
+            }else{
+                cont.stop().slideUp();
+                but.find('span').text('Показать еще');
 
+            }
+        });
+
+    }
 }
 $(document).ready(function () {
     dropdowns();
@@ -127,4 +144,5 @@ $(document).ready(function () {
     catalogShowAll();
     mobMenu();
     footerhow();
+    showmoreCategory();
 });

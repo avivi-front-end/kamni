@@ -166,4 +166,9 @@
     li{ display: inline-block; margin-right: 14px;}
     a{font-size: 17px; line-height: 1.88; text-align: left; color: #3777b3;}
   }
+  &__quest{
+    i{font-size: 14px; text-align: left; font-style: normal;  color: #ffffff; width: 16px;  height: 16px; background-color: #c7c7c7; border-radius: 50%; display: inline-flex; justify-content: center; align-items: center; margin-right: 8px;}
+    a:hover{ text-decoration: none;}
+    span{font-size: 14px;  line-height: 1.43;  text-align: left;  color: #575757;}
+  }
 }
