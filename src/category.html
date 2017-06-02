@@ -127,25 +127,43 @@
                                 <option value="">Сначала новинки </option>
                             </select>
                         </div>
-                        <div class="filter__checklist dropdown-container">
-                            <div class="filter__title dropdown-btn">Показать:</div>
-                            <ul class="filter__list dropdown">
-                               <li> <label><input type="checkbox" name="qwe"><i></i><span>Ночная скидка</span></label>  </li>
-                                <li><label><input type="checkbox" name="asd"><i></i><span>Стоп через 3 часа</span></label></li>
-                                <li> <label><input type="checkbox" name="zxc"><i></i><span>Продано</span></label></li>
-                            </ul>
-                        </div>
-                        <div class="filter__range  dropdown-container">
-                            <div class="filter__price dropdown-btn">Цена:</div>
-                            <div class="filter__range-content dropdown">
-                                <p>
-                                    <label for="amount">Price range:</label>
-                                    <input type="text" id="amount" readonly style="border:0; color:#f6931f; font-weight:bold;">
-                                </p>
-
-                                <div id="slider-range"></div>
+                        <form action="">
+                            <div class="filter__checklist dropdown-container">
+                                <div class="filter__title dropdown-btn">Показать:</div>
+                                <ul class="filter__list dropdown">
+                                    <li> <label><input type="checkbox" name="qwe"><i></i><span>Ночная скидка</span></label>  </li>
+                                    <li><label><input type="checkbox" name="asd"><i></i><span>Стоп через 3 часа</span></label></li>
+                                    <li> <label><input type="checkbox" name="zxc"><i></i><span>Продано</span></label></li>
+                                </ul>
                             </div>
-                        </div>
+                            <div class="filter__range  dropdown-container">
+                                <div class="filter__price dropdown-btn">Цена:</div>
+                                <div class="filter__range-content dropdown">
+                                    <div class="filter__price-title">
+                                        <input type="text" name="minval" value="0">
+                                        <i></i>
+                                        <input type="text" name="maxval" value="33 068">
+                                        <span>₽</span>
+                                    </div>
+
+                                    <div id="slider-range" class="filter__price-range" >
+                                        <div class="filter__price-min"><span>0</span>₽</div>
+                                        <div class="filter__price-max"><span>60 000</span>₽</div>
+                                    </div>
+                                    <div class="filter__price-fast">
+                                        <p>Быстрый выбор</p>
+                                        <div class="filter__price-setter">до 1 000 ₽     </div>
+                                        <div class="filter__price-setter"> 1000 ₽-3 000 ₽  </div>
+                                        <div class="filter__price-setter">  3 000 ₽-5 000 ₽    </div>
+                                        <div class="filter__price-setter">  от 5 000 ₽</div>
+
+
+                                    </div>
+                                    <button class="button button__green"><span>Показать</span></button>
+                                </div>
+                            </div>
+                        </form>
+
 
                     </div>
                 </div>
