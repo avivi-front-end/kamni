@@ -32,9 +32,9 @@
               <div class="partners-form">
                 <form id="partnersForm">
                   <input type="text" class="partners-form__input" placeholder="Напишите ваше имя" name="name">
-                  <input type="text" class="partners-form__input tel-mask" name="phone">
+                  <input type="text" class="partners-form__input tel-mask" name="phone" placeholder="+7">
                   <input type="text" class="partners-form__input" placeholder="hello@mail.ru" name="email">
-                  <button type="submit" class="button button__yellow"><span>Получить презентацию и бизнес-план</span></button>
+                  <button type="submit" class="button button--big button__yellow partners-form__submit"><span>Получить презентацию и бизнес-план</span></button>
                 </form>
               </div>
             </div>
@@ -84,6 +84,30 @@
             </div>
             <div class="partners__col">
               <img src="images/partn_img5.jpg" alt="partners" data-object-fit>
+            </div>
+          </div>
+          <div class="partners-offer">
+            <div class="partners-offer__wrap">
+              <h2>У вас есть другие интересные предложения?</h2>
+              <h5>Мы открыты для взаимовыгодного сотрудничества. Просто напишите нам и получите ответ в ближайшее время</h5>
+              <form>
+                <div class="offer-form">
+                  <input type="text" class="offer-form__input" placeholder="Ваше имя">
+                  <input type="text" class="offer-form__input tel-mask" placeholder="+7">
+                  <input type="text" class="offer-form__input" placeholder="hello@mail.ru">
+                  <textarea class="offer-form__textarea" placeholder="Напишите суть вашего предложения"></textarea>
+                  <div class="offer-form__file-field file-field">
+                    <label href="#" class="file-field__label" for="fileOffer">
+                      <div class="file-field__link">Прикрепить файлы</div>
+                    </label>
+                    <div class="file-field__text">Файлы формата .doc, .docx, .pdf, .jpg, не более 5 Мб</div>
+                    <input type="file" class="file-field__input js-send-file" id="fileOffer">
+                  </div>
+                </div>
+                <button type="submit" class="button button--big button__yellow offer-form__submit">
+                  <span>Отправить предложение</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>

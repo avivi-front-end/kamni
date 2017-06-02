@@ -6,6 +6,16 @@ $(document).ready(function() {
     GMapHandler();
 });
 
+var sendFile = (function(){
+    var fileText = $('.file-field__text');
+    $('.js-send-file').change(function() {
+        var filename = $(this).val().split('\\').pop();
+        console.log(filename);
+        fileText.html('');
+        fileText.append(filename);
+    });
+})();
+
 var videoPop = (function(){
     var $targetBtn = $('.js-target-btn');
     var $tab = $('.js-tab');
