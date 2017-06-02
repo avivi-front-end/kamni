@@ -138,6 +138,47 @@ function showmoreCategory(){
 
     }
 }
+function selectStyler(){
+    var select = $('.filter__sort select');
+    if(select.length > 0){
+        select.styler({
+            selectPlaceholder:'Сортировать',
+            selectSmartPositioning:false
+        });
+    }
+}
+function filterCheckboxLogic(){
+    var top = $('.filter__title');
+    var input = $('.filter__list input');
+    if(top.length > 0){
+        check();
+        input.on('change', function () {
+            check();
+        });
+    }
+    function check() {
+        $('.filter__title span').remove();
+        $('.filter__list input:checked').each(function () {
+            var text = $(this).closest('label').find('span').text();
+            var el = document.createElement('span');
+            $(el).text(text+',');
+            top.append(el);
+        });
+    }
+}
+function rangeLogic() {
+    $( "#slider-range" ).slider({
+        range: true,
+        min: 0,
+        max: 500,
+        values: [ 75, 300 ],
+        slide: function( event, ui ) {
+            $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+        }
+    });
+    $( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+        " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+};
 $(document).ready(function () {
     dropdowns();
     sliderInit();
@@ -145,4 +186,7 @@ $(document).ready(function () {
     mobMenu();
     footerhow();
     showmoreCategory();
+    selectStyler();
+    filterCheckboxLogic();
+    rangeLogic();
 });
