@@ -13,6 +13,7 @@
 			&--text{padding: 2.9% 4% 2.9% 4%;}
 		}
 	}
+	.offer-form{flex-direction: column; align-items: center;}
 }
 @media screen and (max-width: 800px){
 	.location-target{top: auto; right: 50%; bottom: -30px; transform: translateX(50%); box-shadow: 5px 9px 14.55px 0.45px rgba(0, 1, 1, 0.15);}
