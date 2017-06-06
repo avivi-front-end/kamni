@@ -169,22 +169,80 @@ function filterCheckboxLogic(){
 function rangeLogic() {
     var range = $( "#slider-range" );
     if(range.length > 0){
+        var minval = parseInt(range.attr('data-minval'));
+        var maxval = parseInt(range.attr('data-maxval'));
+
         range.slider({
             range: true,
-            min: 0,
-            max: 500,
-            values: [ 0, 250 ],
-            classes: {"ui-slider-handle": "leftright"},
+            min: minval,
+            max: maxval,
+            values: [ 0, parseInt(maxval/2) ],
+
+            create: function( event, ui ) {
+                $('input[name=minval]').val(minval);
+                $('input[name=maxval]').val(parseInt(maxval/2));
+                $('.filter__price-min span').text(minval);
+                $('.filter__price-max span').text(maxval);
+
+                $('.filter__price span').text(minval+' - '+maxval);
+            },
             slide: function( event, ui ) {
-                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+
+                $('input[name=minval]').val(ui.values[ 0 ]);
+                $('input[name=maxval]').val(ui.values[ 1 ]);
+                $('.filter__price span').text(ui.values[ 0 ]+' - '+ui.values[ 1 ]);
             }
         });
-        $( "#amount" ).val( "$" + range.slider( "values", 0 ) +
-            " - $" + range.slider( "values", 1 ) );
+        var setter = $('.filter__price-setter');
+        if(setter.length > 0){
+            setter.each(function () {
+                $(this).click(function(){
+                    var min = parseInt($(this).attr('data-minval'));
+                    var max = parseInt($(this).attr('data-maxval'));
+                    if (isNaN(min)){ min = 0;}
+                    if (isNaN(max)){ max = maxval;}
+                    $( "#slider-range" ).slider( "values", [ min, max ] );
+                    $('.filter__price span').text(min+' - '+max);
+                    $('input[name=minval]').val(min);
+                    $('input[name=maxval]').val(max);
+                });
+            });
+        }
+        $('input[name=minval]').on('change', function () {
+            changeInput();
+        });
+        $('input[name=maxval]').on('change', function () {
+            changeInput();
+        });
+        function changeInput() {
+            var min  = $('input[name=minval]').val();
+            var max  = $('input[name=maxval]').val();
+            if (min < 0 ) min = 0;
+            if (max > maxval) max = maxval;
+            $( "#slider-range" ).slider( "values", [ min, max ] );
+            $('.filter__price span').text(min+' - '+max);
+        }
     }
 
 
 };
+function showAllComments() {
+    var but = $('.show-all-comments');
+    var cont = $('.feedbacks__item.hidden');
+    if(but.length > 0){
+        but.click(function () {
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                cont.stop().slideDown();
+                but.find('span').text('Скрыть');
+            }else{
+                cont.stop().slideUp();
+                but.find('span').text('Показать еще');
+
+            }
+        })
+    }
+}
 $(document).ready(function () {
     dropdowns();
     sliderInit();
@@ -195,4 +253,5 @@ $(document).ready(function () {
     selectStyler();
     filterCheckboxLogic();
     rangeLogic();
+    showAllComments();
 });
