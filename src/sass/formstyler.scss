@@ -235,7 +235,7 @@
 	cursor: pointer;
 	width: 100%;
 }
-.jq-selectbox__select { height: 36px; padding: 0 25px 0 0; border-bottom:1px solid #E6E6E6;  font-size: 17px; line-height: 2.12; text-align: left; color: #000000;
+.jq-selectbox__select { height: 37px; padding: 0 25px 0 0; border-bottom:1px solid #E6E6E6;  font-size: 17px; line-height: 2.12; text-align: left; color: #000000;
 }
 .jq-selectbox.disabled .jq-selectbox__select {
 	border-color: #CCC;
@@ -251,7 +251,7 @@
 	text-overflow: ellipsis;
 }
 .jq-selectbox .placeholder {
-	color: #808080;
+	color: #000;
 }
 .jq-selectbox__trigger {
 	position: absolute;
