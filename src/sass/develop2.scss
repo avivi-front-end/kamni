@@ -7,7 +7,7 @@
 	&__link{display: block; color: #3777b3;
 		&:hover{text-decoration: none;}
 	}
-	&.white{
+	&--white{
 		.breadcrumbs__link, .breadcrumbs__item{
 			color: #fff;
 		}
