@@ -99,7 +99,14 @@ h1,h2,h3,h4,h5,h6{ font-weight: 400; text-align: center; color: #000000;width: 1
     &.blue, .blue{ color: #3777b3;}
 }
 p{ line-height: 1.5; margin:0 0 1.5em;}
-.emoji{ height: 22px;
+.emoji{ height: 16px; width: 16px; display: inline-block; background-position: 50%; background-size: cover;
     &--like{ background-image: url(../images/emodji_like.png);}
+    &--vip{ background-image: url(../images/emodji_vip.png);}
+    &--fire{ background-image: url(../images/emodji_fire.png);}
+    &--rank0{ background-image: url(../images/emodji_0.png);}
+    &--rank1{ background-image: url(../images/emodji_1.png);}
+    &--rank2{ background-image: url(../images/emodji_2.png);}
+    &--rank3{ background-image: url(../images/emodji_3.png);}
+    &--rank4{ background-image: url(../images/emodji_4.png);}
 }
 .global-wrapper{ overflow: hidden;}
