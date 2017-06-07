@@ -218,16 +218,25 @@
 	&__text{font-size: 16px; color: #c7c7c7;}
 }
 .sales{
-	&-slider{
-		&__wrap{
-			margin: 0 -4px;
-		}
-		&__slide{max-width: 576px; width: 100%; padding: 0 4px;}
+	&-slider{margin-bottom: 4.5em; margin-right: -4px;
+		&__slide{max-width: 568px; width: 100%; margin: 0 4px;}
+	}
+	&-discount{text-align: center; border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
+		h5{color: #575757;}
+		h2{margin-top: 0.8em;}
+		&__inner{max-width: 819px; margin: 0 auto; padding: 3.5em 0 3em;}
+	}
+	&-calculation{
+		&__item{text-align: center;}
+		&__list{list-style-type: none; display: flex; justify-content: space-between;}
+		&__img{height: 144px; display: flex; align-items: center;}
+		&__value{font-size: 24px; line-height: 1.33; color: #000;}
 	}
 	&__first-screen{background: url(../images/sales-bg.jpg) no-repeat; height: 480px; display: flex; justify-content: center; align-items: center; margin: -52px 0 4.7em;}
 	&__title{padding-top: 30px; max-width: 835px;
 		h1, h5{color: #fff;}
 	}
+	&__main{color: #51b37b; font-size: 112px; font-weight: 700; line-height: 1;}
 }
 .sales-box{position: relative;
 	&__text{z-index: 10; position: relative; color: #fff; padding: 50px 33px 33px 33px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 400px;
