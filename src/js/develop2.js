@@ -4,8 +4,11 @@
 
 $(document).ready(function() {
     GMapHandler();
+    $('.js-sales-slider').slick({
+        slidesToShow: 2,
+        arrows:true
+    });
 });
-
 var sendFile = (function(){
     var fileText = $('.file-field__text');
     $('.js-send-file').change(function() {
@@ -72,7 +75,6 @@ var showCategore = (function(){
      var a = "images/marker.png";
      var n = 16;
      if (!e.length) {
-         console.log("[Gmap] Элемента не существует");
          return;
      }
      if (!window.map_coords) {
