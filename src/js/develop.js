@@ -127,10 +127,10 @@ function showmoreCategory(){
         but.click(function () {
             $(this).toggleClass('active');
             if($(this).hasClass('active')){
-                cont.stop().slideDown();
+                cont.addClass('show');
                 but.find('span').text('Скрыть');
             }else{
-                cont.stop().slideUp();
+                cont.removeClass('show');
                 but.find('span').text('Показать еще');
 
             }
@@ -238,7 +238,6 @@ function showAllComments() {
             }else{
                 cont.stop().slideUp();
                 but.find('span').text('Показать еще');
-
             }
         })
     }
@@ -254,7 +253,9 @@ function itemsSlider() {
             responsive: [
                 { breakpoint: 1150, settings: {  slidesToShow: 5} },
                 { breakpoint: 992, settings: {  slidesToShow: 4} },
-                { breakpoint: 900, settings: {  slidesToShow: 3} }
+                { breakpoint: 790, settings: {  slidesToShow: 3} },
+                { breakpoint: 600, settings: {  slidesToShow: 2} },
+                { breakpoint: 400, settings: {  slidesToShow: 1} }
             ]
 
         });
