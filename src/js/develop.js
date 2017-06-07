@@ -243,6 +243,23 @@ function showAllComments() {
         })
     }
 }
+function itemsSlider() {
+    var slider = $('.items-slider__wrap');
+    if(slider.length > 0){
+        slider.slick({
+            dots:false,
+            arrows:true,
+            slidesToShow: 6,
+            slidesToScroll: 1,
+            responsive: [
+                { breakpoint: 1150, settings: {  slidesToShow: 5} },
+                { breakpoint: 992, settings: {  slidesToShow: 4} },
+                { breakpoint: 900, settings: {  slidesToShow: 3} }
+            ]
+
+        });
+    }
+}
 $(document).ready(function () {
     dropdowns();
     sliderInit();
@@ -254,4 +271,5 @@ $(document).ready(function () {
     filterCheckboxLogic();
     rangeLogic();
     showAllComments();
+    itemsSlider();
 });

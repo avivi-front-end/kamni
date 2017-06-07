@@ -70,7 +70,7 @@ input, textarea{
     }
 }
 
- @include font-face('emoji', 'EmojiSymbols-Regular');
+ //@include font-face('emoji', 'EmojiSymbols-Regular');
 /*/fonts*/
 /*buttons*/
 .button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400;
@@ -82,6 +82,9 @@ input, textarea{
     }
     &__green{ color: #fff; background-color: #51b37b;
         span{ padding: 12px;font-size: 17px; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
+    }
+    &__white{ color: #fff; background-color: transparent;
+        span{  line-height: 1.41; height: 40px; border-color: #fff;}
     }
     &--big{
         span{min-width: 159px; height: 48px;}
