@@ -15,5 +15,8 @@
     "gulp-concat": "^2.6.0",
     "gulp-html-replace": "^1.5.5",
     "gulp-sass": "^3.1.0"
+  },
+  "devDependencies": {
+    "gulp-convert-encoding": "^1.0.0"
   }
 }
