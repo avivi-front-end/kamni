@@ -6,7 +6,15 @@ $(document).ready(function() {
     GMapHandler();
     $('.js-sales-slider').slick({
         slidesToShow: 2,
-        arrows:true
+        arrows:true,
+        responsive: [
+            {
+              breakpoint: 768,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
     });
 });
 var sendFile = (function(){
