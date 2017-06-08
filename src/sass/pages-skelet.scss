@@ -190,7 +190,7 @@
 }
 .filter{ margin-top: 35px; display: flex; justify-content: flex-start; align-items: flex-start; position: relative; z-index: 90; margin-bottom: 23px;
   &__sort{ width: 210px; margin-right: 8px;}
-  &__checklist{ width: 210px; position: relative; margin-right: 8px;}
+  &__checklist{ width: 210px; position: relative; margin-right: 8px; z-index: 20;}
   &__price,
   &__title{font-size: 17px;  line-height: 2.12; text-align: left;  color: #000000; border-bottom:1px solid #E6E6E6; width: 100%; position: relative; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; padding-right: 14px; cursor: pointer;
     &:before{position: absolute;  top: 12px;  right: 3px;  width: 8px;  height: 8px;  border-bottom: 2px solid #000; border-right: 2px solid #000; transform:rotate(45deg); content: '';}
@@ -208,7 +208,7 @@
     input[type=checkbox]:checked + i:before{ opacity: 1;}
   }
   form{ display: flex; justify-content: flex-start; align-items: flex-start;}
-  &__range{ position: relative; width: 336px;}
+  &__range{ position: relative; width: 336px; z-index: 10;}
   &__range-content{margin: 0; padding: 22px 15px 16px; top: 100%; box-sizing: border-box; width: 100%;   border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3);font-size: 17px; line-height: 1.2; text-align: left; color: #000000; position: absolute;  display: none;
     .button{    margin: 14px 0 0;
       span{ height: 40px;}
@@ -342,9 +342,14 @@
 
 }
 .aside-menu{ width: 100%; list-style-type: none; padding: 0; margin: 0; border:1px solid #e6e6e6; border-radius:2px;
-  &>li{ border-bottom: 1px solid #e6e6e6; min-height: 47px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding-left: 16px;
+  &>li{ border-bottom: 1px solid #e6e6e6; min-height: 47px; position: relative; display: flex; justify-content: flex-start; align-items: center; padding: 10px 16px;
     &:last-child{ border-bottom:none;}
     &.active:before{width: 4.5px; height: 100%; background-color: #4acb82; content: ''; position: absolute; left: 0; top: 0;}
     a{font-size: 16px; line-height: 1.38; text-align: left; color: #000000;}
+    &>ul{ padding: 0; margin: 0;
+      a{font-size: 14px; line-height: 1.71; color: #575757;}
+      ul{ padding-left: 27px;}
+    }
   }
+  ul{ list-style-type: none;}
 }
