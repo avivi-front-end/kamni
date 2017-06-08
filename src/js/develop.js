@@ -146,6 +146,13 @@ function selectStyler(){
             selectSmartPositioning:false
         });
     }
+    var select2 = $('.feed-form__select select');
+    if(select2.length > 0){
+        select2.styler({
+
+            selectSmartPositioning:false
+        });
+    }
 }
 function filterCheckboxLogic(){
     var top = $('.filter__title');

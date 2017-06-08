@@ -70,6 +70,14 @@
   .category-page__menu li{ width: 150px; display: inline-flex;}
   .category-page__menu a{ line-height: 1.1;}
   .category-page__menu .hidden.show{ display: inline-flex;}
+
+  .feed-top__content{ padding-left: 0;}
+  .feed-cont__wrap{flex-wrap: wrap;}
+  .feed-cont__left{ width: 100%; padding-right: 0;}
+  .feed-cont__right{ width: 100%;}
+  .aside-menu{border:none; margin-bottom: 25px;}
+  .aside-menu > li{ display: inline-flex; border:1px solid #e6e6e6; padding-right: 16px; margin-right: 2px; margin-bottom: 4px;}
+  .aside-menu > li:last-child{border-bottom:1px solid #e6e6e6; }
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
@@ -88,13 +96,16 @@
   .filter__range,
   .filter__checklist,
   .filter__sort{ margin-bottom: 10px; width: 100%; margin-right: 0;}
-
+  .feed-top__left {overflow: visible;}
+  .feed-top__left img{ bottom: 0;}
 }
 @media screen and (max-width: 730px) {
   .rock-man__img{ display: none;}
   .rock-man__text{ max-width: 100%; }
   .rock-man__wrap{ padding-bottom: 20px; }
   .category-page__items{ max-width: 440px; justify-content: space-around; }
+  .feed-top__left { display: none;}
+  .feed-top__right { width: 100%; padding-bottom: 20px;}
 }
 @media screen and (max-width: 610px) {
   .pop-items__content,
@@ -119,6 +130,8 @@
   .services__img{ height: 100px;}
   .services__item{ margin-right: 0; margin-bottom: 10px;}
   .feedbacks__item{border-left:0px; border-right: 0px; padding:23px 0; }
+  .feed-cont .category-page__paginator { border:none; padding: 23px 0 13px; }
+  .feed-cont__title{border-right: 0px; border-left: 0px;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
@@ -134,6 +147,7 @@
   h4{font-size: 16px;}
   h5{font-size: 14px;}
   h6{font-size: 12px;}
+  .feed-top p { font-size: 14px;}
   .slider__slide{ height: 240px; padding:0 30px;}
   .slick-prev, .slick-next { width: 38px; height: 38px;}
   .slick-prev:before, .slick-next:before{ width: 10px; top: -1px; left: 12px;}
@@ -150,11 +164,14 @@
   .modal__footer { padding: 17px 20px 23px;}
   .rock-man__button-txt p{ font-size: 14px;}
   .feedbacks__top{flex-wrap: wrap; }
-
+  .feedbacks__rank{ margin-bottom: 8px;}
   .feedbacks__date{ width: 100%;}
   .feedbacks__img{ width: 138px;}
 
   .category-page__menu{border-right: 0px; border-left: 0px;}
   .category-page__menu li{ padding: 0; width: 49%;}
+  .feed-form{padding: 0 10px 10px;}
+  .aside-menu > li{min-height: 24px;}
+  .aside-menu > li a{ font-size: 14px;}
 
 }
