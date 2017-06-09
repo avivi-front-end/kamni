@@ -218,30 +218,88 @@
 	&__text{font-size: 16px; color: #c7c7c7;}
 }
 .sales{
-	&-slider{margin-bottom: 4.5em; margin-right: -4px;
-		&__slide{max-width: 568px; width: 100%; margin: 0 4px;}
+	&-reviews{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 4.5em 0 0;
+		h2{margin-top: 0.4em;}
+		h5{color: #575757;}
+		&__title{max-width: 856px; margin: 0 auto 2em auto;}
+		&__list{list-style-type: none; display: flex; margin: 0 -4px; padding-left: 0;
+			&-item{margin: 0 4px; border: solid 1px #e6e6e6; border-radius: 2px; width: 222px; padding: 38px 0 27px; overflow: hidden; position: relative;}
+		}
+		&__icon{display: flex; justify-content: center; align-items: center; height: 80px; margin-bottom: 18px;}
+		&__text{text-align: center; padding: 0 15px; font-size: 17px; line-height: 1.41;}
+		&__shape{position: absolute; width: 56px; height: 56px; background: #51b37b; right: -28px; top: -28px; border-radius: 50%; color: #fff; font-size: 17px; font-weight: 700;
+			span{position: absolute; bottom: 4px; left: 13px;}
+		}
+	}
+	&-slider{margin-bottom: 4.5em; margin-top: 1.7em;
+		&__slide{max-width: 568px; width: 100%; margin: 0 4px;
+		.sales-box{margin: 0;}
+		}
+	}
+	&-box{position: relative; max-width: 568px; margin:0 4px; overflow: hidden;
+		&:hover{
+			img{transform: scale(1.2);}
+		}
+		&__wrap{display: flex; margin: 0 -4px 0 -4px}
+		&__text{z-index: 10; position: relative; color: #fff; padding: 50px 33px 33px 33px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 400px;
+			h2{color: #fff; text-align: left; margin: 0.2em 0 0;}
+		}
+		&__date{font-size: 12px; text-transform: uppercase; letter-spacing: 2px;}
+		&__bg{position: absolute; top: 0; left: 0; z-index: 0; object-fit: cover; width: 100%; height: 100%;}
 	}
 	&-discount{text-align: center; border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
 		h5{color: #575757;}
-		h2{margin-top: 0.8em;}
-		&__inner{max-width: 819px; margin: 0 auto; padding: 3.5em 0 3em;}
+		h2{margin-top: 0.7em;}
+		&__inner{max-width: 819px; margin: 0 auto; padding: 4.6em 0 3.2em;}
 	}
-	&-calculation{
-		&__item{text-align: center;}
-		&__list{list-style-type: none; display: flex; justify-content: space-between;}
-		&__img{height: 144px; display: flex; align-items: center;}
-		&__value{font-size: 24px; line-height: 1.33; color: #000;}
+	&-club{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
+		&__wrap{max-width: 864px; margin: 0 auto;}
+		&__list{list-style-type: none; display: flex; justify-content: center; margin: 0 -4px; margin: 2em 0 1em;
+			&-item{text-align: center; padding: 50px 27px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
+		}
+		&__icon{height: 80px; margin-bottom: 6px;}
+		&__text{font-size: 17px; line-height: 1.41;}
 	}
-	&__first-screen{background: url(../images/sales-bg.jpg) no-repeat; height: 480px; display: flex; justify-content: center; align-items: center; margin: -52px 0 4.7em;}
+	&-calculation{background: url(../images/calc-bg.jpg) no-repeat; padding: 27.5em 0 4.3em; position: relative;
+		&__discount{color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: 700;}
+		&__item{text-align: center; cursor: pointer; width: 148px;
+			&:hover{
+				.sales-calculation__value{transition: all linear .3s; border-color: #575757;}
+			}
+		}
+		&__text-block{box-shadow: 0 2px 0 0 #e9e4cb; background: #fff; width: 308px; border-radius: 3px; padding: 25px 20px 20px; color: #000; font-size: 24px; line-height: 1.33; position: absolute; top: 11%; left: 47%; text-align: left;
+			&:after{content: ''; position: absolute; bottom: -27px; left: 24px; background: url(../images/sale-item.png) no-repeat; width: 40px; height: 27px;}
+		}
+		&__list{list-style-type: none; display: flex; justify-content: space-between; margin: 0 0 1.3em; padding-left: 0;}
+		&__img{height: 144px; display: flex; align-items: center; justify-content: center; position: relative; margin-bottom: 3px;}
+		&__value{font-size: 24px; line-height: 1.6; padding: 0 7px; color: #000; border: solid 1px transparent; border-radius: 2px; display: inline-block; }
+		&__remainder{font-size: 12px; font-weight: 700; line-height: 1.33; color: #808080; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
+	}
+	&__first-screen{background: url(../images/sales-bg.jpg) center center no-repeat; padding: 0 15px; height: 480px; display: flex; justify-content: center; align-items: center; margin: -52px 0 4.7em;}
 	&__title{padding-top: 30px; max-width: 835px;
 		h1, h5{color: #fff;}
 	}
+	&__btn-row{text-align: center; margin: 1.5em 0 4.5em;
+			.button{min-width: 216px;}
+		}
 	&__main{color: #51b37b; font-size: 112px; font-weight: 700; line-height: 1;}
 }
-.sales-box{position: relative;
-	&__text{z-index: 10; position: relative; color: #fff; padding: 50px 33px 33px 33px; display: flex; flex-direction: column; justify-content: space-between; align-items: flex-start; min-height: 400px;
-		h2{color: #fff; text-align: left; margin: 0.2em 0 0;}
+.promo{
+	&-block{padding: 0 15px; position: relative; height: 516px; display: flex; justify-content: center; align-items: center;
+		&__inner{max-width: 770px; position: relative; z-index: 10;}
+		h2,h5{color: #fff;}
+		h2{margin-top: 0.4em;}
+		&__bg{position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; object-fit: cover;}
 	}
-	&__date{font-size: 12px; text-transform: uppercase; letter-spacing: 2px;}
-	&__bg{position: absolute; top: 0; left: 0; z-index: 0; object-fit: cover; width: 100%; height: 100%;}
+	&-discount{padding: 3em 0;
+		&__card{margin-right: 102px; margin-left: 144px;}
+		&__text{max-width: 455px;}
+		&__inner{display: flex;}
+		h3{margin: 0.2em 0 0.6em;}
+		h3,h6{text-align: left;}
+		h6{color: #575757; margin: 0 0 1.8em;}
+	}
+}
+.smiles{list-style-type: none; display: flex; justify-content: center; margin: 0 0 0; padding-left: 0;
+	&__item{width: 40px; height: 40px;}
 }
