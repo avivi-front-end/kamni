@@ -35,7 +35,7 @@
     img{object-fit: cover; width: 100%; height: 100%; transition: transform 300ms;}
   }
   &__text{ color: #fff; position: absolute; z-index: 15; width: 100%; display: block; padding:33px 24px;
-    p{ text-transform: uppercase; margin: 0; font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px;  text-align: left; }
+    p{ text-transform: uppercase; margin: 0; font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px;  text-align: left; color: #fff; }
     h4{ line-height: 1.33;  text-align: left;  color: #fff; margin-top: 11px;}
   }
   &__watch{ position: absolute; display: block; bottom: 26px; left: 24px; z-index: 15;font-size: 12px;  line-height: 1; text-align: left; color: #ffffff;

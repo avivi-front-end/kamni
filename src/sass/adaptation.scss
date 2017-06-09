@@ -119,11 +119,11 @@
   }
   .tags__title{ font-size: 14px; width: 100%;}
   .tags__row{flex-wrap: wrap; padding: 0 0 17px;}
-  .tags{border-right: 0px; border-left: 0px; }
+  .tags{border-right: 0px; border-left: 0px;}
 
   .popcat__content li{ width: 100%;}
   .main-infoblock{flex-wrap: wrap;
-    &__right, &__left{ width: 100%; padding: 0;}
+    &__box{ width: 100%;}
   }
   .main-infoblock__block{ min-height: 1px; height: auto;}
   .services__text { min-height: 1px; padding: 14px 10px 5px; }
