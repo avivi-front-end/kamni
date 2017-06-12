@@ -35,7 +35,8 @@ var gulp = require('gulp'),
             part:'src/partials/*.html' ,
             js: 'src/js/*.js',
             jsplug:  'src/js/plagins/*.js',
-            style: 'src/sass/*.scss'
+            style: 'src/sass/*.scss',
+            img: 'src/image/*.*'
         },
         clean: './build'
     };
@@ -123,6 +124,9 @@ gulp.task('watch', function(){
     });
     watch([path.watch.jsplug], function(event, cb) {
         gulp.start('js:build');
+    });
+    watch([path.watch.img], function(event, cb) {
+        gulp.start('imgage:build');
     });
 
 });
