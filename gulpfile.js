@@ -31,12 +31,11 @@ var gulp = require('gulp'),
             php:'src/*.php'
         },
         watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
-            html: 'src/**/*.html',
-            js: 'src/js/**/*.js',
-            style: 'src/sass/**/*.scss',
-            img: 'src/images/**/*.*',
-            fonts: 'src/fonts/**/*.*',
-            php:'src/*.php'
+            html: 'src/*.html',
+            part:'src/partials/*.html' ,
+            js: 'src/js/*.js',
+            jsplug:  'src/js/plagins/*.js',
+            style: 'src/sass/*.scss'
         },
         clean: './build'
     };
@@ -113,21 +112,19 @@ gulp.task('watch', function(){
     watch([path.watch.html], function(event, cb) {
         gulp.start('html:build');
     });
+    watch([path.watch.part], function(event, cb) {
+        gulp.start('html:build');
+    });
     watch([path.watch.style], function(event, cb) {
         gulp.start('style:build');
     });
     watch([path.watch.js], function(event, cb) {
         gulp.start('js:build');
     });
-    watch([path.watch.img], function(event, cb) {
-        gulp.start('image:build');
+    watch([path.watch.jsplug], function(event, cb) {
+        gulp.start('js:build');
     });
-    watch([path.watch.fonts], function(event, cb) {
-        gulp.start('fonts:build');
-    });
-    watch([path.watch.php], function(event, cb) {
-        gulp.start('php:build');
-    });
+
 });
 
 
