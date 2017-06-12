@@ -132,6 +132,13 @@
   .feedbacks__item{border-left:0px; border-right: 0px; padding:23px 0; }
   .feed-cont .category-page__paginator { border:none; padding: 23px 0 13px; }
   .feed-cont__title{border-right: 0px; border-left: 0px; padding-left: 0;}
+  .stone__publications-wrap,
+  .mini-items{ justify-content: space-around;}
+  .stone__content{flex-wrap: wrap;}
+  .stone__left,
+  .stone__right{ width: 100%; padding-left: 0;}
+  .stone__services-item{ width: 100%; box-shadow: inset 0px -1px 0 0 #e6e6e6;}
+  .stone__services{flex-wrap: wrap;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
