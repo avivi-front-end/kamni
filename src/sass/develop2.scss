@@ -233,6 +233,9 @@
 		&__slide{max-width: 568px; width: 100%; margin: 0 4px;
 		.sales-box{margin: 0;}
 		}
+		&--second{
+			h2{margin: 1.8em auto 0.8em; max-width: 850px;}
+		}
 	}
 	&-box{position: relative; max-width: 568px; margin:0 4px; overflow: hidden;
 		&:hover{
@@ -285,13 +288,16 @@
 		}
 	}
 	&-feedback{
-		&__main{margin-top: -167px;}
+		&__main{margin-top: -167px; padding-bottom: 4.5em;}
 		&__top{height: 532px; display: flex; justify-content: center; position: relative;}
 		&__title{max-width: 800px; z-index: 10;
 			h2{color: #fff; margin-top: 3.4em;}
 		}
-		&__colection{background: #51b37b; width: 168px; height: 168px; border-radius: 50%; position: absolute; right: 53px; top: -84px; text-align: center;
-			a{display: block; color: #fff;}
+		&__colection{background: #51b37b; width: 168px; height: 168px; border-radius: 50%; position: absolute; right: 53px; top: -84px; text-align: center; padding: 25px 0 0;
+			a{color: #fff; border-bottom: 1px dashed #fff;
+				&:hover{border: none; text-decoration: none;}
+			}
+			img{display: block; margin: 0 auto; margin-bottom: 8px;}
 		}
 		&__info{font-size: 14px; color: #808080; text-align: center;}
 		&__form-title{max-width: 600px; margin: 0 auto;
@@ -316,11 +322,13 @@
 	&__main{color: #51b37b; font-size: 112px; font-weight: 700; line-height: 1;}
 }
 .promo{
-	&-block{padding: 0 15px; position: relative; height: 516px; display: flex; justify-content: center; align-items: center;
-		&__inner{max-width: 770px; position: relative; z-index: 10;}
+	&-block{padding: 0 15px; position: relative; min-height: 516px; display: flex; justify-content: center; align-items: center;
+		&__inner{max-width: 770px; position: relative; z-index: 10; text-align: center;}
 		h2,h5{color: #fff;}
+		h5{margin-bottom: 1.5em;}
 		h2{margin-top: 0.4em;}
 		&__bg{position: absolute; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%; object-fit: cover;}
+		&--second{min-height: 564px; align-items: flex-start; padding-top: 7.5em;}
 	}
 	&-discount{padding: 3em 0;
 		&__card{margin-right: 102px; margin-left: 144px;}
