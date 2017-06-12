@@ -4,9 +4,7 @@
 			&:after{content:'/'; color: #808080; font-size: 14px; position: absolute; right: -10px; top: 0;}
 		}
 	}
-	&__link{display: block; color: #3777b3;
-		&:hover{text-decoration: none;}
-	}
+	&__link{display: block; color: #3777b3;}
 	&--white{
 		.breadcrumbs__link, .breadcrumbs__item{
 			color: #fff;
@@ -293,7 +291,7 @@
 			h2{color: #fff; margin-top: 3.4em;}
 		}
 		&__colection{background: #51b37b; width: 168px; height: 168px; border-radius: 50%; position: absolute; right: 53px; top: -84px; text-align: center;
-			a{display: block; color: #fff; text-decoration: ;}
+			a{display: block; color: #fff;}
 		}
 		&__info{font-size: 14px; color: #808080; text-align: center;}
 		&__form-title{max-width: 600px; margin: 0 auto;
