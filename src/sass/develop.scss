@@ -82,6 +82,9 @@ input, textarea{
     }
     &__green{ color: #fff; background-color: #51b37b;
         span{ padding: 12px;font-size: 17px; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
+        &--big{
+            span{font-size: 20px; min-width: 240px; height: 64px;}
+        }
     }
     &__white{ color: #fff; background-color: transparent;
         span{  line-height: 1.41; height: 40px; border-color: #fff;}
