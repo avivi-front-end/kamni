@@ -75,6 +75,15 @@ function sliderInit() {
             infinite:false
         });
     }
+    var slider3 = $('.card__slider-init');
+    if(slider3.length > 0){
+        slider3.slick({
+            dots:false,
+            arrows:true,
+            infinite:false
+        });
+        cardSlider();
+    }
 }
 
 function mobMenu(){
@@ -150,6 +159,13 @@ function selectStyler(){
     if(select2.length > 0){
         select2.styler({
 
+            selectSmartPositioning:false
+        });
+    }
+    var select3 = $('.card__select select');
+    if(select3.length > 0){
+        select3.styler({
+            selectPlaceholder:'Выберете размер',
             selectSmartPositioning:false
         });
     }
@@ -265,6 +281,21 @@ function itemsSlider() {
                 { breakpoint: 400, settings: {  slidesToShow: 1} }
             ]
 
+        });
+    }
+}
+function cardSlider(){
+    var items = $('.card__thumb');
+   
+    if(items.length > 0){
+        if(items.length > 6){
+            var butt = $('.card__thumbs-butt');
+            butt.addClass('show');
+            butt.find('i').text(items.length - 4);
+        }
+        items.click(function () {
+            var ind = $(this).index();
+            $('.card__slider-init').slick('slickGoTo', ind);
         });
     }
 }
