@@ -259,7 +259,7 @@
 	&-club{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
 		&__wrap{max-width: 864px; margin: 0 auto;}
 		&__list{list-style-type: none; display: flex; justify-content: center; margin: 0 -4px; margin: 2em 0 1em;
-			&-item{text-align: center; padding: 50px 27px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
+			&-item{text-align: center; padding: 50px 22px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
 		}
 		&__icon{height: 80px; margin-bottom: 6px;}
 		&__text{font-size: 17px; line-height: 1.41;}
@@ -348,4 +348,41 @@
 }
 .smiles{list-style-type: none; display: flex; justify-content: center; margin: 0 0 0; padding-left: 0;
 	&__item{width: 40px; height: 40px;}
+}
+.club{
+	&-membership{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
+		&__price{font-size: 56px; line-height: 1;}
+	}
+	&__first-screen{
+		background: url(../images/club-bg.jpg) center center no-repeat;
+		padding: 0 15px;
+		height: 529px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: -52px 0 4.7em;
+	}
+	&-advantages{margin: 0 -4px; display: flex;
+		&__left, &__right{margin: 0 4px; width: 568px; margin: 0 4px;}
+	}
+	&__title{text-align: center; max-width: 800px;
+		h1, h5{color: #fff;}
+		h5{margin-bottom: 1em;}
+	}
+	&__item{border: 1px solid #e6e6e6; width: 100%;
+		h3{text-align: left;}
+		&:not(:last-child){margin-bottom: 8px;}
+	}
+	&__conditions-link{color: #808080; font-size: 14px; border-bottom: 1px dashed #e6e6e6; display: none;
+		&:hover{border: none; text-decoration: none;}
+	}
+	&__button{width: 100%;}
+	&__for{margin: 0.5em 0 2em;}
+	&__condition{ font-size: 12px; font-weight: bold; letter-spacing: 2px; text-align: center; color: #808080; text-transform: uppercase;}
+	&__payment{
+		&.disabled{
+			.button{opacity: 0.5; pointer-events: none;}
+			.club__conditions-link{display: inline-block;}
+		}
+	}
 }
