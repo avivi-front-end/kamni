@@ -216,6 +216,9 @@
 	&__text{font-size: 16px; color: #c7c7c7;}
 }
 .sales{
+	&__btn{
+		span{min-width: 240px;}
+	}
 	&-reviews{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 4.5em 0 0;
 		h2{margin-top: 0.4em;}
 		h5{color: #575757;}
@@ -233,7 +236,7 @@
 		&__slide{max-width: 568px; width: 100%; margin: 0 4px;
 		.sales-box{margin: 0;}
 		}
-		&--second{
+		&--bottom{
 			h2{margin: 1.8em auto 0.8em; max-width: 850px;}
 		}
 	}
@@ -256,19 +259,22 @@
 	&-club{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
 		&__wrap{max-width: 864px; margin: 0 auto;}
 		&__list{list-style-type: none; display: flex; justify-content: center; margin: 0 -4px; margin: 2em 0 1em;
-			&-item{text-align: center; padding: 50px 27px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
+			&-item{text-align: center; padding: 50px 22px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
 		}
 		&__icon{height: 80px; margin-bottom: 6px;}
 		&__text{font-size: 17px; line-height: 1.41;}
 	}
-	&-calculation{background: url(../images/calc-bg.jpg) no-repeat; padding: 27.5em 0 4.3em; position: relative;
+	&-calculation{background: url(../images/calc-bg.jpg) no-repeat; background-size: cover ; padding: 27.5em 0 4.3em; position: relative;
+		&__character{position: absolute; top: 13%; left: 25.3%; height: 306px;
+			img{height: 100%;}
+		}
 		&__discount{color: #fff; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; font-weight: 700;}
 		&__item{text-align: center; cursor: pointer; width: 148px;
 			&:hover{
 				.sales-calculation__value{transition: all linear .3s; border-color: #575757;}
 			}
 		}
-		&__text-block{box-shadow: 0 2px 0 0 #e9e4cb; background: #fff; width: 308px; border-radius: 3px; padding: 25px 20px 20px; color: #000; font-size: 24px; line-height: 1.33; position: absolute; top: 11%; left: 47%; text-align: left;
+		&__text-block{box-shadow: 0 2px 0 0 #e9e4cb; background: #fff; width: 308px; border-radius: 3px; padding: 25px 20px 20px; color: #000; font-size: 24px; line-height: 1.33; position: absolute; top: -5%; left: 100%; text-align: left;
 			&:after{content: ''; position: absolute; bottom: -27px; left: 24px; background: url(../images/sale-item.png) no-repeat; width: 40px; height: 27px;}
 		}
 		&__list{list-style-type: none; display: flex; justify-content: space-between; margin: 0 0 1.3em; padding-left: 0;}
@@ -277,14 +283,15 @@
 		&__remainder{font-size: 12px; font-weight: 700; line-height: 1.33; color: #808080; text-transform: uppercase; letter-spacing: 2px; text-align: center;}
 	}
 	&-procurement{display: flex;
-		&__img{width: 696px; height: 592px; flex-shrink: 0;
-			img{height: 100%; width: 100%; object-fit: cover;}
+		&__img{width: 50%; flex-shrink: 0;
+			img{width: 100%; height: 100%; object-fit: cover;}
 		}
-		&__text{padding: 0 5em 0 8em;
+		&__text{width: 50%; display: flex; flex-direction: column; align-items: center; padding: 0 1em 1em;
 			h2,h5{text-align: left;}
-			&--top{margin-bottom: 4.5em;
+			&--top{margin-bottom: 1.5em;
 				h5{margin: 1em 0 1.5em; color: #575757;}
 			}
+			&--bot, &--top{max-width: 500px;}
 		}
 	}
 	&-feedback{
@@ -304,8 +311,8 @@
 			h3{margin: 1.3em 0 0;}
 			h5{margin-bottom: 0.7em;}
 		}
-		&__bg{position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%;}
-		&__inner{border-radius: 2px; border: solid 1px #e6e6e6; background: #fff; padding-bottom: 1.5em; position: relative;}
+		&__bg{position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; width: 100%; object-fit: cover;}
+		&__inner{border-radius: 2px; border: solid 1px #e6e6e6; background: #fff; padding: 0 1em 1.5em; position: relative;}
 		&__form{max-width: 696px; width: 100%; margin: 0px auto 17px; border-radius: 2px; background-color: #f5f5f5; border: solid 1px #e6e6e6; padding: 1em 0 0.8em;
 			form{padding: 0 16px; display: flex; align-items: center; margin: 0 -4px 10px -4px;}
 			.button{width: 202px; margin: 0 4px;}
@@ -341,4 +348,41 @@
 }
 .smiles{list-style-type: none; display: flex; justify-content: center; margin: 0 0 0; padding-left: 0;
 	&__item{width: 40px; height: 40px;}
+}
+.club{
+	&-membership{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
+		&__price{font-size: 56px; line-height: 1;}
+	}
+	&__first-screen{
+		background: url(../images/club-bg.jpg) center center no-repeat;
+		padding: 0 15px;
+		height: 529px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: -52px 0 4.7em;
+	}
+	&-advantages{margin: 0 -4px; display: flex;
+		&__left, &__right{margin: 0 4px; width: 568px; margin: 0 4px;}
+	}
+	&__title{text-align: center; max-width: 800px;
+		h1, h5{color: #fff;}
+		h5{margin-bottom: 1em;}
+	}
+	&__item{border: 1px solid #e6e6e6; width: 100%;
+		h3{text-align: left;}
+		&:not(:last-child){margin-bottom: 8px;}
+	}
+	&__conditions-link{color: #808080; font-size: 14px; border-bottom: 1px dashed #e6e6e6; display: none;
+		&:hover{border: none; text-decoration: none;}
+	}
+	&__button{width: 100%;}
+	&__for{margin: 0.5em 0 2em;}
+	&__condition{ font-size: 12px; font-weight: bold; letter-spacing: 2px; text-align: center; color: #808080; text-transform: uppercase;}
+	&__payment{
+		&.disabled{
+			.button{opacity: 0.5; pointer-events: none;}
+			.club__conditions-link{display: inline-block;}
+		}
+	}
 }
