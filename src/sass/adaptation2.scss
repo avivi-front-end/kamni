@@ -1,3 +1,13 @@
+@media screen and (max-width: 1150px){
+	.club{
+		&-member{
+			&__img{
+				img{width: 500px;}
+			}
+		}
+	}
+}
+
 @media screen and (max-width: 992px){
 	.sales{
 		&-procurement{flex-direction: column-reverse; align-items: center;
@@ -40,6 +50,13 @@
 		&__item{padding-right: 6em;
 			&--x2{height: 380px;}
 		}
+		&-member{
+			&__img{display: none;}
+			&__inner{justify-content: center; padding: 2em 0 2em;
+				h3, h5{text-align: center;}
+			}
+			&__text{text-align: center;}
+		}
 	}
 }
 @media screen and (max-width: 800px){
@@ -64,6 +81,11 @@
 			&__text-block{top: -50%; left: 0%;
 				&:after{display: none;}
 			}
+		}
+	}
+	.club{
+		&-faq{
+			&__inner{flex-direction: column; align-items: center;}
 		}
 	}
 }
