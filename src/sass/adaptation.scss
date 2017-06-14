@@ -9,6 +9,11 @@
   .mailer .slick-next { right: -8px;}
   .mailer .slick-prev { left: -8px;}
 }
+@media screen and (max-width: 1130px) {
+  .card__wrap{flex-wrap: wrap;}
+  .card__slider-wrap{ margin: 0 auto 40px;}
+  .card__info-wrap{ width: 100%;}
+}
 @media screen and (max-width: 1090px) {
   .category-page__right{ padding-left: 10px;}
   .filter__range{ width: 280px;}
@@ -80,6 +85,9 @@
   .aside-menu > li{ display: inline-flex; border:1px solid #e6e6e6; padding:5px 16px; margin-right: 2px; margin-bottom: 4px;}
   .aside-menu > li:last-child{border-bottom:1px solid #e6e6e6; }
   .aside-menu--relative{ display: flex; flex-direction: column;}
+  .complect__wrap{ flex-wrap: wrap; justify-content: space-around; max-width: 645px; margin: 0 auto;}
+  .complect__result{ width: 100%;}
+  .complect__done{ margin:32px 0 0;}
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
@@ -117,6 +125,10 @@
   .opt-info__item{ padding: 10px; min-height: 1px; width: 100%;}
   .opt-info__row{flex-wrap: wrap;}
 }
+@media screen and (max-width: 690px) {
+  .complect__wrap{ flex-direction: column; flex-wrap: nowrap;}
+  .complect__plus{ margin: 28px 0 0;}
+}
 @media screen and (max-width: 666px) {
   .pop-items__content,
   .collection-items__content,
@@ -147,7 +159,11 @@
   .stone__left,
   .stone__right{ width: 100%; padding-left: 0;}
   .stone__services-item{ width: 100%; box-shadow: inset 0px -1px 0 0 #e6e6e6;}
-  .stone__services{flex-wrap: wrap;}
+  .stone__services{flex-wrap: wrap; width: 100%;}
+}
+@media screen and (max-width: 560px) {
+  .card__thumbs{ display: none;}
+  .card__slider-wrap{ width: 100%;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
@@ -189,5 +205,9 @@
   .feed-form{padding: 0 10px 10px;}
   .aside-menu > li{min-height: 24px;}
   .aside-menu > li a{ font-size: 14px;}
+  .card__price .tovar__info{ top: -1px; right: -1px;}
+  .card__price{ padding-top: 32px;}
+  .card__select-wrap{ flex-direction: column; align-items: flex-start;}
+  .card__form-but .button{ margin-bottom: 8px;}
 
 }
