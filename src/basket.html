@@ -5,10 +5,49 @@
         //= partials/header-mini.html
         //= partials/breadcrumbs.html
         <div class="mbox">
-            <div class="basket">
-                <div class="basket__left"></div>
-                <div class="basket__right"></div>
+            <div class="basket-tabs">
+                <div class="basket-tabs__item active">Корзина<span>5</span></div>
+                <div class="basket-tabs__item">Отложенные <span>10</span></div>
             </div>
+            <form class="basket">
+                <div class="basket__left">
+                    <h2>Корзина</h2>
+                    <div class="basket__menu mover">
+                        <div class="mover__butt mover__all">Выбрать все</div>
+                        <div class="mover__wrap">
+                            <div class="mover__row">
+                                <div class="mover__info">Выбран 1 товар </div>
+                                <div class="mover__butt mover__del">Удалить</div>
+                                <div class="mover__butt mover__defer">Отложить</div>
+                                <div class="mover__butt mover__undefer">Отложить невыделенные</div>
+                                <div class="mover__butt mover__discheck">Снять выделение</div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="basket__right">
+                    <div class="basket__info">
+                        <div class="basket__info-row">
+                            <span>Без скидки</span><b>7 950 ₽</b>
+                        </div>
+                        <div class="basket__info-row">
+                            <span>Скидки</span><b>-477 ₽</b>
+                        </div>
+                        <div class="basket__info-row">
+                            <span>Итого без учета доставки</span><b>7 473 ₽</b>
+                        </div>
+                        <a href="#">Изменить промокод</a>
+                        <p>Применен 1 промокод</p>
+                        <a href="#">Выбрать еще товары</a>
+                        <div class=" mover__butt mover__del">Очистить корзину</div>
+                        <button class="button button__yellow"><span>Оформить заказ</span></button>
+                        <div class="greencar">
+                            
+                        </div>
+                    </div>
+                </div>
+            </form>
         </div>
 
 
