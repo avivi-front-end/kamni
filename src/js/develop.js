@@ -299,6 +299,66 @@ function cardSlider(){
         });
     }
 }
+function tovarCounter() {
+    var items = $('.tovar__counter');
+    if(items.length > 0){
+        items.each(function(){
+            var plus = $(this).find('.tovar__butts-plus');
+            var minus = $(this).find('.tovar__butts-minus');
+            var res = $(this).find('.tovar__count');
+            var current = parseInt(res.text());
+            var item = $(this);
+            init(item);
+            plus.click(function () {
+                current++;
+                res.text(current);
+                init(item);
+            });
+            minus.click(function () {
+                current--;
+                res.text(current);
+                init(item);
+            });
+
+        });
+        function init(item){
+            var plus = item.find('.tovar__butts-plus');
+            var minus = item.find('.tovar__butts-minus');
+            var res = item.find('.tovar__count');
+            var max = parseInt(res.attr('data-maxcount'));
+            var current = parseInt(res.text());
+            var input = item.find('input');
+            input.val(current);
+            minus.removeClass('unactive');
+            plus.removeClass('unactive');
+            item.find('.dropdowned').remove();
+            if(current <= 1){
+                minus.addClass('unactive');
+            }
+            if(current >= max){
+                plus.addClass('unactive');
+            }
+            if(current == max){
+                var message = generateMessage(current);
+                console.log(message);
+                var html = '<div class="dropdowned tovar__message"><div class="dropdowned__wrap"><div class="tovar__message-txt">'+message+'</div></div></div>';
+                if(message.length > 0){
+                    item.find('.tovar__butts').append(html);
+                }
+            }
+
+        }
+        function generateMessage(i) {
+            if(i <= 0) return;
+            var message = '';
+            if(i == 1) message = 'Этот товар представлен в единственном экземпляре';
+            if(i >= 2 && i <= 4) message = 'На складе осталось только '+i+' товара';
+            if(i >= 5 ) message = 'На складе осталось только '+i+' товаров';
+
+            return message;
+        }
+    }
+}
 $(document).ready(function () {
     dropdowns();
     sliderInit();
@@ -311,4 +371,5 @@ $(document).ready(function () {
     rangeLogic();
     showAllComments();
     itemsSlider();
+    tovarCounter();
 });

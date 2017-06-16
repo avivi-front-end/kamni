@@ -77,10 +77,11 @@ input, textarea{
     &:hover{ text-decoration: underline;}
     span{ min-width: 80px; height: 40px; border-radius: 2px; border:1px solid rgb(175, 201, 224); display: flex; justify-content: center; align-items: center; font-size: 17px; cursor: pointer; padding:0 15px; text-align: center; line-height: 1;}
     img{ margin-right: 8px;}
-    &__yellow{ color: #000000; width: 100%;
+    &__yellow{ color: #000000; width: 100%;  border-radius:2px;
         span{ width: 100%; padding: 10px; background-color: #fcd504; border-color: #fcd504;}
+        img{ margin-right: 15px;}
     }
-    &__green{ color: #fff; background-color: #51b37b;
+    &__green{ color: #fff; background-color: #51b37b; border-radius:2px;
         span{ padding: 12px;font-size: 17px; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
         &--big{
             span{font-size: 20px; min-width: 240px; height: 64px;}
