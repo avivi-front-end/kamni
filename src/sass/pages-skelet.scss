@@ -641,3 +641,24 @@
   p{font-size: 14px; line-height: 1.05; text-align: left; color: #575757; margin: 0;}
   a{ font-size: 14px; margin-top: 0; display: inline-block;}
 }
+.timetogo{height: 32px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: stretch; position: absolute; top: calc(100% + 1px); left: 50%; transform:translateX(-50%); white-space: nowrap; cursor: default;
+  &:before{ display: none; width: 100%; height: 20px; top: 100%; left: 0;content: ''; background:transparent; position: absolute;}
+  &__percent{ padding: 9px 6px;background-color: #51b37b; font-size: 14px; font-weight: bold; line-height: 1.14; text-align: right; color: #ffffff;}
+  &__timer{font-size: 14px; line-height: 1.14; text-align: right; color: #000000; padding: 9px 8px;}
+  &__dropdown{width: 336px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); position: absolute; right: -39px; top: calc(100% + 8px); display: none; justify-content: space-between; align-items: flex-start; padding: 18px 16px 5px;}
+  &__green{width: 64px; height: 64px; background-color: #51b37b; border-radius: 50%; font-size: 32px; font-weight: bold; line-height: 1.5; text-align: right; color: #ffffff; display: flex; justify-content: center; align-items: center; position: relative;
+    span{background-color: #f9b715; border: solid 3px #ffffff; border-radius: 50%; position: absolute; left: 2px; top: -3px; width: 19px; height: 19px;
+      &:before,
+      &:after{content: ''; display: block; position: absolute; top: 2px; left: 6px;width: 2px; height: 8px;  background-color: #d5840d;}
+      &:before{transform: rotate(90deg);}
+    }
+  }
+  &__text{ white-space: normal; width: 226px;
+    p{font-size: 14px; line-height: 1.15;  text-align: left; color: #575757;margin-bottom: 0.65em;}
+    b{font-size: 17px; line-height: 1.41; text-align: left; color: #000000; font-weight: normal;}
+  }
+  &:hover{
+    &:before{ display: block;}
+    .timetogo__dropdown{ display: flex;}
+  }
+}

@@ -58,7 +58,7 @@
      }
 
   }
-  &__busket{ width: 213px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; padding-right: 7px; cursor: pointer;}
+  &__busket{ width: 213px;  height: 56px;  box-shadow: inset 1px 0 0 0 #e6e6e6; display: flex; justify-content: space-between; align-items: center; padding-right: 7px; cursor: pointer; position: relative;}
   &__items{
     a{ width: 32px;height: 32px; border-radius: 2px; border: solid 1px #e6e6e6; z-index: 5; position: relative;
       &:nth-child(2){ z-index: 3;}

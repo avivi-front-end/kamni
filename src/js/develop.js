@@ -422,11 +422,20 @@ var mover = {
         if(i >= 2 && i <= 4) message = 'Выбрано '+i+' товара';
         if(i >= 5 ) message = 'Выбрано '+i+' товаров';
         $('.'+box+'__menu .mover__info').text(message);
+
+        var bx = $('.basket__items .tovar').length;
+        var dx = $('.defer__items .tovar').length;
+        $('.basket-all').text(bx);
+        $('.defer-all').text(dx);
     }
 
 }
 function moversEvents() {
     if(mover.basket.length > 0 || mover.defer.length > 0){
+        var bx = $('.basket__items .tovar').length;
+        var dx = $('.defer__items .tovar').length;
+        $('.basket-all').text(bx);
+        $('.defer-all').text(dx);
         $('.basket__menu .mover__del').click(function () {
             $('.basket__items .complect__checkbox input:checked').each(function () {
                 $(this).closest('.tovar').remove();
@@ -504,10 +513,35 @@ function moversEvents() {
         });
     }
 }
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
 
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        display.text(minutes + " мин " + seconds + " сек");
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+
+function initTimer() {
+    var timer = $('.timetogo__timer');
+    if(timer.length > 0){
+        var min = parseInt(timer.attr('data-start-sec'));
+        startTimer(min, timer);
+    }
+
+};
 
 $(document).ready(function () {
     dropdowns();
+    initTimer();
     basketTabs();
     moversEvents();
     sliderInit();
