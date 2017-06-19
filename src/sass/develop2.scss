@@ -5,7 +5,7 @@
 	align-items: center;
 	margin: -52px 0 0;
 	&__title{text-align: center;
-		h1, h5{color: #fff;}
+		h1, h2, h5{color: #fff;}
 	}
 }
 .breadcrumbs{display: flex; flex-wrap: wrap; list-style-type: none; padding-left: 0;
@@ -381,12 +381,7 @@
 	}
 	&__first-screen{
 		background: url(../images/club-bg.jpg) center center no-repeat;
-		padding: 0 15px;
 		height: 529px;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		margin: -52px 0 4.7em;
 	}
 	&-advantages{margin: 0 -4px; display: flex;
 		&__left, &__right{margin: 0 4px; width: 568px; margin: 0 4px; display: flex; flex-direction: column; justify-content: space-between;}
@@ -471,4 +466,16 @@
 	&__first-screen{height: 529px; background: url(../images/stonebox-bg.jpg) center center no-repeat;
 		.first-screen__title{max-width: 535px;}
 	}
+}
+.collection{
+	&__content{
+		h2{margin: 0 0 0.5em; text-align: left;}
+	}
+	&__first-screen{background: url(../images/collection-bg.jpg) center center no-repeat; height: 577px;
+		.first-screen__title{max-width: 860px;}
+	}
+}
+.special-offer{background: #51b37b; text-align: center; padding: 2em 0 1em; border-radius: 2px;
+	&__title{color: #fff;}
+	&__icon{width: 80px; height: 80px; display: inline-flex; justify-content: center; align-items: center;}
 }
