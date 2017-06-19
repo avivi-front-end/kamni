@@ -9,14 +9,14 @@
                 <div class="basket-tabs__item active">Корзина<span>5</span></div>
                 <div class="basket-tabs__item">Отложенные <span>10</span></div>
             </div>
-            <form class="basket">
+            <form class="tab-content basket active">
                 <div class="basket__left">
                     <h2>Корзина</h2>
                     <div class="basket__menu mover">
                         <div class="mover__butt mover__all">Выбрать все</div>
                         <div class="mover__wrap">
                             <div class="mover__row">
-                                <div class="mover__info">Выбран 1 товар </div>
+                                <div class="mover__info">Выбрано 0 товаров</div>
                                 <div class="mover__butt mover__del">Удалить</div>
                                 <div class="mover__butt mover__defer">Отложить</div>
                                 <div class="mover__butt mover__undefer">Отложить невыделенные</div>
@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="basket__items">
-                        <div class="tovar tovar--big">
+                        <div class="tovar tovar--big" data-maxcount="1">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big">
+                        <div class="tovar tovar--big" data-maxcount="2">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big">
+                        <div class="tovar tovar--big" data-maxcount="3">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big">
+                        <div class="tovar tovar--big" data-maxcount="4">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -134,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big">
+                        <div class="tovar tovar--big" data-maxcount="5">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -168,19 +168,47 @@
                     <div class="basket__info">
                         <div class="basket__info-wrap">
                             <div class="basket__info-row">
-                                <span>Без скидки</span><b>7 950 ₽</b>
+                                <span>Без скидки
+                                    <div class="dropdowned">
+                                        <div class="dropdowned__wrap">
+                                            test
+                                        </div>
+                                    </div>
+                                </span>
+                                <b>7 950 ₽</b>
+
                             </div>
                             <div class="basket__info-row">
-                                <span>Скидки</span><b>-477 ₽</b>
+                                <span>Скидки
+                                    <div class="dropdowned">
+                                        <div class="dropdowned__wrap">
+                                            <div class="basket__info-row">
+                                                <span>Скидка товаров</span><b>-1 520 ₽</b>
+                                            </div>
+                                            <div class="basket__info-row">
+                                                <span>Накопительная скидка</span><b>-1 520 ₽</b>
+                                            </div>
+                                            <div class="basket__info-row">
+                                                <span>Временная скидка 3%</span><b>-1 520 ₽</b>
+                                            </div>
+                                            <div class="basket__info-row">
+                                                <span>Промокод</span><b>-1 520 ₽</b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </span>
+                                <b>-477 ₽</b>
                             </div>
                             <div class="basket__info-row">
                                 <span>Итого без учета доставки</span><b>7 473 ₽</b>
                             </div>
-                            <a href="#">Изменить промокод</a>
-                            <p>Применен 1 промокод</p>
-                            <a href="#">Выбрать еще товары</a>
-                            <div class=" mover__butt mover__del">Очистить корзину</div>
-                            <button class="button button__yellow"><span>Оформить заказ</span></button>
+                            <div class="basket__info-box">
+                                <a href="#">Изменить промокод</a>
+                                <p>Применен 1 промокод</p>
+                                <a href="#">Выбрать еще товары</a>
+                                <div class=" mover__butt mover__del-all">Очистить корзину</div>
+                                <button class="button button__yellow"><span>Оформить заказ</span></button>
+                            </div>
                         </div>
 
                         <div class="greencar">
@@ -207,6 +235,200 @@
                     </div>
                 </div>
             </form>
+            <div class="tab-content defer">
+                <h2>Отложенные товары</h2>
+                <h5 class="gray">Если вы хотите оформить заказ, просто перенесите нужные товары в корзину.</h5>
+                <div class="defer__menu mover">
+                    <div class="mover__butt mover__all">Выбрать все</div>
+                    <div class="mover__wrap">
+                        <div class="mover__row">
+                            <div class="mover__info">Выбрано 0 товаров</div>
+                            <div class="mover__butt mover__to-bas">В корзину</div>
+                            <div class="mover__butt mover__unto-bas">В корзину невыделенные</div>
+                            <div class="mover__butt mover__del">Удалить</div>
+
+                            <div class="mover__butt mover__discheck">Снять выделение</div>
+                        </div>
+                        <p>В корзину добавиться только тот товар, который есть в наличии</p>
+
+                    </div>
+                </div>
+                <div class="defer__items">
+                    <div class="tovar" data-maxcount="3">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div >
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tovar" data-maxcount="1">
+                        <label class="complect__checkbox">
+                            <input type="checkbox" ><i></i>
+                        </label>
+                        <div class="tovar__img">
+                            <img src="images/kamen.jpeg" data-object-fit alt="">
+
+                        </div>
+                        <div class="tovar__text ">
+                            <div class="tovar__name">
+                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                            </div>
+                            <div class="tovar__price">
+                                <strike>49 490 ₽</strike>
+                                <strong>49 490 ₽</strong>
+                                <div class="tovar__sale">-15%</div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
         </div>
 
 

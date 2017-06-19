@@ -92,6 +92,8 @@
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
   .category-page__items{ max-width: 650px; width: 100%; margin: 0 auto;}
+  .basket__items,
+  .defer__items{ justify-content: space-around;}
 }
 @media screen and (max-width: 820px) {
   .popcat__content li{ width: 50%;}
@@ -110,6 +112,13 @@
   .filter__sort{ margin-bottom: 10px; width: 100%; margin-right: 0;}
   .feed-top__left {overflow: visible;}
   .feed-top__left img{ bottom: 0;}
+  .basket{flex-wrap: wrap;}
+  .basket__left{ width: 100%;}
+  .basket__right{ width: 100%;}
+  .basket__info{ margin-top: 0;}
+  .basket__info-row span .dropdowned{ left: 0; transform:none;}
+  .basket__info-row span .dropdowned:before{ left: 20px;}
+  .basket__info-row span .dropdowned__wrap:before{ left: 20px;}
 }
 @media screen and (max-width: 730px) {
   .rock-man__img{ display: none;}
@@ -209,5 +218,7 @@
   .card__price{ padding-top: 32px;}
   .card__select-wrap{ flex-direction: column; align-items: flex-start;}
   .card__form-but .button{ margin-bottom: 8px;}
+  .mover{flex-wrap: wrap;}
+  .mover__wrap{ margin-left: 0;}
 
 }
