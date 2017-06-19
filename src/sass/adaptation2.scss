@@ -8,6 +8,14 @@
 	}
 }
 
+@media (min-width: 992px) and (max-width: 1110px){
+	.stonebox{
+		&-choice{
+			&__products{width: 470px;}
+		}
+	}
+}
+
 @media screen and (max-width: 992px){
 	.sales{
 		&-procurement{flex-direction: column-reverse; align-items: center;
@@ -17,6 +25,14 @@
 		&-feedback{
 			&__colection{ right: auto; transform: translateX(-50%); left: 50%; top: -135px;
 			}
+		}
+	}
+	.stonebox{
+		&-choice{flex-direction: column;
+			&__left{margin: 0 auto; padding-right: 0;}
+			&__title{text-align: center;}
+			&__products{justify-content: center;}
+			&__row{max-width: 450px; margin: 0 auto 1.6em;}
 		}
 	}
 	.delivery__decorations{background-position: left bottom}
@@ -144,6 +160,18 @@
 		&__label{margin-bottom: 15px;}
 	}
 }
+@media screen and (max-width: 600px){
+	.stonebox{
+		&-choice{
+			&__products{flex-direction: column; align-items: center;}
+			&__product{
+				&:not(:last-child){
+					margin: 0 0 1em;
+				}
+			}
+		}
+	}
+}
 @media screen and (max-width: 550px){
 	.sales{
 		&-reviews{
@@ -170,6 +198,15 @@
 	}
 }
 @media screen and (max-width: 480px){
+	.stonebox{
+		&-choice{
+			&__price-list{flex-direction: column; align-items: center;
+				&-item{
+					&:not(:last-child){margin-right: 0;}
+				}
+			}
+		}
+	}
 	.del-nav__list{flex-direction: column;}
 	.partners{
 		&__col{
