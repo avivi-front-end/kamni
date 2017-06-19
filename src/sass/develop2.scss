@@ -244,7 +244,7 @@
 		&__slide{max-width: 568px; width: 100%; margin: 0 4px;
 		.sales-box{margin: 0;}
 		}
-		&--bottom{
+		&--bottom{margin-bottom: 0;
 			h2{margin: 1.8em auto 0.8em; max-width: 850px;}
 		}
 	}
@@ -331,7 +331,7 @@
 	&__first-screen{background: url(../images/sales-bg.jpg) center center no-repeat; height: 480px;
 		.first-screen__title{padding-top: 30px; max-width: 835px;}
 	}
-	&__btn-row{text-align: center; margin: 1.5em 0 4.5em;
+	&__btn-row{text-align: center; margin: 1.5em 0 0; padding-bottom: 4.5em;
 			.button{min-width: 216px;}
 		}
 	&__main{color: #51b37b; font-size: 112px; font-weight: 700; line-height: 1;}
@@ -474,8 +474,51 @@
 	&__first-screen{background: url(../images/collection-bg.jpg) center center no-repeat; height: 577px;
 		.first-screen__title{max-width: 860px;}
 	}
+	&__special-offer{margin: 1em 0 0;}
+	&-advantages{list-style-type: none; border: 1px solid #e6e6e6; display: flex; padding-left: 0; margin: 2em 0 1.5em;
+		&__icon{width: 48px; height: 48px; position: absolute; left: 16px;
+			img{position: relative; top: 50%; left: 50%; transform: translate(-50%, -50%);}
+		}
+		&__item{width: 33.33%; padding: 1em 0 1em 5em; position: relative;
+			&:not(:last-child){border-right : 1px solid #e6e6e6;}
+			p{margin-bottom: 0;}
+		}
+	}
 }
-.special-offer{background: #51b37b; text-align: center; padding: 2em 0 1em; border-radius: 2px;
-	&__title{color: #fff;}
+.special-offer{background: #51b37b; text-align: center; padding: 1.7em 0em 2.5em; border-radius: 2px;
+	&__title{color: #fff; margin-bottom: 1.4em;}
 	&__icon{width: 80px; height: 80px; display: inline-flex; justify-content: center; align-items: center;}
 }
+.prod-card{
+	h5{text-align: left; margin: 0 0 0.9em;}
+	&__top{position: relative; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;
+		h3, p{color: #fff; position: relative; z-index: 5; text-align: center;}
+		h3{margin: 1em 0 0.2em;}
+	}
+	&__item{width: 25%;}
+	&__list{list-style-type: none; padding-left: 0; display: flex; flex-wrap: wrap;}
+	&__mid{border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 25px 0 0 30px;}
+	&__title{max-width: 445px;}
+	&__background{position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
