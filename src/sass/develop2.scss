@@ -268,9 +268,9 @@
 	&-club{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
 		&__wrap{max-width: 864px; margin: 0 auto;}
 		&__list{list-style-type: none; display: flex; justify-content: center; margin: 0 -4px; margin: 2em 0 1em;
-			&-item{text-align: center; padding: 50px 22px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px;}
+			&-item{text-align: center; padding: 43px 22px 24px; border: solid 1px #e6e6e6; border-radius: 2px; width: 280px; margin: 0 4px; position: relative; overflow: hidden;}
 		}
-		&__icon{height: 80px; margin-bottom: 6px;}
+		&__icon{height: 80px; margin-bottom: 14px;}
 		&__text{font-size: 17px; line-height: 1.41;}
 	}
 	&-calculation{background: url(../images/calc-bg.jpg) no-repeat; background-size: cover ; padding: 27.5em 0 4.3em; position: relative;
@@ -304,7 +304,7 @@
 		}
 	}
 	&-feedback{
-		&__main{margin-top: -167px; padding-bottom: 4.5em;}
+		&__main{margin-top: -164px; padding-bottom: 4.5em;}
 		&__top{height: 532px; display: flex; justify-content: center; position: relative;}
 		&__title{max-width: 800px; z-index: 10;
 			h2{color: #fff; margin-top: 3.4em;}
@@ -500,6 +500,22 @@
 	&__mid{border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6; padding: 25px 0 0 30px;}
 	&__title{max-width: 445px;}
 	&__background{position: absolute; top: 0; left: 0; height: 100%; width: 100%; object-fit: cover;}
-	&__price{font-size: 24px; line-height: 1.33; font-weight: 700;}
-	&__bot{display: flex;}
+	&__price{font-size: 24px; line-height: 1; font-weight: 700;
+		&-wrap{margin-right: 35px;}
+	}
+	&__bot{padding: 15px 0 13px 31px; display: flex; align-items: center; border-left: 1px solid #e6e6e6; border-right: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;}
+	&__btn{width: 143px;
+		&--heart{width: 48px; height: 48px;
+			span{min-width: auto; height: 100%; padding: 0;}
+			img{margin-right: 0;}
+		}
+		&-wrap{display: flex; align-items: center;
+			.button{
+				&:not(:last-child){
+					margin-right: 8px;
+				}
+			}
+		}
+		span{min-width: auto;}
+	}
 }
