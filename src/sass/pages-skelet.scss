@@ -576,17 +576,18 @@
   &__left{ width:calc(100% - 242px);}
   &__right{ width: 242px; padding-left: 10px;}
   &__info{ width: 100%; border-radius: 2px; background-color: #ffffff;  border: solid 1px #e6e6e6; margin-top: -48px;
-    p{ margin: 0; font-size: 14px;  line-height: 1.43; text-align: left; color: #808080;}
-    a{font-size: 17px; line-height: 1.41;  text-align: left; color: #3777b3; margin-top: 15px; display: block;}
+    .basket__info-row{flex-wrap: nowrap;}
     .mover__butt{ margin-top: 17px;}
     .button{ margin-top: 15px; margin-bottom: 16px;
       span{ height: 48px;}
     }
   }
   &__menu{ margin-bottom: 22px;}
-  &__info-row{ display: flex; justify-content: space-between; align-items: center; cursor: default; position: relative; margin-bottom: 4px;
+  &__info-row{ display: flex; justify-content: space-between; align-items: center; cursor: default; position: relative; margin-bottom: 4px; flex-wrap: wrap;
+    p{ margin: 0; font-size: 14px;  line-height: 1.43; text-align: left; color: #808080;}
+    a{font-size: 17px; line-height: 1.41;  text-align: left; color: #3777b3; margin-top: 15px; display: block;}
     b{font-size: 16px;  line-height: 1.5;  text-align: right; color: #000000; font-weight: normal; white-space: nowrap; padding-left: 10px;}
-    span{font-size: 14px;  line-height: 1.14;  text-align: left; color: #575757;  position: relative; display: block;
+    span{font-size: 14px;  line-height: 1.14;  text-align: left; color: #575757;  position: relative;
 
       .dropdowned{ z-index: 90;}
       .dropdowned__wrap{ width: 228px;}
@@ -597,8 +598,14 @@
     }
 
   }
+  &__info-additional{ display: block; width: 100%;font-size: 14px; line-height: 1.14; text-align: left; color: #51b37b; white-space: nowrap;
+    div{ color: #575757; display: inline-block;}
+  }
   &__info-wrap{ padding: 16px 16px 0;}
-  &__info-box{ padding-top: 26px;}
+  &__info-box{ padding-top: 26px;
+    p{ margin: 0; font-size: 14px;  line-height: 1.43; text-align: left; color: #808080;}
+    a{font-size: 17px; line-height: 1.41;  text-align: left; color: #3777b3; margin-top: 15px; display: block;}
+  }
   &__right-txt{ padding-top: 27px;
     p{font-size: 14px; line-height: 1.14;  text-align: left;  color: #575757; margin-bottom: 0.7em;}
   }
@@ -638,7 +645,9 @@
   }
   &__start{font-size: 10px; line-height: 1.2; text-align: left; color: #575757; white-space:nowrap; margin-right: 7px;}
   &__end{font-size: 10px; line-height: 1.2; text-align: right; color: #575757; white-space:nowrap; margin-left: 7px;}
-  p{font-size: 14px; line-height: 1.05; text-align: left; color: #575757; margin: 0;}
+  p{font-size: 14px; line-height: 1.05; text-align: left; color: #575757; margin: 0;
+    b{ display: inline-block; margin-bottom: 8px;}
+  }
   a{ font-size: 14px; margin-top: 0; display: inline-block;}
 }
 .timetogo{height: 32px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); display: flex; justify-content: space-between; align-items: stretch; position: absolute; top: calc(100% + 1px); left: 50%; transform:translateX(-50%); white-space: nowrap; cursor: default;
@@ -661,4 +670,10 @@
     &:before{ display: block;}
     .timetogo__dropdown{ display: flex;}
   }
+}
+.js-total-with-sale,
+.js-total-price{ display: inline-block;}
+.container__more,
+.container__less{ display: none;
+  &.show{ display: block;}
 }

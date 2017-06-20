@@ -318,11 +318,13 @@ function tovarCounter($item) {
             current++;
             res.text(current);
             init($item);
+            sumBasket();
         });
         minus.click(function () {
             current--;
             res.text(current);
             init($item);
+            sumBasket();
         });
 
 
@@ -364,6 +366,47 @@ function tovarCounter($item) {
         }
 
 }
+function startTimer(duration, display, separator) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 60, 10);
+
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+
+        if(separator == 0) display.text(minutes + " мин " + seconds + " сек");
+        if(separator == 1) display.text(minutes + " : " + seconds);
+
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
+}
+function initTimer() {
+    var timer = $('.timetogo__timer');
+    if(timer.length > 0){
+        var min = parseInt(timer.attr('data-start-sec'));
+        var separator = 0; // 0 для мин/сек, 1 для :
+        var destroy1 = $('.timetogo')
+        startTimer(min, timer, separator, destroy1);
+    }
+    var timer2 = $('.timer-basket');
+    if(timer2.length > 0){
+        var min2 = parseInt(timer.attr('data-start-sec'));
+        var separator2 = 1; // 0 для мин/сек, 1 для :
+        var destroy2 = $('.basket__info-additional');
+        startTimer(min2, timer2, separator2, destroy2);
+    }
+
+};
+
+//baskets scripts---------------------START----------------------------
+
+var timeToDisplayMessege = 4000;
+var timeToAnimateDelMessege = 1000;
+var maxToFreeDelivery = 3000;
+var userName = 'Ivan';
 function basketTabs() {
     var items = $('.basket-tabs__item');
     var tabs = $('.tab-content');
@@ -400,7 +443,7 @@ var mover = {
         clone.find('.complect__checkbox input').prop('checked', false);
         tovarCounter(bind);
         mover.basket.append(clone);
-
+        sumBasket();
 
     },
     toDefer:function (item) {
@@ -411,6 +454,7 @@ var mover = {
         clone.find('.tovar__counter').remove();
         clone.find('.complect__checkbox input').prop('checked', false);
         mover.defer.append(clone);
+        sumBasket();
     },
     checkCount:function (box) {
         var i = 0;
@@ -422,13 +466,51 @@ var mover = {
         if(i >= 2 && i <= 4) message = 'Выбрано '+i+' товара';
         if(i >= 5 ) message = 'Выбрано '+i+' товаров';
         $('.'+box+'__menu .mover__info').text(message);
-
         var bx = $('.basket__items .tovar').length;
         var dx = $('.defer__items .tovar').length;
         $('.basket-all').text(bx);
         $('.defer-all').text(dx);
+
+
     }
 
+}
+function sumBasket(){
+    var items = $('.basket__items .tovar');
+    if(items.length > 0){
+        var sum = 0;
+        for (i = 0; i < items.length; i++){
+            var price = parseInt($(items[i]).attr('data-price'),10);
+            var count = $(items[i]).find('.tovar__counter input').val();
+            sum += (price * count);
+        }
+
+        $('.js-total-price').text(prepareNumber(sum));
+        var sale = (($('.js-total-sale').length > 0) ? parseInt($('.js-total-sale').attr('data-sale')) : 0)
+        var total = sum - sale;
+        $('.js-total-with-sale').text(prepareNumber(total));
+        $('.greencar__line-in').attr('style', 'width:'+ getPercentage(maxToFreeDelivery, total)+'%;');
+        var more = maxToFreeDelivery - total;
+        $('.js-more-left').text(prepareNumber(more));
+        if (more <= 0) {
+            $('.container__less').addClass('show');
+            $('.container__more').removeClass('show');
+        }else{
+            $('.container__more').addClass('show');
+            $('.container__less').removeClass('show');
+        }
+        $('.header-top').attr('data-price-in-basket', total);
+
+
+    }else{
+        $('.js-total-price').text(0);
+        $('.js-total-with-sale').text(0);
+        $('.header-top').attr('data-price-in-basket', 0);
+        $('.container__more').addClass('show');
+        $('.container__less').removeClass('show');
+        $('.greencar__line-in').attr('style', 'width:0%;');
+        $('.js-more-left').text(prepareNumber(maxToFreeDelivery));
+    }
 }
 function moversEvents() {
     if(mover.basket.length > 0 || mover.defer.length > 0){
@@ -440,23 +522,21 @@ function moversEvents() {
             $('.basket__items .complect__checkbox input:checked').each(function () {
                 $(this).closest('.tovar').remove();
                 mover.checkCount('basket');
+                sumBasket();
             });
         });
         $('.mover__del-all').click(function () {
             $('.basket__items .tovar').remove();
             mover.checkCount('basket');
+            sumBasket();
         });
-        $('.defer__menu .mover__del').click(function () {
-            $('.defer__items .complect__checkbox input:checked').each(function () {
-                $(this).closest('.tovar').remove();
-                mover.checkCount('defer');
-            });
-        });
+
         $('.basket__menu .mover__defer').click(function () {
             $('.basket__items .complect__checkbox input:checked').each(function () {
                 var item = $(this).closest('.tovar');
                 mover.toDefer(item);
                 mover.checkCount('basket');
+                createDeployMesage(0, item);
             });
         });
         $('.basket__menu .mover__undefer').click(function () {
@@ -464,6 +544,8 @@ function moversEvents() {
                 var item = $(this).closest('.tovar');
                 mover.toDefer(item);
                 mover.checkCount('basket');
+                createDeployMesage(0, item);
+
             });
         });
         $('.basket__menu .mover__discheck').click(function () {
@@ -478,6 +560,12 @@ function moversEvents() {
                 mover.checkCount('basket');
             });
         });
+        $('.defer__menu .mover__del').click(function () {
+            $('.defer__items .complect__checkbox input:checked').each(function () {
+                $(this).closest('.tovar').remove();
+                mover.checkCount('defer');
+            });
+        });
         $('.defer__menu .mover__all').click(function () {
             $('.defer__items .complect__checkbox input:not(:checked)').each(function () {
                 $(this).prop('checked', true);
@@ -490,6 +578,7 @@ function moversEvents() {
                 var item = $(this).closest('.tovar');
                 mover.toBasket(item);
                 mover.checkCount('defer');
+                createDeployMesage(1, item);
             });
         });
         $('.defer__menu .mover__unto-bas').click(function () {
@@ -497,6 +586,7 @@ function moversEvents() {
                 var item = $(this).closest('.tovar');
                 mover.toBasket(item);
                 mover.checkCount('defer');
+                createDeployMesage(2, item);
             });
         });
         $('.defer__menu .mover__discheck').click(function () {
@@ -513,34 +603,117 @@ function moversEvents() {
         });
     }
 }
-function startTimer(duration, display) {
-    var timer = duration, minutes, seconds;
-    setInterval(function () {
-        minutes = parseInt(timer / 60, 10)
-        seconds = parseInt(timer % 60, 10);
 
-        minutes = minutes < 10 ? "0" + minutes : minutes;
-        seconds = seconds < 10 ? "0" + seconds : seconds;
 
-        display.text(minutes + " мин " + seconds + " сек");
 
-        if (--timer < 0) {
-            timer = duration;
-        }
-    }, 1000);
-}
 
-function initTimer() {
-    var timer = $('.timetogo__timer');
-    if(timer.length > 0){
-        var min = parseInt(timer.attr('data-start-sec'));
-        startTimer(min, timer);
+function initDeploy() {
+    var container = document.getElementsByClassName('deploy');
+    var result = container[0];
+    if(!(container.length > 0)){
+        var div = document.createElement('div');
+        div.className = "deploy";
+        div.setAttribute("data-msgs", 0);
+        document.body.appendChild(div);
+        result = div;
     }
+    return result;
+}
+function createDeployMesage(type, item) {
+    var deploy = initDeploy();
+    var msgs = document.createElement('div');
+    msgs.className = "deploy__item";
+    var row = document.createElement('div');
+    row.className = "deploy__row";
+    var images = document.createElement('div');
+    images.className = "deploy__img";
+    var img = item.find('.tovar__img img').clone();
+    var txt = document.createElement('span');
+    $(images).append($(img));
+    row.appendChild(images);
+    row.appendChild(txt);
 
-};
+    msgs.appendChild(row);
+    var car = document.createElement('div');
+    car.className = "greencar";
+    var cartext = '';
+    var green = false;
+    switch(type) {
+        case 0: //товар отложен
+            txt.textContent = 'Товар отложен';
+            break;
+        case 1: //товар добавлен в корзину
+            var sumBaskets =  parseInt($('.header-top').attr('data-price-in-basket'), 10);
+            var percent = getPercentage(maxToFreeDelivery, sumBaskets);
+            green = true;
+            car.innerHTML =' <div class="greencar__car-wrap">'+
+                '<div class="greencar__start">0 ₽ </div>'+
+                '<div class="greencar__line"><div class="greencar__line-in" style="width:'+percent+'%;"></div></div>'+
+                '<div class="greencar__end">'+maxToFreeDelivery+' ₽</div>'+
+                '</div>';
+            var more = maxToFreeDelivery - sumBaskets;
+            txt.textContent = 'Добавлен в корзину';
+            if(more <= 0){
+                cartext  = 'Ура! Мы доставим ваш заказ бесплатно!';
+            }else{
+                cartext = 'Хотите бесплатную доставку? Добавьте товаров еще на сумму '+prepareNumber(more)+' ₽';
+            }
+            var carNodeText = document.createElement('p');
+            carNodeText.textContent = cartext;
+
+
+            break;
+        case 2: //член камневедов;
+            txt.textContent = 'Добавлен в корзину';
+            green = true;
+            cartext  = 'Это значит, что мы доставим ваш заказ бесплатно. Приятных покупок!';
+            car.innerHTML = '<p><b>'+userName+', вы — член Клуба Камневедов.</b></p>';
+            var carNodeText = document.createElement('p');
+            carNodeText.innerHTML = cartext;
+            break;
+        default:
+           return;
+    }
+    if(green){
+        car.appendChild(carNodeText);
+        msgs.appendChild(car);
+    }
+       destroyThisMessage(msgs);
+       deploy.appendChild(msgs);
+}
+function destroyThisMessage(msgs){
+     setTimeout(function () {
+         $(msgs).addClass('hide');
+         setTimeout(function () {
+             $(msgs).remove();
+         },timeToAnimateDelMessege);
+     }, timeToDisplayMessege);
+
+}
+function prepareNumber(number) { // формат числа для цен 99 999 999
+    number = ''+number;
+    number = number.split("").reverse().join("");
+    var result = '';
+    for (i = 1; i <= number.length; i++){
+        var ind = i-1;
+        result += number[ind];
+        if(i % 3 == 0){result += ' ';}
+    }
+    result = result.split("").reverse().join("");
+    return result;
+}
+function getPercentage(total, current) {
+    total = parseInt(total, 10);
+    current = parseInt(current, 10);
+    var result = parseInt(((current * 100)/total),10);
+
+    return ((total <= current) ? 100 : result);
+}
+//baskets scripts---------------------FINISH----------------------------
 
 $(document).ready(function () {
     dropdowns();
+    sumBasket();
     initTimer();
     basketTabs();
     moversEvents();

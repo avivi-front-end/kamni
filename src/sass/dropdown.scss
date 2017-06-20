@@ -144,3 +144,28 @@
     p{ margin-bottom: 1.5em; line-height: 1.45;}
   }
 }
+.basket-dropdown{ width: 256px; left: auto; right: 0; transform:none;
+  &__inner{ padding: 0;}
+  &__wrap{}
+  &__info{ padding:15px 16px 16px;
+    .button{ margin-top: 12px;
+      span{ height: 48px;}
+    }
+  }
+  &__box{text-align: right;
+    .right{font-size: 14px; line-height: 1.14;  color: #3777b3;}
+  }
+  .greencar p{ line-height: 1.15;}
+}
+.active + div + div + .timetogo{ display: none;}
+.deploy{ position: fixed; right: 30px; bottom: 30px; z-index: 9999;
+  &__item{ width: 290px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); transition: opacity 500ms;
+    &.hide{ opacity: 0;}
+  }
+
+  &__row{display: flex; justify-content: flex-start; align-items: center; font-size: 17px; line-height: 1.41; text-align: left; color: #000000; padding: 16px;}
+  &__img{ width: 32px; height: 32px;border-radius: 2px; border: solid 1px #e6e6e6; margin-right: 16px;
+    img{ width: 100%; height: 100%; object-fit: cover;}
+  }
+
+}

@@ -26,7 +26,7 @@
                         </div>
                     </div>
                     <div class="basket__items">
-                        <div class="tovar tovar--big" data-maxcount="1">
+                        <div class="tovar tovar--big" data-maxcount="1" data-price="100">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -39,8 +39,8 @@
                                     <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>49 490 ₽</strike>
-                                    <strong>49 490 ₽</strong>
+                                    <strike>55 ₽</strike>
+                                    <strong>100 ₽</strong>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -53,7 +53,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big" data-maxcount="2">
+                        <div class="tovar tovar--big" data-maxcount="2" data-price="200">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -67,7 +67,7 @@
                                 </div>
                                 <div class="tovar__price">
                                     <strike>49 490 ₽</strike>
-                                    <strong>49 490 ₽</strong>
+                                    <strong>200 ₽</strong>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -80,7 +80,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big" data-maxcount="3">
+                        <div class="tovar tovar--big" data-maxcount="3" data-price="350">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -94,7 +94,7 @@
                                 </div>
                                 <div class="tovar__price">
                                     <strike>49 490 ₽</strike>
-                                    <strong>49 490 ₽</strong>
+                                    <strong>350 ₽</strong>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -107,7 +107,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big" data-maxcount="4">
+                        <div class="tovar tovar--big" data-maxcount="4" data-price="400">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -121,7 +121,7 @@
                                 </div>
                                 <div class="tovar__price">
                                     <strike>49 490 ₽</strike>
-                                    <strong>49 490 ₽</strong>
+                                    <strong>400 ₽</strong>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -134,7 +134,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="tovar tovar--big" data-maxcount="5">
+                        <div class="tovar tovar--big" data-maxcount="5" data-price="450">
                             <label class="complect__checkbox">
                                 <input type="checkbox" ><i></i>
                             </label>
@@ -148,7 +148,7 @@
                                 </div>
                                 <div class="tovar__price">
                                     <strike>49 490 ₽</strike>
-                                    <strong>49 490 ₽</strong>
+                                    <strong>450 ₽</strong>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -161,7 +161,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="basket__right">
@@ -175,7 +174,7 @@
                                         </div>
                                     </div>
                                 </span>
-                                <b>7 950 ₽</b>
+                                <b><div class="js-total-price"></div> ₽</b>
 
                             </div>
                             <div class="basket__info-row">
@@ -197,10 +196,11 @@
                                         </div>
                                     </div>
                                 </span>
-                                <b>-477 ₽</b>
+                                <b class="js-total-sale" data-sale="123">-123 ₽</b>
                             </div>
                             <div class="basket__info-row">
-                                <span>Итого без учета доставки</span><b>7 473 ₽</b>
+                                <span>Итого без учета доставки</span>
+                                <b><div class="js-total-with-sale"></div> ₽</b>
                             </div>
                             <div class="basket__info-box">
                                 <a href="#">Изменить промокод</a>
@@ -217,7 +217,8 @@
                                 <div class="greencar__line"><div class="greencar__line-in" style="width:50%;"></div></div>
                                 <div class="greencar__end">3000 ₽</div>
                             </div>
-                            <p>Хотите бесплатную доставку? <a href="#">Добавьте товаров</a> еще на сумму <span>2 147</span> ₽</p>
+                            <p class="container__more">Хотите бесплатную доставку? <a href="#">Добавьте товаров</a> еще на сумму <span class="js-more-left">2 147</span> ₽</p>
+                            <p class="container__less">Ура! Мы доставим ваш заказ бесплатно!</p>
                         </div>
                     </div>
                     <div class="basket__right-txt">
@@ -254,7 +255,7 @@
                     </div>
                 </div>
                 <div class="defer__items">
-                    <div class="tovar" data-maxcount="3">
+                    <div class="tovar" data-maxcount="3" data-price="500">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -268,12 +269,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>500 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div >
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="580">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -287,12 +288,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>580 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="600">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -306,12 +307,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>600 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="650">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -325,12 +326,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>650 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="700">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -344,12 +345,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>700 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="750">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -363,12 +364,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>750 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="800">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -382,12 +383,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>800 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="900">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -401,12 +402,12 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>900 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-                    <div class="tovar" data-maxcount="1">
+                    <div class="tovar" data-maxcount="1" data-price="1050">
                         <label class="complect__checkbox">
                             <input type="checkbox" ><i></i>
                         </label>
@@ -420,13 +421,11 @@
                             </div>
                             <div class="tovar__price">
                                 <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
+                                <strong>1 050 ₽</strong>
                                 <div class="tovar__sale">-15%</div>
                             </div>
                         </div>
                     </div>
-
-
                 </div>
             </div>
         </div>
