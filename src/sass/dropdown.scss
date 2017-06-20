@@ -159,7 +159,7 @@
 }
 .active + div + div + .timetogo{ display: none;}
 .deploy{ position: fixed; right: 30px; bottom: 30px; z-index: 9999;
-  &__item{ width: 290px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); transition: opacity 500ms;
+  &__item{ width: 290px; border-radius: 2px; background-color: #ffffff; box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.3); transition: opacity 500ms; margin-top: 4px;
     &.hide{ opacity: 0;}
   }
 
