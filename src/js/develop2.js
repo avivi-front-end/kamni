@@ -16,6 +16,31 @@ $(document).ready(function() {
             }
         ]
     });
+
+    $('.js-col-slider').slick({
+        slidesToShow: 6,
+        arrows:true,
+        responsive: [
+            {
+              breakpoint: 992,
+              settings: {
+                slidesToShow: 4
+              }
+            },
+            {
+              breakpoint: 556,
+              settings: {
+                slidesToShow: 2
+              }
+            },
+            {
+              breakpoint: 400,
+              settings: {
+                slidesToShow: 1
+              }
+            }
+        ]
+    });
 });
 var sendFile = (function(){
     var fileText = $('.file-field__text');

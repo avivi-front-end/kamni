@@ -17,6 +17,14 @@
 }
 
 @media screen and (max-width: 992px){
+	.collection{
+		&__content{
+			h2{text-align: center;}
+		}
+		&-gift{
+			&__bg{display: none;}
+		}
+	}
 	.sales{
 		&-procurement{flex-direction: column-reverse; align-items: center;
 			&__img{width: 100%; height: 300px;}
@@ -152,8 +160,21 @@
 		&__slide{max-width: 100%;}
 		.sales-box{margin: 0 auto;}
 	}
+	.collection{
+		&-factors{
+			&__wrap{flex-direction: column; align-items: center;}
+			&__text{padding: 0;}
+			&__col{margin-bottom: 20px;}
+		}
+	}
 }
 @media screen and (max-width: 700px){
+	.prod-card{
+		&__item{width: 50%;}
+		&__bot{flex-direction: column; padding-left: 0;}
+		&__price-wrap{margin-bottom: 20px; margin-right: 0;}
+		&__price{text-align: center;}
+	}
 	.contacts__wrap{display: block; margin-top: 1.8em;}
 	.contacts__col{width: 100%; min-height: auto; margin-bottom: 1em;
 		&--center{border: none;}
@@ -175,6 +196,23 @@
 	}
 }
 @media screen and (max-width: 550px){
+	.collection{
+		&-gift{
+			&__form{
+				form{flex-direction: column; align-items: center;}
+			}
+			&__input{margin-bottom: 16px; margin-right: 0;}
+			&__submit{width: 232px;}
+		}
+		&-slider{padding-bottom: 30px;}
+	}
+	.prod-card{
+		&__btn-wrap{flex-direction: column;
+			.button{
+				&:not(:last-child){margin-bottom: 16px;}
+			}
+		}
+	}
 	.sales{
 		&-reviews{
 			&__list{flex-direction: column; align-items: center;
@@ -234,6 +272,9 @@
 	}
 }
 @media screen and (max-width: 400px){
+	.prod-card{
+		&__item{width: 100%;}
+	}
 	.sales{
 		&-feedback{
 			&__main{margin-top: -140px;}
