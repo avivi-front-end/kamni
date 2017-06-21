@@ -84,37 +84,25 @@ var videoPop = (function(){
 
 })();
 
-var showCategore = (function(){
-    var $category = $('.js-category');
+var showMoreItem = (function(){
+    var $btn = $('.js-show-link');
+    var $item = $('.prod-card__list .hidden');
 
-    $category.on('click', function(e){
-        e.preventDefault();
-        if($(this).hasClass('active')){
-            return false;
-        } else {
-            $category.removeClass('active');
-            $(this).addClass('active');
-        }
-    });
+    if($btn.length > 0){
+        $btn.click(function (e) {
+            e.preventDefault();
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                $item.show();
+                $btn.text('Скрыть');
+            }else{
+                $item.hide();
+                $btn.text('Показать еще');
+            }
+        });
+    }
+
 })();
-
-function showmore(){
-    var but = $('.show-catmenu-items');
-   var cont = $('.category-page__menu .hidden');
-   if(but.length > 0){
-       but.click(function () {
-           $(this).toggleClass('active');
-           if($(this).hasClass('active')){
-               cont.addClass('show');
-               but.find('span').text('Скрыть');
-           }else{
-               cont.removeClass('show');
-               but.find('span').text('Показать еще');
-
-           }
-       });
-   }
-}
 
  window.Gmap = null;
 

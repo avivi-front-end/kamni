@@ -544,6 +544,7 @@
 	&__icon{width: 80px; height: 80px; display: inline-flex; justify-content: center; align-items: center;}
 }
 .prod-card{margin-bottom: 16px;
+	.hidden{display: none;}
 	h5{text-align: left; margin: 0 0 0.9em;}
 	&__top{position: relative; height: 400px; display: flex; flex-direction: column; justify-content: center; align-items: center;
 		h3, p{color: #fff; position: relative; z-index: 5; text-align: center;}
@@ -571,4 +572,16 @@
 			}
 		}
 	}
+}
+.map-modal{max-width: 1144px; height: 681px; background: #000; position: relative;
+	.fancybox-close-small{top: -40px;}
+	&__aside{background: #fff; position: absolute; top: 33px; left: 48px; width: 232px; padding-top: 16px;}
+	&__logo{padding-left: 16px; margin-bottom: 16px;}
+	&__list{list-style-type: none; padding-left: 0; margin: 0 0 0;
+		&-item{border-bottom: 1px solid #dcdcdc; padding: 13px 16px; cursor: pointer;}
+	}
+	&__price-day{display: flex; font-size: 24px; margin-bottom: 16px;}
+	&__price{margin-right: 15px; padding-left: 16px;}
+	&__day{color: #808080;}
+	&__search-input{border: none; border-bottom: 1px solid #dcdcdc; background: url(../images/search-outlines.png) 16px 50% no-repeat; background-size: 16px 16px; width: 100%; padding: 8px 8px 8px 40px;}
 }
