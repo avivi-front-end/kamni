@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="34px" height="34px" viewBox="0 0 34 34" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>YT</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M7.3872,9.49105291 L7.3872,3.87836243 L12.8953,6.68518519 L7.3872,9.49105291 Z M18.8176,2.67884921 C18.70265,1.38669841 17.68045,0.363865079 16.3951,0.254037037 C14.90645,0.128928571 12.69865,0 9.975,0 C6.6956,0 4.2199,0.13465873 2.6182,0.260722222 C1.32715,0.364820106 0.2983,1.39051852 0.18335,2.68744444 C0.08455,3.72460317 0,5.09315608 0,6.7252963 C0,8.3173254 0.08455,9.66104762 0.1824,10.684836 C0.2983,11.9808069 1.32715,13.0055503 2.61725,13.1086931 C4.218,13.2347566 6.69465,13.3703704 9.975,13.3703704 C12.69865,13.3703704 14.90645,13.2404868 16.3951,13.1163333 C17.68045,13.0055503 18.70265,11.9827169 18.8176,10.6915212 C18.9145,9.66009259 19,8.30013492 19,6.68518519 C19,5.06928042 18.9145,3.70932275 18.8176,2.67884921 L18.8176,2.67884921 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Социалки-Hover" transform="translate(-79.000000, 1.000000)">
+            <g id="Социалки">
+                <g id="YT" transform="translate(80.000000, 0.000000)">
+                    <circle id="Oval-5" stroke="#DF4140" stroke-width="2" cx="16" cy="16" r="16"></circle>
+                    <g id="Icon/YouTube" transform="translate(7.000000, 7.000000)">
+                        <g id="youtube">
+                            <rect id="Rectangle-14" x="0" y="0" width="19" height="19"></rect>
+                            <g id="Mixin/Fill/Black" transform="translate(0.000000, 2.770833)">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                                <g id="Mixin/Fill/Google" mask="url(#mask-2)" fill="#DF4140">
+                                    <g transform="translate(-121.125000, -22.958333)" id="Mixin/Fill/Grey">
+                                        <rect x="0" y="0" width="262" height="59"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
