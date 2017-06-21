@@ -169,6 +169,12 @@ function selectStyler(){
             selectSmartPositioning:false
         });
     }
+    var select4 = $('.payment__select select');
+    if(select4.length > 0){
+        select4.styler({
+            selectSmartPositioning:false
+        });
+    }
 }
 function filterCheckboxLogic(){
     var top = $('.filter__title');
