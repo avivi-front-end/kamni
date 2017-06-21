@@ -169,8 +169,15 @@
 	}
 }
 @media screen and (max-width: 700px){
+	.collection{
+		&-advantages{flex-direction: column; max-width: 300px; margin: 2em auto 1.5em;
+			&__item{width: 100%;
+				&:not(:last-child){border-right: none; border-bottom: 1px solid #e6e6e6;}
+			}
+		}
+	}
 	.prod-card{
-		&__item{width: 50%;}
+		&__item{width: auto; margin-right: 15px;}
 		&__bot{flex-direction: column; padding-left: 0;}
 		&__price-wrap{margin-bottom: 20px; margin-right: 0;}
 		&__price{text-align: center;}
@@ -209,7 +216,7 @@
 	.prod-card{
 		&__btn-wrap{flex-direction: column;
 			.button{
-				&:not(:last-child){margin-bottom: 16px;}
+				&:not(:last-child){margin-bottom: 16px; margin-right: 0;}
 			}
 		}
 	}
@@ -272,9 +279,6 @@
 	}
 }
 @media screen and (max-width: 400px){
-	.prod-card{
-		&__item{width: 100%;}
-	}
 	.sales{
 		&-feedback{
 			&__main{margin-top: -140px;}
