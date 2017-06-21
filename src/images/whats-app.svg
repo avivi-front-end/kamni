@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/App/Telegram Copy 2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M13.1922651,14.962972 L10.1367163,11.7035314 L4.17342037,14.962972 L10.7328489,8 L13.8632837,11.2594406 L19.7512009,8 L13.1922651,14.962972 Z M12,0 C5.37258283,0 0,4.97460065 0,11.1110839 C0,14.6075035 1.74504249,17.7269111 4.47197931,19.7637554 L4.47197931,24 L8.55770415,21.7575127 C9.64847888,22.0591223 10.8033009,22.2221678 12,22.2221678 C18.6274172,22.2221678 24,17.2475672 24,11.1110839 C24,4.97460065 18.6274172,0 12,0 L12,0 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" opacity="0.199999988">
+        <g id="Верхнее-меню/Сокращенное" transform="translate(-776.000000, -34.000000)">
+            <g id="Верхнее-меню/Каталог-скрыт-Black">
+                <g id="Верхнее-меню" transform="translate(128.000000, 24.000000)">
+                    <g id="Месенджеры" transform="translate(568.000000, 10.000000)">
+                        <g id="Icon/Messenger" transform="translate(80.000000, 0.000000)">
+                            <g id="messenger">
+                                <mask id="mask-2" fill="white">
+                                    <use xlink:href="#path-1"></use>
+                                </mask>
+                                <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                                <g id="Mixin/Fill/Black" mask="url(#mask-2)" fill="#000000">
+                                    <g transform="translate(-132.500000, -30.500000)">
+                                        <rect x="0" y="0" width="331" height="75"></rect>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

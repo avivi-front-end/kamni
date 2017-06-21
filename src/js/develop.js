@@ -476,6 +476,7 @@ var mover = {
 
 }
 function sumBasket(){
+    if(!$('.basket').length) return;
     var items = $('.basket__items .tovar');
     if(items.length > 0){
         var sum = 0;
@@ -603,10 +604,6 @@ function moversEvents() {
         });
     }
 }
-
-
-
-
 function initDeploy() {
     var container = document.getElementsByClassName('deploy');
     var result = container[0];
@@ -711,9 +708,24 @@ function getPercentage(total, current) {
 }
 //baskets scripts---------------------FINISH----------------------------
 
+function orderingRadio() {
+    var items = $('.order-delivery__label');
+    if(items.length > 0){
+        $('.order-delivery__label input').on('change', function () {
+            items.removeClass('active');
+            $('.order-delivery__dropdown').stop().slideUp();
+            if($(this).prop('checked')){
+                var cont = $(this).closest('.order-delivery__label').addClass('active');
+                cont.find('.order-delivery__dropdown').stop().slideDown();
+            }
+        });
+    }
+}
+
 $(document).ready(function () {
     dropdowns();
     sumBasket();
+    orderingRadio();
     initTimer();
     basketTabs();
     moversEvents();

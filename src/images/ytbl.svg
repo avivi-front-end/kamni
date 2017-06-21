@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="12px" viewBox="0 0 16 12" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 44.1 (41455) - http://www.bohemiancoding.com/sketch -->
+    <title>Icon/YouTube</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M6.2208,7.99246561 L6.2208,3.26598942 L10.8592,5.62962963 L6.2208,7.99246561 Z M15.8464,2.25587302 C15.7496,1.16774603 14.8888,0.306412698 13.8064,0.213925926 C12.5528,0.108571429 10.6936,0 8.4,0 C5.6384,0 3.5536,0.113396825 2.2048,0.219555556 C1.1176,0.307216931 0.2512,1.17096296 0.1544,2.26311111 C0.0712,3.13650794 0,4.28897354 0,5.66340741 C0,7.00406349 0.0712,8.13561905 0.1536,8.99775661 C0.2512,10.0891005 1.1176,10.9520423 2.204,11.0388995 C3.552,11.1450582 5.6376,11.2592593 8.4,11.2592593 C10.6936,11.2592593 12.5528,11.1498836 13.8064,11.0453333 C14.8888,10.9520423 15.7496,10.090709 15.8464,9.00338624 C15.928,8.13481481 16,6.9895873 16,5.62962963 C16,4.26886772 15.928,3.12364021 15.8464,2.25587302 L15.8464,2.25587302 Z" id="path-1"></path>
+    </defs>
+    <g id="Корзина" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Оформление-заказа---виды-доставки" transform="translate(-457.000000, -1189.000000)">
+            <g id="Москва" transform="translate(228.000000, 902.000000)">
+                <g id="Icon/YouTube" transform="translate(229.000000, 285.000000)">
+                    <g id="youtube">
+                        <rect id="Rectangle-14" x="0" y="0" width="16" height="16"></rect>
+                        <g id="Mixin/Fill/Black" transform="translate(0.000000, 2.333333)">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Mask" fill="#000000" xlink:href="#path-1"></use>
+                            <g id="Mixin/Fill/Link" mask="url(#mask-2)" fill="#3777B3">
+                                <g transform="translate(-102.000000, -19.333333)">
+                                    <rect x="0" y="0" width="220" height="50"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

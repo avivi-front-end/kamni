@@ -21,10 +21,10 @@
   }
 }
 .social{ display: block; background-size: cover; background-repeat: no-repeat; width: 24px; height: 24px;
-  &--vk{ background-image: url(../images/vk.png); height: 15px;}
-  &--tg{ background-image: url(../images/telegram.png); }
-  &--ms{ background-image: url(../images/messenger.png);}
-  &--wa{ background-image: url(../images/whats-app.png);}
+  &--vk{ background-image: url(../images/vk.svg); height: 15px; }
+  &--tg{ background-image: url(../images/telegram.svg); }
+  &--ms{ background-image: url(../images/messenger.svg);}
+  &--wa{ background-image: url(../images/whats-app.svg);}
 }
 .header-bot{ position: relative; z-index: 200;
   &__wrap{ display: flex; justify-content: space-between; align-items: center;}
