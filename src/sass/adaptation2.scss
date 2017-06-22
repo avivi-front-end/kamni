@@ -15,7 +15,13 @@
 		}
 	}
 }
-
+@media screen and (min-width: 992px){
+	.collection{
+		&-feedback{
+			h2{margin-top: 4.5em;}
+		}
+	}
+}
 @media screen and (max-width: 992px){
 	.collection{
 		&__content{
@@ -23,6 +29,10 @@
 		}
 		&-gift{
 			&__bg{display: none;}
+		}
+		&__first-screen{height: auto; padding: 30px 15px;}
+		&-feedback{height: auto; margin-bottom: 30px;
+			&__main{margin-top: 0;}
 		}
 	}
 	.sales{
@@ -43,6 +53,12 @@
 			&__products{justify-content: center;}
 			&__row{max-width: 450px; margin: 0 auto 1.6em;}
 			&__price-list{justify-content: center;}
+		}
+	}
+	.prod-card{
+		&__top{
+			height: auto;
+			padding: 15px 0;
 		}
 	}
 	.delivery__decorations{background-position: left bottom}
@@ -136,6 +152,7 @@
 			}
 		}
 		&-feedback{
+			h2{margin: 30px 0;}
 			&__input{margin-bottom: 1em;}
 			&__form{
 				form{flex-direction: column;}
@@ -282,6 +299,11 @@
 	.sales{
 		&-feedback{
 			&__main{margin-top: -140px;}
+		}
+	}
+	.collection{
+		&-feedback{
+			&__main{margin-top: 0;}
 		}
 	}
 	.catalogue-search{
