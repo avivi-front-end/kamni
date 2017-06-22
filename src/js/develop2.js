@@ -113,13 +113,15 @@ var map;
 }
 
 var PopupMap = (function(){
-	var map;
-	function initMap() {
-		map = new google.maps.Map(document.getElementById('popmap'), {
-			center: {lat: -34.397, lng: 150.644},
-			zoom: 8
+	$("#map-clauses[data-fancybox]").fancybox({
+		var map;
+			function initMap() {
+				map = new google.maps.Map(document.getElementById('popmap'), {
+					center: {lat: -34.397, lng: 150.644},
+					zoom: 8
+				});
+			}
 		});
-	}
 })();
 
  window.Gmap = null;
