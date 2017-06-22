@@ -573,7 +573,9 @@
 .basket{ display: none; justify-content: space-between; align-items: flex-start; padding-bottom: 64px;
   &.active{ display: flex;}
   h2{ text-align: left; margin-top: 0.6em;}
-  &__left{ width:calc(100% - 242px);}
+  &__left{ width:calc(100% - 242px);
+    &.order__left{ width: 856px;}
+  }
   &__right{ width: 242px; padding-left: 10px;}
   &__info{ width: 100%; border-radius: 2px; background-color: #ffffff;  border: solid 1px #e6e6e6; margin-top: -48px;
     .basket__info-row{flex-wrap: nowrap;}
@@ -760,5 +762,44 @@
   &__price{ margin-right: 24px;
     span{font-size: 14px; line-height: 1.43; text-align: left;  color: #808080;}
     p{font-size: 24px; line-height: 1.33; text-align: left; color: #000000; margin-bottom: 0; white-space: nowrap;}
+  }
+}
+.order-done{
+  &__main{ padding-top: 8px;}
+  h2{ text-align: left; margin-top: 0.75em; margin-bottom: 0.65em;}
+  &__name{ display: flex; justify-content: space-between; align-items: flex-start; padding: 0 9px 0 13px;}
+  &__img-wrap{width: 76px; height: 58px; border-radius: 2px; border: solid 1px #e6e6e6;
+    img{ width: 100%; height: 100%; object-fit: cover;}
+  }
+  &__text{ text-align: left; width: 207px;
+    span{ color: #808080;}
+  }
+  strike{color: #eb3838; }
+}
+.od-check{border-radius: 2px; background-color: #f5f5f5; border: solid 1px #e6e6e6; width: 100%; padding: 8px 24px 15px; margin-bottom: 41px;
+  h4{ text-align: left; margin-bottom: 6px;
+    .gray{color: #808080;}
+  }
+  &__gray{ color: #808080; width: 178px;}
+  &__row{ justify-content: space-between; display: flex; align-items: flex-start;}
+  p{ white-space: nowrap;margin-bottom: 0;  margin-top: 17px;}
+  &__long{ text-align: left; width: 391px;}
+  &__buttons{ width: 224px; margin-left: 15px;
+    .button{ width: 100%; margin-bottom: 8px;
+      span{ width: 100%;}
+    }
+  }
+  &__tab{ padding-top: 7px;}
+}
+.od-table{
+  &__head{font-size: 10px; font-weight: bold; line-height: 1.4; letter-spacing: 1.8px; text-align: left; color: #808080; text-transform: uppercase; display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 11px;}
+  &__cell{
+    &:nth-child(1){ width: 337px;}
+    &:nth-child(2){ width: 144px;}
+    &:nth-child(3){ width: 192px;}
+    &:nth-child(4){ width: 184px;}
+  }
+  &__row{display: flex; justify-content: space-between; align-items: stretch;border-radius: 2px; background-color: #ffffff; border: solid 1px #e6e6e6; margin-bottom: 8px; padding: 15px 0;  line-height: 1.15;
+    p{  margin-bottom: 0.75em;}
   }
 }
