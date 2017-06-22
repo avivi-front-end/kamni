@@ -3,23 +3,7 @@
 <div class="global-wrapper">
     <div class="main">
         //= partials/header.html
-        <p> <!-- блок для тестового просмотра всех попапов  -->
-            <a data-fancybox data-src="#registration" href="javascript:;">__Registration__</a>
-            <a data-fancybox data-src="#already-email" href="javascript:;">__Если адрес уже есть в базе__</a>
-            <a data-fancybox data-src="#secod-social" href="javascript:;">__Второй шаг регистрации через социальные сети__</a>
-            <a data-fancybox data-src="#register-done" href="javascript:;">__register done__</a>
-            <a data-fancybox data-src="#entrance" href="javascript:;">__entrance__</a>
-            <a data-fancybox data-src="#recovery-step-1" href="javascript:;">__recovery-step-1__</a>
-            <a data-fancybox data-src="#recovery-step-2" href="javascript:;">__recovery-step-2__</a>
-            <a data-fancybox data-src="#recovery-step-3" href="javascript:;">__recovery-step-3__</a>
-            <a data-fancybox data-src="#recovery-step-4" href="javascript:;">__recovery-step-4__</a>
-            <a data-fancybox data-src="#recovery-step-5" href="javascript:;">__recovery-step-5__</a>
-            <a  data-fancybox data-src="#choose-city" href="javascript:;">__choose city__</a>
-            <a  data-fancybox data-src="#subscribe" href="javascript:;">__subscribey__</a>
-            <a  data-fancybox data-src="#reg-success" href="javascript:;">__reg-success__</a>
-            <a  data-fancybox data-src="#map-clauses" href="javascript:;">__map-clauses__</a>
-            <a  data-fancybox data-src="#one-click" href="javascript:;">__one-click__</a>
-        </p>
+        //= partials/popups-list.html
         <div class="mbox">
             <div class="main-page">
                 <div class="main-page__left">
@@ -984,6 +968,7 @@
     //= partials/footer.html
 
 </div>
-
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6hVSy0xDDgCHiKUYRFOpSXUj-28dBi2M&callback=initMap"
+    async defer></script>
 </body>
 </html>
