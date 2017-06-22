@@ -3,7 +3,7 @@
 <div class="global-wrapper">
     <div class="main">
         //= partials/header-mini.html
-        //= partials/breadcrumbs.html
+
         <div class="mbox">
            <div class="order">
                <div class="basket__left">
@@ -44,6 +44,8 @@
                                    <p>На этот email отправим реквизиты для оплаты (если нужно)  и подтверждение оплаты.</p>
                                </div>
                            </div>
+                       </div>
+                       <div class="input__container">
                            <div class="input__rowed input__rowed--classic">
                                <h6 class="gray">Комментарий к заказу</h6>
                                <div class="input__item">
@@ -51,7 +53,6 @@
                                    <p>Например, «код домофона #281, позвоните за час до приезда». Если вы юр.лицо и вам нужны документы, напишите об этом</p>
                                </div>
                            </div>
-
                        </div>
                        <h3>Доставка</h3>
                        <div class="order-delivery">
@@ -174,6 +175,7 @@
                <div class="basket__right">
                    <div class="basket__info">
                        <div class="basket__info-wrap">
+                            <a href="#">Ваш заказ</a>
                            <div class="basket__info-row">
                                 <span>Без скидки
                                     <div class="dropdowned">
@@ -183,7 +185,6 @@
                                     </div>
                                 </span>
                                <b><div class="js-total-price">12 123</div> ₽</b>
-
                            </div>
                            <div class="basket__info-row">
                                 <span>Скидки
@@ -207,16 +208,21 @@
                                <b class="js-total-sale" data-sale="123">-123 ₽</b>
                            </div>
                            <div class="basket__info-row">
-                               <span>Итого без учета доставки</span>
+                               <span>Доставка</span>
                                <b><div class="js-total-with-sale">12 312</div> ₽</b>
                            </div>
+                           <br>
+                           <div class="basket__info-row">
+                               <span>К оплате</span>
+                               <b><div class="js-total-with-sale">12 312</div> ₽</b>
+                           </div>
+                           <br>
                            <div class="basket__info-box">
                                <a href="#">Изменить промокод</a>
                                <p>Применен 1 промокод</p>
-
                            </div>
+                           <br>
                        </div>
-
                        <div class="greencar">
                            <div class="greencar__car-wrap">
                                <div class="greencar__start">0 ₽ </div>
