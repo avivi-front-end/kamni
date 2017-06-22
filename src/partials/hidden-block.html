@@ -1,0 +1,305 @@
+<div class="hidden-block">
+    <div class="modal map-modal" id="map-clauses">
+        <div class="map-modal__aside">
+            <div class="map-modal__logo">
+                <img src="images/logo-cdek.png" alt="logo">
+            </div>
+            <div class="map-modal__price-day">
+                <div class="map-modal__price">125 ₽</div>
+                <div class="map-modal__day">3 дня</div>
+            </div>
+            <div class="map-modal__search">
+                <input type="text" class="map-modal__search-input" placeholder="Поиск по списку">
+            </div>
+            <ul class="map-modal__list">
+                <li class="map-modal__list-item">ХОРОШЕВСКОЕ Ш. 43А</li>
+                <li class="map-modal__list-item">РАМЕНКИ УЛ. 23</li>
+                <li class="map-modal__list-item">ДОБРОЛЮБОВА 21А корп. А</li>
+            </ul>
+        </div>
+    </div>
+    <!--<div id="call_success">-->
+        <!--<div class="call-success">-->
+             <!--<div class="call_success">-->
+                 <!--<div class="call-title">Спасибо за заявку!</div>-->
+                 <!--<div class="call-subtitle">Мы свяжемся с Вами в ближайшее время</div>-->
+             <!--</div>-->
+        <!--</div>-->
+    <!--</div>-->
+
+    <!--<div id="call-popup">-->
+        <!--<form action="ajax.php" name="" class="contact-form">-->
+            <!--<div class="contact-form-title">-->
+                <!--<h5>Lorem ipsum dolor.</h5>-->
+            <!--</div>-->
+            <!--<div class="contact-form-row cfix">-->
+                <!--<div class="contact-form-item">-->
+                    <!--<div class="contact-form-item-input form_row">-->
+                        <!--<div class="form_input">-->
+                            <!--<input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="contact-form-item">-->
+                    <!--<div class="contact-form-item-input form_row">-->
+                        <!--<div class="form_input">-->
+                            <!--<input type="text" name="contact_tel" value="" required="required" placeholder="Ваш номер" class="tel-mask">-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="contact-form-row cfix">-->
+                <!--<div class="contact-form-item">-->
+                    <!--<button type="submit" class="contact-submit">-->
+                        <!--<span>Отправить заявку</span>-->
+                    <!--</button>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</form>-->
+    <!--</div>-->
+    <div class="video-pop" id="video-pop">
+      <h2>Путеводители к магазину на Дубровке</h2>
+      <ul class="video-pop__tabs">
+        <li class="video-pop__tab active js-tab" data-video="https://www.youtube.com/embed/EuDqhvPmQKI">Пешком</li>
+        <li class="video-pop__tab js-tab" data-video="https://www.youtube.com/embed/TNX0-JLdM_U">На автомобиле</li>
+      </ul>
+      <h5>Двигаемся с третьего транспортного кольца</h5>
+      <div class="video-pop__video-wrap js-video-wrap"></div>
+    </div>
+    <div class="modal" id="registration">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Зарегистрируйтесь за 1 минуту</h5>
+            <h6>Сразу же после регистрации вы получите стартовую
+                скидку 3%, а также возможность стать членом
+                Клуба Камневедов (если вы частное лицо) и доступ
+                к оптовому разделу сайта (если вы оптовик).</h6>
+            <p>Чтобы зарегистрироваться,
+                просто выберите статус и введите email:</p>
+            <form action="">
+                <p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
+                <p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
+                <input type="text" required="required" name="" type="email" placeholder="hello@mail.ru">
+                <button class="button button__yellow"><span>Зарегистрироватся</span></button>
+            </form>
+        </div>
+        <div class="modal__footer">
+            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+            <h6>Откроется окно подтверждения
+                авторизации, после этого выберите статус: частное лицо или оптовик</h6>
+            <div class="modal__buttons">
+                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="already-email">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <p>Хм... такой адрес уже есть в нашей базе.
+                Скорее всего, вы зарегистрированы.  </p>
+            <h3>Тогда просто войдите —
+                и воспользуйтесь своей скидкой!</h3>
+            <h5>Вход по паролю</h5>
+            <h6>Вы получили его во время регистрации и получаете
+                в каждом письме. По этому паролю мы узнаём вас
+                и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
+            <form action="" class="modal__row">
+                <input type="text" required="required" name="" type="text" placeholder="pass">
+                <button class="button button__yellow"><span>Войти</span></button>
+            </form>
+            <a href="#">Забыли пароль?</a>
+        </div>
+        <div class="modal__footer">
+            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+            <h6>Откроется окно подтверждения
+                авторизации, после этого выберите статус: частное лицо или оптовик</h6>
+            <div class="modal__buttons">
+                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="secod-social">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <p>Отлично! Теперь выберите ваш статус </p>
+            <form action="">
+                <p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
+                <p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
+                <button class="button button__yellow"><span>Зарегистрироваться</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="register-done">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Мы отправили письмо на
+                konstantinopolsky@gmail.com</h5>
+            <h6>Откройте его, пройдите по ссылке, зарегистрируйтесь
+                за 1 минуту — и уже сейчас пользуйтесь расширенными возможностями!</h6>
+            <p>Пройдите на почту,
+                чтобы воспользоваться скидкой</p>
+            <a class="button button__yellow"><span>Проверить почту</span></a>
+            <h6>Если письма нет во входящих, проверьте папку «Промоакции» или «Спам».
+                Письмо могло попасть туда по ошибке. </h6>
+        </div>
+    </div>
+    <div class="modal" id="entrance">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+           <h5>Вход по паролю</h5>
+            <h6>Вы получили его во время регистрации и получаете
+                в каждом письме. По этому паролю мы узнаём вас
+                и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
+            <form action="" class="modal__row">
+                <input type="text" required="required" name="" type="text" placeholder="pass">
+                <button class="button button__yellow"><span>Войти</span></button>
+            </form>
+            <a data-fancybox data-src="#recovery-step-1" href="javascript:;">Забыли пароль?</a>
+        </div>
+        <div class="modal__footer">
+            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+            <h6>Откроется окно подтверждения
+                авторизации, после этого вас автоматически вернут в Камневеды</h6>
+            <div class="modal__buttons">
+                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+            </div>
+        </div>
+    </div>
+    <div class="modal" id="recovery-step-1">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Введите адрес электронной почты,
+                который вы указывали при регистрации</h5>
+            <h6>Мы отправим на него ваш пароль</h6>
+            <form action="" >
+                <input type="text" required="required" name="" type="email" placeholder="email">
+                <button class="button button__yellow"><span>Получить пароль</span></button>
+            </form>
+            <a data-fancybox data-src="#entrance" href="javascript:;">Вспомнил!</a>
+        </div>
+    </div>
+    <div class="modal" id="recovery-step-2">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>К сожалению, в нашей базе
+                нет такого email-а</h5>
+            <h6>Проверьте, правильно ли вы указали адрес эл.почты</h6>
+            <form action="" >
+                <input type="text" required="required" name="" type="email" placeholder="email">
+                <button class="button button__yellow"><span>Получить пароль</span></button>
+            </form>
+            <a data-fancybox data-src="#entrance" href="javascript:;"><img src="images/ssms.png"  alt="">Отправьте код в смс</a>
+        </div>
+    </div>
+    <div class="modal" id="recovery-step-3">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Укажите номер телефона, который
+                вы указывали при регистрации</h5>
+            <h6> Мы отправим на него ваш пароль  </h6>
+            <form action="" >
+                <input type="text" required="required" name="" type="text" placeholder="Ваш номер" class="tel-mask">
+                <button class="button button__yellow"><span>Получить пароль</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="recovery-step-4">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Мы отправили SMS с паролем на номер
+                +7 911 545-54-54</h5>
+            <h6>Впишите его в поле — и войдите в магазин</h6>
+            <form action="" >
+                <input type="text" required="required" name="" type="text" placeholder="pass">
+                <button class="button button__yellow"><span>Войти на сайт</span></button>
+            </form>
+            <a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
+        </div>
+    </div>
+    <div class="modal" id="recovery-step-5">
+        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+        <div class="modal__content">
+            <h5>Мы отправили ваш пароль на
+                konstanipolsky@gmail.com</h5>
+            <h6>Впишите его в поле — и войдите в магазин</h6>
+            <form action="" >
+                <input type="text" required="required" name="" type="text" placeholder="pass">
+                <button class="button button__yellow"><span>Войти на сайт</span></button>
+            </form>
+            <a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
+        </div>
+    </div>
+    <div class="modal" id="choose-city">
+        <div class="modal__content">
+            <h3>Скажите, из какого  вы города?</h3>
+            <form action="" >
+                <input type="text" class="awesomplete" data-list="#citylist" required="required" name="" type="text" placeholder="Начните вводить название города">
+
+                <ul id="citylist" class="awesomplete-list" >
+                    <li>Ada</li>
+                    <li>Java</li>
+                    <li>JavaScript</li>
+                    <li>Brainfuck</li>
+                    <li>LOLCODE</li>
+                    <li>Node.js</li>
+                    <li>Ruby on Rails</li>
+                </ul>
+                <button class="button button__yellow"><span>Выбрать</span></button>
+            </form>
+
+        </div>
+    </div>
+    <div class="modal" id="one-click">
+        <div class="modal__content">
+            <h3>СПРЕДСТАВЬТЕСЬ, ЧТОБЫ МЕНЕДЖЕР СВЯЗАЛСЯ С ВАМИ</h3>
+            <form action="">
+                <input type="text" name=""  placeholder="Ваше имя">
+                <input type="text" required="required" name="" placeholder="Ваш номер" class="tel-mask">
+                <button class="button button__yellow"><span>Выбрать</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="subscribe">
+        <div class="modal__content--subscribe modal__content">
+           <p>Подарок за подписку</p>
+            <div class="pseudoH1">-3% на все</div>
+            <p>А также доступ к закрытым акциям, накопительные скидки до 15% и множество других возможностей для всех, кто с нами!</p>
+            <form action="" >
+                <input type="text" required="required" name="" type="email" placeholder="email">
+                <button class="button button__yellow"><span>Подписаться</span></button>
+            </form>
+        </div>
+    </div>
+    <div class="modal reg-success" id="reg-success">
+        <div class="reg-success__top">
+            <p>Поздравляем! Вы только что зарегистрировались в «Камневедах»</p>
+            <h2>и получили 3% скидки на все!</h2>
+            <div class="reg-success__box">
+                <p><b>Это ваш Камневед</b></p>
+                <p>Он не простой персонаж. Он — отражение вашего статуса в «Камневедах».</p>
+               <p> Когда вы получаете бонусы, скидки, накапливаете сумму покупок и переходите
+                на следующий уровень — Камневед растет,
+                   у него появляются новые артефакты, он получает звание повыше.</p>
+            </div>
+        </div>
+        <div class="reg-success__bot">
+            <h3>Прокачайте своего Камневеда прямо сейчас</h3>
+            <p>Заполните все данные в личном кабинете — и вы не только прокачаете Камневеда, но
+                и будете оформлять заказы гораздо быстрее, а также получите доступ к дополнительным возможностям.</p>
+            <a href="#" class="button button__green"><span>Перейти в Личный кабинет</span></a>
+        </div>
+    </div>
+
+</div>
