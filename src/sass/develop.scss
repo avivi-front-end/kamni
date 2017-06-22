@@ -73,7 +73,7 @@ input, textarea{
  //@include font-face('emoji', 'EmojiSymbols-Regular');
 /*/fonts*/
 /*buttons*/
-.button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400; border-radius:2px;
+.button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400; border-radius:2px; cursor: pointer;
     &:hover{ text-decoration: underline;}
     span{ min-width: 80px; height: 40px; border-radius: 2px; border:1px solid rgb(175, 201, 224); display: flex; justify-content: center; align-items: center; font-size: 17px; cursor: pointer; padding:0 15px; text-align: center; line-height: 1;}
     img{ margin-right: 8px;}

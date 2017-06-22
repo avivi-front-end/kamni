@@ -13,6 +13,7 @@
   .card__wrap{flex-wrap: wrap;}
   .card__slider-wrap{ margin: 0 auto 40px;}
   .card__info-wrap{ width: 100%;}
+  .basket__left.order__left{width: calc(100% - 242px);}
 }
 @media screen and (max-width: 1090px) {
   .category-page__right{ padding-left: 10px;}
@@ -88,6 +89,8 @@
   .complect__wrap{ flex-wrap: wrap; justify-content: space-around; max-width: 645px; margin: 0 auto;}
   .complect__result{ width: 100%;}
   .complect__done{ margin:32px 0 0;}
+  .input__rowed{ flex-wrap: wrap;}
+  .input__item{ width: 100%;}
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
@@ -112,13 +115,22 @@
   .filter__sort{ margin-bottom: 10px; width: 100%; margin-right: 0;}
   .feed-top__left {overflow: visible;}
   .feed-top__left img{ bottom: 0;}
+  .order,
   .basket{flex-wrap: wrap;}
+  .basket__left.order__left,
   .basket__left{ width: 100%;}
   .basket__right{ width: 100%; padding-left: 0;}
   .basket__info{ margin-top: 0;}
   .basket__info-row span .dropdowned{ left: 0; transform:none;}
   .basket__info-row span .dropdowned:before{ left: 20px;}
   .basket__info-row span .dropdowned__wrap:before{ left: 20px;}
+  .order-done { border-bottom: 1px solid #e6e6e6; padding-bottom: 25px;}
+  .od-table__cell:nth-child(2){ width: 120px;}
+  .od-table__cell:nth-child(3){ width: 120px;}
+  .od-table__cell:nth-child(4){ width: 100px;}
+  .od-table{overflow-x: scroll; width: 100%;}
+  .od-table__head,
+  .od-table__row{ min-width: 770px;}
 }
 @media screen and (max-width: 730px) {
   .rock-man__img{ display: none;}
@@ -169,6 +181,16 @@
   .stone__right{ width: 100%; padding-left: 0;}
   .stone__services-item{ width: 100%; box-shadow: inset 0px -1px 0 0 #e6e6e6;}
   .stone__services{flex-wrap: wrap; width: 100%;}
+
+  .od-check__row{flex-wrap: wrap;}
+  .od-check__buttons{ width: 100%; margin-top: 16px; margin-left: 0;}
+  .od-check p{ margin-top: 0;}
+  .od-check__gray,
+  .od-check__long{ width: 50%;}
+
+
+
+
 }
 @media screen and (max-width: 560px) {
   .card__thumbs{ display: none;}
@@ -185,7 +207,9 @@
   h1{font-size: 32px;}
   h2{font-size: 26px;}
   h3{font-size: 22px;}
+  .order-done__groupup-txt,
   h4{font-size: 16px;}
+  .order-payment__row,
   h5{font-size: 14px;}
   h6{font-size: 12px;}
   .feed-top p { font-size: 14px;}
@@ -222,4 +246,9 @@
   .mover__wrap{ margin-left: 0;}
   .deploy{ right: 0; bottom: 0; width: 100%;}
   .deploy__item{width: 100%;}
+  .agree-pay__submit{flex-wrap: wrap; height: auto; padding: 10px;}
+  .agree-pay__price{ display: flex; justify-content: space-between; align-items: center; width: 100%; margin-right: 0;}
+  .agree-pay__submit .button span{ width: 100%;}
+  .order-done__groupup{ padding-left: 0;}
+
 }
