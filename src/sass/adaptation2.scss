@@ -23,6 +23,7 @@
 	}
 }
 @media screen and (max-width: 992px){
+
 	.collection{
 		&__content{
 			h2{text-align: center;}
@@ -45,6 +46,7 @@
 			}
 		}
 	}
+	.sales-feedback__title h2{ margin:2.4em 0;}
 	.stonebox{
 		&-choice{flex-direction: column; padding-left: 1em; padding-right: 1em;
 			&__date, h2{text-align: center;}
