@@ -4,7 +4,7 @@
     &:before{ content: ''; width: 11px; height: 11px; background-color: #fff;  position: absolute; left: 50%; transform:translateX(-50%) rotate(45deg); top: -6px; z-index: 30;}
   }
   p{ text-align: center; font-size: 17px;line-height: 1.41;color: #000000; margin: 0;}
-
+  &__sell{ padding: 0; width: 184px;}
 }
 .hc-dropdown{
   &__wrap{ min-width: 216px;  min-height: 120px;

@@ -816,7 +816,7 @@
   }
 }
 .lk-skelet{
-  &__container{ justify-content: space-between; align-items: flex-start; display: flex;}
+  &__container{ justify-content: space-between; align-items: flex-start; display: flex; padding-top: 22px;}
   &__left{ width: 244px; padding-right: 10px;}
   &__right{ width:calc(100% - 244px); padding-left: 46px;}
 }
@@ -828,4 +828,41 @@
     .lc-dropdown__pin{ margin-top: 4px;}
   }
   a{font-size: 16px; line-height: 1.38;  text-align: left; color: #000000;}
+}
+.lk-main{
+  &__tab{border-radius: 2px; border: 1px solid #e6e6e6; width: 100%;}
+  &__hr{ background-color: #f5f5f5;  border-bottom: solid 1px #e6e6e6; width: 100%; display: flex; justify-content: space-between; align-items: center; min-height: 64px; padding: 0 16px;}
+  &__hr-left{display: flex; justify-content: flex-start; align-items: center;}
+  &__user{ display: flex; justify-content: flex-start; align-items: center;margin-right: 16px;
+    b{ font-weight: normal; }
+  }
+  &__sell{border-left:1px solid #e6e6e6; border-right:1px solid #e6e6e6; padding: 8px 16px; position: relative; margin-right: 16px;
+    p{ margin: 0;font-size: 14px; line-height: 1.14; text-align: left; color: #808080; cursor: pointer;
+      &:hover{ text-decoration: underline;text-decoration-style: dotted; }
+    }
+    b{ color: #000;}
+    p:hover + .dropdowned{ display: block;top: calc(100% + 8px);}
+  }
+  &__sell-row{ display: flex; justify-content: flex-start; align-items: center; border-bottom:1px solid #e6e6e6; padding: 0 8px; min-height: 40px; position: relative;
+    &.unactive{ opacity: 0.4;}
+    img{ width: 32px;}
+    b{font-size: 16px; line-height: 1.5; text-align: left; color: #000000;}
+    span{font-size: 14px; line-height: 1.14; text-align: left; color: #808080; margin-left: 16px;}
+  }
+  &__sell-bg{background-color: #e6e6e6; position: absolute; left: 0; top: 0; height: 100%; z-index: -1;}
+  &__cash{
+    p{ margin: 0;font-size: 14px;  line-height: 1.14; text-align: left;  color: #808080;}
+    b{ color: #000; margin-right: 8px;}
+  }
+  &__button{
+    a{font-size: 14px; line-height: 1.14; text-align: center; color: #808080; padding: 8px; background-color: #fff; cursor: pointer;}
+  }
+  &__row{ border-bottom: 1px solid #e6e6e6; padding: 16px 0; display: flex; justify-content: space-between; align-items: flex-start;}
+  &__cell{ width: 50%; text-align: center; padding: 0 5%;
+    &:first-child{ border-right:1px solid #e6e6e6;}
+    h6{font-size: 12px; font-weight: bold; line-height: 1.33; letter-spacing: 2.2px; color: #808080; text-transform: uppercase; margin: 9px 0 6px;}
+    h4{  margin: 0 0 6px;}
+    p{font-size: 14px; line-height: 1.43;  color: #808080; margin: 0px 0 8px;}
+    b{font-weight: bold;  color: #000000; margin-top: 10px; display: inline-block;}
+  }
 }
