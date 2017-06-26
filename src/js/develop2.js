@@ -106,10 +106,12 @@ var showMoreItem = (function(){
 
 var PopupMap = (function(){
 
-	$("[data-fancybox]").fancybox({
+	$("[data-fancybox-map]").fancybox({
 		afterLoad: function() {
 			$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=initGMap&key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
-			initGMap();
+			setTimeout(function() {
+				initGMap();
+			}, 120);
 		}
 	});
 
