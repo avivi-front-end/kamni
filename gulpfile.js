@@ -33,10 +33,11 @@ var gulp = require('gulp'),
         watch: { //Тут мы укажем, за изменением каких файлов мы хотим наблюдать
             html: 'src/*.html',
             part:'src/partials/*.html' ,
+            lk:'src/partials/lk/*.html' ,
             js: 'src/js/*.js',
             jsplug:  'src/js/plagins/*.js',
             style: 'src/sass/*.scss',
-            img: 'src/image/*.*'
+            img: 'src/images/*.*'
         },
         clean: './build'
     };
@@ -114,6 +115,9 @@ gulp.task('watch', function(){
         gulp.start('html:build');
     });
     watch([path.watch.part], function(event, cb) {
+        gulp.start('html:build');
+    });
+    watch([path.watch.lk], function(event, cb) {
         gulp.start('html:build');
     });
     watch([path.watch.style], function(event, cb) {
