@@ -104,25 +104,32 @@ var showMoreItem = (function(){
 
 })();
 
-// var map;
-// 	function initMap() {
-// 		map = new google.maps.Map(document.getElementById('popmap'), {
-// 			center: {lat: -34.397, lng: 150.644},
-// 			zoom: 8
-// 	});
-// }
+var PopupMap = (function(){
 
-// var PopupMap = (function(){
-// 	$("#map-clauses[data-fancybox]").fancybox({
-// 		var map;
-// 			function initMap() {
-// 				map = new google.maps.Map(document.getElementById('popmap'), {
-// 					center: {lat: -34.397, lng: 150.644},
-// 					zoom: 8
-// 				});
-// 			}
-// 		});
-// })();
+	$("[data-fancybox]").fancybox({
+		afterLoad: function() {
+			$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=initGMap&key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
+			initGMap();
+		}
+	});
+
+	function initGMap() {
+		var map;
+		var myLatLng = {lat: -25.363, lng: 131.044};
+		map = new google.maps.Map(document.getElementById('popmap'), {
+			center: {lat: 55.755231, lng: 37.616549}, 
+			zoom: 12,
+			mapTypeControl: false
+		});
+		var marker = new google.maps.Marker({
+			position: myLatLng,
+			map: map,
+			title: 'Hello World!'
+		});
+	}
+
+})();
+
 
  window.Gmap = null;
 
