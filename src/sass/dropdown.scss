@@ -20,17 +20,23 @@
 .lc-dropdown{
   &__wrap{ min-width: 208px; padding: 0;}
   &__pin{height: 16px; display: inline-block; position: absolute; border-radius: 7px;   font-size: 12px; font-weight: bold; line-height: 1; color: #808080; top: 12px; right: 16px; padding:2px 4px; background-color: #e6e6e6;}
-  ul{ list-style-type: none; padding: 0; margin: 0; color: #3777b3; line-height: 1.5; font-size: 16px;
+  ul{ list-style-type: none; padding: 0; margin: 0; color: #3777b3; line-height: 1.5; font-size: 16px; position: relative; z-index: 99;
     &.mobile-mc__blacklist{ border-top: 0; padding-top: 20px; padding-bottom: 27px;
       a{ color: #575757;}
       li{ border-bottom: 0;padding: 5px 0px 3px;}
     }
   }
-  li{     padding: 9px 16px 6px; border-bottom: 1px solid #E6E6E6; position: relative;
+  li{      border-bottom: 1px solid #E6E6E6; position: relative;
     &.title{height: 24px; width: 100%; background-color: #f8f8f8;  border-bottom:none;font-size: 10px; font-weight: bold; line-height: 24px; letter-spacing: 2.2px;  text-align: left; color: #808080; text-transform: uppercase; padding: 0 16px;}
+    &:hover{ text-decoration: none; background-color: #f5f5f5;}
   }
-  a{color: #3777b3;}
-  p{     margin: 2px 0 4px; font-size: 12px; line-height: 1.17; text-align: left; color: #808080;}
+  a{color: #3777b3; width: 100%;padding: 9px 16px 6px; display: flex; justify-content: space-between; align-items: center;
+    &:hover{ text-decoration: none; background-color: #f5f5f5;}
+    &.social{ width: 24px; padding: 0;
+      &:hover{ background-color: transparent;}
+    }
+  }
+  p{ margin: -4px 0 10px; padding: 0 16px; font-size: 12px; line-height: 1.17; text-align: left; color: #808080;}
 }
 .mobile-lc{ padding-top: 35px;
   &__top{ display: flex; justify-content: flex-start; align-items: center;}
@@ -49,8 +55,10 @@
   }
   &__contacts{ padding: 0 16px;
     .header-top__contact{ margin-left: 0; margin-top: 18px;
-      a{ margin-left: 0; margin-right: 17px;}
-      p { font-size: 14px; line-height: 1.14; margin-bottom: 8px;}
+      a{ margin-left: 0; margin-right: 17px; padding-left: 0;
+        &:hover{ background-color: transparent;}
+      }
+      p { font-size: 14px; line-height: 1.14; margin-bottom: 8px; padding-left: 0;}
     }
   }
 }

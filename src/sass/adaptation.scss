@@ -92,6 +92,8 @@
   .complect__done{ margin:32px 0 0;}
   .input__rowed{ flex-wrap: wrap;}
   .input__item{ width: 100%;}
+  .lk-skelet__left{ display: none;}
+  .lk-skelet__right{ width: 100%; padding-left: 0;}
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
@@ -103,6 +105,12 @@
   .popcat__content li{ width: 50%;}
   .opt-faq__container{ justify-content: space-around;}
   .opt-faq__col{ width: 100%;}
+  .lk-main__hr{flex-wrap: wrap;}
+  .lk-main__hr-left{ width: 100%; justify-content: space-around; flex-wrap: wrap;}
+  .lk-main__button{ width: 100%; margin: 16px 0; text-align: center;}
+  .lk-main__sell,
+  .lk-main__user{ margin:5px 0;}
+  .lk-main__cash{ white-space: nowrap;}
 
 }
 @media screen and (max-width: 800px) {
@@ -253,5 +261,8 @@
   .agree-pay__price{ display: flex; justify-content: space-between; align-items: center; width: 100%; margin-right: 0;}
   .agree-pay__submit .button span{ width: 100%;}
   .order-done__groupup{ padding-left: 0;}
+  .lk-main__cell:first-child{ border-right:none; border-bottom: 1px solid #e6e6e6;}
+  .lk-main__cell{ width: 100%;}
+  .lk-main__row{ flex-wrap: wrap;}
 
 }
