@@ -573,8 +573,19 @@
 	}
 }
 .map-modal{max-width: 1144px; height: 681px; background: #000; position: relative;
+	&__button{min-width: 152px; width: auto;}
+	&__address{font-size: 17px; margin-bottom: 20px;}
+	&__phone, &__workhours{font-size: 14px; color: #808080; margin-bottom: 15px; padding-left: 24px; position: relative;
+		&:before{content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+	}
+	&__phone{
+		&:before{background: url(../images/icon-phone.svg) center center no-repeat;}
+	}
+	&__workhours{
+		&:before{background: url(../images/icon-clock.svg) center center no-repeat;}
+	}
 	.fancybox-close-small{top: -40px;}
-	&__aside{background: #fff; position: absolute; top: 33px; left: 48px; width: 232px; padding-top: 16px;}
+	&__aside{background: #fff; position: absolute; top: 33px; left: 48px; width: 232px; padding-top: 16px; max-height: 617px; overflow-y: scroll;}
 	&__logo{padding-left: 16px; margin-bottom: 16px;}
 	&__list{list-style-type: none; padding-left: 0; margin: 0 0 0;
 		&-item{border-bottom: 1px solid #dcdcdc; padding: 13px 16px; cursor: pointer;}
@@ -584,3 +595,7 @@
 	&__day{color: #808080;}
 	&__search-input{border: none; border-bottom: 1px solid #dcdcdc; background: url(../images/search-outlines.png) 16px 50% no-repeat; background-size: 16px 16px; width: 100%; padding: 8px 8px 8px 40px;}
 }
+/* gmap style */
+.gm-style-iw + div{display: none;}
+/* .gm-style-iw — основной блок, в нем находится контент. На скриншоте, расположенном выше, этот блок имеет черный фон.
+.poi-info-window — обертка для текста в стандартном информационном окне, находится внутри. .gm-style-iw */

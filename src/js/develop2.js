@@ -103,34 +103,178 @@ var showMoreItem = (function(){
 		}
 
 })();
-
+var addMap = true; 
 var PopupMap = (function(){
 
+	var $btn = $('.js-btn-map');
+	
+
 	$("[data-fancybox-map]").fancybox({
+		attr : {
+					scrolling : 'false'
+				},
+
 		afterLoad: function() {
-			$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=initGMap&key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
 			setTimeout(function() {
 				initGMap();
-			}, 120);
+			}, 500);
+			if (addMap){
+				console.log('add map')
+				$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
+				addMap = !addMap;	
+			}
+			
 		}
 	});
 
-	function initGMap() {
+/*	function initGMap() {
 		var map;
-		var myLatLng = {lat: -25.363, lng: 131.044};
+		var zoom;
+
 		map = new google.maps.Map(document.getElementById('popmap'), {
 			center: {lat: 55.755231, lng: 37.616549}, 
 			zoom: 12,
-			mapTypeControl: false
+			mapTypeControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
 		});
-		var marker = new google.maps.Marker({
-			position: myLatLng,
-			map: map,
-			title: 'Hello World!'
+
+		var markers = [
+			[55.764246, 37.618367],
+			[55.757881, 37.610806],
+			[55.762683, 37.660390],
+			[55.741620, 37.630843],
+			[55.738175, 37.589916]
+		];
+
+		for (var i = 0; i < markers.length; i++) {
+			var mark = markers[i];
+			var marker = new google.maps.Marker({
+				position: {lat: mark[0], lng: mark[1]},
+				map: map,
+				icon: {
+					url: "images/marker1.png",
+					origin: new google.maps.Point(0, 0)
+				}
+			});
+		}
+
+		$btn.click(function(){
+			zoom = map.getZoom();
+			if (zoom > 9) map.setZoom(16);
+			var lat = $(this).data('lat');
+			var lng = $(this).data('lng');
+			map.setCenter(new google.maps.LatLng(lat, lng));
 		});
+
+	}*/
+
+	function initGMap() {
+		var map;
+		var zoom;
+
+		map = new google.maps.Map(document.getElementById('popmap'), {
+			center: {lat: 55.755231, lng: 37.616549}, 
+			zoom: 12,
+			mapTypeControl: false,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		});
+
+		infoWindow = new google.maps.InfoWindow({
+			maxWidth: 240
+		});
+
+		google.maps.event.addListener(map, "click", function() {
+			// infoWindow.close - закрываем информационное окно.
+			infoWindow.close();
+		});
+
+		var markersData = [
+			{
+				lat: 55.764246,
+				lng: 37.618367,
+				address: "ХОРОШЕВСКОЕ Ш. 41А",
+				phone: "+7 (499) 677-20-69",
+				workhours: "пн-пт 10:00-20:00, сб 10:00-16:00, вс 10:00-14:00"
+			},
+			{
+				lat: 55.757881,
+				lng: 37.610806,
+				address: "ХОРОШЕВСКОЕ Ш. 42А",
+				phone: "+7 (499) 677-20-69",
+				workhours: "пн-пт 10:00-20:00, сб 10:00-16:00, вс 10:00-14:00"
+			},
+			{
+				lat: 55.762683,
+				lng: 37.660390,
+				address: "ХОРОШЕВСКОЕ Ш. 43А",
+				phone: "+7 (499) 677-20-69",
+				workhours: "пн-пт 10:00-20:00, сб 10:00-16:00, вс 10:00-14:00"
+			},
+			{
+				lat: 55.762683,
+				lng: 37.630843,
+				address: "ХОРОШЕВСКОЕ Ш. 44А",
+				phone: "+7 (499) 677-20-69",
+				workhours: "пн-пт 10:00-20:00, сб 10:00-16:00, вс 10:00-14:00"
+			},
+			{
+				lat: 55.738175,
+				lng: 37.589916,
+				address: "ХОРОШЕВСКОЕ Ш. 45А",
+				phone: "+7 (499) 677-20-69",
+				workhours: "пн-пт 10:00-20:00, сб 10:00-16:00, вс 10:00-14:00"
+			}
+		];
+
+		for (var i = 0; i < markersData.length; i++){
+			var latLng = new google.maps.LatLng(markersData[i].lat, markersData[i].lng);
+			var address = markersData[i].address;
+			var phone = markersData[i].phone;
+			var workhours = markersData[i].workhours;
+			// Добавляем маркер с информационным окном
+			addMarker(latLng, address , workhours, phone);
+		}
+
+		function addMarker(latLng, address , workhours, phone) {
+				var marker = new google.maps.Marker({
+						position: latLng,
+						map: map,
+						address: address,
+						icon: {
+							url: "images/marker1.png"
+						}
+				});
+			
+				// Отслеживаем клик по нашему маркеру
+				google.maps.event.addListener(marker, "click", function() {
+					// contentString - это переменная в которой хранится содержимое информационного окна.
+					var contentString = '<div class="map-modal__info-block">' +
+						'<div class="map-modal__address">' + address + '</div>' +
+						'<div class="map-modal__phone">' + phone + '</div>' +
+						'<div class="map-modal__workhours">' + workhours + '</div>' +
+						'<a href="#" class="button button__yellow map-modal__button"><span>Выбрать</span></a>'
+						'</div>';
+					// Меняем содержимое информационного окна
+					infoWindow.setContent(contentString);
+					// Показываем информационное окно
+					infoWindow.open(map, marker);
+			
+				});
+		}
+
+		$btn.click(function(){
+			zoom = map.getZoom();
+			if (zoom > 9) map.setZoom(16);
+			var lat = $(this).data('lat');
+			var lng = $(this).data('lng');
+			map.setCenter(new google.maps.LatLng(lat, lng));
+		});
+
 	}
 
+
 })();
+
 
 
  window.Gmap = null;
