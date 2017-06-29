@@ -94,6 +94,10 @@
   .input__item{ width: 100%;}
   .lk-skelet__left{ display: none;}
   .lk-skelet__right{ width: 100%; padding-left: 0;}
+  .basket-dropdown{ width: 100%;
+    &:before{ left: auto; right: 25px;}
+  }
+  .basket-dropdown__inner:before{ left: auto; right: 25px;}
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}
