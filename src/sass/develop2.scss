@@ -596,7 +596,5 @@
 	&__search-input{border: none; border-bottom: 1px solid #dcdcdc; background: url(../images/search-outlines.png) 16px 50% no-repeat; background-size: 16px 16px; width: 100%; padding: 8px 8px 8px 40px;}
 }
 /* gmap style */
-.gm-style-iw + div{display: none;}
-.gm-style-iw{z-index: 250;}
-/* .gm-style-iw — основной блок, в нем находится контент. На скриншоте, расположенном выше, этот блок имеет черный фон.
-.poi-info-window — обертка для текста в стандартном информационном окне, находится внутри. .gm-style-iw */
+.gm-style-iw + div{display: none;} /* close cross */
+/* gmap style */
