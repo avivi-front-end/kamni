@@ -110,9 +110,11 @@ var PopupMap = (function(){
 	
 
 	$("[data-fancybox-map]").fancybox({
-		attr : {
-					scrolling : 'false'
-				},
+
+		touch : {
+		vertical : false,  // Allow to drag content vertically
+		momentum : false   // Continue movement after releasing mouse/touch when panning
+	},
 
 		afterLoad: function() {
 			setTimeout(function() {
@@ -123,50 +125,9 @@ var PopupMap = (function(){
 				$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
 				addMap = !addMap;	
 			}
-			
 		}
 	});
 
-/*	function initGMap() {
-		var map;
-		var zoom;
-
-		map = new google.maps.Map(document.getElementById('popmap'), {
-			center: {lat: 55.755231, lng: 37.616549}, 
-			zoom: 12,
-			mapTypeControl: false,
-			mapTypeId: google.maps.MapTypeId.ROADMAP
-		});
-
-		var markers = [
-			[55.764246, 37.618367],
-			[55.757881, 37.610806],
-			[55.762683, 37.660390],
-			[55.741620, 37.630843],
-			[55.738175, 37.589916]
-		];
-
-		for (var i = 0; i < markers.length; i++) {
-			var mark = markers[i];
-			var marker = new google.maps.Marker({
-				position: {lat: mark[0], lng: mark[1]},
-				map: map,
-				icon: {
-					url: "images/marker1.png",
-					origin: new google.maps.Point(0, 0)
-				}
-			});
-		}
-
-		$btn.click(function(){
-			zoom = map.getZoom();
-			if (zoom > 9) map.setZoom(16);
-			var lat = $(this).data('lat');
-			var lng = $(this).data('lng');
-			map.setCenter(new google.maps.LatLng(lat, lng));
-		});
-
-	}*/
 
 	function initGMap() {
 		var map;

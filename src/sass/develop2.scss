@@ -579,10 +579,10 @@
 		&:before{content: ''; width: 16px; height: 16px; position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
 	}
 	&__phone{
-		&:before{background: url(../images/icon-phone.svg) center center no-repeat;}
+		&:before{background: url(../images/icon-phone.png) center center no-repeat;}
 	}
 	&__workhours{
-		&:before{background: url(../images/icon-clock.svg) center center no-repeat;}
+		&:before{background: url(../images/icon-clock.png) center center no-repeat;}
 	}
 	.fancybox-close-small{top: -40px;}
 	&__aside{background: #fff; position: absolute; top: 33px; left: 48px; width: 232px; padding-top: 16px; max-height: 617px; overflow-y: scroll;}
@@ -597,5 +597,6 @@
 }
 /* gmap style */
 .gm-style-iw + div{display: none;}
+.gm-style-iw{z-index: 250;}
 /* .gm-style-iw — основной блок, в нем находится контент. На скриншоте, расположенном выше, этот блок имеет черный фон.
 .poi-info-window — обертка для текста в стандартном информационном окне, находится внутри. .gm-style-iw */
