@@ -598,3 +598,12 @@
 /* gmap style */
 .gm-style-iw + div{display: none;} /* close cross */
 /* gmap style */
+.lk-stonebox{
+	h1, h2, h5{text-align: left;}
+	h1, h2{margin-top: 5px;}
+}
+.lk-radio{
+	&__list{list-style-type: none; padding-left: 0;}
+	&__icon{width: 16px; height: 16px; border: solid 1px #cccccc; border-radius: 50%; display: inline-block;}
+	&__text{line-height: 16px;}
+}
