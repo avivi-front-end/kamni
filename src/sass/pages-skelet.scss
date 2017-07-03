@@ -798,6 +798,7 @@
   &__tab{ padding-top: 7px;    width: calc(100% - 240px);}
 }
 .od-table{ margin-bottom: 18px;
+  &.order-lk{ margin-top: 41px;}
   &__head{font-size: 10px; font-weight: bold; line-height: 1.4; letter-spacing: 1.8px; text-align: left; color: #808080; text-transform: uppercase; display: flex; justify-content: space-between; align-items: stretch; margin-bottom: 11px;}
   &__cell{
     &:nth-child(1){ width: 337px;}
@@ -878,7 +879,7 @@
 .lk-orderlist{ text-align: center; padding-bottom: 72px;
   h2{ text-align: left; margin-top: 5px;}
   h3{ text-align: left; margin-bottom: 0.65em;}
-  h4{ text-align: left;}
+  h4{ text-align: left; margin-top: 1.3em; margin-bottom: 0.9em;}
   p{color: #808080; text-align: left; margin-bottom: 0.9em;}
   b{ color: #000; font-weight: normal;}
   &__check{ margin-bottom: 8px; text-align: left;
