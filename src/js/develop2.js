@@ -110,11 +110,11 @@ var PopupMap = (function(){
 	
 
 	$("[data-fancybox-map]").fancybox({
-
+		modal: true,
 		touch : {
-		vertical : false,  // Allow to drag content vertically
-		momentum : false   // Continue movement after releasing mouse/touch when panning
-	},
+			vertical : false,  // Allow to drag content vertically
+			momentum : false   // Continue movement after releasing mouse/touch when panning
+		},
 
 		afterLoad: function() {
 			setTimeout(function() {
