@@ -746,4 +746,5 @@ $(document).ready(function () {
     showAllComments();
     itemsSlider();
     counterStart();
+
 });
