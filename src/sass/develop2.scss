@@ -573,6 +573,11 @@
 	}
 }
 .map-modal{max-width: 1144px; height: 681px; background: #000; position: relative;
+	&__close{width: 20px; height: 20px; background: #fff; position: absolute; top: -30px; right: 0; z-index: 10; cursor: pointer;
+		&:after, &:before{content: ''; width: 15px; height: 2px; background: #000; position: absolute; top: 9px; left: 3px;}
+		&:after{transform: rotate(45deg);}
+		&:before{transform: rotate(-45deg);}
+	}
 	&__button{min-width: 152px; width: auto;}
 	&__address{font-size: 17px; margin-bottom: 20px;}
 	&__phone, &__workhours{font-size: 14px; color: #808080; margin-bottom: 15px; padding-left: 24px; position: relative;
@@ -598,12 +603,25 @@
 /* gmap style */
 .gm-style-iw + div{display: none;} /* close cross */
 /* gmap style */
-.lk-stonebox{
-	h1, h2, h5{text-align: left;}
-	h1, h2{margin-top: 5px;}
-}
-.lk-radio{
-	&__list{list-style-type: none; padding-left: 0;}
-	&__icon{width: 16px; height: 16px; border: solid 1px #cccccc; border-radius: 50%; display: inline-block;}
-	&__text{line-height: 16px;}
+.lk{
+	&-stonebox{
+		h3, h2, h5{text-align: left;}
+		h1, h2{margin-top: 5px;}
+		&__row{
+			display: flex;
+		}
+		h3{margin-bottom: 0.6em;}
+	}
+	&-radio{width: 285px;}
+	&-example{
+		h5{
+			margin: 0em 0 1em;
+		}
+		&__list{display: flex; margin: 0 -4px;}
+		&__item{border: 1px solid #e6e6e6; display: flex; flex-direction: column; margin: 0 4px; width: 136px;}
+		&__img{overflow: hidden;
+			img{width: 146px; height: 103px; object-fit: cover;}
+		}
+		&__text{border-top: 1px solid #e6e6e6; text-align: center;}
+	}
 }
