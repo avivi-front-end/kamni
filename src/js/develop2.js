@@ -105,9 +105,8 @@ var showMoreItem = (function(){
 })();
 var addMap = true; 
 var PopupMap = (function(){
-
 	var $btn = $('.js-btn-map');
-	
+	var $mapClose = $('.js-map-close');
 
 	$("[data-fancybox-map]").fancybox({
 		modal: true,
@@ -115,7 +114,6 @@ var PopupMap = (function(){
 			vertical : false,  // Allow to drag content vertically
 			momentum : false   // Continue movement after releasing mouse/touch when panning
 		},
-
 		afterLoad: function() {
 			setTimeout(function() {
 				initGMap();
@@ -127,6 +125,12 @@ var PopupMap = (function(){
 			}
 		}
 	});
+
+	$mapClose.click(function(){
+		$.fancybox.close();
+	});
+
+
 
 
 	function initGMap() {
