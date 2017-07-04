@@ -98,6 +98,9 @@
     &:before{ left: auto; right: 25px;}
   }
   .basket-dropdown__inner:before{ left: auto; right: 25px;}
+  .feedbacks__m-cont.dropdowned{ left: auto; right: 0; transform:none;}
+  .feedbacks__m-cont.dropdowned:before{ left: auto; right: 5px;}
+  .feedbacks__m-cont .dropdowned__wrap:before{ left: auto; right: 5px;}
 }
 @media screen and (max-width: 900px) {
   .publications__content{ max-width: 576px;}

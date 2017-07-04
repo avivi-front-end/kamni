@@ -1,30 +1,29 @@
 function dropdowns() {
     var drops = $('.dropdown-container');
     if(drops.length > 0){
-        drops.each(function(){
-            var but = $(this).find('.dropdown-btn').eq(0);
-            var win = $(this).find('.dropdown').eq(0);
-            var cont = $(this);
-            but.click(function () {
+        $(document).on('click', '.dropdown-btn', function () {
+            var win = $(this).closest('.dropdown-container').find('.dropdown').eq(0);
+            var that = this
+            $(this).toggleClass('active');
+            if($(this).hasClass('active')){
+                win.stop().slideDown(200);
+                $(document).on('click touchstart',function (event){
+                    var ignore = $('.ignore-miss-click');
+                    var but = $('.dropdown-btn');
 
-                $(this).toggleClass('active');
-                if($(this).hasClass('active')){
-                    win.stop().slideDown(200);
-                }else{
-                    win.stop().slideUp(200);
-                }
-
-            });
-            $(document).on('click touchstart',function (event){
-                var ignore = $('.ignore-miss-click');
-                if (!but.is(event.target) && but.has(event.target).length === 0 && !cont.is(event.target) && cont.has(event.target).length === 0 && !ignore.is(event.target) && ignore.has(event.target).length === 0){
-                    but.removeClass('active');
-                    win.stop().slideUp(200);
-                }
-            });
+                    var cont = $('.dropdown-container');
+                    if (!but.is(event.target) && but.has(event.target).length === 0 && !cont.is(event.target) && cont.has(event.target).length === 0 && !ignore.is(event.target) && ignore.has(event.target).length === 0){
+                        but.removeClass('active');
+                        win.stop().slideUp(200);
+                    }
+                });
+            }else{
+                win.stop().slideUp(200);
+            }
 
         });
-        $('.dropdown-close').click(function(){
+
+        $(document).on('click', '.dropdown-close', function(){
             var cont = $(this).closest('.dropdown-container');
             var butt = cont.find('.dropdown-btn').eq(0);
             var winn = cont.find('.dropdown').eq(0);
@@ -39,7 +38,6 @@ function catalogShowAll(){
     if(but.length > 0){
         but.click(function () {
             $(this).toggleClass('active');
-
             if($(this).hasClass('active')){
                 but.find('span').text('Свернуть все');
                 arrows.each(function () {
@@ -372,7 +370,7 @@ function tovarCounter($item) {
         }
 
 }
-function startTimer(duration, display, separator) {
+function startTimer(duration, display, separator, destroy) {
     var timer = duration, minutes, seconds;
     setInterval(function () {
         minutes = parseInt(timer / 60, 10)
@@ -386,6 +384,7 @@ function startTimer(duration, display, separator) {
 
         if (--timer < 0) {
             timer = duration;
+            destroy.remove();
         }
     }, 1000);
 }
@@ -394,7 +393,7 @@ function initTimer() {
     if(timer.length > 0){
         var min = parseInt(timer.attr('data-start-sec'));
         var separator = 0; // 0 для мин/сек, 1 для :
-        var destroy1 = $('.timetogo')
+        var destroy1 = $('.timetogo');
         startTimer(min, timer, separator, destroy1);
     }
     var timer2 = $('.timer-basket');

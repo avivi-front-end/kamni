@@ -1,0 +1,76 @@
+<div class="lk-feeds">
+    <h2>Редактировать отзыв</h2>
+    <div class="feed-cont__feeds">
+        <div class="feedbacks__item">
+            <div class="feedbacks__top">
+                <div class="feedbacks__rank"><span class="emoji emoji--rank4"></span> Отлично</div>
+                <div class="feedbacks__date">Россия, 23 октября 2016 г.</div>
+            </div>
+            <div class="feedbacks__title"> <b>Елена</b>  О товаре <a href="#">«Браслет с агатом»</a> </div>
+            <div class="feedbacks__text">
+                <p>Просто рай для фанатиков камней вроде меня. Удивительное место! Попав сюда, уходить не хочется! Все камушки разложены удобно, все наглядно, можно потрогать, почувствовать, никто не будет кричать "не трогать!", это важно для тех, кого интересует не только внешняя красота, но и энергия камня. Очень богатый выбор, редкие образцы, можно под заказ, есть интернет-магазин, можно зарезервировать образец,если хочется купить, но нет возможности прямо сегодня приехать, если магазин далеко от дома (мне не повезло, другой конец города).</p>
+                <p>Благодарю вас за такую чистоту и светлость.</p>
+
+                <a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
+                <a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
+                <a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
+                <a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="feed-form">
+
+        <form action="ajax.php">
+            <div class="offer-form">
+                <div class="feed-form__select">
+                    <p>Выберите товар из заказа</p>
+                    <select name="ss" id="">
+                        <option value="">test</option>
+                        <option value="">test</option>
+                        <option value="">test</option>
+                        <option value="">test</option>
+                        <option value="">test</option>
+                    </select>
+                </div>
+                <div class="feed-form__rank">
+                    <label>
+                        <input type="radio" name="rank">
+                        <div class="feedbacks__rank"><span class="emoji emoji--rank4"></span>Отлично</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rank">
+                        <div class="feedbacks__rank"><span class="emoji emoji--rank3"></span>Хорошо</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rank">
+                        <div class="feedbacks__rank"><span class="emoji emoji--rank2"></span> Удовлетворительно</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rank">
+                        <div class="feedbacks__rank"><span class="emoji emoji--rank1"></span>Плохо</div>
+                    </label>
+                    <label>
+                        <input type="radio" name="rank">
+                        <div class="feedbacks__rank"><span class="emoji emoji--rank0"></span>Очень плохо</div>
+                    </label>
+
+                </div>
+                <textarea class="offer-form__textarea" placeholder="Напишите ваш отзыв"></textarea>
+                <div class="offer-form__file-field file-field">
+                    <label href="#" class="file-field__label" for="fileOffer">
+                        <div class="file-field__link">Прикрепить файлы</div>
+                    </label>
+                    <div class="file-field__text">Файлы формата .doc, .docx, .pdf, .jpg, не более 5 Мб</div>
+                    <input type="file" class="file-field__input js-send-file" id="fileOffer">
+                </div>
+            </div>
+            <button type="submit" class="button button--big button__yellow">
+                <span>Оставить отзыв</span>
+            </button>
+        </form>
+    </div>
+</div>
