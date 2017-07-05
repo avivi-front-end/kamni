@@ -212,6 +212,7 @@
 @media screen and (max-width: 560px) {
   .card__thumbs{ display: none;}
   .card__slider-wrap{ width: 100%;}
+  .profile__main{ flex-direction: column;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
@@ -227,6 +228,7 @@
   h3{font-size: 22px;}
   .order-done__groupup-txt,
   h4{font-size: 16px;}
+  .profile__main,
   .order-payment__row,
   h5{font-size: 14px;}
   h6{font-size: 12px;}
@@ -250,7 +252,6 @@
   .feedbacks__rank{ margin-bottom: 8px;}
   .feedbacks__date{ width: 100%;}
   .feedbacks__img{ width: 138px;}
-
   .category-page__menu{border-right: 0px; border-left: 0px;}
   .category-page__menu li{ padding: 0; width: 49%;}
   .feed-form{padding: 0 10px 10px;}
@@ -271,5 +272,8 @@
   .lk-main__cell:first-child{ border-right:none; border-bottom: 1px solid #e6e6e6;}
   .lk-main__cell{ width: 100%;}
   .lk-main__row{ flex-wrap: wrap;}
+  .profile__form-row{ flex-direction: column;}
+  .profile__form-row span{ width: auto; margin-right: 0;}
+  .profile__buttons{ justify-content: center;}
 
 }
