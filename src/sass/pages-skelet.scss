@@ -759,7 +759,7 @@
   }
   input[type=radio]:checked + i:before{ opacity: 1;}
 }
-.order-payment{ max-width: 424px; margin-bottom: 32px;
+.order-payment{ max-width: 435px; margin-bottom: 32px;
   &__select{ width: 260px; margin-left: 16px;}
   &__row{ display: flex; justify-content: flex-start; align-items: center; font-size: 17px; margin-bottom: 18px;
     & + p{margin-top: -10px; margin-bottom: 16px;}
@@ -922,4 +922,19 @@
 }
 .lk-feeds{ padding-bottom: 72px;
   h2{ text-align: left; margin-top: 0;}
+}
+.profile{
+  h2{ text-align: left; margin-top: 0;}
+  h3{ text-align: left; }
+  &__content{}
+  &__row{border-top:1px solid #e6e6e6;
+    &:last-child{border-bottom:1px solid #e6e6e6;}
+  }
+  &__main{font-size: 17px; line-height: 1.41; width: 100%; display: flex; justify-content: space-between; align-items: center;
+    p{ margin: 0; text-align: left; color: #000000;}
+    span{color: #808080; margin-right: 12px;}
+  }
+  &__show{ text-align: right; color: #3777b3; cursor: pointer;
+    &:hover{ text-decoration: underline;}
+  }
 }
