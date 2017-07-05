@@ -42,6 +42,8 @@ $(document).ready(function() {
 				]
 		});
 });
+
+
 var sendFile = (function(){
 		var fileText = $('.file-field__text');
 		$('.js-send-file').change(function() {
@@ -129,9 +131,6 @@ var PopupMap = (function(){
 	$mapClose.click(function(){
 		$.fancybox.close();
 	});
-
-
-
 
 	function initGMap() {
 		var map;

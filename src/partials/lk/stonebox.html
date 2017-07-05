@@ -1,77 +1,200 @@
-<div class="lk-stonebox">
-	<h2>StoneBox</h2>
-	<h5>Для оформления подписки выберите тип коробочки и цену</h5>
-	<h3>Тип коробочки</h3>
-	<div class="lk-stonebox__row">
-		<div class="lk-radio">
-			<div class="order-payment">
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Метеориты</span>
+<form action="">
+	<div class="lk-stonebox">
+		<h2>StoneBox</h2>
+		<h5>Для оформления подписки выберите тип коробочки и цену</h5>
+		<h3>Тип коробочки</h3>
+		<div class="lk-stonebox__row">
+			<div class="lk-radio">
+				<div class="order-payment">
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Метеориты</span>
+								</label>
+						</div>
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Кристаллы</span>
+								</label>
+						</div>
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Самоцветы</span>
+								</label>
+						</div>
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Полезные ископаемые</span>
+								</label>
+						</div>
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Горные породы</span>
+								</label>
+						</div>
+						<div class="order-payment__row">
+								<label class="radio__styled">
+										<input type="radio" name="222"><i></i>
+									<span>Выбор «Камневедов»</span>
+								</label>
+						</div>
+				</div>
+			</div>
+			<div class="lk-example">
+				<h5>Пример того что входит в StoneBox</h5>
+				<div class="lk-example__list">
+					<div class="lk-example__item">
+						<div class="lk-example__img">
+							<img src="../images/stone-item1.png" alt="stone" data-object-fit>
+						</div>
+						<div class="lk-example__text">
+							<p>Шерл (турмалин), кристалл двухголовик 9х8х6,5 см</p>
+						</div>
 					</div>
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Кристаллы</span>
+					<div class="lk-example__item">
+						<div class="lk-example__img">
+							<img src="../images/stone-item1.png" alt="stone" data-object-fit>
+						</div>
+						<div class="lk-example__text">
+							<p>Дымчатый кварц (раухтопаз), кристалл 3-4,5 см</p>
+						</div>
 					</div>
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Самоцветы</span>
+					<div class="lk-example__item">
+						<div class="lk-example__img">
+							<img src="../images/stone-item1.png" alt="stone" data-object-fit>
+						</div>
+						<div class="lk-example__text">
+							<p>Горный хрусталь, кристалл 3-4 см</p>
+						</div>
 					</div>
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Полезные ископаемые</span>
-					</div>
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Горные породы</span>
-					</div>
-					<div class="order-payment__row">
-							<label class="radio__styled">
-									<input type="radio" name="222"><i></i>
-							</label>
-							<span>Выбор «Камневедов»</span>
-					</div>
+				</div>
+				<blockquote>Состав всегда разный, это всего лишь пример того что может войти в коробочку</blockquote>
 			</div>
 		</div>
-		<div class="lk-example">
-			<h5>Пример того что входит в StoneBox</h5>
-			<div class="lk-example__list">
-				<div class="lk-example__item">
-					<div class="lk-example__img">
-						<img src="../images/stone-item1.png" alt="stone" data-object-fit>
-					</div>
-					<div class="lk-example__text">
-						<p>Шерл (турмалин), кристалл двухголовик 9х8х6,5 см</p>
+		<div class="lk-tabs">
+			<h3>Цена за подписку</h3>
+			<ul class="lk-tabs__list">
+				<li class="lk-tabs__item js-lk-tab">
+					<label>
+						<input type="radio" name="stonebox" class="lk-tabs__input">
+						<div class="lk-tabs__text">800 ₽</div>
+					</label>
+				</li>
+				<li class="lk-tabs__item js-lk-tab active">
+					<label>
+						<input type="radio" name="stonebox" class="lk-tabs__input" checked>
+						<div class="lk-tabs__text">1 200 ₽</div>
+					</label>
+				</li>
+				<li class="lk-tabs__item js-lk-tab">
+					<label>
+						<input type="radio" name="stonebox" class="lk-tabs__input">
+						<div class="lk-tabs__text">1 700 ₽</div>
+					</label>
+				</li>
+			</ul>
+			<blockquote>При такой цене вы ежемесячно получаете 2 камня, минерала или изделия из них</blockquote>
+		</div>
+		<div class="lk-stonebox__delivery">
+			<h3>Скажите: кому и куда доставлять StoneBox?</h3>
+			<div class="input__container">
+				<div class="input__rowed">
+					<h6 class="gray">Фамилия</h6>
+					<div class="input__item">
+						<input type="text" name="">
 					</div>
 				</div>
-				<div class="lk-example__item">
-					<div class="lk-example__img">
-						<img src="../images/stone-item1.png" alt="stone" data-object-fit>
-					</div>
-					<div class="lk-example__text">
-						<p>Дымчатый кварц (раухтопаз), кристалл 3-4,5 см</p>
+				<div class="input__rowed">
+					<h6 class="gray">Имя</h6>
+					<div class="input__item">
+						<input type="text" name="">
 					</div>
 				</div>
-				<div class="lk-example__item">
-					<div class="lk-example__img">
-						<img src="../images/stone-item1.png" alt="stone" data-object-fit>
-					</div>
-					<div class="lk-example__text">
-						<p>Горный хрусталь, кристалл 3-4 см</p>
+				<div class="input__rowed">
+					<h6 class="gray">Отчество</h6>
+					<div class="input__item">
+						<input type="text" name="">
 					</div>
 				</div>
 			</div>
-			<blockquote>Состав всегда разный, это всего лишь пример того что может войти в коробочку</blockquote>
+			<div class="input__container">
+				<div class="input__rowed">
+					<h6 class="gray">Адрес</h6>
+					<div class="input__item lk-stonebox__radio-row">
+						<div class="order-payment__row">
+							<label class="radio__styled">
+								<input type="radio" name="222"><i></i>
+								<span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
+							</label>
+						</div>
+						<div class="order-payment__row">
+							<label class="radio__styled">
+								<input type="radio" name="222"><i></i>
+								<span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
+							</label>
+						</div>
+						<a href="#">Другой адрес</a>
+					</div>
+				</div>
+			</div>
+			<div class="input__container">
+				<div class="input__rowed">
+					<h6 class="gray">Телефон</h6>
+					<div class="input__item">
+						<input type="text" name="">
+					</div>
+				</div>
+				<div class="input__rowed">
+					<h6 class="gray">Электронная почта</h6>
+					<div class="input__item">
+						<input type="text" name="">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="lk-stonebox__delivery">
+			<h3>Укажите данные для оплаты</h3>
+			<div class="lk-stonebox__text">
+				<p>Подписка привязана к карте или внутреннему счету: раз в месяц с нее будут списываться плата.</p>
+				<p>Вы в любой момент сможете отменить подписку в личном кабинете.</p>
+			</div>
+			<div class="order-payment">
+				<div class="order-payment__row">
+					<label class="radio__styled">
+						<input type="radio" name="222"><i></i>
+					</label>
+					<span>Оплатить картой</span>
+					<div class="order-payment__select">
+						<select name="" id="">
+							<option value="" class="mc-pay" >•••• •••• •••• 1234</option>
+							<option value="" class="mc-pay">•••• •••• •••• 7684</option>
+						</select>
+					</div>
+				</div>
+				<div class="order-payment__row">
+					<label class="radio__styled">
+						<input type="radio" name="222"><i></i>
+						<span>Использовать другую карту</span>
+					</label>
+				</div>
+				<div class="order-payment__row">
+					<label class="radio__styled">
+						<input type="radio" name="222"><i></i>
+						<span>Оплатить с внутреннего счета (У вас есть 28 900 ₽)</span>
+					</label>
+				</div>
+			</div>
+			<div class="agree-pay__submit">
+				<div class="agree-pay__price">
+					<span>К оплате</span>
+					<p>1 250 ₽</p>
+				</div>
+				<button class="button button__yellow"><span>Оплатить</span></button>
+			</div>
 		</div>
 	</div>
-</div>
+</form>

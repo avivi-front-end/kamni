@@ -604,24 +604,36 @@
 .gm-style-iw + div{display: none;} /* close cross */
 /* gmap style */
 .lk{
-	&-stonebox{
+	&-tabs{margin-bottom: 53px;
+		&__list{margin-bottom: 0; list-style-type:none; display: flex; padding-left: 0; flex-wrap: wrap;}
+		&__input{width: 0; height: 0; visibility: hidden; display: block; overflow: hidden; opacity: 0; margin: 0;
+			&:checked ~ .lk-tabs__text{border-color: #dcdcdc; color: #808080;}
+		}
+		&__item{margin-bottom: 20px;
+			&:not(:last-child){margin-right: 16px;}
+			label{width: 100%; height: 100px;}
+		}
+		&__text{padding: 8px 16px; line-height: 1.33; color: #3777b3; border-radius: 2px; border: solid 1px rgba(55,119,179, .4); cursor: pointer; font-size: 24px;
+		}
+	}
+	&-stonebox{padding-bottom: 72px;
 		h3, h2, h5{text-align: left;}
 		h1, h2{margin-top: 5px;}
-		&__row{
-			display: flex;
-		}
+		&__row{display: flex; margin-bottom: 57px;}
 		h3{margin-bottom: 0.6em;}
+		&__radio-row{padding-top: 11px;}
+		&__text{max-width: 564px;}
 	}
 	&-radio{width: 285px;}
 	&-example{
-		h5{
-			margin: 0em 0 1em;
-		}
+		h5{margin: 0.5em 0 0.7em;}
 		&__list{display: flex; margin: 0 -4px;}
 		&__item{border: 1px solid #e6e6e6; display: flex; flex-direction: column; margin: 0 4px; width: 136px;}
 		&__img{overflow: hidden;
 			img{width: 146px; height: 103px; object-fit: cover;}
 		}
-		&__text{border-top: 1px solid #e6e6e6; text-align: center;}
+		&__text{border-top: 1px solid #e6e6e6; text-align: center; padding: 7px;
+			p{margin-bottom: 0; font-size: 14px; line-height: 1.29;}
+		}
 	}
 }
