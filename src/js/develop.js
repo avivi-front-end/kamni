@@ -742,6 +742,7 @@ function profileLogic(){
         });
     }
 
+
 }
 $(document).ready(function () {
     dropdowns();

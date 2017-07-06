@@ -213,6 +213,14 @@
   .card__thumbs{ display: none;}
   .card__slider-wrap{ width: 100%;}
   .profile__main{ flex-direction: column;}
+  .profile__row{ padding: 17px 0 12px; }
+  .profile__form-row{ flex-direction: column;}
+  .profile__form-row span{ width: auto; margin-right: 0;}
+  .profile__buttons{ justify-content: center; }
+  .profile__card-type{ padding-left: 0;}
+  .profile__card{ margin-right: 0;}
+  .profile__buttons .button span{ padding: 0 10px; font-size: 12px; }
+  .profile__close{ font-size: 12px;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
@@ -272,8 +280,6 @@
   .lk-main__cell:first-child{ border-right:none; border-bottom: 1px solid #e6e6e6;}
   .lk-main__cell{ width: 100%;}
   .lk-main__row{ flex-wrap: wrap;}
-  .profile__form-row{ flex-direction: column;}
-  .profile__form-row span{ width: auto; margin-right: 0;}
-  .profile__buttons{ justify-content: center;}
+
 
 }
