@@ -147,6 +147,7 @@
   .od-table{overflow-x: scroll; width: 100%;}
   .od-table__head,
   .od-table__row{ min-width: 770px;}
+  .transactions{overflow-x: scroll;}
 }
 @media screen and (max-width: 730px) {
   .rock-man__img{ display: none;}
@@ -213,7 +214,9 @@
   .card__thumbs{ display: none;}
   .card__slider-wrap{ width: 100%;}
   .profile__main{ flex-direction: column;}
-  .profile__row{ padding: 17px 0 12px; }
+  .profile__row{
+    &.rising{padding: 10px; }
+  }
   .profile__form-row{ flex-direction: column;}
   .profile__form-row span{ width: auto; margin-right: 0;}
   .profile__buttons{ justify-content: center; }
@@ -237,7 +240,6 @@
   .order-done__groupup-txt,
   h4{font-size: 16px;}
   .profile__main,
-  .order-payment__row,
   h5{font-size: 14px;}
   h6{font-size: 12px;}
   .feed-top p { font-size: 14px;}
@@ -280,6 +282,7 @@
   .lk-main__cell:first-child{ border-right:none; border-bottom: 1px solid #e6e6e6;}
   .lk-main__cell{ width: 100%;}
   .lk-main__row{ flex-wrap: wrap;}
-
+  .order-payment__row{flex-wrap: wrap; font-size: 12px;}
+  .rising__main{ flex-direction: column-reverse;}
 
 }
