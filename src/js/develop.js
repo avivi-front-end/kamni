@@ -744,6 +744,22 @@ function profileLogic(){
 
 
 }
+function radioWatcher() {
+    var radio = $('.js-watcher');
+    if(radio.length > 0){
+        $(document).on('change', '.js-watcher', function () {
+            if($('.js-watcher:checked').hasClass('js-show')){
+                console.log('pokag');
+                $('.js-show').closest('.orderpay-modal__row').addClass('active');
+                $('.js-show').closest('.orderpay-modal__row').find('.orderpay-modal__add').stop().slideDown();
+            }else{
+                console.log('sprach');
+                $('.js-show').closest('.orderpay-modal__row').removeClass('active');
+                $('.js-show').closest('.orderpay-modal__row').find('.orderpay-modal__add').stop().slideUp();
+            }
+        });
+    }
+}
 $(document).ready(function () {
     dropdowns();
     sumBasket();
@@ -763,5 +779,7 @@ $(document).ready(function () {
     itemsSlider();
     counterStart();
     profileLogic();
+    radioWatcher();
+    $('.slider1').slick();
 
 });

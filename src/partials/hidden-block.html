@@ -496,4 +496,115 @@
                 <a class="button button__green"><span>Изменить заказ</span></a>
         </div>
     </div>
+    <div class="modal stonebox-modal" id="stonebox">
+        <div class="modal__content modal__content--normal">
+            <h3>Вы уверены что хотите
+                отменить подписку?</h3>
+            <p>После отмены подписки вы все равно получите StoneBox за оплаченный период </p>
+            <div class="stonebox-modal__buts">
+                <a href="#" class="button button__red"><span>Отменить подписку</span></a>
+                <a href="#" >Я передумал</a>
+            </div>
+        </div>
+    </div>
+    <div class="modal orderpay-modal" id="orderpay">
+        <div class="modal__content--normal">
+            <h3>Оплата заказа № 12-34-123-4</h3>
+            <form action="">
+
+                <div class="order-payment">
+                    <div class="order-payment__row">
+                        <label class="radio__styled">
+                            <input type="radio" name="222" class="js-watcher"><i></i>
+                            <span>Оплатить картой</span>
+                        </label>
+
+                        <div class="order-payment__select">
+                            <select name="" id="">
+                                <option value="" class="mc-pay" >•••• •••• •••• 1234</option>
+                                <option value="" class="mc-pay">•••• •••• •••• 7684</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="order-payment__row orderpay-modal__row">
+                        <label class="radio__styled">
+                            <input type="radio" name="222" class="js-watcher js-show"><i></i>
+                            <span>Использовать другую карту</span>
+                        </label>
+                        <div class="orderpay-modal__add">
+                            <div class="profile__form-wrap">
+                                <div class="profile__form-row">
+                                    <span>Имя</span>
+                                    <input type="text">
+                                </div>
+                                <div class="profile__form-row">
+                                    <span>Фамилия</span>
+                                    <input type="text">
+                                </div>
+
+                                <div class="profile__form-row">
+                                    <span>Номер карты</span>
+                                    <input type="text">
+                                </div>
+                                <div class="profile__form-row">
+                                    <div class="profile__card-type">
+                                        <label><input type="radio" name="rrr"><img src="images/mastercard.svg" alt=""></label>
+                                        <label><input type="radio" name="rrr"><img src="images/visa-c.svg" alt=""></label>
+                                    </div>
+                                </div>
+                                <div class="profile__form-row">
+                                    <div class="profile__card profile__card--small">
+                                        <span>Срок действия</span>
+                                        <p>
+                                            <input type="text" placeholder="MM"><i> / </i><input type="text" placeholder="ГГ">
+                                        </p>
+                                    </div>
+                                    <div class="profile__card">
+                                        <span>Код безопасность <b>?</b></span>
+                                        <p>
+                                            <input type="text" placeholder="CVC">
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-payment__row">
+                        <label class="radio__styled">
+                            <input type="radio" name="222" class="js-watcher"><i></i>
+                            <span>Другие способы оплаты</span>
+                        </label>
+
+                    </div>
+                    <p>Robokassa, Webmoney, Яндекс. Деньги, QIWI и др.</p>
+                    <div class="order-payment__row">
+                        <label class="radio__styled">
+                            <input type="radio" name="222" class="js-watcher"><i></i>
+                            <span>Оплатить с внутреннего счета (У вас есть 28 900 ₽) </span>
+                        </label>
+
+                    </div>
+
+
+                </div>
+                <div class="agree-pay">
+                    <div class="agree-pay__row">
+                        <label class="checkbox__styled">
+                            <input type="checkbox" name=" "><i></i>
+                        </label>
+                        <span>Я согласен со всеми пунктами длинного <a href="#">Пользовательского соглашения</a></span>
+                    </div>
+                    <div class="agree-pay__submit">
+                        <div class="agree-pay__price">
+                            <span>К оплате</span>
+                            <p>7 723 ₽</p>
+
+                        </div>
+                        <button class="button button__yellow"><span>Оформить заказ и оплатить</span></button>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
 </div>

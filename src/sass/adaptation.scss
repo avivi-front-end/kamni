@@ -224,6 +224,7 @@
   .profile__card{ margin-right: 0;}
   .profile__buttons .button span{ padding: 0 10px; font-size: 12px; }
   .profile__close{ font-size: 12px;}
+  .orderpay-modal__add{ width: 100%; padding: 0;}
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}
@@ -241,6 +242,7 @@
   h4{font-size: 16px;}
   .profile__main,
   h5{font-size: 14px;}
+  .profile__form-row span,
   h6{font-size: 12px;}
   .feed-top p { font-size: 14px;}
   .slider__slide{ height: 240px; padding:0 30px;}
@@ -284,5 +286,11 @@
   .lk-main__row{ flex-wrap: wrap;}
   .order-payment__row{flex-wrap: wrap; font-size: 12px;}
   .rising__main{ flex-direction: column-reverse;}
-
+  .stonebox-modal__buts{ display: flex; justify-content: center; align-items: center; flex-direction: column;}
+  .stonebox-modal .button__red{ margin-right: 0;}
+  .orderpay-modal .agree-pay__row, .orderpay-modal .agree-pay__submit,
+  .orderpay-modal h3, .orderpay-modal p, .orderpay-modal .order-payment__row {
+    padding: 0 10px;
+  }
+  .orderpay-modal__row label{ margin-left: 10px;}
 }
