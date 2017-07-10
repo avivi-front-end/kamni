@@ -1,0 +1,67 @@
+.score{padding: 50px 0;
+	.score__bottom{border: none; text-align: right;}
+	h4{ margin-bottom: 0.2em;}
+	&__cost{margin-bottom: 5px;}
+	&__table{width: 100%; border: 1px solid #000; margin-bottom: 50px; border-collapse: collapse;
+		&_non-border{border-bottom: none; border-left: none; }
+		th{font-weight: 400; text-align: center;}
+		td, th{border: 1px solid #000; padding: 5px 10px;}
+		td{vertical-align: bottom;}
+	}
+	&__signature{margin-top: 50px;}
+}
+.invoice{padding: 50px 0;
+	h6{text-align: right; margin: 5px;}
+	&__table{font-size: 9px; width: 100%; border-collapse: collapse; table-layout: auto; margin-bottom: 30px;
+		td{padding: 5px;}
+	}
+	&__left-col{width: 90px;}
+	&_little-text{font-size: 6px;}
+	&_border-bot{border-bottom: 1px solid #000; text-align: center;}
+	&__form-col{width: 70px; text-align: right;
+		&_border{border: 1px solid #000;}
+	}
+	&__right-col{width: 60px; text-align: center; border: 1px solid #000;}
+	.invoice_non-border{border: none; text-align: right;}
+	&-num{width: 90px; text-align: left;}
+	&_center{text-align: center;}
+	&-table2{margin-bottom: 50px; width: 100%; border-collapse: collapse;
+		td, th{border: 1px solid #000; padding: 5px; text-align: center; font-size: 8px;}
+		h5{margin: 0; text-align: right; padding-right: 30px; position: absolute; top: -10px;}
+	}
+	&__summary{font-size: 11px; padding-left: 10px;}
+	&__table3{border-collapse: collapse; width: 100%;
+		td{padding: 20px 10px 5px; font-size: 11px; vertical-align: bottom;}
+	}
+	&__table4{width: 100%; border-spacing: 15px; margin: 0 -15px;
+		td{padding: 20px 10px 5px; font-size: 11px;}
+	}
+	&-sample{width: 250px; position: relative;
+		span{position: absolute; bottom: -12px; font-size: 8px; left: 50%; transform: translate(-50%); white-space: nowrap;}
+	}
+	&__table-aside{ width: 135px; border-collapse: collapse;
+		td{border: 2px solid #000; height: 40px;}
+	}
+	&__flex-wrap{display: flex; justify-content: space-between; margin-bottom: 30px;
+		&_left{width: 78%;}
+		&_col{width: 50%;
+			&:not(:last-child){border-right: 1px solid #000; padding-right: 10px;}
+			&1{width: 50%;}
+		}
+	}
+	&__text{position: relative;
+		&:after{content: ''; width: 100%; height: 1px; background: #000; position: absolute; bottom: -5px; left: 0;}
+	}
+	&_border-bot-full{border-bottom: 1px solid #000; text-align: center;}
+	&__brackets{position: relative; text-align: center;
+		&:before, &:after{position: absolute; top: 50%; transform: translateY(-50%);}
+		&:before{content: '«'; position: absolute; left: -10px;}
+		&:after{content: '»'; position: absolute; right: -10px;}
+	}
+	&__table5{width: 100%;
+		td{padding: 20px 10px 0px; font-size: 11px; vertical-align: bottom;}
+	}
+	&__bor-sp{position: relative; border-bottom: 1px solid #000; text-align: center;
+		span{position: absolute; bottom: -12px; font-size: 8px; left: 50%; transform: translate(-50%); white-space: nowrap;}
+	}
+}
