@@ -213,6 +213,7 @@
 @media screen and (max-width: 560px) {
   .card__thumbs{ display: none;}
   .card__slider-wrap{ width: 100%;}
+  .stonelist__main,
   .profile__main{ flex-direction: column;}
   .profile__row{
     &.rising{padding: 10px; }
@@ -225,6 +226,7 @@
   .profile__buttons .button span{ padding: 0 10px; font-size: 12px; }
   .profile__close{ font-size: 12px;}
   .orderpay-modal__add{ width: 100%; padding: 0;}
+  .profile__row.active {  padding: 17px 10px 12px; }
 }
 @media screen and (max-width: 480px) {
   .bigsoc__item{ width: 105px; height: 32px;font-size: 14px;  line-height: 1.14; text-align: left; justify-content: center;}

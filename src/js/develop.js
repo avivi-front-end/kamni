@@ -730,15 +730,15 @@ function profileLogic(){
     var butt = $('.profile__show');
     if(butt.length > 0){
         butt.click(function () {
-            $(this).closest('.profile__row').addClass('active');
-            $(this).closest('.profile__row').find('.profile__form').stop().slideDown();
+            $(this).closest('.profile__row').eq(0).addClass('active');
+            $(this).closest('.profile__row').find('.profile__form').eq(0).stop().slideDown();
         });
     }
     var butt2 = $('.profile__close');
     if(butt2.length > 0){
         butt2.click(function () {
-            $(this).closest('.profile__row').removeClass('active');
-            $(this).closest('.profile__row').find('.profile__form').stop().slideUp();
+            $(this).closest('.profile__row').eq(0).removeClass('active');
+            $(this).closest('.profile__row').find('.profile__form').eq(0).stop().slideUp();
         });
     }
 
