@@ -150,6 +150,9 @@
 			&__row{display: block;}
 		}
 	}
+	.adv-mini{
+		&__item{width: 50%;}
+	}
 	.map-modal{
 		&__aside{display: none;}
 	}
@@ -278,6 +281,9 @@
 	}
 }
 @media screen and (max-width: 480px){
+	.adv-mini{
+		&__item{width: 100%;}
+	}
 	.stonebox{
 		&-choice{
 			&__price-list{flex-direction: column; align-items: center;
