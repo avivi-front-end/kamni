@@ -259,7 +259,7 @@
 			h2{margin: 1.8em auto 0.8em; max-width: 850px;}
 		}
 	}
-	&-box{position: relative; max-width: 568px; margin:0 4px; overflow: hidden;
+	&-box{position: relative; max-width: 568px; width: 100%; margin:0 4px; overflow: hidden;
 		&:hover{
 			img{transform: scale(1.2); transition: transform 200ms;}
 		}
@@ -661,8 +661,36 @@
 			p{margin-bottom: 0; font-size: 14px; line-height: 1.29;}
 		}
 	}
+	&-list{
+		&__gray{color: #575757;}
+		h2, h3{text-align: left;}
+		h2{margin-bottom: 0.8em; margin-top: 0;}
+		.lk-list__title{margin: 0.6em 0 0.7em;}
+		h3{margin-bottom: 0.3em;}
+		&__tabs{
+			.lk-tabs__item{margin-bottom: 10px;}
+		}
+		&__bq{margin-top: 0;}
+		&__btn{
+			span{height: 40px;}
+		}
+		&__adv{
+			h3{margin-bottom: 0.7em;}
+		}
+		&__btns{
+			.button{margin-bottom: 10px;
+				&:not(:last-child){margin-right: 16px;}
+			}
+		}
+		&__sales{padding-bottom: 26px;
+			p{margin-bottom: 2em;}
+			.sales-box__text{padding: 23px 73px 25px 33px; min-height: 298px;}
+			.sales-box__text h2{font-size: 24px; line-height: 31px;}
+			.sales-box__date{margin-bottom: 10px;}
+		}
+	}
 }
-.adv-mini{margin-bottom: 55px;
+.adv-mini{padding-bottom: 55px;
 	&__list{list-style-type: none; display: flex; flex-wrap: wrap; padding-left: 0; margin: 0; margin-bottom: 20px;}
 	&__item{width: 33.33%; display: flex; padding-right: 30px; margin-bottom: 25px;}
 	&__img{width: 40px; height: 40px; position: relative; flex-shrink: 0; margin-right: 16px;

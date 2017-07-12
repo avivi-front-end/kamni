@@ -729,7 +729,8 @@ function orderingRadio() {
 function profileLogic(){
     var butt = $('.profile__show');
     if(butt.length > 0){
-        butt.click(function () {
+        butt.click(function (e) {
+            e.preventDefault();
             $(this).closest('.profile__row').eq(0).addClass('active');
             $(this).closest('.profile__row').find('.profile__form').eq(0).stop().slideDown();
         });
