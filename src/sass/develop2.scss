@@ -662,6 +662,10 @@
 		}
 	}
 	&-list{
+		&__pay{margin-right: 24px;
+			span{font-size: 14px; line-height: 1.43; text-align: left; color: #808080;}
+			p{font-size: 24px; line-height: 1.33; text-align: left; color: #000000; margin-bottom: 0; white-space: nowrap;}
+		}
 		&__gray{color: #575757;}
 		h2, h3{text-align: left;}
 		h2{margin-bottom: 0.8em; margin-top: 0;}
