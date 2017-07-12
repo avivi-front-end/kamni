@@ -615,9 +615,12 @@
 		}
 		&__item{margin-bottom: 20px;
 			&:not(:last-child){margin-right: 16px;}
-			label{width: 100%; height: 100px;}
-		}
-		&__text{padding: 8px 16px; line-height: 1.33; color: #3777b3; border-radius: 2px; border: solid 1px rgba(55,119,179, .4); cursor: pointer; font-size: 24px;
+			label{display: block; width: 100%; padding: 8px 16px; line-height: 1.33; color: #3777b3; border-radius: 2px; border: solid 1px rgba(55,119,179, .4); cursor: pointer; font-size: 24px;}
+			blockquote{margin: 0.1em 0.1em;}
+			&--special{
+				label{padding-right: 60px; position: relative; overflow: hidden;}
+				.special-discount{position: absolute; right: -37px; top: -37px; width: 80px; padding: 43px 0 0 6px; height: 80px; background: #51b375; font-size: 14px; font-weight: 700; color: #fff; border-radius: 50%;}
+			}
 		}
 	}
 	&-club{
@@ -638,6 +641,13 @@
 		h3{margin-bottom: 0.6em;}
 		&__radio-row{padding-top: 11px;}
 		&__text{max-width: 564px;}
+	}
+	&-decor{padding-bottom: 72px;
+		h2, h3{text-align: left;}
+		h2{margin-top: 0.1em;}
+		h3{margin-bottom: 0.7em;}
+		&__tabs{margin-bottom: 10px;}
+		&__del{margin-top: 56px;}
 	}
 	&-radio{width: 285px;}
 	&-example{
