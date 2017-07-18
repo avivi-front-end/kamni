@@ -14,7 +14,7 @@
 	&__signature{margin-top: 50px;}
 }
 .invoice{padding: 50px 0 100px;
-	h6{text-align: right; margin: 5px;}
+	h6{text-align: right; margin: 5px; font-size: 12px;}
 	&__table{font-size: 9px; width: 100%; border-collapse: collapse; table-layout: auto; margin-bottom: 10px;
 		td{padding: 7px 5px 0px;}
 	}
@@ -34,7 +34,7 @@
 	}
 	&__summary{font-size: 11px; padding-left: 10px;}
 	&__table3{border-collapse: collapse; width: 100%;
-		td{padding: 15px 10px 0px; font-size: 11px; vertical-align: bottom;}
+		td{padding: 5px 10px 0px; font-size: 11px; vertical-align: bottom;}
 	}
 	&__table4{width: 100%; border-spacing: 15px; margin: 0 -15px;
 		td{padding: 15px 10px 5px; font-size: 11px;}
@@ -52,7 +52,7 @@
 			&1{width: 50%;}
 		}
 	}
-	&__print{position: absolute; bottom: -30px; left: 50px;}
+	&__print{position: absolute; bottom: -30px; left: 50px; font-size: 11px;}
 	&__text{position: relative; border-bottom: 1px solid #000;}
 	&_border-bot-full{border-bottom: 1px solid #000; text-align: center;}
 	&__brackets{position: relative; text-align: center;
@@ -61,7 +61,7 @@
 		&:after{content: '»'; position: absolute; right: -10px;}
 	}
 	&__table5{width: 100%;
-		td{padding: 15px 10px 0px; font-size: 11px; vertical-align: bottom;}
+		td{padding: 5px 10px 0px; font-size: 11px; vertical-align: bottom;}
 	}
 	&__bor-sp{position: relative; border-bottom: 1px solid #000; text-align: center;
 		span{position: absolute; bottom: -8px; font-size: 8px; left: 50%; font-size: 6px; transform: translate(-50%); white-space: nowrap;}

@@ -29,6 +29,12 @@
 	}
 }
 @media screen and (max-width: 992px){
+	.blog{
+		.blog__hide-text{opacity: 1; display: block; z-index: 20; text-decoration: none;}
+		.document__bg img{filter: blur(8px); transform: scale(1); transition: all linear .3s;}
+		p, h4, .document__watch, .blog__date{display: none;}
+	}
+	.blog__container{justify-content: center;}
 
 	.collection{
 		&__content{

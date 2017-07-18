@@ -1,6 +1,17 @@
 /**
  * Created by user on 24.05.2017.
  */
+(function(){
+	$(".js-cut-text").dotdotdot({
+			ellipsis	: '...',
+			wrap		: 'word',
+			fallbackToLetter: 'letter',
+			after		: null,
+			watch		: true,
+			height		: null,
+			tolerance	: 0
+		});
+})();
 
 $(document).ready(function() {
 		GMapHandler();
