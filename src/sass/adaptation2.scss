@@ -29,10 +29,17 @@
 	}
 }
 @media screen and (max-width: 992px){
+	.archive{
+		&-form{
+			&__col{width: 100%;}
+		}
+	}
 	.blog{
 		.blog__hide-text{opacity: 1; display: block; z-index: 20; text-decoration: none;}
 		.document__bg img{filter: blur(8px); transform: scale(1); transition: all linear .3s;}
-		p, h4, .document__watch, .blog__date{display: none;}
+		.blog-hide, h4, .document__watch, .blog__date{display: none;}
+		&-article__container{flex-direction: column;}
+		&-article__left{width: 100%;}
 	}
 	.blog__container{justify-content: center;}
 
@@ -70,10 +77,7 @@
 		}
 	}
 	.prod-card{
-		&__top{
-			height: auto;
-			padding: 15px 0;
-		}
+		&__top{height: auto; padding: 15px 0;}
 	}
 	.delivery__decorations{background-position: left bottom}
 	.delivery__wrap{padding-left: 0;}
