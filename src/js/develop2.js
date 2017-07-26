@@ -1,20 +1,23 @@
 /**
  * Created by user on 24.05.2017.
  */
+(function(){
+	$(".js-cut-text").dotdotdot({
+			ellipsis	: '...',
+			wrap		: 'word',
+			fallbackToLetter: 'letter',
+			after		: null,
+			watch		: true,
+			height		: null,
+			tolerance	: 0
+		});
+})();
 
 $(document).ready(function() {
 		GMapHandler();
 		$('.js-sales-slider').slick({
 				slidesToShow: 2,
-				arrows:true,
-				responsive: [
-						{
-							breakpoint: 768,
-							settings: {
-								slidesToShow: 1
-							}
-						}
-				]
+				arrows:true
 		});
 
 		$('.js-col-slider').slick({
@@ -41,8 +44,43 @@ $(document).ready(function() {
 						}
 				]
 		});
+
+		$('.js-art-slider').slick({
+				slidesToShow: 4,
+				arrows:true,
+				infinite: false,
+				responsive: [
+						{
+							breakpoint: 800,
+							settings: {
+								slidesToShow: 3 
+							}
+						},
+						{
+							breakpoint: 664,
+							settings: {
+								slidesToShow: 2
+							}
+						},
+						{
+							breakpoint: 450,
+							settings: {
+								slidesToShow: 1
+							}
+						}
+				]
+		});
 });
 
+var filterDrop = (function(){
+	var $btn = $('.js-sw-trg');
+
+	$btn.on('click', function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).parent().next().slideToggle();
+	});
+})();
 
 var sendFile = (function(){
 		var fileText = $('.file-field__text');
