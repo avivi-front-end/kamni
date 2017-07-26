@@ -835,7 +835,7 @@
 			&:hover{color: #575757;}
 		}
 		&__item{position: relative;}
-		&__wrap{display: none;}
+		&__wrap{display: none; border: none;}
 	}
 	&__link{color: #000; font-size: 16px; line-height: 1.38; text-align: left;
 		&:hover{color: #000;}
@@ -844,6 +844,6 @@
 		&.active{
 			&:before{width: 5px; height: 100%; background-color: #4acb82; content: ''; position: absolute; left: 0; top: 0;}
 		}
-		&:not(:last-child){border-bottom: 1px solid #e6e6e6;}
+		&:not(:first-child){border-top: 1px solid #e6e6e6;}
 	}
 }
