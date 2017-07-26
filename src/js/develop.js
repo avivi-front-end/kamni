@@ -761,7 +761,18 @@ function radioWatcher() {
         });
     }
 }
+
 $(document).ready(function () {
+    $().fancybox({
+        selector : '[data-fancybox="group"]',
+        loop : true,
+        hash     : false,
+        toolbar  : false,
+        afterShow : function( instance, current ) {
+            instance.update();
+        }
+
+    });
     dropdowns();
     sumBasket();
     orderingRadio();
