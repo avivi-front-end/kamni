@@ -29,7 +29,15 @@
 	}
 }
 @media screen and (max-width: 992px){
+	.our-collection{
+		&-slider{
+			&__inner{flex-direction: column; justify-content: center;}
+			&__wrap{width: 100%;}
+			&__text{padding-right: 0;}
+		}
+	}
 	.archive{
+		&__content-wrap{justify-content: center;}
 		&-form{margin-bottom: 40px;
 			&__col{width: 100%;}
 		}
@@ -291,7 +299,6 @@
 	}
 }
 @media screen and (max-width: 480px){
-	.aside-drop-menu__item{padding: 5px 17px;}
 	.lk-list__pay p{font-size: 20px;}
 	.adv-mini{
 		&__item{width: 100%;}
