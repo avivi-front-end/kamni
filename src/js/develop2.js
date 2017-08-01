@@ -72,8 +72,39 @@ $(document).ready(function() {
 		});
 });
 
+var filterAlph = (function(){
+	var $letter = $('.js-letter');
+	var $input = $('.js-alph-input');
+	var $close = $('.js-alph-close');
+	var $reset = $('.js-alph-reset');
+
+	$letter.on('click', function(){
+		$(this).parent().toggleClass('active');
+	});
+
+	$close.on('click', function(){
+		if($(this).parent().find($input).not(":checked")){
+			$(this).parent().parent().hide();
+		}
+	});
+
+	$reset.on('click', function(e){
+		e.preventDefault();
+		$('.alph-form__item').show();
+		$('.alph-form__item').removeClass('active');
+		$input.prop('checked',false);
+	});
+
+})();
+
 var filterDrop = (function(){
 	var $btn = $('.js-sw-trg');
+	var $reset = $('.js-check-reset');
+
+	$reset.on('click', function(e){
+		e.preventDefault();
+		$(this).parent().find('.aside-drop-menu-check__input').prop('checked',false);
+	});
 
 	$btn.on('click', function(e){
 		e.preventDefault();

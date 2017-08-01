@@ -29,8 +29,16 @@
 	}
 }
 @media screen and (max-width: 992px){
+	.our-collection{
+		&-slider{
+			&__inner{flex-direction: column; justify-content: center;}
+			&__wrap{width: 100%;}
+			&__text{padding-right: 0;}
+		}
+	}
 	.archive{
-		&-form{
+		&__content-wrap{justify-content: center;}
+		&-form{margin-bottom: 40px;
 			&__col{width: 100%;}
 		}
 	}

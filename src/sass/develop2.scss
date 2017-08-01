@@ -26,7 +26,7 @@
 }
 .video-pop{text-align: center;
 	h2{margin-top: 0.5em;}
-	&__tabs{display: flex; justify-content: center; list-style-type: none; padding-left: 0;}
+	&__tabs{display: flex; justify-content: center; list-style-type: no14e; padding-left: 0;}
 	&__tab{border: 1px solid #C7C7C7; color: #C7C7C7; font-size: 17px; line-height: 2.2; white-space: nowrap; padding: 0 5px; cursor: pointer; border-radius: 2px;
 		&:hover, .active{border-color: #AFC9E0; color: #3777B3;}
 		&.active{border-color: #AFC9E0; color: #3777B3;}
@@ -35,7 +35,7 @@
 	&__video-wrap{width: 900px; height: 600px;}
 }
 .phone-workhours{text-align: center; margin: 2.5em 0 2.5em;
-	&__phone{font-size: 32px; font-weight: bold; line-height: 1.25; margin-bottom: 0.3em;}
+	&__phone{font-size: 32px; font-weight: bold; line-height: 1; margin-bottom: 0.3em;}
 	&__workhours{font-size: 16px; line-height: 1.5; color: #808080;}
 }
 .social-links{list-style-type: none; display: flex; justify-content: center; padding-left: 0;margin: 0;
@@ -458,7 +458,7 @@
 		}
 		&__left{max-width: 382px; padding-right: 1em;}
 		&__date{color: #808088; margin-top: 1.5em;}
-		h2{text-align: left; margin: 0.4em 0 0;}
+		h2{text-al14gn: left; margin: 0.4em 0 0;}
 		&__title{font-weight: 700; font-size: 17px; margin: 1.5em 0 0.8em;}
 		&__price{
 			&-title{font-size: 14px; line-height: 1.43;}
@@ -466,7 +466,7 @@
 				&-item{padding: 7px 16px 7px;
 					&:not(:last-child){margin-right: 10px;}
 					&.active{background: #f9f7ec;
-						.stonebox-choice__price{font-size: 32px; line-height: 1.25;}
+						.stonebox-choice__price{font-size: 32px; line-height: 1;}
 					}
 				}
 			}
@@ -713,7 +713,7 @@
 		h1{margin-top: 0;}
 	}
 	&__wrap{padding: 20px 0 0;}
-	&__date{opacity: 0.8; font-size: 12px; line-height: 1.33; color: #ffffff;position: absolute; z-index: 10; bottom: 20px; right: 25px; line-height: 24px;}
+	&__date{opaci14y: 0.8; font-size: 12px; line-height: 1.33; color: #ffffff;position: absolute; z-index: 10; bottom: 20px; right: 25px; line-height: 24px;}
 	&__container{display: flex; flex-wrap: wrap; margin-right: -8px;}
 	&__hide-text{position: absolute; top: 0; left: 0; right: 0; bottom: 0; padding: 32px 25px 20px; opacity: 0; display: none;
 		.button{
@@ -721,7 +721,7 @@
 		}
 	}
 	&__left-aside{margin-top: 40px;}
-	&__inner-text{color: #fff; font-size: 16px; line-height: 1.25; height: 180px; overflow: hidden; margin-bottom: 30px;}
+	&__inner-text{color: #fff; font-size: 16px; line-height: 1; height: 180px; overflow: hidden; margin-bottom: 30px;}
 	&__form{padding: 0 24px 0;
 		h6{font-size: 16px; margin: 2.5em 0 0.6em;}
 		h3{margin: 0 0 0.7em;}
@@ -808,7 +808,7 @@
 		}
 	}
 	h2{margin: 0em 0 0.8em; text-align: left;}
-	&__content-wrap{display: flex; flex-wrap: wrap; justify-content: center; margin-right: -8px;}
+	&__content-wrap{display: flex; flex-wrap: wrap; margin-right: -8px;}
 	&__bot{padding-bottom: 70px;
 		h2, h5{text-align: left;}
 		h2{color: #3777b3;}
@@ -828,15 +828,33 @@
 		}
 	}
 }
-.aside-drop-menu{border: 1px solid #e6e6e6; border-radius: 2px; list-style-type: none; padding-left: 0;
+.aside-drop-menu{border: 1px solid #e6e6e6; border-radius: 2px; list-style-type: none; padding-left: 0; margin: 0 0 30px;
+	.button{
+		span{height: 40px;}
+	}
 	&-submenu{list-style-type: none; padding-left: 0; display: flex; flex-direction: column; align-items: flex-start;
 		&--padl{padding-left: 27px;}
 		&__link{position: relative; font-size: 14px; line-height: 1.71; color: #575757;
 			&:hover{color: #575757;}
 		}
 		&__item{position: relative;}
-		&__wrap{display: none;}
+		&__wrap{display: none; border: none;}
 	}
+
+	&-check{display: flex; align-items: flex-start; cursor: pointer;
+		&:not(:last-child){margin-bottom: 14px;}
+		&__icon{width: 16px; height: 16px; flex-shrink: 0; border: solid 1px #cccccc; border-radius: 3px; margin-right: 8px; position: relative;
+			&:before{content: ''; width: 5px; height: 9px; background: transparent; border-bottom: 2px solid #000; border-right: 2px solid #000; transform: rotate(45deg); opacity: 0; margin-top: -2px; display: block; position: absolute; left: 5px; top: 4px;}
+		}
+		&__input{width: 0; height: 0; visibility: hidden; display: block; overflow: hidden; opacity: 0; margin: 0;
+			&:checked ~ .aside-drop-menu-check__icon{
+				&:before{opacity: 1;}
+			}
+		}
+		&__text{line-height: 1;}
+	}
+	&__reset{font-size: 14px;}
+	&__title{font-size: 16px; font-weight: bold; line-height: 1.5; margin-bottom: 9px;}
 	&__link{color: #000; font-size: 16px; line-height: 1.38; text-align: left;
 		&:hover{color: #000;}
 	}
@@ -844,6 +862,46 @@
 		&.active{
 			&:before{width: 5px; height: 100%; background-color: #4acb82; content: ''; position: absolute; left: 0; top: 0;}
 		}
-		&:not(:last-child){border-bottom: 1px solid #e6e6e6;}
+		&:not(:first-child){border-top: 1px solid #e6e6e6;}
 	}
+}
+.our-collection{
+	&__first-screen{min-height: 521px; background: url(../images/bg-ocol.jpg) center center no-repeat; margin-bottom: 23px;
+		.first-screen__title{max-width: 585px;}
+	}
+	&-slider{border-top: 1px solid #e6e6e6; border-bottom: 1px solid #e6e6e6;
+		&__inner{display: flex;}
+		&__wrap{width: 568px; padding: 46px 0;
+			.slider__slide{height: 379px;}
+		}
+		&__text{padding: 49px 87px 0 0px;
+			h2{text-align: left; margin: 0em 0 0.2em;}
+			h5{text-align: left; margin-bottom: 1.4em;}
+			.button{width: 209px;}
+		}
+	}
+	&-question{
+		&__title{max-width: 780px; margin: 0 auto;
+			h2{margin: 1.8em 0 0;}
+			h5{margin-bottom: 1.7em;}
+		}
+		&__btn-wrap{padding: 15px 0 72px; text-align: center;}
+	}
+}
+.alph-form{list-style-type: none; padding-left: 0; display: flex; flex-wrap: wrap; margin-bottom: 15px;
+	&__item{cursor: pointer; margin-right: 10px; display: flex; align-items: center; position: relative;
+		&.active{
+			&:before{content: ''; background: #f5f5f5; border-radius: 2px; position: absolute; top: 0; left: -3px; right: -3px; bottom: 0;}
+			.alph-form__cross{display: block;}
+		}
+	}
+	&__letter{text-transform: uppercase; color: #3777b3; margin-right: 4px;position: relative; z-index: 2;}
+	&__label{position: relative;}
+	&__cross{width: 8px; height: 8px; cursor: pointer; display: none;
+		span{background: #c7c7c7; height: 1px; display: block; width: 9px;
+			&:first-child{transform: translate3d(0, 4px, 0) rotate(-45deg);}
+			&:last-child{transform: translate3d(0, 3px, 0) rotate(45deg);}
+		}
+	}
+	&__input{width: 0; height: 0; visibility: hidden; display: block; overflow: hidden; opacity: 0; margin: 0;}
 }
