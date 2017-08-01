@@ -154,7 +154,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   &__info{ font-size: 10px; font-weight: bold; line-height: 1.4;  letter-spacing: 1.5px;  text-align: left;  color: #ffffff; text-transform: uppercase; padding: 5px 8px; display: inline-block; position: absolute; bottom: 8px; left: 16px;}
   &__like{ display: none; justify-content: center; align-items: center; width: 32px; height: 32px; background-color: rgba(0,0,0,0.35); border-radius: 50%; position: absolute; right: 16px; top: 16px; padding: 7px; cursor: pointer;
     &:hover{background-color: rgba(0,0,0,0.5);}
-    &.active{ display: flex;}
+    &.active{ display: flex;background-color: rgba(0,0,0,1);}
   }
   &__present{ display: none; justify-content: center; align-items: center; width: 32px; height: 32px; background-color: rgba(0,0,0,0.35); border-radius: 50%; position: absolute; right: 16px; top: 56px; padding: 7px; cursor: pointer;
     &:hover{background-color: rgba(0,0,0,0.5);}
@@ -917,11 +917,14 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
 .card{
   &__wrap{ display: flex; justify-content: space-between; align-items: flex-start; padding-top: 21px;}
   &__slider-wrap{ width: 520px; }
+  &__slide{ position: relative;
+    .tovar__like{ display: flex; width: 40px; height: 40px; z-index: 99;}
+    .tovar__present{ display: flex; width: 40px; height: 40px; top: 64px;}
+  }
   &__slider{border:1px solid #e6e6e6; border-radius:2px;}
   &__slide-img{ position: relative; width: 100%; height: 390px; display: block;
     img{ width: 100%; height: 100%; object-fit: cover;}
-    .tovar__like{ display: flex; width: 40px; height: 40px;}
-    .tovar__present{ display: flex; width: 40px; height: 40px; top: 64px;}
+
   }
   &__slide-video{ position: relative; width: 100%; height: 390px; display: block;
     &:before{content: ''; width: 80px; height: 80px;border-radius: 50%; background-color: rgba(0,0,0,0.5); position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); transition:all 200ms;}
