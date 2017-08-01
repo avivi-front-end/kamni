@@ -521,17 +521,17 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   h2{max-width: 610px;}
   h5{max-width: 610px;}
   &__content{ padding-top: 13px; display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; margin-right: -7px;}
-  &__item{ cursor: pointer; display: block; width: 282px;  border-radius: 4px;  background-color: #ffffff; border: solid 1px #e6e6e6; margin-right: 6px; margin-bottom: 6px;
+  &__item{display: flex; justify-content: center; align-items: center; height: 300px; cursor: pointer; position: relative; width: 282px;  border-radius: 4px;  background-color: #ffffff; border: solid 1px #e6e6e6; margin-right: 6px; margin-bottom: 6px;
     &:hover{ text-decoration: none;
-      .services__img img{transform: scale(1.2);}
     }
+    &:before{content: ''; background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.6)), to(transparent)); background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0.6), transparent); background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent); position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 8;}
   }
-  &__img{ width: 100%; height: 136px; overflow: hidden;
+  &__img{position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 5;
     img{ width: 100%; height: 100%; object-fit: cover; transition: transform 200ms;}
   }
-  &__text{ min-height: 174px; padding: 25px 10px 5px;
-    p{ margin: 0;font-size: 12px;  font-weight: bold;  line-height: 1.33;  letter-spacing: 2.2px; text-align: center;  color: #3777b3; text-transform: uppercase;}
-    h4{line-height: 1.33; color: #000000;}
+  &__text{position: relative; z-index: 10;
+    p{color: #fff; margin: 0;font-size: 12px;  font-weight: bold;  line-height: 1.33;  letter-spacing: 2.2px; text-align: center; text-transform: uppercase;}
+    h4{color: #fff; line-height: 1.33;}
   }
 }
 .mailer{ margin-bottom: 73px;
@@ -852,6 +852,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   &__wrapper{ padding-top: 70px;}
 }
 .opt-top{ background-position: 50%; background-size: cover; min-height: 562px; position: relative; padding-top: 1px; display: flex; justify-content: center; align-items: center;
+  &:after{content: ''; background: #000; opacity: 0.3; position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10;}
   &__content{ text-align: center;
     h1{ color: #fff;}
     h5{ color: #fff;}

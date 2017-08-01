@@ -123,6 +123,42 @@ var sendFile = (function(){
 		});
 })();
 
+var ProductSheet = (function(){
+
+	$('.js-sheet-slider').slick({
+			slidesToShow: 1,
+			arrows:true
+	});
+
+	$("[data-fancybox-sheet]").fancybox({
+		/*modal: true,*/
+		showCloseButton: true,
+		/*touch : {
+			vertical : false,  // Allow to drag content vertically
+			momentum : false   // Continue movement after releasing mouse/touch when panning
+		},*/
+		afterLoad: function() {
+			$('.js-prodsheet-slider').slick({
+					dots:false,
+					arrows:true,
+					slidesToShow: 5,
+					slidesToScroll: 1,
+					responsive: [
+							{ breakpoint: 1150, settings: {  slidesToShow: 5} },
+							{ breakpoint: 992, settings: {  slidesToShow: 4} },
+							{ breakpoint: 750, settings: {  slidesToShow: 3} },
+							{ breakpoint: 600, settings: {  slidesToShow: 2} },
+							{ breakpoint: 450, settings: {  slidesToShow: 1} }
+					]
+			});
+		},
+		afterClose: function(){
+			$('.js-prodsheet-slider').slick('unslick');
+		}
+	});
+
+})();
+
 var videoPop = (function(){
 		var $targetBtn = $('.js-target-btn');
 		var $tab = $('.js-tab');
