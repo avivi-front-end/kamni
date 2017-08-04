@@ -120,8 +120,10 @@
 			text-align: left;
 		}
 	}
-	&__wrap{padding-left: 48px; max-width: 805px; padding-top: 10px;}
-	&__row{margin-bottom: 3em;}
+	&__wrap{max-width: 805px; padding-top: 10px;}
+	&__row{margin-bottom: 3em;
+		p{color: #575757;}
+	}
 }
 .del-nav{
 	&__list{list-style-type: none; display: flex; flex-wrap: wrap; padding-left: 0;}

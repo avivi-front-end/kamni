@@ -172,6 +172,9 @@
 	}
 }
 @media screen and (max-width: 768px){
+	.card__nothing{flex-direction: column;
+		input{width: 100%;}
+	}
 	.lk{
 		&-stonebox{
 			&__row{display: block;}
@@ -259,6 +262,12 @@
 	}
 }
 @media screen and (max-width: 600px){
+	.card__price-inner{flex-direction: column;
+		strike{margin-right: 0;}
+		.card-percent{margin: 0 0 10px;}
+	}
+	.card-counter{text-align: center;}
+	.card-price__bot{flex-direction: column; align-items: center;}
 	.stonebox{
 		&-choice{
 			&__products{flex-direction: column; align-items: center;}
