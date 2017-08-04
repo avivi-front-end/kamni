@@ -47,10 +47,10 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 .footer{position:absolute;bottom:0;left:0;width:100%;z-index:2;overflow:hidden;}
 
 input, textarea{
-    &::-webkit-input-placeholder  { color: #000; font-size: 16px;}
-    &:-moz-placeholder            { color: #000; font-size: 16px;}
-    &::-moz-placeholder           { color: #000; font-size: 16px;}
-    &:-ms-input-placeholder       { color: #000; font-size: 16px;}
+    &::-webkit-input-placeholder  { color: #808080; font-size: 16px;}
+    &:-moz-placeholder            { color: #808080; font-size: 16px;}
+    &::-moz-placeholder           { color: #808080; font-size: 16px;}
+    &:-ms-input-placeholder       { color: #808080; font-size: 16px;}
 }
 
 /*End Layout*/
