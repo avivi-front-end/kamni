@@ -982,3 +982,7 @@
 		h3{margin-top: 0; margin-bottom: 0.2em;}
 	}
 }
+#choose-city{height: 500px; padding: 20px 30px 20px; }
+.modal-choose{height: 450px; overflow-y: scroll;
+	&+ .fancybox-close-small{top: -40px; right: -10px;}
+}
