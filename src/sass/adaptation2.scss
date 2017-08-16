@@ -270,6 +270,7 @@
 	}
 }
 @media screen and (max-width: 600px){
+	.delivery__list ul{font-size: 14px;}
 	.card__price-inner{flex-direction: column;
 		strike{margin-right: 0;}
 		.card-percent{margin: 0 0 10px;}

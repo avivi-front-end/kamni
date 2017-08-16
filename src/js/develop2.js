@@ -72,6 +72,29 @@ $(document).ready(function() {
 		});
 });
 
+var addDelMap = (function(){
+	var btn = $('.js-del-map');
+
+	btn.click(function(e){
+		e.preventDefault();
+		$(this).next().slideToggle();
+		var $map = $('#map');
+		if(addMap){
+			$.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=gMapInitialize&key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
+			addMap = !addMap;
+		}
+	});
+})();
+
+var addDelList = (function(){
+	var btn = $('.js-del-list');
+
+	btn.click(function(e){
+		e.preventDefault();
+		$(this).next().slideToggle();
+	});
+})();
+
 var filterAlph = (function(){
 	var $letter = $('.js-letter');
 	var $input = $('.js-alph-input');
@@ -356,7 +379,7 @@ window.Gmap = null;
 		 return;
 	 }
 	 if (!window.map_coords) {
-		 console.log("[Gmap] Не заданы координаты в параметре map_coord. Используем стандартное значение");
+		 /*console.log("[Gmap] Не заданы координаты в параметре map_coord. Используем стандартное значение");*/
 		 window.map_coords = "55.69777704873052,37.77824859751695;55.7535378290641,37.624929644118836;10";
 	 }
 	 var r = window.map_coords.split(";");
@@ -379,6 +402,7 @@ window.Gmap = null;
 			 o = true;
 		 }
 	 }, 20);
+
 	 window.gMapInitialize = function() {
 		 window.Gmap = new google.maps.Map(document.getElementById("map"), {
 			 zoom: n,

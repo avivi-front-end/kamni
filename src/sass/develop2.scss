@@ -29,7 +29,7 @@
 }
 .video-pop{text-align: center;
 	h2{margin-top: 0.5em;}
-	&__tabs{display: flex; justify-content: center; list-style-type: no14e; padding-left: 0;}
+	&__tabs{display: flex; justify-content: center; list-style-type: none; padding-left: 0;}
 	&__tab{border: 1px solid #C7C7C7; color: #C7C7C7; font-size: 17px; line-height: 2.2; white-space: nowrap; padding: 0 5px; cursor: pointer; border-radius: 2px;
 		&:hover, .active{border-color: #AFC9E0; color: #3777B3;}
 		&.active{border-color: #AFC9E0; color: #3777B3;}
@@ -107,6 +107,14 @@
 	&__text{color: #808080; font-size: 14px; padding: 0 10px;line-height: 1.43;}
 }
 .delivery{
+	&__map-wrap{
+		display: none;
+		padding-top: 24px;
+	}
+	&__list{display: flex; flex-wrap: wrap;
+		&-wrap{display: none;}
+		ul{list-style-type: none; font-size: 16px; padding-left: 20px;}
+	}
 	&__title{max-width: 840px;
 		h1{text-align: left;
 			b{display: block;}
