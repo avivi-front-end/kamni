@@ -137,12 +137,11 @@ var filterDrop = (function(){
 })();
 
 var sendFile = (function(){
-		var fileText = $('.file-field__text');
 		$('.js-send-file').change(function() {
-				var filename = $(this).val().split('\\').pop();
-				console.log(filename);
-				fileText.html('');
-				fileText.append(filename);
+				var filename = $(this).val().split('\\').pop();;
+				var filePath = $(this).val();
+				$('.file-wrap').append('<div class="file-field__text-wrap"><div class="file-field__text file-field__text--done">' + filename + '</div><input type="file" class="file-field__input" name="user_file[]" value=' + filePath + ' /> </div>');
+				$(this).val('');
 		});
 })();
 
@@ -211,6 +210,17 @@ var videoPop = (function(){
 				var $videoLink = $tab.eq($targetNum).attr('data-video');
 				$videoWrapper.append('<iframe width="100%" height="100%" src="' + $videoLink + '" frameborder="0" allowfullscreen></iframe>');
 		});
+
+})();
+
+var tabsLk = (function(){
+	var tab = $('.js-tab-lk');
+
+	tab.click(function(e){
+		e.preventDefault();
+		tab.removeClass('active');
+		$(this).addClass('active');
+	});
 
 })();
 
@@ -361,10 +371,7 @@ var PopupMap = (function(){
 			var lng = $(this).data('lng');
 			map.setCenter(new google.maps.LatLng(lat, lng));
 		});
-
 	}
-
-
 })();
 
 window.Gmap = null;
