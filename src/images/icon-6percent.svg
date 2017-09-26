@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="36px" height="39px" viewBox="0 0 105 115" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-6percent</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-580.000000, -47.000000)" id="_percent">
+            <g transform="translate(48.000000, 32.000000)">
+                <g id="icon-6percent" transform="translate(512.000000, 0.000000)">
+                    <rect id="Rectangle-2" x="0" y="0" width="144" height="144"></rect>
+                    <g id="Group-4" transform="translate(20.000000, 15.000000)">
+                        <polygon id="Path-27" fill="#96AB6E" points="46.9959852 114.809464 85.0130208 99.4060035 104.559462 71.3243799 104.128689 63.7465394 62.0269097 88.58114 34.7412109 108.172584"></polygon>
+                        <polygon id="Path-24" fill="#BED790" points="3.63389757 42.0782767 35.4928928 108.715571 76.3368056 80.5519 103.995226 64.0954471 75.8398438 4.72770024 58.4982639 0.774139108 44.1851128 4.60122118"></polygon>
+                        <polygon id="Path-25" fill="#B3CD83" points="3.50016276 41.9242666 0.118272569 61.7566748 14.6527778 94.8473054 29.6321615 112.366837 35.6239149 108.563742"></polygon>
+                        <polygon id="Path-26" fill="#9BB272" points="29.4151476 112.503674 46.9769965 114.70888 35.5834961 108.451165"></polygon>
+                        <polygon id="Path-28" fill="#758A4E" points="76.6463216 80.273319 85.1470269 99.3005134 46.9824219 114.841083 35.5959744 108.446803"></polygon>
+                        <polygon id="Path-29" fill="#D1EAA2" points="58.7847222 0.213706007 15.4435221 66.8529088 3.44346788 42.0611039 44.2578125 4.438761"></polygon>
+                        <polygon id="Path-53" fill="#B0CA80" points="35.984057 108.890147 54.4776526 67.4098931 25.1975836 52.3961104 14.92619 66.5003047"></polygon>
+                        <polygon id="Path-54" fill="#A9C37A" opacity="0.192934783" points="54.410883 67.6185727 90.2737214 35.4659796 75.8216751 4.73870027 58.4436887 1.04140694 25.0250954 52.6043918"></polygon>
+                        <polygon id="Path-55" fill="#F6F6F6" opacity="0.480638587" points="3.53163608 42.2751482 8.39389535 52.4295628 43.8366415 4.76538259"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

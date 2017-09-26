@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-delete</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-90.000000, -483.000000)" id="icon-delete">
+            <g transform="translate(90.000000, 483.000000)">
+                <rect id="Path" x="0" y="0" width="16" height="16"></rect>
+                <polygon id="Combined-Shape" fill="#c7c7c7" fill-rule="nonzero" points="9.17852406 7.8314849 16 14.7966511 14.8214759 16 8 9.03483385 1.17852406 16 0 14.7966511 6.82147594 7.8314849 0.330077316 1.20334895 1.50860138 0 8 6.62813596 14.4913986 0 15.6699227 1.20334895"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

@@ -8,12 +8,9 @@
 				//= partials/dopmenu.html
 			</div>
 		</div>
-
+		//= partials/breadcrumbs.html
 		<section class="feed-top">
 			<div class="mbox">
-				<div class="braedcrumbs-absolute">
-					//= partials/breadcrumbs.html
-				</div>
 				<div class="feed-top__content">
 					<div class="feed-top__left"><img src="images/bigboss.png" alt=""></div>
 					<div class="feed-top__right">
@@ -58,7 +55,7 @@
 											<div class="dropdown-btn feedbacks__m-butt">...</div>
 											<div class="dropdown feedbacks__m-cont dropdowned">
 												<ul class="dropdowned__wrap">
-													<li><a href="#">Редактировать</a></li>
+													<li><a href="#" class="js-edit">Редактировать</a></li>
 													<li><a href="#">Удалить отзыв</a></li>
 												</ul>
 											</div>
@@ -69,6 +66,10 @@
 								<div class="feedbacks__text">
 									<p>Просто рай для фанатиков камней вроде меня. Удивительное место! Попав сюда, уходить не хочется! Все камушки разложены удобно, все наглядно, можно потрогать, почувствовать, никто не будет кричать "не трогать!", это важно для тех, кого интересует не только внешняя красота, но и энергия камня. Очень богатый выбор, редкие образцы, можно под заказ, есть интернет-магазин, можно зарезервировать образец,если хочется купить, но нет возможности прямо сегодня приехать, если магазин далеко от дома (мне не повезло, другой конец города).</p>
 									<p>Благодарю вас за такую чистоту и светлость.</p>
+								</div>
+								<div class="feedbacks__photos">
+									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
+									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
@@ -91,6 +92,8 @@
 								<div class="feedbacks__text">
 									<p>Просто рай для фанатиков камней вроде меня. Удивительное место! Попав сюда, уходить не хочется! Все камушки разложены удобно, все наглядно, можно потрогать, почувствовать, никто не будет кричать "не трогать!", это важно для тех, кого интересует не только внешняя красота, но и энергия камня. Очень богатый выбор, редкие образцы, можно под заказ, есть интернет-магазин, можно зарезервировать образец,если хочется купить, но нет возможности прямо сегодня приехать, если магазин далеко от дома (мне не повезло, другой конец города).</p>
 									<p>Благодарю вас за такую чистоту и светлость.</p>
+								</div>
+								<div class="feedbacks__photos">
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
@@ -127,6 +130,8 @@
 								<div class="feedbacks__text">
 									<p>Просто рай для фанатиков камней вроде меня. Удивительное место! Попав сюда, уходить не хочется! Все камушки разложены удобно, все наглядно, можно потрогать, почувствовать, никто не будет кричать "не трогать!", это важно для тех, кого интересует не только внешняя красота, но и энергия камня. Очень богатый выбор, редкие образцы, можно под заказ, есть интернет-магазин, можно зарезервировать образец,если хочется купить, но нет возможности прямо сегодня приехать, если магазин далеко от дома (мне не повезло, другой конец города).</p>
 									<p>Благодарю вас за такую чистоту и светлость.</p>
+								</div>
+								<div class="feedbacks__photos">
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
 									<a href="images/kamen.jpeg" data-fancybox="group" class="feedbacks__img"><img src="images/kamen.jpeg" alt="" data-object-fit></a>
@@ -160,6 +165,7 @@
 											<option value="">test</option>
 										</select>
 									</div>
+									<input type="text" class="feed-form__media" placeholder="Youtube">
 									<div class="feed-form__rank">
 										<label>
 											<input type="radio" name="rank">
@@ -186,10 +192,9 @@
 									<div class="offer-form__file-field file-field">
 										<label href="#" class="file-field__label">
 											<div class="file-field__link">Прикрепить файлы</div>
-											<input type="file" class="file-field__input js-send-file">
+											<input type="file" multiple class="file-field__input js-send-file">
 											<div class="file-field__text">Файлы формата .doc, .docx, .pdf, .jpg, не более 5 Мб</div>
 										</label>
-										<div class="file-wrap"></div>
 									</div>
 								</div>
 								<button type="submit" class="button button--big button__yellow">

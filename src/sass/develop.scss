@@ -21,7 +21,8 @@ body{min-height:100%;width:100%;min-width:320px;font-family: 'PT Sans', sans-ser
     /* /styles for wp-admin panel */
 }
 a{ text-decoration: none; color: #3777b3;
-    &:hover{ text-decoration: underline; color: #5597D8;}
+    &:hover{ color: #5597d8;}
+    &:active{ color: #2d5a87;}
 }
 .main{max-width: 1400px; width: 100%; margin: 0 auto; background-color: #fff;box-shadow: inset 1px 0 0 0 #e6e6e6, inset -1px 0 0 0 #e6e6e6, inset 0 -1px 0 0 #e6e6e6; margin-bottom: 40px;}
 img{vertical-align:bottom;border:0;max-width:100%;}
@@ -37,7 +38,7 @@ img{vertical-align:bottom;border:0;max-width:100%;}
 /* /adapted styles for wp-admin panel */
 /* /base styles */
 /* wraps styling*/
-.mbox{max-width:1175px; padding: 0 15px; width:100%;margin:0 auto;position:relative;z-index:1;}
+.mbox{max-width:1175px; padding: 0 16px; width:100%;margin:0 auto;position:relative;z-index:1;}
 .mbox:after{content:"";clear:both;font-size:1px;line-height:1px;height:0;overflow:hidden;display:block;}
 
 /* /wraps styling*/
@@ -88,10 +89,12 @@ input, textarea{
         span{ color: #eb3838; border-color: #eb3838; }
     }
     &__green{ color: #fff; background-color: #51b37b;
-        span{ padding: 12px;font-size: 17px; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
+        span{ padding: 12px;font-size: 17px; border: none; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
         &--big{
             span{font-size: 20px; min-width: 240px; height: 64px;}
         }
+        &:hover{color: #fff; background: #50c887;}
+        &:active{color: #fff; background: #46a56e;}
     }
     &__white{ color: #fff; background-color: transparent;
         span{  line-height: 1.41; height: 40px; border-color: #fff;}
@@ -120,7 +123,10 @@ h1,h2,h3,h4,h5,h6{ font-weight: 400; text-align: center; color: #000000;width: 1
     &.blue, .blue{ color: #3777b3;}
     &.gray, .gray{ color: #575757;}
 }
-p{ line-height: 1.5; margin:0 0 1.5em;}
+p{ line-height: 1.5; margin:0 0 1.5em;
+    &.blue, .blue{ color: #3777b3;}
+    &.gray, .gray{ color: #575757;}
+}
 .emoji{ height: 16px; width: 16px; display: inline-block; background-position: 50%; background-size: cover;
     &--like{ background-image: url(../images/emodji_like.png);}
     &--vip{ background-image: url(../images/emodji_vip.png);}

@@ -1,933 +1,1065 @@
 <div class="hidden-block">
-    <!--<div class=" form_row">-->
-        <!--<div class="form_input">-->
-            <!--<input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">-->
-        <!--</div>-->
-    <!--</div>-->
-    <div class="modal map-modal" id="map-clauses">
-        <div class="map-modal__close js-map-close"></div>
-        <div id="popmap" style="height: 100%;"></div>
-        <div class="map-modal__aside">
-            <div class="map-modal__logo">
-                <img src="images/logo-cdek.png" alt="logo">
-            </div>
-            <div class="map-modal__price-day">
-                <div class="map-modal__price">125 ₽</div>
-                <div class="map-modal__day">3 дня</div>
-            </div>
-            <div class="map-modal__search">
-                <input type="text" class="map-modal__search-input" placeholder="Поиск по списку">
-            </div>
-            <ul class="map-modal__list">
-                <li class="map-modal__list-item js-btn-map" data-lat="55.764246" data-lng="37.618367">ХОРОШЕВСКОЕ Ш. 43А</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.757881" data-lng="37.610806">РАМЕНКИ УЛ. 23</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.660390">ХОРОШЕВСКОЕ Ш. 43А</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.764246" data-lng="37.618367">ХОРОШЕВСКОЕ Ш. 43А</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.757881" data-lng="37.610806">РАМЕНКИ УЛ. 23</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.660390">ХОРОШЕВСКОЕ Ш. 43А</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
-                <li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
-            </ul>
-        </div>
-    </div>
+		<!--<div class=" form_row">-->
+				<!--<div class="form_input">-->
+						<!--<input type="text" name="contact_name" required="required" value="" placeholder="Ваше Имя">-->
+				<!--</div>-->
+		<!--</div>-->
+		<div class="modal map-modal" id="map-clauses">
+				<div class="map-modal__close js-map-close"></div>
+				<div id="popmap" style="height: 100%;"></div>
+				<div class="map-modal__aside">
+						<div class="map-modal__logo">
+								<img src="images/logo-cdek.png" alt="logo">
+						</div>
+						<div class="map-modal__price-day">
+								<div class="map-modal__price">125 ₽</div>
+								<div class="map-modal__day">3 дня</div>
+						</div>
+						<div class="map-modal__search">
+								<input type="text" class="map-modal__search-input" placeholder="Поиск по списку">
+						</div>
+						<ul class="map-modal__list">
+								<li class="map-modal__list-item js-btn-map" data-lat="55.764246" data-lng="37.618367">ХОРОШЕВСКОЕ Ш. 43А</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.757881" data-lng="37.610806">РАМЕНКИ УЛ. 23</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.660390">ХОРОШЕВСКОЕ Ш. 43А</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.764246" data-lng="37.618367">ХОРОШЕВСКОЕ Ш. 43А</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.757881" data-lng="37.610806">РАМЕНКИ УЛ. 23</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.660390">ХОРОШЕВСКОЕ Ш. 43А</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.762683" data-lng="37.630843">РАМЕНКИ УЛ. 23</li>
+								<li class="map-modal__list-item js-btn-map" data-lat="55.738175" data-lng="37.589916">ОПА</li>
+						</ul>
+				</div>
+		</div>
 
-    <div class="video-pop" id="video-pop">
-      <h2>Путеводители к магазину на Дубровке</h2>
-      <ul class="video-pop__tabs">
-        <li class="video-pop__tab active js-tab" data-video="https://www.youtube.com/embed/EuDqhvPmQKI">Пешком</li>
-        <li class="video-pop__tab js-tab" data-video="https://www.youtube.com/embed/TNX0-JLdM_U">На автомобиле</li>
-      </ul>
-      <h5>Двигаемся с третьего транспортного кольца</h5>
-      <div class="video-pop__video-wrap js-video-wrap"></div>
-    </div>
+		<div class="video-pop" id="video-pop">
+			<h2>Путеводители к магазину на Дубровке</h2>
+			<ul class="video-pop__tabs">
+				<li class="video-pop__tab active js-tab" data-video="https://www.youtube.com/embed/EuDqhvPmQKI">Пешком</li>
+				<li class="video-pop__tab js-tab" data-video="https://www.youtube.com/embed/TNX0-JLdM_U">На автомобиле</li>
+			</ul>
+			<h5>Двигаемся с третьего транспортного кольца</h5>
+			<div class="video-pop__video-wrap js-video-wrap"></div>
+		</div>
 
-    <div class="modal" id="registration">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Зарегистрируйтесь за 1 минуту</h5>
-            <h6>Сразу же после регистрации вы получите стартовую
-                скидку 3%, а также возможность стать членом
-                Клуба Камневедов (если вы частное лицо) и доступ
-                к оптовому разделу сайта (если вы оптовик).</h6>
-            <p>Чтобы зарегистрироваться,
-                просто выберите статус и введите email:</p>
-            <form action="">
-                <p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
-                <p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
-                <input   required="required" name="" type="email" placeholder="hello@mail.ru">
-                <button class="button button__yellow"><span>Зарегистрироватся</span></button>
-            </form>
-        </div>
-        <div class="modal__footer">
-            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
-            <h6>Откроется окно подтверждения
-                авторизации, после этого выберите статус: частное лицо или оптовик</h6>
-            <div class="modal__buttons">
-                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
-                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
-                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
-                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
-                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
-            </div>
-        </div>
-    </div>
+		<div class="modal" id="registration">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Зарегистрируйтесь за 1 минуту</h5>
+						<h6>Сразу же после регистрации вы получите стартовую
+								скидку 3%, а также возможность стать членом
+								Клуба Камневедов (если вы частное лицо) и доступ
+								к оптовому разделу сайта (если вы оптовик).</h6>
+						<p>Чтобы зарегистрироваться,
+								просто выберите статус и введите email:</p>
+						<form action="">
+								<p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
+								<p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
+								<input   required="required" name="" type="email" placeholder="hello@mail.ru">
+								<button class="button button__yellow"><span>Зарегистрироватся</span></button>
+						</form>
+				</div>
+				<div class="modal__footer">
+						<h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+						<h6>Откроется окно подтверждения
+								авторизации, после этого выберите статус: частное лицо или оптовик</h6>
+						<div class="modal__buttons">
+								<a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+								<a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+								<a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+								<a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+								<a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+						</div>
+				</div>
+		</div>
 
-    <div class="modal" id="already-email">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <p>Хм... такой адрес уже есть в нашей базе.
-                Скорее всего, вы зарегистрированы.  </p>
-            <h3>Тогда просто войдите —
-                и воспользуйтесь своей скидкой!</h3>
-            <h5>Вход по паролю</h5>
-            <h6>Вы получили его во время регистрации и получаете
-                в каждом письме. По этому паролю мы узнаём вас
-                и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
-            <form action="" class="modal__row">
-                <input  required="required" name="" type="text" placeholder="pass">
-                <button class="button button__yellow"><span>Войти</span></button>
-            </form>
-            <a href="#">Забыли пароль?</a>
-        </div>
-        <div class="modal__footer">
-            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
-            <h6>Откроется окно подтверждения
-                авторизации, после этого выберите статус: частное лицо или оптовик</h6>
-            <div class="modal__buttons">
-                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
-                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
-                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
-                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
-                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
-            </div>
-        </div>
-    </div>
+		<div class="modal" id="already-email">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<p>Хм... такой адрес уже есть в нашей базе.
+								Скорее всего, вы зарегистрированы.  </p>
+						<h3>Тогда просто войдите —
+								и воспользуйтесь своей скидкой!</h3>
+						<h5>Вход по паролю</h5>
+						<h6>Вы получили его во время регистрации и получаете
+								в каждом письме. По этому паролю мы узнаём вас
+								и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
+						<form action="" class="modal__row">
+								<input  required="required" name="" type="text" placeholder="pass">
+								<button class="button button__yellow"><span>Войти</span></button>
+						</form>
+						<a href="#">Забыли пароль?</a>
+				</div>
+				<div class="modal__footer">
+						<h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+						<h6>Откроется окно подтверждения
+								авторизации, после этого выберите статус: частное лицо или оптовик</h6>
+						<div class="modal__buttons">
+								<a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+								<a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+								<a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+								<a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+								<a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+						</div>
+				</div>
+		</div>
 
-    <div class="modal" id="secod-social">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <p>Отлично! Теперь выберите ваш статус </p>
-            <form action="">
-                <p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
-                <p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
-                <button class="button button__yellow"><span>Зарегистрироваться</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal" id="secod-social">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<p>Отлично! Теперь выберите ваш статус </p>
+						<form action="">
+								<p><label><input type="radio" name="type"><i></i><span>Я частное лицо, покупаю для себя</span></label></p>
+								<p><label><input type="radio" name="type"><i></i><span>Я оптовик, покупаю для перепродажи</span></label></p>
+								<button class="button button__yellow"><span>Зарегистрироваться</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal" id="register-done">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Мы отправили письмо на
-                konstantinopolsky@gmail.com</h5>
-            <h6>Откройте его, пройдите по ссылке, зарегистрируйтесь
-                за 1 минуту — и уже сейчас пользуйтесь расширенными возможностями!</h6>
-            <p>Пройдите на почту,
-                чтобы воспользоваться скидкой</p>
-            <a class="button button__yellow"><span>Проверить почту</span></a>
-            <h6>Если письма нет во входящих, проверьте папку «Промоакции» или «Спам».
-                Письмо могло попасть туда по ошибке. </h6>
-        </div>
-    </div>
+		<div class="modal" id="register-done">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Мы отправили письмо на
+								konstantinopolsky@gmail.com</h5>
+						<h6>Откройте его, пройдите по ссылке, зарегистрируйтесь
+								за 1 минуту — и уже сейчас пользуйтесь расширенными возможностями!</h6>
+						<p>Пройдите на почту,
+								чтобы воспользоваться скидкой</p>
+						<a class="button button__yellow"><span>Проверить почту</span></a>
+						<h6>Если письма нет во входящих, проверьте папку «Промоакции» или «Спам».
+								Письмо могло попасть туда по ошибке. </h6>
+				</div>
+		</div>
 
-    <div class="modal" id="entrance">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-           <h5>Вход по паролю</h5>
-            <h6>Вы получили его во время регистрации и получаете
-                в каждом письме. По этому паролю мы узнаём вас
-                и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
-            <form action="" class="modal__row">
-                <input   required="required" name="" type="text" placeholder="pass">
-                <button class="button button__yellow"><span>Войти</span></button>
-            </form>
-            <a data-fancybox data-src="#recovery-step-1" href="javascript:;">Забыли пароль?</a>
-        </div>
-        <div class="modal__footer">
-            <h5>или зарегистрируйтесь через профиль в соцсетях</h5>
-            <h6>Откроется окно подтверждения
-                авторизации, после этого вас автоматически вернут в Камневеды</h6>
-            <div class="modal__buttons">
-                <a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
-                <a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
-                <a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
-                <a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
-                <a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
-            </div>
-        </div>
-    </div>
+		<div class="modal" id="entrance">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+					 <h5>Вход по паролю</h5>
+						<h6>Вы получили его во время регистрации и получаете
+								в каждом письме. По этому паролю мы узнаём вас
+								и рассказываем о ваших скидках и персональных спецпредложениях!  </h6>
+						<form action="" class="modal__row">
+								<input   required="required" name="" type="text" placeholder="pass">
+								<button class="button button__yellow"><span>Войти</span></button>
+						</form>
+						<a data-fancybox data-src="#recovery-step-1" href="javascript:;">Забыли пароль?</a>
+				</div>
+				<div class="modal__footer">
+						<h5>или зарегистрируйтесь через профиль в соцсетях</h5>
+						<h6>Откроется окно подтверждения
+								авторизации, после этого вас автоматически вернут в Камневеды</h6>
+						<div class="modal__buttons">
+								<a href="" class="vk"><img src="images/vkk.png" alt=""><span>Вконтакте</span></a>
+								<a href="" class="fb"><img src="images/face.png" alt=""><span>Facebook</span></a>
+								<a href="" class="ok"><img src="images/odnok.png" alt=""><span>Одноклассники</span></a>
+								<a href="" class="gg"><img src="images/google.png" alt=""><span>Google</span></a>
+								<a href="" class="ml"><img src="images/mail.png" alt=""><span>Mail.ru</span></a>
+						</div>
+				</div>
+		</div>
 
-    <div class="modal" id="recovery-step-1">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Введите адрес электронной почты,
-                который вы указывали при регистрации</h5>
-            <h6>Мы отправим на него ваш пароль</h6>
-            <form action="" >
-                <input required="required" name="" type="email" placeholder="email">
-                <button class="button button__yellow"><span>Получить пароль</span></button>
-            </form>
-            <a data-fancybox data-src="#entrance" href="javascript:;">Вспомнил!</a>
-        </div>
-    </div>
+		<div class="modal" id="recovery-step-1">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Введите адрес электронной почты,
+								который вы указывали при регистрации</h5>
+						<h6>Мы отправим на него ваш пароль</h6>
+						<form action="" >
+								<input required="required" name="" type="email" placeholder="email">
+								<button class="button button__yellow"><span>Получить пароль</span></button>
+						</form>
+						<a data-fancybox data-src="#entrance" href="javascript:;">Вспомнил!</a>
+				</div>
+		</div>
 
-    <div class="modal" id="recovery-step-2">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>К сожалению, в нашей базе
-                нет такого email-а</h5>
-            <h6>Проверьте, правильно ли вы указали адрес эл.почты</h6>
-            <form action="" >
-                <input   required="required" name="" type="email" placeholder="email">
-                <button class="button button__yellow"><span>Получить пароль</span></button>
-            </form>
-            <a data-fancybox data-src="#entrance" href="javascript:;">Отправьте код в смс</a>
-        </div>
-    </div>
+		<div class="modal" id="recovery-step-2">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>К сожалению, в нашей базе
+								нет такого email-а</h5>
+						<h6>Проверьте, правильно ли вы указали адрес эл.почты</h6>
+						<form action="" >
+								<input   required="required" name="" type="email" placeholder="email">
+								<button class="button button__yellow"><span>Получить пароль</span></button>
+						</form>
+						<a data-fancybox data-src="#entrance" href="javascript:;">Отправьте код в смс</a>
+				</div>
+		</div>
 
-    <div class="modal" id="recovery-step-3">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Укажите номер телефона, который
-                вы указывали при регистрации</h5>
-            <h6> Мы отправим на него ваш пароль  </h6>
-            <form action="" >
-                <input   required="required" name="" type="text" placeholder="Ваш номер" class="tel-mask">
-                <button class="button button__yellow"><span>Получить пароль</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal" id="recovery-step-3">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Укажите номер телефона, который
+								вы указывали при регистрации</h5>
+						<h6> Мы отправим на него ваш пароль  </h6>
+						<form action="" >
+								<input   required="required" name="" type="text" placeholder="Ваш номер" class="tel-mask">
+								<button class="button button__yellow"><span>Получить пароль</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal" id="recovery-step-4">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Мы отправили SMS с паролем на номер
-                +7 911 545-54-54</h5>
-            <h6>Впишите его в поле — и войдите в магазин</h6>
-            <form action="" >
-                <input  required="required" name="" type="text" placeholder="pass">
-                <button class="button button__yellow"><span>Войти на сайт</span></button>
-            </form>
-            <a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
-        </div>
-    </div>
+		<div class="modal" id="recovery-step-4">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Мы отправили SMS с паролем на номер
+								+7 911 545-54-54</h5>
+						<h6>Впишите его в поле — и войдите в магазин</h6>
+						<form action="" >
+								<input  required="required" name="" type="text" placeholder="pass">
+								<button class="button button__yellow"><span>Войти на сайт</span></button>
+						</form>
+						<a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
+				</div>
+		</div>
 
-    <div class="modal" id="recovery-step-5">
-        <div class="modal__title"><img src="images/w-logo.png" alt=""></div>
-        <div class="modal__content">
-            <h5>Мы отправили ваш пароль на
-                konstanipolsky@gmail.com</h5>
-            <h6>Впишите его в поле — и войдите в магазин</h6>
-            <form action="" >
-                <input   required="required" name="" type="text" placeholder="pass">
-                <button class="button button__yellow"><span>Войти на сайт</span></button>
-            </form>
-            <a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
-        </div>
-    </div>
+		<div class="modal" id="recovery-step-5">
+				<div class="modal__title"><img src="images/w-logo.png" alt=""></div>
+				<div class="modal__content">
+						<h5>Мы отправили ваш пароль на
+								konstanipolsky@gmail.com</h5>
+						<h6>Впишите его в поле — и войдите в магазин</h6>
+						<form action="" >
+								<input   required="required" name="" type="text" placeholder="pass">
+								<button class="button button__yellow"><span>Войти на сайт</span></button>
+						</form>
+						<a data-fancybox data-src="#entrance" href="javascript:;">Вы можете получить код повторно через 5 минут</a>
+				</div>
+		</div>
 
-    <div class="modal" id="choose-city">
-        <div class="modal-choose">
-            <div class="modal__content">
-                <h3>Скажите, из какого  вы города?</h3>
-                <form action="" >
-                    <input   class="awesomplete" data-list="#citylist" required="required" name="" type="text" placeholder="Начните вводить название города">
+		<div class="modal" id="choose-city">
+				<div class="modal-choose">
+						<div class="modal__content">
+								<h3>Скажите, из какого  вы города?</h3>
+								<form action="" >
+										<input   class="awesomplete" data-list="#citylist" required="required" name="" type="text" placeholder="Начните вводить название города">
 
-                    <ul id="citylist" class="awesomplete-list" >
-                        <li>Ada</li>
-                        <li>Java</li>
-                        <li>JavaScript</li>
-                        <li>Brainfuck</li>
-                        <li>LOLCODE</li>
-                        <li>Node.js</li>
-                        <li>Ruby on Rails</li>
-                    </ul>
-                    <button class="button button__yellow"><span>Выбрать</span></button>
-                </form>
-            </div>
-        </div>
-    </div>
+										<ul id="citylist" class="awesomplete-list" >
+												<li>Ada</li>
+												<li>Java</li>
+												<li>JavaScript</li>
+												<li>Brainfuck</li>
+												<li>LOLCODE</li>
+												<li>Node.js</li>
+												<li>Ruby on Rails</li>
+										</ul>
+										<button class="button button__yellow"><span>Выбрать</span></button>
+								</form>
+						</div>
+				</div>
+		</div>
 
-    <div class="modal" id="one-click">
-        <div class="modal__content">
-            <h3>СПРЕДСТАВЬТЕСЬ, ЧТОБЫ МЕНЕДЖЕР СВЯЗАЛСЯ С ВАМИ</h3>
-            <form action="">
-                <input type="text" name=""  placeholder="Ваше имя">
-                <input type="text" required="required" name="" placeholder="Ваш номер" class="tel-mask">
-                <button class="button button__yellow"><span>Выбрать</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal" id="one-click">
+				<div class="modal__content">
+						<h3>СПРЕДСТАВЬТЕСЬ, ЧТОБЫ МЕНЕДЖЕР СВЯЗАЛСЯ С ВАМИ</h3>
+						<form action="">
+								<input type="text" name=""  placeholder="Ваше имя">
+								<input type="text" required="required" name="" placeholder="Ваш номер" class="tel-mask">
+								<button class="button button__yellow"><span>Выбрать</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal" id="subscribe">
-        <div class="modal__content--subscribe modal__content">
-           <p>Подарок за подписку</p>
-            <div class="pseudoH1">-3% на все</div>
-            <p>А также доступ к закрытым акциям, накопительные скидки до 15% и множество других возможностей для всех, кто с нами!</p>
-            <form action="" >
-                <input  required="required" name="" type="email" placeholder="email">
-                <button class="button button__yellow"><span>Подписаться</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal" id="subscribe">
+				<div class="modal__content--subscribe modal__content">
+					 <p>Подарок за подписку</p>
+						<div class="pseudoH1">-3% на все</div>
+						<p>А также доступ к закрытым акциям, накопительные скидки до 15% и множество других возможностей для всех, кто с нами!</p>
+						<form action="" >
+								<input  required="required" name="" type="email" placeholder="email">
+								<button class="button button__yellow"><span>Подписаться</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal reg-success" id="reg-success">
-        <div class="reg-success__top">
-            <p>Поздравляем! Вы только что зарегистрировались в «Камневедах»</p>
-            <h2>и получили 3% скидки на все!</h2>
-            <div class="reg-success__box">
-                <p><b>Это ваш Камневед</b></p>
-                <p>Он не простой персонаж. Он — отражение вашего статуса в «Камневедах».</p>
-               <p> Когда вы получаете бонусы, скидки, накапливаете сумму покупок и переходите
-                на следующий уровень — Камневед растет,
-                   у него появляются новые артефакты, он получает звание повыше.</p>
-            </div>
-        </div>
-        <div class="reg-success__bot">
-            <h3>Прокачайте своего Камневеда прямо сейчас</h3>
-            <p>Заполните все данные в личном кабинете — и вы не только прокачаете Камневеда, но
-                и будете оформлять заказы гораздо быстрее, а также получите доступ к дополнительным возможностям.</p>
-            <a href="#" class="button button__green"><span>Перейти в Личный кабинет</span></a>
-        </div>
-    </div>
+		<div class="modal reg-success" id="reg-success">
+				<div class="reg-success__top">
+						<p>Поздравляем! Вы только что зарегистрировались в «Камневедах»</p>
+						<h2>и получили 3% скидки на все!</h2>
+						<div class="reg-success__box">
+								<p><b>Это ваш Камневед</b></p>
+								<p>Он не простой персонаж. Он — отражение вашего статуса в «Камневедах».</p>
+							 <p> Когда вы получаете бонусы, скидки, накапливаете сумму покупок и переходите
+								на следующий уровень — Камневед растет,
+									 у него появляются новые артефакты, он получает звание повыше.</p>
+						</div>
+				</div>
+				<div class="reg-success__bot">
+						<h3>Прокачайте своего Камневеда прямо сейчас</h3>
+						<p>Заполните все данные в личном кабинете — и вы не только прокачаете Камневеда, но
+								и будете оформлять заказы гораздо быстрее, а также получите доступ к дополнительным возможностям.</p>
+						<a href="#" class="button button__green"><span>Перейти в Личный кабинет</span></a>
+				</div>
+		</div>
 
-    <div class="modal promocode" id="promocode">
-        <div class="modal__content modal__content--normal">
-            <h3>Применить промокод</h3>
+		<div class="modal promocode" id="promocode">
+				<div class="modal__content modal__content--normal">
+						<h3>Применить промокод</h3>
 
-            <form action="" >
-                <div  class="modal__row">
-                    <input type="text" required="required" name="" placeholder="promocode">
-                    <div class="button button--big64"><span>Проверить</span></div>
-                </div>
-                <div class="promocode__box">
-                    <label class="checkbox__styled">
-                        <input type="checkbox" name=""><i></i>
-                    </label>
-                    <div class="promocode__txt">
-                        <p><a href="#">КАМНЕВЕД3000</a></p>
-                        <p><span>6% скидка на минералы</span></p>
-                    </div>
-                </div>
-                <div class="promocode__box">
-                    <label class="checkbox__styled">
-                        <input type="checkbox" name=""><i></i>
-                    </label>
-                    <div class="promocode__txt">
-                        <p><a href="#">ЗВЕЗДОПАД</a></p>
-                        <p><span>500 ₽ на метеориты</span></p>
-                    </div>
-                </div>
-                <button class="button button__yellow"><span>Активировать 1 промокод</span></button>
-            </form>
-        </div>
-    </div>
+						<form action="" >
+								<div  class="modal__row">
+										<input type="text" required="required" name="" placeholder="promocode">
+										<div class="button button--big64"><span>Проверить</span></div>
+								</div>
+								<div class="promocode__box">
+										<label class="checkbox__styled">
+												<input type="checkbox" name=""><i></i>
+										</label>
+										<div class="promocode__txt">
+												<p><a href="#">КАМНЕВЕД3000</a></p>
+												<p><span>6% скидка на минералы</span></p>
+										</div>
+								</div>
+								<div class="promocode__box">
+										<label class="checkbox__styled">
+												<input type="checkbox" name=""><i></i>
+										</label>
+										<div class="promocode__txt">
+												<p><a href="#">ЗВЕЗДОПАД</a></p>
+												<p><span>500 ₽ на метеориты</span></p>
+										</div>
+								</div>
+								<button class="button button__yellow"><span>Активировать 1 промокод</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal promocode" id="choose-addres">
-        <div class="modal__content modal__content--normal">
-            <h3>Куда доставить?</h3>
-            <form action="">
-                <div  class="modal__row modal__row--start">
-                    <label class="radio__styled">
-                        <input type="radio" name="sss" ><i></i>
-                    </label>
-                    <span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
-                </div>
-                <div  class="modal__row modal__row--start">
-                    <label class="radio__styled">
-                        <input type="radio" name="sss" ><i></i>
-                    </label>
-                    <span>125009, г. Москва,  Малый Гнездниковский пер., 9с6А</span>
-                </div>
-                <p><a href="#">Другой адрес</a></p>
-                <button class="button button__yellow"><span>Выбрать</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal promocode" id="choose-addres">
+				<div class="modal__content modal__content--normal">
+						<h3>Куда доставить?</h3>
+						<form action="">
+								<div  class="modal__row modal__row--start">
+										<label class="radio__styled">
+												<input type="radio" name="sss" ><i></i>
+										</label>
+										<span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
+								</div>
+								<div  class="modal__row modal__row--start">
+										<label class="radio__styled">
+												<input type="radio" name="sss" ><i></i>
+										</label>
+										<span>125009, г. Москва,  Малый Гнездниковский пер., 9с6А</span>
+								</div>
+								<p><a href="#">Другой адрес</a></p>
+								<button class="button button__yellow"><span>Выбрать</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal promocode" id="new-addres">
-        <div class="modal__content modal__content--normal">
-            <h3>Куда доставить?</h3>
-            <form action="">
-                <div  class="modal__row modal__row--start">
-                    <label class="radio__styled">
-                        <input type="radio" name="sss" ><i></i>
-                    </label>
-                    <span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
-                </div>
-                <div  class="modal__row modal__row--start">
-                    <label class="radio__styled">
-                        <input type="radio" name="sss" ><i></i>
-                    </label>
-                    <span>125009, г. Москва,  Малый Гнездниковский пер., 9с6А</span>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Страна</span>
-                    <div class="input__item">
-                        <input type="text" name=""  >
-                    </div>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Населенный пункт</span>
-                    <div class="input__item">
-                        <input type="text" name="" >
-                    </div>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Улица</span>
-                    <div class="input__item">
-                        <input type="text" name=""  >
-                    </div>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Дом, корпус</span>
-                    <div class="input__item">
-                        <input type="text" name="" >
-                    </div>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Квартира</span>
-                    <div class="input__item">
-                        <input type="text" name=""  >
-                    </div>
-                </div>
-                <div class="input__rowed">
-                    <span class="gray">Индекс</span>
-                    <div class="input__item">
-                        <input type="text" name="" >
-                    </div>
-                </div>
-                <div  class="modal__row modal__row--start">
-                    <label class="checkbox__styled">
-                        <input type="checkbox" name=" "><i></i>
-                    </label>
-                    <span>Сохранить адрес</span>
-                </div>
-                <button class="button button__yellow"><span>Выбрать</span></button>
-            </form>
-        </div>
-    </div>
+		<div class="modal promocode" id="new-addres">
+				<div class="modal__content modal__content--normal">
+						<h3>Куда доставить?</h3>
+						<form action="">
+								<div  class="modal__row modal__row--start">
+										<label class="radio__styled">
+												<input type="radio" name="sss" ><i></i>
+										</label>
+										<span>412000, г. Санкт-Петербург,  ул. Ленина, д. 40, кв. 50</span>
+								</div>
+								<div  class="modal__row modal__row--start">
+										<label class="radio__styled">
+												<input type="radio" name="sss" ><i></i>
+										</label>
+										<span>125009, г. Москва,  Малый Гнездниковский пер., 9с6А</span>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Страна</span>
+										<div class="input__item">
+												<input type="text" name=""  >
+										</div>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Населенный пункт</span>
+										<div class="input__item">
+												<input type="text" name="" >
+										</div>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Улица</span>
+										<div class="input__item">
+												<input type="text" name=""  >
+										</div>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Дом, корпус</span>
+										<div class="input__item">
+												<input type="text" name="" >
+										</div>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Квартира</span>
+										<div class="input__item">
+												<input type="text" name=""  >
+										</div>
+								</div>
+								<div class="input__rowed">
+										<span class="gray">Индекс</span>
+										<div class="input__item">
+												<input type="text" name="" >
+										</div>
+								</div>
+								<div  class="modal__row modal__row--start">
+										<label class="checkbox__styled">
+												<input type="checkbox" name=" "><i></i>
+										</label>
+										<span>Сохранить адрес</span>
+								</div>
+								<button class="button button__yellow"><span>Выбрать</span></button>
+						</form>
+				</div>
+		</div>
 
-    <div class="modal order-modal" id="order">
-        <div class="modal__content modal__content--normal">
-                <div class="od-table">
-                    <div class="od-table__head">
-                        <div class="od-table__cell">Наименование</div>
-                        <div class="od-table__cell">Цена без скидки</div>
-                        <div class="od-table__cell">Цена со скидкой</div>
-                        <div class="od-table__cell">Количество</div>
-                    </div>
-                    <div class="od-table__row">
-                        <div class="od-table__cell">
-                            <div class="order-done__name">
-                                <div class="order-done__img-wrap">
-                                    <img src="images/kamen.jpeg" alt="" data-object-fit>
-                                </div>
-                                <div class="order-done__text">
-                                    <p>Шерл (турмалин), кристалл двухголовик, 6х5 см</p>
-                                    <span>Артикул: 135-34</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="od-table__cell">
-                            <strike>1 971 ₽</strike>
-                        </div>
-                        <div class="od-table__cell">
-                            <p>1 860 ₽</p>
-                        </div>
-                        <div class="od-table__cell">
-                            <p> 1 шт.</p>
-                        </div>
-                    </div>
-                    <div class="od-table__row">
-                        <div class="od-table__cell">
-                            <div class="order-done__name">
-                                <div class="order-done__img-wrap">
-                                    <img src="images/kamen.jpeg" alt="" data-object-fit>
-                                </div>
-                                <div class="order-done__text">
-                                    <p>Шерл (турмалин),</p>
-                                    <span>Артикул: 135-34</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="od-table__cell">
-                            <strike>1 971 ₽</strike>
-                        </div>
-                        <div class="od-table__cell">
-                            <p>1 860 ₽</p>
-                        </div>
-                        <div class="od-table__cell">
-                            <p> 1 шт.</p>
-                        </div>
-                    </div>
-                    <div class="od-table__row">
-                        <div class="od-table__cell">
-                            <div class="order-done__name">
-                                <div class="order-done__img-wrap">
-                                    <img src="images/kamen.jpeg" alt="" data-object-fit>
-                                </div>
-                                <div class="order-done__text">
-                                    <p>Шерл (турмалин), кристалл двухголовик, 6х5 см Шерл (турмалин), кристалл двухголовик, 6х5 см</p>
-                                    <span>Артикул: 135-34</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="od-table__cell">
-                            <strike>1 971 ₽</strike>
-                        </div>
-                        <div class="od-table__cell">
-                            <p>1 860 ₽</p>
-                        </div>
-                        <div class="od-table__cell">
-                            <p> 1 шт.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="od-add">
-                    <div class="od-add__content">
-                        <div class="od-add__row">
-                            <span>Без скидки</span>
-                            <p>2 700 ₽</p>
-                        </div>
-                        <div class="od-add__row">
-                            <span> Скидки</span>
-                            <p>-200 ₽</p>
-                        </div>
-                        <div class="od-add__row">
-                            <span> Доставка</span>
-                            <p>+290 ₽</p>
-                        </div>
-                        <div class="od-add__row">
-                            <br>
-                        </div>
-                        <div class="od-add__row">
-                            <span> Итого</span>
-                            <p>2 750 ₽</p>
-                        </div>
-                    </div>
-                </div>
-                <a class="button button__green"><span>Изменить заказ</span></a>
-        </div>
-    </div>
+		<div class="modal order-modal" id="order">
+				<div class="modal__content modal__content--normal">
+								<div class="od-table">
+										<div class="od-table__head">
+												<div class="od-table__cell">Наименование</div>
+												<div class="od-table__cell">Цена без скидки</div>
+												<div class="od-table__cell">Цена со скидкой</div>
+												<div class="od-table__cell">Количество</div>
+										</div>
+										<div class="od-table__row">
+												<div class="od-table__cell">
+														<div class="order-done__name">
+																<div class="order-done__img-wrap">
+																		<img src="images/kamen.jpeg" alt="" data-object-fit>
+																</div>
+																<div class="order-done__text">
+																		<p>Шерл (турмалин), кристалл двухголовик, 6х5 см</p>
+																		<span>Артикул: 135-34</span>
+																</div>
+														</div>
+												</div>
+												<div class="od-table__cell">
+														<strike>1 971 ₽</strike>
+												</div>
+												<div class="od-table__cell">
+														<p>1 860 ₽</p>
+												</div>
+												<div class="od-table__cell">
+														<p> 1 шт.</p>
+												</div>
+										</div>
+										<div class="od-table__row">
+												<div class="od-table__cell">
+														<div class="order-done__name">
+																<div class="order-done__img-wrap">
+																		<img src="images/kamen.jpeg" alt="" data-object-fit>
+																</div>
+																<div class="order-done__text">
+																		<p>Шерл (турмалин),</p>
+																		<span>Артикул: 135-34</span>
+																</div>
+														</div>
+												</div>
+												<div class="od-table__cell">
+														<strike>1 971 ₽</strike>
+												</div>
+												<div class="od-table__cell">
+														<p>1 860 ₽</p>
+												</div>
+												<div class="od-table__cell">
+														<p> 1 шт.</p>
+												</div>
+										</div>
+										<div class="od-table__row">
+												<div class="od-table__cell">
+														<div class="order-done__name">
+																<div class="order-done__img-wrap">
+																		<img src="images/kamen.jpeg" alt="" data-object-fit>
+																</div>
+																<div class="order-done__text">
+																		<p>Шерл (турмалин), кристалл двухголовик, 6х5 см Шерл (турмалин), кристалл двухголовик, 6х5 см</p>
+																		<span>Артикул: 135-34</span>
+																</div>
+														</div>
+												</div>
+												<div class="od-table__cell">
+														<strike>1 971 ₽</strike>
+												</div>
+												<div class="od-table__cell">
+														<p>1 860 ₽</p>
+												</div>
+												<div class="od-table__cell">
+														<p> 1 шт.</p>
+												</div>
+										</div>
+								</div>
+								<div class="od-add">
+										<div class="od-add__content">
+												<div class="od-add__row">
+														<span>Без скидки</span>
+														<p>2 700 ₽</p>
+												</div>
+												<div class="od-add__row">
+														<span> Скидки</span>
+														<p>-200 ₽</p>
+												</div>
+												<div class="od-add__row">
+														<span> Доставка</span>
+														<p>+290 ₽</p>
+												</div>
+												<div class="od-add__row">
+														<br>
+												</div>
+												<div class="od-add__row">
+														<span> Итого</span>
+														<p>2 750 ₽</p>
+												</div>
+										</div>
+								</div>
+								<a class="button button__green"><span>Изменить заказ</span></a>
+				</div>
+		</div>
 
-    <div class="modal stonebox-modal" id="stonebox">
-        <div class="modal__content modal__content--normal">
-            <h3>Вы уверены что хотите
-                отменить подписку?</h3>
-            <p>После отмены подписки вы все равно получите StoneBox за оплаченный период </p>
-            <div class="stonebox-modal__buts">
-                <a href="#" class="button button__red"><span>Отменить подписку</span></a>
-                <a href="#" >Я передумал</a>
-            </div>
-        </div>
-    </div>
+		<div class="modal stonebox-modal" id="stonebox">
+				<div class="modal__content modal__content--normal">
+						<h3>Вы уверены что хотите
+								отменить подписку?</h3>
+						<p>После отмены подписки вы все равно получите StoneBox за оплаченный период </p>
+						<div class="stonebox-modal__buts">
+								<a href="#" class="button button__red"><span>Отменить подписку</span></a>
+								<a href="#" >Я передумал</a>
+						</div>
+				</div>
+		</div>
 
-    <div class="modal orderpay-modal" id="orderpay">
-        <div class="modal__content--normal">
-            <h3>Оплата заказа № 12-34-123-4</h3>
-            <form action="">
-                <div class="order-payment">
-                    <div class="order-payment__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Оплатить картой</span>
-                        </label>
-                        <div class="order-payment__select">
-                            <select name="" id="">
-                                <option value="" class="mc-pay" >•••• •••• •••• 1234</option>
-                                <option value="" class="mc-pay">•••• •••• •••• 7684</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="order-payment__row orderpay-modal__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher js-show"><i></i>
-                            <span>Использовать другую карту</span>
-                        </label>
-                        <div class="orderpay-modal__add">
-                            <div class="profile__form-wrap">
-                                <div class="profile__form-row">
-                                    <span>Имя</span>
-                                    <input type="text">
-                                </div>
-                                <div class="profile__form-row">
-                                    <span>Фамилия</span>
-                                    <input type="text">
-                                </div>
+		<div class="modal orderpay-modal" id="orderpay">
+				<div class="modal__content--normal">
+						<h3>Оплата заказа № 12-34-123-4</h3>
+						<form action="">
+								<div class="order-payment">
+										<div class="order-payment__row">
+												<label class="radio__styled">
+														<input type="radio" name="222" class="js-watcher"><i></i>
+														<span>Оплатить картой</span>
+												</label>
+												<div class="order-payment__select">
+														<select name="" id="">
+																<option value="" class="mc-pay" >•••• •••• •••• 1234</option>
+																<option value="" class="mc-pay">•••• •••• •••• 7684</option>
+														</select>
+												</div>
+										</div>
+										<div class="order-payment__row orderpay-modal__row">
+												<label class="radio__styled">
+														<input type="radio" name="222" class="js-watcher js-show"><i></i>
+														<span>Использовать другую карту</span>
+												</label>
+												<div class="orderpay-modal__add">
+														<div class="profile__form-wrap">
+																<div class="profile__form-row">
+																		<span>Имя</span>
+																		<input type="text">
+																</div>
+																<div class="profile__form-row">
+																		<span>Фамилия</span>
+																		<input type="text">
+																</div>
 
-                                <div class="profile__form-row">
-                                    <span>Номер карты</span>
-                                    <input type="text">
-                                </div>
-                                <div class="profile__form-row">
-                                    <div class="profile__card-type">
-                                        <label><input type="radio" name="rrr"><img src="images/mastercard.svg" alt=""></label>
-                                        <label><input type="radio" name="rrr"><img src="images/visa-c.svg" alt=""></label>
-                                    </div>
-                                </div>
-                                <div class="profile__form-row">
-                                    <div class="profile__card profile__card--small">
-                                        <span>Срок действия</span>
-                                        <p>
-                                            <input type="text" placeholder="MM"><i> / </i><input type="text" placeholder="ГГ">
-                                        </p>
-                                    </div>
-                                    <div class="profile__card">
-                                        <span>Код безопасность <b>?</b></span>
-                                        <p>
-                                            <input type="text" placeholder="CVC">
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="order-payment__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Другие способы оплаты</span>
-                        </label>
+																<div class="profile__form-row">
+																		<span>Номер карты</span>
+																		<input type="text">
+																</div>
+																<div class="profile__form-row">
+																		<div class="profile__card-type">
+																				<label><input type="radio" name="rrr"><img src="images/mastercard.svg" alt=""></label>
+																				<label><input type="radio" name="rrr"><img src="images/visa.svg" alt=""></label>
+																		</div>
+																</div>
+																<div class="profile__form-row">
+																		<div class="profile__card profile__card--small">
+																				<span>Срок действия</span>
+																				<p>
+																						<input type="text" placeholder="MM"><i> / </i><input type="text" placeholder="ГГ">
+																				</p>
+																		</div>
+																		<div class="profile__card">
+																				<span>Код безопасность <b>?</b></span>
+																				<p>
+																						<input type="text" placeholder="CVC">
+																				</p>
+																		</div>
+																</div>
+														</div>
+												</div>
+										</div>
+										<div class="order-payment__row">
+												<label class="radio__styled">
+														<input type="radio" name="222" class="js-watcher"><i></i>
+														<span>Другие способы оплаты</span>
+												</label>
 
-                    </div>
-                    <p>Robokassa, Webmoney, Яндекс. Деньги, QIWI и др.</p>
-                    <div class="order-payment__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Оплатить с внутреннего счета (У вас есть 28 900 ₽) </span>
-                        </label>
+										</div>
+										<p>Robokassa, Webmoney, Яндекс. Деньги, QIWI и др.</p>
+										<div class="order-payment__row">
+												<label class="radio__styled">
+														<input type="radio" name="222" class="js-watcher"><i></i>
+														<span>Оплатить с внутреннего счета (У вас есть 28 900 ₽) </span>
+												</label>
 
-                    </div>
-                </div>
-                <div class="agree-pay">
-                    <div class="agree-pay__row">
-                        <label class="checkbox__styled">
-                            <input type="checkbox" name=" "><i></i>
-                        </label>
-                        <span>Я согласен со всеми пунктами длинного <a href="#">Пользовательского соглашения</a></span>
-                    </div>
-                    <div class="agree-pay__submit">
-                        <div class="agree-pay__price">
-                            <span>К оплате</span>
-                            <p>7 723 ₽</p>
+										</div>
+								</div>
+								<div class="agree-pay">
+										<div class="agree-pay__row">
+												<label class="checkbox__styled">
+														<input type="checkbox" name=" "><i></i>
+												</label>
+												<span>Я согласен со всеми пунктами длинного <a href="#">Пользовательского соглашения</a></span>
+										</div>
+										<div class="agree-pay__submit">
+												<div class="agree-pay__price">
+														<span>К оплате</span>
+														<p>7 723 ₽</p>
 
-                        </div>
-                        <button class="button button__yellow"><span>Оформить заказ и оплатить</span></button>
-                    </div>
-                </div>
-            </form>
+												</div>
+												<button class="button button__yellow"><span>Оформить заказ и оплатить</span></button>
+										</div>
+								</div>
+						</form>
 
-        </div>
-    </div>
+				</div>
+		</div>
 
-    <div class="prod-sheet" id="prod-sheet">
-        <div class="prod-sheet__top">
-            <div class="prod-sheet__slider js-sheet-slider">
-                <div class="prod-sheet__slider-item">
-                    <img src="images/collection_img1.jpg" alt="image" data-object-fit>
-                </div>
-                <div class="prod-sheet__slider-item">
-                    <img src="images/collection_img1.jpg" alt="image" data-object-fit>
-                </div>
-                <div class="prod-sheet__slider-item">
-                    <img src="images/collection_img1.jpg" alt="image" data-object-fit>
-                </div>
-            </div>
-            <div class="prod-sheet__info">
-                <h2>Сферолиты пренита</h2>
-                <blockquote>Артикул: 135-34</blockquote>
-                <div class="prod-sheet__row">
-                    <p><span>Размер образца:</span> 1,5 см</p>
-                    <p><span>Химическая фомула:</span> Cu³(CO³)²(OH)²</p>
-                    <p><span>Место находки:</span> Мали, месторождение</p>
-                    <p><span>Дата сбора:</span> 01.01.2001</p>
-                </div>
-                <div class="prod-sheet__row">
-                    <p><span>Раздел: </span>Минералы и аналоги</p>
-                    <p><span>Категория:</span> Кристаллы и минеральные агрегаты</p>
-                    <p><span>Подкатегория:</span> Сферолиты, блочные и расщепленные криталлы</p>
-                </div>
-                <div class="prod-sheet__row">
-                    <p>В ходе почвенно-мелиоративного исследования территории было установлено, что включение трансформирует почвообразовательный процесс. Гетерогенная среда неустойчива. Фраджипэн повышает ортзанд. Фрактал интуитивно понятен. Бугор пучения окисляет фрактал.</p>
-                </div>
-            </div>
-        </div>
-        <div class="prod-sheet__middle">
-            <h3>Этот образец не продается, но вы можете заказать похожий</h3>
-            <div class="prod-sheet__prod-slider">
-                <div class="js-prodsheet-slider">
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                    <div class="items-slider__slide"><div class="tovar">
-                        <div class="tovar__img">
-                            <img src="images/kamen.jpeg" data-object-fit alt="">
-                            <a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
-                            <div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
-                        </div>
-                        <div class="tovar__text">
-                            <div class="tovar__name">
-                                <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
-                            </div>
-                            <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>49 490 ₽</strong>
-                                <div class="tovar__sale">-15%</div>
-                            </div>
-                        </div>
-                    </div></div>
-                </div>
-            </div>
-        </div>
-        <div class="prod-sheet-bot">
-            <div class="partners__row">
-              <div class="partners__col partners__col--text prod-sheet-bot__text">
-                <h3>Ничего не подходит? Можем привезти на заказ.</h3>
-                <h5 class="gray">Мы можем привезти что угодно и откуда угодно, в том числе и подобный образец для вашей коллекции.</h5>
-                <h5 class="gray">Просто оставьте заявку — мы свяжемся с вами в ближайшее время и уточним условия заказа.</h5>
-                <div class="partners-form">
-                  <form id="partnersForm">
-                    <input type="text" class="partners-form__input" placeholder="Напишите ваше имя" name="name" required="required">
-                    <input type="text" class="partners-form__input tel-mask" name="phone" placeholder="+7" required="required">
-                    <input type="text" class="partners-form__input" placeholder="hello@mail.ru" name="email" required="required">
-                    <button type="submit" class="button button--big button__yellow partners-form__submit"><span>Привезите на заказ</span></button>
-                  </form>
-                </div>
-              </div>
-              <div class="partners__col partners__col--img prod-sheet-bot__img">
-                <img src="images/partn_img1.jpg" alt="partners" data-object-fit>
-              </div>
-            </div>
-        </div>
-    </div>
+		<div class="prod-sheet" id="prod-sheet">
+				<div class="prod-sheet__top">
+						<div class="prod-sheet__slider js-sheet-slider">
+								<div class="prod-sheet__slider-item">
+										<img src="images/collection_img1.jpg" alt="image" data-object-fit>
+								</div>
+								<div class="prod-sheet__slider-item">
+										<img src="images/collection_img1.jpg" alt="image" data-object-fit>
+								</div>
+								<div class="prod-sheet__slider-item">
+										<img src="images/collection_img1.jpg" alt="image" data-object-fit>
+								</div>
+						</div>
+						<div class="prod-sheet__info">
+								<h2>Сферолиты пренита</h2>
+								<blockquote>Артикул: 135-34</blockquote>
+								<div class="prod-sheet__row">
+										<p><span>Размер образца:</span> 1,5 см</p>
+										<p><span>Химическая фомула:</span> Cu³(CO³)²(OH)²</p>
+										<p><span>Место находки:</span> Мали, месторождение</p>
+										<p><span>Дата сбора:</span> 01.01.2001</p>
+								</div>
+								<div class="prod-sheet__row">
+										<p><span>Раздел: </span>Минералы и аналоги</p>
+										<p><span>Категория:</span> Кристаллы и минеральные агрегаты</p>
+										<p><span>Подкатегория:</span> Сферолиты, блочные и расщепленные криталлы</p>
+								</div>
+								<div class="prod-sheet__row">
+										<p>В ходе почвенно-мелиоративного исследования территории было установлено, что включение трансформирует почвообразовательный процесс. Гетерогенная среда неустойчива. Фраджипэн повышает ортзанд. Фрактал интуитивно понятен. Бугор пучения окисляет фрактал.</p>
+								</div>
+						</div>
+				</div>
+				<div class="prod-sheet__middle">
+						<h3>Этот образец не продается, но вы можете заказать похожий</h3>
+						<div class="prod-sheet__prod-slider">
+								<div class="js-prodsheet-slider">
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+										<div class="items-slider__slide"><div class="tovar">
+												<div class="tovar__img">
+														<img src="images/kamen.jpeg" data-object-fit alt="">
+														<a href="#" class="tovar__like"><img src="images/WishHeart.png" alt=""></a>
+														<div class="tovar__info" style="background-color: #9b6fe9;">Ночная скидка</div>
+												</div>
+												<div class="tovar__text">
+														<div class="tovar__name">
+																<a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+														</div>
+														<div class="tovar__price">
+																<strike>49 490 ₽</strike>
+																<strong>49 490 ₽</strong>
+																<div class="tovar__sale">-15%</div>
+														</div>
+												</div>
+										</div></div>
+								</div>
+						</div>
+				</div>
+				<div class="prod-sheet-bot">
+						<div class="partners__row">
+							<div class="partners__col partners__col--text prod-sheet-bot__text">
+								<h3>Ничего не подходит? Можем привезти на заказ.</h3>
+								<h5 class="gray">Мы можем привезти что угодно и откуда угодно, в том числе и подобный образец для вашей коллекции.</h5>
+								<h5 class="gray">Просто оставьте заявку — мы свяжемся с вами в ближайшее время и уточним условия заказа.</h5>
+								<div class="partners-form">
+									<form id="partnersForm">
+										<input type="text" class="partners-form__input" placeholder="Напишите ваше имя" name="name" required="required">
+										<input type="text" class="partners-form__input tel-mask" name="phone" placeholder="+7" required="required">
+										<input type="text" class="partners-form__input" placeholder="hello@mail.ru" name="email" required="required">
+										<button type="submit" class="button button--big button__yellow partners-form__submit"><span>Привезите на заказ</span></button>
+									</form>
+								</div>
+							</div>
+							<div class="partners__col partners__col--img prod-sheet-bot__img">
+								<img src="images/partn_img1.jpg" alt="partners" data-object-fit>
+							</div>
+						</div>
+				</div>
+		</div>
 
-    <div class="excursion" id="excursion">
-        <div class="excursion__wrap">
-            <div class="excursion__text">
-                <form>
-                    <h3>Запишитесь на экскурсию</h3>
-                    <h5 class="gray">Оставьте заявку. Мы свяжемся с вами и уточним время экскурсии.</h5>
-                    <input type="text" class="offer-form__input" required="required" placeholder="Напишите ваше имя">
-                    <input type="text" class="offer-form__input tel-mask" required="required" placeholder="+7">
-                    <button class="button button--big button__yellow"><span>Записаться</span></button>
-                </form>
-            </div>
-            <div class="excursion__img">
-                <img src="images/exc-img.jpg" alt="photo" data-object-fit>
-            </div>
-        </div>
-    </div>
+		<div class="excursion" id="excursion">
+				<div class="excursion__wrap">
+						<div class="excursion__text">
+								<form>
+										<h3>Запишитесь на экскурсию</h3>
+										<h5 class="gray">Оставьте заявку. Мы свяжемся с вами и уточним время экскурсии.</h5>
+										<input type="text" class="offer-form__input" required="required" placeholder="Напишите ваше имя">
+										<input type="text" class="offer-form__input tel-mask" required="required" placeholder="+7">
+										<button class="button button--big button__yellow"><span>Записаться</span></button>
+								</form>
+						</div>
+						<div class="excursion__img">
+								<img src="images/exc-img.jpg" alt="photo" data-object-fit>
+						</div>
+				</div>
+		</div>
 
-    <div class="tnx" id="tnx">
-        <div class="tnx__wrap">
-            <h3>Заявка успешно отправлена!</h3>
-            <h5 class="gray">Мы свяжемся с вами в ближайшее время и уточним детали.</h5>
-            <h5 class="gray">Удачного дня!</h5>
-        </div>
-    </div>
+		<div class="tnx" id="tnx">
+				<div class="tnx__wrap">
+						<h3>Заявка успешно отправлена!</h3>
+						<h5 class="gray">Мы свяжемся с вами в ближайшее время и уточним детали.</h5>
+						<h5 class="gray">Удачного дня!</h5>
+				</div>
+		</div>
 
-    <div class="modal cancel-modal" id="cancel">
-        <div class="modal__content">
-            <h3>Отмена заказа № 12-34-123-4</h3>
-            <p>Очень жаль...<br>Напишите, пожалуйста, причину отмены заказа. Так мы сможем улучшить сервис и/или предложить вам что-то взамен.</p><p>Я отменяю заказ, потому что:</p>
-            <form>
-                <div class="cancel-modal__wrap">
-                    <div class="cancel-modal__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Оплатить картой</span>
-                        </label>
-                    </div>
-                    <div class="cancel-modal__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Другие способы оплаты</span>
-                        </label>
-                    </div>
-                    <div class="cancel-modal__row">
-                        <label class="radio__styled">
-                            <input type="radio" name="222" class="js-watcher"><i></i>
-                            <span>Оплатить с внутреннего счета (У вас есть 28 900 ₽) </span>
-                        </label>
-                        <div class="cancel-modal__hidden">
-                            <p>Хм... А вы знаете, что мы можем доставить и курьером, и до пункта выдачи? Тогда вы сможете оплатить заказ при получении.</p>
-                            <p>Просто оставьте заявку — и мы изменим способ доставки.</p>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
+		<div class="modal cancel-modal" id="cancel">
+				<form>
+						<div class="modal__content">
+								<h3>Отмена заказа № 12-34-123-4</h3>
+								<p>Очень жаль...<br>Напишите, пожалуйста, причину отмены заказа. Так мы сможем улучшить сервис и/или предложить вам что-то взамен.</p><p>Я отменяю заказ, потому что:</p>
+										<div class="cancel-modal__wrap">
+												<div class="cancel-modal__row">
+														<label class="radio__styled">
+																<input type="radio" name="222" class="js-dropm js-act"><i></i>
+																<span>Нашел дешевле</span>
+														</label>
+												</div>
+												<div class="cancel-modal__hidden">
+														<div class="cancel-modal__text">
+																<img src="images/cancel_img.png" class="cancel-modal__img" alt="img">
+																<p>Странно. У нас одни из самых низких цен на натуральные камни.</p>
+																<p>Будьте осторожны! Если вы нашли цену ниже, возможно, это ненатуральный товар, крашенный или контрафактный.</p>
+																<a href="#" class="button button__yellow">
+																		<span>Не буду отменять заказ</span>
+																</a>
+														</div>
+												</div>
+												<div class="cancel-modal__row">
+														<label class="radio__styled">
+																<input type="radio" name="222" class="js-dropm"><i></i>
+																<span>Слишком долгая доставка</span>
+														</label>
+												</div>
+												<div class="cancel-modal__row">
+														<label class="radio__styled">
+																<input type="radio" name="222" class="js-dropm js-act"><i></i>
+																<span>Хочу платить при получении товара, а у вас это невозможно</span>
+														</label>
+												</div>
+												<div class="cancel-modal__hidden">
+														<div class="cancel-modal__text">
+																<img src="images/cancel_img.png" class="cancel-modal__img" alt="img">
+																<p>Хм... А вы знаете, что мы можем доставить и курьером, и до пункта выдачи? Тогда вы сможете оплатить заказ при получении.</p>
+																<span>Просто оставьте заявку — и мы изменим способ доставки.</span>
+																<a href="#" class="button button__yellow">
+																		<span>Изменить способ доставки и оплаты</span>
+																</a>
+														</div>
+												</div>
+												<div class="cancel-modal__row">
+														<label class="radio__styled">
+																<input type="radio" name="222" class="js-dropm"><i></i>
+																<span>Передумал</span>
+														</label>
+												</div>
+												<div class="cancel-modal__row">
+														<label class="radio__styled">
+																<input type="radio" name="222" class="js-dropm js-act"><i></i>
+																<span>Другое</span>
+														</label>
+												</div>
+												<div class="cancel-modal__hidden">
+														<textarea class="cancel-modal__mess" placeholder="Напишите причину, пожалуйста. Это необязательно, но поможет нам стать лучше."></textarea>
+												</div>
+										</div>
+						</div>
+						<div class="cancel-modal__bottom">
+								<a href="#" class="button button__red">
+										<span>Отменить заказ</span>
+								</a>
+								<a href="#" class="button">Я передумал(а)</a>
+						</div>
+				</form>
+		</div>
 
+		<div class="modal stonebox-modal" id="tnx2">
+				<div class="modal__content modal__content--normal">
+						<h3>Спасибо за доверие!</h3>
+						<p class="gray">Заказ остался в силе. Удачного дня</p>
+						<a href="#" class="button">
+								<span>OK</span>
+						</a>
+				</div>
+		</div>
+
+		<div class="modal stonebox-modal" id="tnx3">
+				<div class="modal__content modal__content--normal">
+						<h3>Заказ отменен</h3>
+						<p class="gray">Жаль.<br>Возможно, вам понравятся другие наши товары.</p>
+						<a href="#" class="button">
+								<span>OK</span>
+						</a>
+				</div>
+		</div>
+		<div class="modal application-modal" id="application">
+				<div class="modal__content">
+						<h3>Спасибо, мы приняли вашу заявку!</h3>
+						<p class="gray">Оформление заказа приостановлено.<br>Мы свяжемся с вами в ближайшее время по номеру<br><b>+7 (960) 150-50-50</b><br>чтобы подобрать более удобный способ доставки и оплаты.</p>
+						<p>Удачного дня!</p>
+						<a href="#" class="button js-show-number">У меня другой номер</a>
+						<form class="application-modal__form">
+								<input type="text" class="offer-form__input" required="required" placeholder="Введите правильный номер">
+								<a href="#" class="button button__yellow">
+										<span>Готово!</span>
+								</a>
+						</form>
+				</div>
+		</div>
+		<div class="modal wish-modal" id="wish">
+				<div class="modal__content">
+						<form>
+								<h3>Константин, напишите свое пожелание и отправьте его прямо сейчас</h3>
+								<textarea class="cancel-modal__mess" placeholder="Постарайтесь описать, что бы вы хотели добавить/изменить в личном кабинете, как можно подробнее. Так мы сможем реализовать ваше пожелание гораздо быстрее."></textarea>
+								<button class="button button__yellow">
+										<span>Отправить</span>
+								</button>
+						</form>
+				</div>
+		</div>
+		<div class="modal wish-modal__tnx" id="wish-tnx">
+				<div class="modal__content">
+						<h3>Спасибо! Мы ценим ваше мнение.</h3>
+						<p class="gray">Программисты «Камневедов» рассмотрят обращение в ближайшее время и, если в нем есть ценность, поставят его в список на выполнение, а вы получите приятный бонус.</p>
+						<p class="gray">Удачного дня!</p>
+				</div>
+		</div>
+		<div class="modal-edit js-edit-block">
+				<form action="ajax.php">
+						<h3>Редактировать отзыв</h3>
+						<h4>О товаре <a href="#">«Браслет с агатом»</a></h4>
+						<div class="offer-form">
+								<input type="text" class="feed-form__media" placeholder="Youtube">
+								<div class="feed-form__rank">
+										<label>
+												<input type="radio" name="rank">
+												<div class="feedbacks__rank"><span class="emoji emoji--rank4"></span>Отлично</div>
+										</label>
+										<label>
+												<input type="radio" name="rank">
+												<div class="feedbacks__rank"><span class="emoji emoji--rank3"></span>Хорошо</div>
+										</label>
+										<label>
+												<input type="radio" name="rank">
+												<div class="feedbacks__rank"><span class="emoji emoji--rank2"></span> Удовлетворительно</div>
+										</label>
+										<label>
+												<input type="radio" name="rank">
+												<div class="feedbacks__rank"><span class="emoji emoji--rank1"></span>Плохо</div>
+										</label>
+										<label>
+												<input type="radio" name="rank">
+												<div class="feedbacks__rank"><span class="emoji emoji--rank0"></span>Очень плохо</div>
+										</label>
+								</div>
+								<input type="hidden" value="id" name="pic[]">
+								<textarea class="offer-form__textarea" placeholder="Напишите ваш отзыв"></textarea>
+								<div class="offer-form__file-field file-field">
+										<label href="#" class="file-field__label">
+												<div class="file-field__link">Прикрепить файлы</div>
+												<input type="file" multiple class="file-field__input js-send-file">
+												<div class="file-field__text">Файлы формата .doc, .docx, .pdf, .jpg, не более 5 Мб</div>
+										</label>
+								</div>
+						</div>
+						<button type="submit" class="button button--big button__yellow">
+								<span>Оставить отзыв</span>
+						</button>
+						<a href="#" class="js-closed">Отмена</a>
+				</form>
+		</div>
 </div>
