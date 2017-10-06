@@ -75,29 +75,55 @@ input, textarea{
 /*/fonts*/
 /*buttons*/
 .button{border:none; background: transparent; padding: 0; margin: 0; display: inline-block; text-decoration: none; color: #3777b3; font-weight: 400; border-radius:2px; cursor: pointer;
-    &:hover{ text-decoration: none;
-        span{ text-decoration: none; opacity: 1;}
+    &:hover{ text-decoration: none; color: #3777b3;
+        span{ text-decoration: none; border-color: rgba(55, 119, 179, 1);}
     }
-    span{ min-width: 80px; height: 40px; border-radius: 2px; border:1px solid rgb(175, 201, 224); display: flex; justify-content: center; align-items: center; font-size: 17px; cursor: pointer; padding:0 15px; text-align: center; line-height: 1; opacity: 0.8;}
+    &:active{
+        span{border-color: rgba(55, 119, 179, .2); color: rgba(55, 119, 179, .5);}
+    }
+    span{ min-width: 80px; height: 40px; border-radius: 2px; border:1px solid rgba(55, 119, 179, .4); display: flex; justify-content: center; align-items: center; font-size: 17px; cursor: pointer; padding:0 15px; text-align: center; line-height: 1; opacity: 0.8;}
     img{ margin-right: 8px;}
     &__yellow{ color: #000000; width: 100%;
-        &:hover{ color: #000;}
-        span{ width: 100%; padding: 10px; background-color: #fcd504; border-color: #fcd504;}
+        span{background: #fcd504;}
+        &:hover{
+            & span{color: #000; background: #ffe13c; border-color: #ffe13c;}
+        }
+        &:active{
+            & span{color: #000; background: #ffc805; border-color: #ffc805; box-shadow: none;}
+        }
+        span{ width: 100%; padding: 10px; background-color: #fcd504; box-shadow: 0 2px 13px 0 rgba(249, 183, 21, 0.41); border-color: #fcd504;}
         img{ margin-right: 15px;}
     }
     &__red{
-        span{ color: #eb3838; border-color: #eb3838; }
+        span{ color: #eb3838; border-color: rgba(235, 56, 56, .4); }
+        &:hover{
+            span{ color: #eb3838; border-color: rgba(235, 56, 56, 1); }
+        }
+        span{ color: #eb3838; border-color: rgba(235, 56, 56, .4); }
+        &:active{
+            span{ color: rgba(235, 56, 56, .5); border-color: rgba(235, 56, 56, .2); }
+        }
     }
     &__green{ color: #fff; background-color: #51b37b;
         span{ padding: 12px;font-size: 17px; border: none; line-height: 1.41; height: 48px; text-align: left; border-color: #51b37b;}
         &--big{
             span{font-size: 20px; min-width: 240px; height: 64px;}
         }
-        &:hover{color: #fff; background: #50c887;}
-        &:active{color: #fff; background: #46a56e;}
+        &:hover{
+            span{color: #fff; background: #50c887;}
+        }
+        &:active{
+            span{color: #fff; background: #46a56e;}
+        }
     }
     &__white{ color: #fff; background-color: transparent;
-        span{  line-height: 1.41; height: 40px; border-color: #fff;}
+        span{  line-height: 1.41; height: 40px; border-color: rgba(255, 255, 255, .4);}
+        &:hover{
+            span{border-color: rgba(255, 255, 255, 1); color: #fff;}
+        }
+        &:active{
+            span{border-color: rgba(255, 255, 255, .5); color: rgba(255, 255, 255, .2);}
+        }
     }
     &--big{
         span{min-width: 159px; height: 48px;}

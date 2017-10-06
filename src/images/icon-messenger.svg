@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="40px" viewBox="0 0 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-messenger</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-48.000000, -223.000000)" id="_social">
+            <g transform="translate(48.000000, 223.000000)">
+                <g id="icon-messenger">
+                    <rect id="Rectangle-2" x="0" y="0" width="40" height="40"></rect>
+                    <path d="M26.3845301,29.9259441 L20.2734327,23.4070629 L8.34684074,29.9259441 L21.4656977,16 L27.7265673,22.5188812 L39.5024018,16 L26.3845301,29.9259441 Z M24,0 C10.7451657,0 0,9.9492013 0,22.2221678 C0,29.215007 3.49008499,35.4538221 8.94395862,39.5275109 L8.94395862,48 L17.1154083,43.5150254 C19.2969578,44.1182447 21.6066018,44.4443356 24,44.4443356 C37.2548343,44.4443356 48,34.4951343 48,22.2221678 C48,9.9492013 37.2548343,0 24,0 L24,0 Z" id="Mask" fill="#3777b3"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

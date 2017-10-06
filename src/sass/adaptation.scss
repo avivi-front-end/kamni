@@ -168,6 +168,9 @@
   .complect__plus{ margin: 28px 0 0;}
 }
 @media screen and (max-width: 666px) {
+  .rock-man{
+    br{display: none;}
+  }
   .pop-items__content,
   .collection-items__content,
   .new-items__content{max-width: 407px; justify-content: space-around;}
