@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="40px" height="32px" viewBox="0 0 40 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-wind</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-124.000000, -890.000000)" id="_element">
+            <g transform="translate(48.000000, 882.000000)">
+                <g id="icon-wind" transform="translate(72.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                    <path d="M8.5106191,37.5 L39.4893809,37.5 L24,12.7169906 L8.5106191,37.5 Z M24,8 L44,40 L4,40 L24,8 Z" id="Path-73" fill="#000000" fill-rule="nonzero"></path>
+                    <rect id="Rectangle-21" fill="#000000" x="4" y="20" width="40" height="2.5"></rect>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

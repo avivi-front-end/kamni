@@ -4,7 +4,16 @@
     <div class="main">
         //= partials/header-mini.html
         //= partials/breadcrumbs.html
-        <div class="mbox">
+        <div class="mbox basket__wrap">
+            <div class="mobile-titles">
+                <div class="mobile-titles__item active">
+                    <h2>Корзина</h2>
+                </div>
+                <div class="mobile-titles__item">
+                    <h2>Отложенные товары</h2>
+                    <h5 class="gray">Если вы хотите оформить заказ, просто перенесите нужные товары в корзину.</h5>
+                </div>
+            </div>
             <div class="basket-tabs">
                 <div class="basket-tabs__item active">Корзина<span class="basket-all">5</span></div>
                 <div class="basket-tabs__item">Отложенные <span class="defer-all">10</span></div>
@@ -35,12 +44,14 @@
 
                             </div>
                             <div class="tovar__text ">
-                                <div class="tovar__name tovar__name--big">
-                                    <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                                <div class="tovar__name">
+                                    <a href="#" >Данбурит, кристалл 3-4 см</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>55 ₽</strike>
-                                    <strong>100 ₽</strong>
+                                    <div class="tovar__price-inner">
+                                        <strike>55 ₽</strike>
+                                        <strong>100 ₽</strong>
+                                    </div>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -62,12 +73,14 @@
 
                             </div>
                             <div class="tovar__text ">
-                                <div class="tovar__name tovar__name--big">
-                                    <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
+                                <div class="tovar__name oneHeight">
+                                    <a href="#" >Шерл (турмалин), кристалл двухголовик 2-2,5 см</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>49 490 ₽</strike>
-                                    <strong>200 ₽</strong>
+                                    <div class="tovar__price-inner">
+                                        <strike>49 490 ₽</strike>
+                                        <strong>200 ₽</strong>
+                                    </div>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -89,12 +102,14 @@
 
                             </div>
                             <div class="tovar__text ">
-                                <div class="tovar__name tovar__name--big">
+                                <div class="tovar__name oneHeight">
                                     <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>49 490 ₽</strike>
-                                    <strong>350 ₽</strong>
+                                    <div class="tovar__price-inner">
+                                        <strike>49 490 ₽</strike>
+                                        <strong>350 ₽</strong>
+                                    </div>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -116,12 +131,14 @@
 
                             </div>
                             <div class="tovar__text ">
-                                <div class="tovar__name tovar__name--big">
+                                <div class="tovar__name oneHeight">
                                     <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>49 490 ₽</strike>
-                                    <strong>400 ₽</strong>
+                                    <div class="tovar__price-inner">
+                                        <strike>49 490 ₽</strike>
+                                        <strong>400 ₽</strong>
+                                    </div>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -143,12 +160,14 @@
 
                             </div>
                             <div class="tovar__text ">
-                                <div class="tovar__name tovar__name--big">
+                                <div class="tovar__name oneHeight">
                                     <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                                 </div>
                                 <div class="tovar__price">
-                                    <strike>49 490 ₽</strike>
-                                    <strong>450 ₽</strong>
+                                    <div class="tovar__price-inner">
+                                        <strike>49 490 ₽</strike>
+                                        <strong>450 ₽</strong>
+                                    </div>
                                     <div class="tovar__sale">-15%</div>
                                 </div>
                                 <div class="tovar__counter">
@@ -167,13 +186,7 @@
                     <div class="basket__info">
                         <div class="basket__info-wrap">
                             <div class="basket__info-row">
-                                <span>Без скидки
-                                    <div class="dropdowned">
-                                        <div class="dropdowned__wrap">
-                                            test
-                                        </div>
-                                    </div>
-                                </span>
+                                <span>Без скидки</span>
                                 <b><div class="js-total-price"></div> ₽</b>
 
                             </div>
@@ -242,12 +255,7 @@
                         <p>Позвоните в отдел обслуживания клиентов (с 9:00 до 19:00)</p>
                         <p> 8 (800) 775-45-19</p>
                         <p> или задайте вопрос тут:</p>
-                        <div class="header-top__social">
-                            <a href="#" class="social social--tg"></a>
-                            <a href="#" class="social social--vk"></a>
-                            <a href="#" class="social social--ms"></a>
-                            <a href="#" class="social social--wa"></a>
-                        </div>
+                        //= partials/header-social.html
                     </div>
                 </div>
             </form>
@@ -283,10 +291,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>500 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>500 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div >
                     <div class="tovar" data-maxcount="1" data-price="580">
@@ -298,14 +312,20 @@
 
                         </div>
                         <div class="tovar__text ">
-                            <div class="tovar__name">
+                            <div class="tovar__name oneHeight">
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>580 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>580 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="600">
@@ -321,10 +341,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>600 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>600 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="650">
@@ -340,10 +366,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>650 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>650 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="700">
@@ -359,10 +391,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>700 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>700 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="750">
@@ -378,10 +416,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>750 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>750 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="800">
@@ -397,10 +441,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>800 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>800 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="900">
@@ -416,10 +466,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>900 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>900 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                     <div class="tovar" data-maxcount="1" data-price="1050">
@@ -435,10 +491,16 @@
                                 <a href="#" >Name item three row line bla bla bla bla bla sad asdasd</a>
                             </div>
                             <div class="tovar__price">
-                                <strike>49 490 ₽</strike>
-                                <strong>1 050 ₽</strong>
+                                <div class="tovar__price-inner">
+                                    <strike>49 490 ₽</strike>
+                                    <strong>1 050 ₽</strong>
+                                </div>
                                 <div class="tovar__sale">-15%</div>
                             </div>
+                        </div>
+                        <div class="tovar-mobile">
+                            <button class="tovar-mobile__buy"></button>
+                            <button class="tovar-mobile__like"></button>
                         </div>
                     </div>
                 </div>

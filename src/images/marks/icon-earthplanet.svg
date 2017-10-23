@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-earthplanet</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-128.000000, -810.000000)" id="_planets">
+            <g transform="translate(48.000000, 802.000000)">
+                <g id="icon-earthplanet" transform="translate(72.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                    <path d="M25.1789474,37.5747368 L25.1789474,25.1789474 L37.5747368,25.1789474 C37.0021053,31.7473684 31.7473684,37.0021053 25.1789474,37.5747368 M10.4252632,25.1789474 L22.8210526,25.1789474 L22.8210526,37.5747368 C16.2526316,37.0021053 10.9978947,31.7473684 10.4252632,25.1789474 M22.8210526,10.4252632 L22.8210526,22.8210526 L10.4252632,22.8210526 C10.9978947,16.2526316 16.2526316,10.9978947 22.8210526,10.4252632 M37.5747368,22.8210526 L25.1789474,22.8210526 L25.1789474,10.4252632 C31.7473684,10.9978947 37.0021053,16.2526316 37.5747368,22.8210526 M24,8 C15.1747368,8 8,15.1747368 8,24 C8,32.8252632 15.1747368,40 24,40 C32.8252632,40 40,32.8252632 40,24 C40,15.1747368 32.8252632,8 24,8" id="Fill-1" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

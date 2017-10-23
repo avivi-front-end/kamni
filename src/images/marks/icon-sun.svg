@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 46 (44423) - http://www.bohemiancoding.com/sketch -->
+    <title>icon-sun</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="icons" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g transform="translate(-632.000000, -810.000000)" id="_planets">
+            <g transform="translate(48.000000, 802.000000)">
+                <g id="icon-sun" transform="translate(576.000000, 0.000000)">
+                    <rect id="Rectangle" x="0" y="0" width="48" height="48"></rect>
+                    <path d="M24,37.6421053 C16.4884211,37.6421053 10.3578947,31.5115789 10.3578947,24 C10.3578947,16.4884211 16.4884211,10.3578947 24,10.3578947 C31.5115789,10.3578947 37.6421053,16.4884211 37.6421053,24 C37.6421053,31.5115789 31.5115789,37.6421053 24,37.6421053 M24,8 C15.1747368,8 8,15.1747368 8,24 C8,32.8252632 15.1747368,40 24,40 C32.8252632,40 40,32.8252632 40,24 C40,15.1747368 32.8252632,8 24,8" id="Fill-1" fill="#000000"></path>
+                    <path d="M23.7852632,22 C24.7712,22 25.5705263,22.7993263 25.5705263,23.7852632 C25.5705263,24.7712 24.7712,25.5705263 23.7852632,25.5705263 C22.7993263,25.5705263 22,24.7712 22,23.7852632 C22,22.7993263 22.7993263,22 23.7852632,22" id="Fill-3" fill="#000000"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

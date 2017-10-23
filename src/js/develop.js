@@ -62,7 +62,18 @@ function sliderInit() {
     if(slider.length > 0){
         slider.slick({
             dots:true,
-            arrows:true
+            arrows:true,
+            responsive: [
+                {
+                    breakpoint: 480,
+                    settings: {
+                    centerMode: true,
+                    slidesToShow: 1,
+                    arrows: false,
+                    centerPadding: '10px'
+                    }
+                }
+            ]
         });
     }
     var slider2 = $('.mailer__slider');
@@ -415,13 +426,16 @@ var userName = 'Ivan';
 function basketTabs() {
     var items = $('.basket-tabs__item');
     var tabs = $('.tab-content');
+    var tabs2 = $('.mobile-titles__item')
     if(items.length > 0){
         items.click(function () {
             var ind = $(this).index();
             items.removeClass('active');
+            tabs2.removeClass('active');
             tabs.removeClass('active');
             $(this).addClass('active');
             tabs.eq(ind).addClass('active');
+            tabs2.eq(ind).addClass('active');
         });
     }
 }
@@ -475,10 +489,7 @@ var mover = {
         var dx = $('.defer__items .tovar').length;
         $('.basket-all').text(bx);
         $('.defer-all').text(dx);
-
-
     }
-
 }
 function sumBasket(){
     if(!$('.basket').length) return;
