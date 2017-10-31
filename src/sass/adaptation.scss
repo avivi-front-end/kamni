@@ -29,7 +29,6 @@
   .boss-block__img img{ left: 0;}
 }
 @media screen and (max-width: 992px) {
-  .document{margin-bottom: 0;}
   .tovar{
     &-mobile{display: flex;}
     &:hover{box-shadow: none;
@@ -328,10 +327,6 @@
   .mailer__input{ margin-bottom: 7px; margin-top: 12px;}
   .mailer__button{ margin:0 auto 12px; }
   .mailer__content{ padding-top: 0; padding-bottom: 22px;}
-  .reg-success__box{ position: relative; top: auto; right: auto; max-width: 100%;}
-  .reg-success__top{ height: auto; padding: 10px;}
-  .reg-success__bot{ padding: 10px;}
-  .reg-success p{ font-size: 14px;}
   .modal__content {  padding: 17px 20px 23px; }
   .modal__footer { padding: 17px 20px 23px;}
   .rock-man__button-txt p{ font-size: 14px;}
@@ -359,7 +354,6 @@
   .lk-main__cell:first-child{ border-right:none; border-bottom: 1px solid #e6e6e6;}
   .lk-main__cell{ width: 100%;}
   .lk-main__row{ flex-wrap: wrap;}
-  .order-payment__row{flex-wrap: wrap; font-size: 12px;}
   .rising__main{ flex-direction: column-reverse;}
   .stonebox-modal__buts{ display: flex; justify-content: center; align-items: center; flex-direction: column;}
   .stonebox-modal .button__red{ margin-right: 0;}

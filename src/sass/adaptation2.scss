@@ -40,7 +40,7 @@
 	.slider{padding-top: 8px;
 		&--main{margin-top: 0;}
 		&__text{
-			h1{font-size: 32px; line-height: 1.25;}
+			.pseudoH1{font-size: 32px; line-height: 1.25;}
 			a{font-size: 10px; letter-spacing: 1.9px;}
 		}
 		.slick-dots{bottom: 8px; height: 12px;
@@ -216,9 +216,33 @@
 	}
 }
 @media screen and (max-width: 800px){
+	.basket{
+		&__right-txt{padding-bottom: 0;}
+	}
+	.order-delivery{
+		&__text{
+			h5{line-height: 24px;}
+		}
+	}
+	.input{
+		&__container{max-width: 100%;}
+		&__item{
+			textarea, input[type="text"]{background: #f5f5f5; border-radius: 2px; box-shadow: none; padding: 0 12px;}
+			textarea{padding: 8px 12px; font-size: 17px; line-height: 1.41;
+				&::-webkit-input-placeholder  { font-size: 17px; line-height: 1.41; opacity: 1; color: #808080;}
+				&:-moz-placeholder            { font-size: 17px; line-height: 1.41; opacity: 1; color: #808080;}
+				&::-moz-placeholder           { font-size: 17px; line-height: 1.41; opacity: 1; color: #808080;}
+				&:-ms-input-placeholder       { font-size: 17px; line-height: 1.41; opacity: 1; color: #808080;}
+			}
+		}
+		&__rowed{
+			h6{line-height: 1.43;}
+		}
+		&__container{margin-bottom: 24px;}
+	}
 	.excursion{
-		&__wrap{width: 100%;}
-		&__img{display: none;}
+		&__wrap{width: 100%; flex-direction: column-reverse;}
+		&__img{width: 100%; height: 248px;}
 		&__text{width: 100%; padding: 0 20px 20px;}
 	}
 	.prod-sheet{
@@ -256,6 +280,7 @@
 	}
 }
 @media screen and (max-width: 768px){
+	.manager{width: auto; margin: 50px 16px;}
 	.about{
 		&-info{
 			&__item{height: 300px;}
@@ -354,6 +379,11 @@
 	}
 }
 @media screen and (max-width: 700px){
+	.email-subscr{
+		&__list{flex-wrap: wrap;
+			&-item{width: 49%; margin-bottom: 8px;}
+		}
+	}
 	.page404{
 		&-info{flex-direction: column;
 			&__text{padding: 0;}
@@ -378,6 +408,18 @@
 	}
 	.file-field{flex-direction: column;
 		&__label{margin-bottom: 15px;}
+	}
+}
+@media screen and (max-width: 666px){
+	.manager{
+		&-letter{
+			&__row{flex-direction: column; align-items: center;}
+		}
+	}
+	.od-check{flex-direction: column;
+		h4{margin-bottom: 18px;}
+		&__buttons{margin-top: 7px;}
+		p{text-align: left; margin-top: 12px; font-size: 16px; margin-bottom: 0;}
 	}
 }
 @media screen and (max-width: 620px){
@@ -632,10 +674,205 @@
 	}
 }
 @media screen and (max-width: 480px){
+	.manager{
+		&-send{max-width: auto;
+			.modal__content{padding: 0px 16px 23px 17px;}
+			.button{width: 100%; margin-top: 6px;
+				span{min-width: auto; font-size: 16px; height: 48px;}
+			}
+			h3{font-size: 20px; line-height: 1.4;}
+			h6{font-size: 16px; line-height: 1.25; margin-bottom: 12px;}
+			.modal__content input.offer-form__input{padding-left: 10px; width: 100%;border-radius: 2px; margin-bottom: 10px; border-bottom: none; box-shadow: none; padding-bottom: 0; height: 40px; background-color: #f5f5f5;}
+		}
+		&-letter{
+			h2{margin-top: 0.3em;}
+			&__main{margin-bottom: 21px;}
+			.manager-letter__bottom{
+				p{text-align: left;
+					&:not(:last-child){
+						margin-bottom: 1.2em;
+					}
+				}
+			}
+			.button{width: 100%; margin-bottom: 0;
+				span{height: 40px; font-size: 17px;}
+			}
+			p{font-size: 16px; line-height: 1.25;}
+			&__img{width: 32px; margin: 0 0 16px;
+				&--big{margin: 0 0 0; width: 122px;}
+			}
+			.modal__content{padding: 26px 14px 23px;}
+			h3, h2, h5,p{text-align: center;}
+		}
+	}
+	.reg-success{margin: 38px 16px; width: auto;
+		&__top{height: auto; padding: 16px 16px 0; background: url(../images/bgpopo.jpg) -21% 20% no-repeat; background-size: 476px;
+			&>p{font-size: 16px; line-height: 1.25; text-align: center; padding: 0 46px; margin-bottom: 1.1em;}
+			h2{font-size: 20px; line-height: 1.4; text-align: center; padding: 0 20px; margin-bottom: 8.6em;}
+		}
+		&__box{text-align: left;
+			p{font-size: 16px; line-height: 1.25;}
+		}
+	}
+	.reg-success__box{ position: relative; top: auto; right: auto; max-width: 100%;}
+	.email-subscr{ margin: 0 16px; width: auto; padding-bottom: 24px;
+		.button{width: 100%;
+			span{height: 40px; font-size: 17px;}
+		}
+		&__img{height: 124px;
+			img{width: 60%;}
+		}
+		.modal__content{padding: 3px 16px 32px;
+			h3{margin-top: 0.7em; font-size: 20px; line-height: 1.4; margin-bottom: 0.8em;}
+			&>p{font-size: 16px; line-height: 1.25; margin-bottom: 1em;}
+		}
+		&__list{padding-bottom: 0px; margin-bottom: 8px;
+			&-item{width: 47%;
+				p{font-size: 14px; line-height: 1.43;}
+			}
+		}
+	}
+	.tnx{margin: 0 16px; padding: 18px 4px 4px;
+		h5{font-size: 16px; line-height: 1.25; margin: 1em 0 1.2em;}
+	}
+	.excursion{margin: 0 16px;
+		&__text{padding: 0 15px 20px;
+			h3{margin: 1em 0 0.9em; font-size: 20px;}
+			h5{font-size: 16px; line-height: 1.25; margin: 1em 0 18px;} 
+			input{height: 40px; background: #f5f5f5; box-shadow: none; padding: 0 12px;
+				&::-webkit-input-placeholder  {font-size: 17px; line-height: 2.12;}
+				&:-moz-placeholder            {font-size: 17px; line-height: 2.12;}
+				&::-moz-placeholder           {font-size: 17px; line-height: 2.12;}
+				&:-ms-input-placeholder       {font-size: 17px; line-height: 2.12;}
+			}
+		}
+	}
+	.catalogue-search__wrap{margin-bottom: 0;}
+	.page404{padding-bottom: 19px;
+		&-bottom{display: none;}
+		&-info{padding-top: 3px;
+			&__text{
+				h5{margin-bottom: 1.2em;}
+			}
+		}
+		&__img{text-align: center;}
+		&__search{border-bottom: none; margin-top: 36px;
+			button{right: 9px;}
+			.catalogue-search__input{background: #f5f5f5; border-radius: 2px; height: 40px; margin-top: 0; padding: 0 38px 0 8px; box-sizing: border-box;
+				&::-webkit-input-placeholder  {font-size: 17px; line-height: 1.41; letter-spacing: 0;}
+				&:-moz-placeholder            {font-size: 17px; line-height: 1.41; letter-spacing: 0;}
+				&::-moz-placeholder           {font-size: 17px; line-height: 1.41; letter-spacing: 0;}
+				&:-ms-input-placeholder       {font-size: 17px; line-height: 1.41; letter-spacing: 0;}
+			}
+		}
+	}
+	.od-add{
+		&__content{padding-top: 2px;}
+		&__row{
+			&:not(:last-child){margin-bottom: 7px;}
+		}
+	}
+	.od-table{border-top: none;
+		&__head{display: none;}
+		&__row{min-width: auto; border-top: none; margin-bottom: 0; flex-wrap: wrap; justify-content: flex-start; padding: 13px 0px 6px;
+			p{margin-bottom: 0.5em;}
+		}
+		&__cell{
+			&:nth-child(1){width: 100%;}
+			&:nth-child(2){padding-left: 80px; margin-right: 7px;}
+			&:nth-child(3){ margin-right: 17px;}
+			&:nth-child(2), &:nth-child(3), &:nth-child(4){width: auto;
+				strike, p{font-size: 14px; line-height: 1.43;}
+			}
+		}
+	}
+	.od-check{padding: 4px 15px 6px; margin-bottom: 0;
+		h4{font-size: 17px; line-height: 1.41;}
+		&__tab{padding-top: 0;}
+		&__row{margin-bottom: 8px;}
+		&__gray{text-align: left; font-size: 14px; line-height: 1.5;}
+		&__long{text-align: right; font-size: 16px; line-height: 1.1;}
+	}
+	.order-done{padding-bottom: 0; border-bottom: none;
+		h2{font-size: 20px; line-height: 1.4; margin: 0.9em 0 0.6em; padding: 0 37px 0; text-align: center;}
+		&__main{padding-top: 0;}
+		&__name{justify-content: flex-start; margin-bottom: 11px;}
+		&__img-wrap{width: 51px; height: 40px; margin-right: 17px;}
+		&__text{
+			p{line-height: 1.7;}
+		}
+		&__groupup{border: 1px solid #e6e6e6; margin: 14px 0px 16px; padding: 12px 20px 6px 35px; justify-content: flex-start; align-items: flex-start;
+			&-txt{
+				p{font-size: 16px; line-height: 1.25; margin-bottom: 12px;}
+				a{padding: 6px 7px; font-size: 14px; line-height: 1.14; border-radius: 2px; border: 1px solid rgba(55, 119, 179, .4);}
+			}
+		}
+	}
+	.checkbox__styled{margin-right: 6px;}
+	.agree-pay{
+		&__row{align-items: flex-start; margin-bottom: 15px;
+			span{font-size: 16px; line-height: 1.25;}
+		}
+		&__submit{margin-top: 25px; padding: 16px;}
+		&__price{margin-bottom: 15px;}
+	}
+	.radio{
+		&__styled{
+			i{margin-right: 1px;}
+		}
+	}
+	.order{padding-bottom: 64px;
+		h3{margin-top: 0.9em; font-size: 20px; line-height: 1.4; margin-bottom: 0.3em;}
+		&-payment{max-width: 100%; margin-bottom: 25px;
+			&__row{flex-wrap: wrap;
+				span{font-size: 16px; line-height: 1.25; vertical-align: middle;}
+				i{vertical-align: middle;}
+			}
+			&__select{margin-top: 6px; margin-left: 0; width: 100%; border-radius: 2px;
+				.jq-selectbox__select{border-bottom: none;}
+				.jq-selectbox{background: #f5f5f5;}
+			}
+		}
+		&-delivery{
+			h3{margin-top: 1.7em;}
+			&>h5{font-size: 16px; line-height: 1.25; margin-top: 0.9em; margin-bottom: 1em;}
+			&>p{font-size: 16px; line-height: 1.25;}
+			p{margin-bottom: 8px;}
+			&__label{padding: 14px 14px 12px;}
+			&__checkbox{
+				i{width: 26px; height: 26px;
+					&:before{left: 7px; top: 5px;}
+				}
+			}
+			&__text{
+				h5{font-size: 17px; line-height: 1.41;}
+			}
+		}
+		&-payment{
+			h3{margin-top: 1.7em; margin-bottom: 0.6em;}
+			&__remainder{display: inline-block;}
+			&__select{
+				.jq-selectbox{
+					&__select-text{padding-left: 11px;}
+					&__trigger-arrow{top: 14px; right: 9px;}
+				}
+			}
+			&__row{margin-bottom: 15px;}
+		}
+	}
+	.input{
+		&__container{margin-bottom: 17px;}
+		&__rowed{margin-bottom: 0;
+			h6{font-size: 14px; line-height: 1.43; margin-bottom: 0.2em; padding-top: 9px;}
+			&--classic{
+				p{padding-top: 3px;}
+			}
+		}
+	}
 	.tovar{width: 47.9%; margin-right: 0; margin-bottom: 13px;
 		&__sale{display: none;}
 		&__price{margin-top: 0; height: auto;
-		  i{font-size: 10px;}
+		  i{font-size: 10px; padding-bottom: 8px;}
 		  strike{font-size: 12px;}
 		  &-inner{flex-direction: row; align-items: center; justify-content: space-between;}
 		  strong{font-size: 14px; line-height: 1.43;}
@@ -671,21 +908,28 @@
 		&__all{padding: 13px 0 0 15px; font-size: 16px;}
 	}
 	.basket{padding-bottom: 31px;
-		&__right-txt{padding-top: 29px;
+		&__right-txt{padding-top: 25px;
 			p{margin-bottom: 13px;}
 		}
+		&__left{padding-right: 0;}
 		&__info{
 			.button{width: auto;
 				span{padding: 0 38px;}
 			} 
-			&-box{
+			&-box{margin-top: 18px;
 				a{margin-top: 8px;}
 				p{margin-bottom: 17px;}
 				.mover__del-all{margin-bottom: 0; border: none; font-size: 17px; padding: 0;}
 			}
+			&-wrap{margin: 16px 16px 0px;}
 			&-row{margin-bottom: 0;
-				&:not(:last-child){margin-bottom: 10px;}
+				&--center{margin: 22px 0 0;}
+				&--drop{
+					&>span{text-decoration: underline; text-decoration-style: dotted;}
+				}
+				&:not(:last-child){margin-bottom: 3px;}
 			}
+			&-title{font-size: 17px; line-height: 1.41; margin-bottom: 8px;}
 		}
 		&__wrap{z-index: auto;}
 		&-tabs{

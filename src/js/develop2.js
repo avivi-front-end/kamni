@@ -648,11 +648,36 @@ var stickySidebar = (function(){
 		bottomSpacing: 800,
 		minWidth: 900
 	});
+})();
 
-/* 	if($(window).width() <= 800){
-		var stickySidebar = new StickySidebar('.sticky');
-		console.log('asfs');
-		stickySidebar.destroy();
-		$('.basket__right').removeClass('sticky');
-	} */
+var  selectCheck = (function(){
+	$.fn.toggleDisabled = function() {
+		return this.each(function() {
+			this.disabled = !this.disabled;
+		});
+	};
+	var
+		input = $('.js-select-check');
+		t=1;
+	;
+
+	input.on('change', function(){
+		if($(this).hasClass('with-select')){
+			$(this).closest('.order-payment__row').find('select').toggleDisabled().trigger('refresh');
+			t=1;
+		} else if(t === 1){
+			$('.with-select').closest('.order-payment__row').find('select').toggleDisabled().trigger('refresh');
+			t++;
+		}
+	});
+
+})();
+
+var buyOneClick = (function(){
+	var btn = $('.js-one-click');
+
+	btn.click(function(e){
+		e.preventDefault();
+		$(this).next().toggleClass('active');
+	});
 })();
