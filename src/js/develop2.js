@@ -633,13 +633,21 @@ var basketCheck = (function(){
 
 })();
 
-var mobileLike = (function(){
+/* var mobileLike = (function(){
 	var button = $('.tovar-mobile__like');
+	var desktopBtn = $('.tovar__like');
+
+	desktopBtn.click(function(e){
+		e.preventDefault();
+		$(this).toggleClass('active');
+		$(this).closest('.tovar').find(button).toggleClass('active');
+	});
 	
 	button.click(function(){
 		$(this).toggleClass('active');
+		$(this).closest('.tovar').find(desktopBtn).toggleClass('active');
 	});
-})();
+})(); */
 
 var stickySidebar = (function(){
 

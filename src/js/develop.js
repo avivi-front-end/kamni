@@ -431,11 +431,11 @@ function basketTabs() {
         items.click(function () {
             var ind = $(this).index();
             items.removeClass('active');
-            tabs2.removeClass('active');
+           /*  tabs2.removeClass('active'); */
             tabs.removeClass('active');
             $(this).addClass('active');
             tabs.eq(ind).addClass('active');
-            tabs2.eq(ind).addClass('active');
+            /* tabs2.eq(ind).addClass('active'); */
         });
     }
 }

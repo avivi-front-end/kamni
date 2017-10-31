@@ -34,6 +34,11 @@
 	}
 }
 @media screen and (max-width: 992px){
+	.spec-see{width: auto; margin: 0 16px;}
+	.spec-sale{width: auto; margin: 30px 16px;}
+	.reg-success{
+		&__img{left: 9%; top: 213px; width: 142px;}
+	}
 	.publications__content{margin: 0 -4px;
 		.document{margin-right: 4px; margin-left: 4px;}
 	}
@@ -202,6 +207,7 @@
 }
 
 @media (max-width: 850px){
+	.reg-success, .modal-mess{width: auto; margin: 0 16px;}
 	.s-blog{
 		&__text{
 			&--min{ flex-direction: column; align-items: flex-start;}
@@ -379,6 +385,19 @@
 	}
 }
 @media screen and (max-width: 700px){
+	.spec-see{padding-left: 16px; padding-right: 16px;
+		&__content{flex-direction: column; align-items: center; text-align: center;
+			img{margin-right: 0;}
+			h2, h6{text-align: center;}
+			h6{max-width: 100%;}
+		}
+	}
+	.reg-success{
+		h2{margin-bottom: 7em;}
+		&__top{height: 598px; position: relative; background-position: 50% 30%;}
+		&__box{top: auto; bottom: 0px; right: auto; left: 30px; max-width: 596px;}
+		&__img{left: 50%; top: 195px; width: 142px; transform: translateX(-50%);}
+	}
 	.email-subscr{
 		&__list{flex-wrap: wrap;
 			&-item{width: 49%; margin-bottom: 8px;}
@@ -674,6 +693,27 @@
 	}
 }
 @media screen and (max-width: 480px){
+	.modal-mess{
+		.modal__content{padding: 15px 16px 25px;}
+	}
+	.spec-see{padding: 15px 16px 25px;
+		&__content{flex-direction: column; align-items: center; text-align: center;
+			img{width: 209px; margin-bottom: 18px;}
+			h6{font-size: 16px; line-height: 1.25; margin-bottom: 15px;}
+			h2{font-size: 20px; line-height: 1.4; margin-bottom: 15px;}
+			.button{width: 100%;
+				span{height: 48px; font-size: 17px; line-height: 1.41; font-size: 17px; line-height: 1.41;}
+			}
+		}
+	}
+	.spec-sale{padding: 10px 16px 30px;
+		.button{width: 100%;
+			span{height: 48px; font-size: 17px; padding: 0;}
+		}
+		.pseudoH1{margin-bottom: 36px;}
+		h4{font-size: 17px; font-weight: bold; padding: 0 50px; line-height: 1.41;}
+		p{font-size: 16px; line-height: 1.25;}
+	}
 	.manager{
 		&-send{max-width: auto;
 			.modal__content{padding: 0px 16px 23px 17px;}
@@ -706,15 +746,24 @@
 		}
 	}
 	.reg-success{margin: 38px 16px; width: auto;
-		&__top{height: auto; padding: 16px 16px 0; background: url(../images/bgpopo.jpg) -21% 20% no-repeat; background-size: 476px;
-			&>p{font-size: 16px; line-height: 1.25; text-align: center; padding: 0 46px; margin-bottom: 1.1em;}
-			h2{font-size: 20px; line-height: 1.4; text-align: center; padding: 0 20px; margin-bottom: 8.6em;}
+		h3{font-size: 20px; line-height: 1.4; margin-bottom: 0.2em;}
+		&__img{position: static; margin: 0 auto 22px; display: block; transform: none;}
+		&__top{height: auto; padding: 16px 16px 0; background: url(../images/mount.svg) 50% 26% #f8f6ec no-repeat; background-size: 320px;
+			&>p{font-size: 16px; line-height: 1.25; text-align: center; padding: 0 39px; margin-bottom: 1.1em;}
+			h2{font-size: 20px; line-height: 1.4; text-align: center; padding: 0 20px; margin-bottom: 0.5em;}
 		}
-		&__box{text-align: left;
+		&__box{text-align: left; padding-right: 20px; position: static; border-bottom: 1px solid transparent;
+			& > p{margin-bottom: 21px;}
+			p{font-size: 16px; line-height: 1.25; padding: 0 0;}
+		}
+		.reg-success__bot{padding: 11px 14px 20px;
 			p{font-size: 16px; line-height: 1.25;}
 		}
+		.button{width: 100%;
+			span{height: 40px;}
+		}
 	}
-	.reg-success__box{ position: relative; top: auto; right: auto; max-width: 100%;}
+	.reg-success__box{ top: auto; right: auto; max-width: 100%;}
 	.email-subscr{ margin: 0 16px; width: auto; padding-bottom: 24px;
 		.button{width: 100%;
 			span{height: 40px; font-size: 17px;}

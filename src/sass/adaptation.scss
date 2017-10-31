@@ -30,10 +30,11 @@
 }
 @media screen and (max-width: 992px) {
   .tovar{
+    &__like{opacity: 0;}
     &-mobile{display: flex;}
     &:hover{box-shadow: none;
       & .tovar__buy{display: none;}
-      & .tovar__like{display: none;}
+      & .tovar__like{opacity: 0;}
     }
   }
   .pseudoH1,

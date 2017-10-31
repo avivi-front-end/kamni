@@ -448,11 +448,12 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   &:focus:after{outline: none;}
 }
 .reg-success{ max-width: 760px; position: relative;
+  &__img{position: absolute; left: 45px; top: 153px;}
   h2{ text-align: left; margin: 0 0 1em;}
   h3{ text-align: left; margin: 0 0 0.45em;}
   p{ text-align: left;font-size: 17px; line-height: 1.2;  color: #000000; margin-bottom:0.3em;}
   .button{margin: 13px 0 12px;}
-  &__top{ background-position: right bottom; height: 428px; width: 100%; background-image: url(../images/bgpopo.jpg); background-color: #f8f5ec; background-repeat: no-repeat; padding: 34px 48px 20px; }
+  &__top{  height: 428px; width: 100%; background: url(../images/mount.svg) 0% 26% #f8f6ec;  background-repeat: no-repeat; padding: 34px 48px 20px; }
   .reg-success__bot{padding: 33px 48px 20px;
     p{max-width: 600px; line-height: 1.5em; margin-bottom: 0;}
   }
