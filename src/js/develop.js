@@ -89,7 +89,16 @@ function sliderInit() {
         slider3.slick({
             dots:false,
             arrows:true,
-            infinite:false
+            infinite:false,
+            responsive:[
+                {
+                    breakpoint: 550,
+                    settings: {
+                        arrows: false,
+                        dots: true
+                    }
+                }
+            ]
         });
         cardSlider();
     }
@@ -290,10 +299,9 @@ function itemsSlider() {
             slidesToScroll: 1,
             responsive: [
                 { breakpoint: 1150, settings: {  slidesToShow: 5} },
-                { breakpoint: 992, settings: {  slidesToShow: 4} },
-                { breakpoint: 790, settings: {  slidesToShow: 3} },
-                { breakpoint: 600, settings: {  slidesToShow: 2} },
-                { breakpoint: 400, settings: {  slidesToShow: 1} }
+                { breakpoint: 992, settings: {  slidesToShow: 4, arrows: false, dots: true} },
+                { breakpoint: 790, settings: {  slidesToShow: 3, arrows: false, dots: true} },
+                { breakpoint: 600, settings: {  slidesToShow: 2, arrows: false, dots: true} }
             ]
 
         });
@@ -818,7 +826,7 @@ var addDelMap = (function(){
         $(this).next().slideToggle();
         var $map = $('#map');
         if(addMap){
-            $.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=gMapInitialize&key=AIzaSyC0_lMgx4X2bzB2ebVtlpcZIF6VAhK0NgE");
+            $.getScript("http://maps.googleapis.com/maps/api/js?v=3.9&sensor=false&callback=gMapInitialize&key=AIzaSyCHWULwI-sjfCoz6Sig3-oUqmI-gzdHpHQ");
             addMap = !addMap;
         }
     });

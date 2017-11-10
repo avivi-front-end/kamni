@@ -1,6 +1,7 @@
 /**
  * Created by user on 24.05.2017.
  */
+$.fancybox.defaults.touch = false;
 (function(){
 	$(".js-cut-text").dotdotdot({
 			ellipsis	: '...',
@@ -688,4 +689,79 @@ var buyOneClick = (function(){
 		e.preventDefault();
 		$(this).next().toggleClass('active');
 	});
+})();
+
+var cardDrop = (function(){
+	var btn = $('.card__description h5');
+	var btnMob = $('.js-card-mclick');
+
+/* 	btn.click(function(){
+		if($(window).width() <= 666){
+			$(this).toggleClass('active');
+			$(this).nextAll('div').slideToggle();
+		}
+	}); */
+	btnMob.click(function(){
+		if($(window).width() <= 666){
+			$(this).toggleClass('active');
+			$(this).find('.card__mobile-title').toggleClass('active');;
+			$(this).nextAll('.js-card-cont').slideToggle();
+		}
+	});
+})();
+
+var modalNight = (function(){
+	var btn = $('.js-modal-night');
+
+	btn.click(function(e){
+		e.preventDefault();
+		$(this).prev().hide();
+		$(this).next().show();
+		$(this).hide();
+	});
+
+})();
+
+var fieldDrop = (function(){
+	var btn = $('.field-two__mob-title').click(function(){
+		$(this).toggleClass('active');
+		$(this).next().slideToggle();
+	});
+})();
+
+var paginator = (function(){
+	var paginatorItem = $('.js-pagi');
+	var add = true;
+	
+	$(window).resize(function(){
+		if($(this).width() < 992){
+			if(add){
+				for (var i = 0; i < paginatorItem.length; ++i) {
+					$('.paginator__select').append('<option value="">' + paginatorItem.eq(i).text() + '</option>');
+					setTimeout(function() {
+						$('.paginator__select').styler({
+							selectSmartPositioning:false,
+							selectSearchLimit: 4
+						});
+					}, 100);
+				}
+				add = !add;
+				paginatorItem.hide();
+			}
+		}
+	});
+
+	if($(window).width() <= 992){
+		for (var i = 0; i < paginatorItem.length; ++i) {
+			$('.paginator__select').append('<option value="' + paginatorItem.eq(i).text() + '">' + paginatorItem.eq(i).text() + '</option>');
+			setTimeout(function() {
+				$('.paginator__select').styler({
+					selectSmartPositioning:false,
+					selectSearchLimit: 4
+				});
+			}, 100);
+		}
+		add = !add;
+		paginatorItem.hide();
+	}
 })();

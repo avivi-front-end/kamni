@@ -30,7 +30,9 @@
 }
 @media screen and (max-width: 992px) {
   .tovar{
-    &__like{opacity: 0;}
+    &__like{opacity: 0;
+      &.active{opacity: 0;}
+    }
     &-mobile{display: flex;}
     &:hover{box-shadow: none;
       & .tovar__buy{display: none;}
@@ -96,7 +98,7 @@
   .aside-menu--relative{ display: flex; flex-direction: column;}
   .complect__wrap{ flex-wrap: wrap; justify-content: space-around; max-width: 645px; margin: 0 auto;}
   .complect__result{ width: 100%;}
-  .complect__done{ margin:32px 0 0;}
+  .complect__done{ margin: 16px auto 3px;}
   .input__rowed{ flex-wrap: wrap;}
   .input__item{ width: 100%;}
   .lk-skelet__left{ display: none;}
@@ -169,10 +171,6 @@
   .opt-info__item{ padding: 10px; min-height: 1px; width: 100%;}
   .opt-info__row{flex-wrap: wrap;}
 }
-@media screen and (max-width: 690px) {
-  .complect__wrap{ flex-direction: column; flex-wrap: nowrap;}
-  .complect__plus{ margin: 28px 0 0;}
-}
 @media screen and (max-width: 666px) {
   .news-items{
     h2{margin-top: 1.4em; font-size: 24px; line-height: 1.33; margin-bottom: 0.7em;}
@@ -223,23 +221,14 @@
   .stone__content{flex-wrap: wrap;}
   .stone__left,
   .stone__right{ width: 100%; padding-left: 0;}
-  .stone__services-item{ width: 100%; box-shadow: inset 0px -1px 0 0 #e6e6e6;}
-  .stone__services{flex-wrap: wrap; width: 100%;}
-
   .od-check__row{flex-wrap: wrap; }
   .od-check__buttons{ width: 100%; margin-top: 16px; margin-left: 0;}
   .od-check p{ margin-top: 0;}
   .od-check__tab{ width: 100%;}
   .od-check__gray,
   .od-check__long{ width: 50%;}
-
-
-
-
 }
 @media screen and (max-width: 560px) {
-  .card__thumbs{ display: none;}
-  .card__slider-wrap{ width: 100%;}
   .stonelist__main,
   .profile__main{ flex-direction: column;}
   .profile__row{
@@ -328,7 +317,6 @@
   .mailer__input{ margin-bottom: 7px; margin-top: 12px;}
   .mailer__button{ margin:0 auto 12px; }
   .mailer__content{ padding-top: 0; padding-bottom: 22px;}
-  .modal__content {  padding: 17px 20px 23px; }
   .modal__footer { padding: 17px 20px 23px;}
   .rock-man__button-txt p{ font-size: 14px;}
   .feedbacks__top{flex-wrap: wrap; }
@@ -340,10 +328,6 @@
   .feed-form{padding: 0 10px 10px;}
   .aside-menu > li{min-height: 24px;}
   .aside-menu > li a{ font-size: 14px;}
-  .card__price .tovar__info{ top: -1px; right: -1px;}
-  .card__price{ padding-top: 32px;}
-  .card__select-wrap{ flex-direction: column; align-items: flex-start;}
-  .card__form-but .button{ margin-bottom: 8px;}
   .mover{flex-wrap: wrap;}
   .mover__wrap{ margin-left: 0;}
   .deploy{ right: 0; bottom: 0; width: 100%;}

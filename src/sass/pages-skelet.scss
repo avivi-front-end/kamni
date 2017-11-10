@@ -229,7 +229,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   }
   &__location{text-align: left; font-size: 13px;}
   &__material{text-align: left; font-size: 13px;}
-  &__price{ position: relative; width: 100%; height: 42px; margin-top: 10px;
+  &__price{ position: relative; width: 100%; margin-top: 10px;
     &-inner{display: flex; flex-direction: column;}
     strike{ display: block;font-size: 14px;  line-height: 1.14; text-align: left; color: #eb3838;}
     strong{ display: block;font-size: 17px; font-weight: bold; line-height: 1.41;  text-align: left; color: #000000;}
@@ -424,11 +424,22 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   }
   &__buttons{
     a{ height: 40px; display: inline-flex; justify-content: center; align-items: center;font-size: 17px; line-height: 1.41; text-align: left;  color: #3777b3; border:1px solid #3777B3; vertical-align: top; margin-right: 5px; margin-left: 0; margin-bottom: 8px; padding: 0 16px;
-      img{ margin-right: 8px;}
-      &.fb{border-color: #3b5998; color: #3b5998;}
-      &.ok{border-color: #f5982a; color: #f5982a;}
-      &.gg{border-color: #df4140; color: #df4140;}
-      &.ml{border-color: #0e5f96; color: #0e5f96;}
+      svg{ margin-right: 8px;}
+      &.vk{
+        svg{fill: #507299; width: 24px; height: 15px;}
+      }
+      &.fb{border-color: #3b5998; color: #3b5998;
+        svg{fill: #3b5998; width: 11px; height: 24px;}
+      }
+      &.ok{border-color: #f5982a; color: #f5982a;
+        svg{fill: #f5982a; width: 14px; height: 24px;}
+      }
+      &.gg{border-color: #df4140; color: #df4140;
+        svg{fill: #df4140; width: 24px; height: 24px;}
+      }
+      &.ml{border-color: #0e5f96; color: #0e5f96;
+        svg{fill: #f9b715; width: 24px; height: 24px;}
+      }
     }
   }
   &__row{ display: flex; justify-content: space-between; align-items: flex-end;
@@ -557,7 +568,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
     &:before{border-radius: 2px; content: '';background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0)); position: absolute; width: 100%; height: 100%; left: 0; top: 0; z-index: 10;}
   }
   &__text{ position: relative; z-index: 30;text-align: center;
-    .pseudoH1{display: block; font-size: 56px; font-weight: normal; color:#fff;line-height: 1.14; margin: 4px 0 0.35em; text-transform: none; letter-spacing: 0;
+    h1, .pseudoH1{display: block; font-size: 56px; font-weight: normal; color:#fff;line-height: 1.14; margin: 4px 0 0.35em; text-transform: none; letter-spacing: 0;
       &:hover{ color: #5597d8;}
       &:active{ color: #2d5a87;}
     }
@@ -700,6 +711,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   }
   &__items{ display: flex; justify-content: flex-start; align-items: flex-start; flex-wrap: wrap; margin: 0 -9px 0 0;}
   &__paginator{margin: 16px 0 6px; display: flex; flex-wrap: wrap; align-items: flex-start;
+    &-main{display: flex;}
     .button{ margin-bottom: 10px; margin-right: 3px;
       &:first-child{ margin-right:6px;}
       &:last-child{ margin-left:3px;}
@@ -948,8 +960,8 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
     .stone__services-img{margin: 0 0 16px; text-align: center;}
     .stone__services-txt{text-align: center;}
   }
-  &__services-item{width: 33.33%; height: 80px; box-shadow: inset -1px 0 0 0 #e6e6e6;  display: flex; justify-content: flex-start; align-items: center; padding: 16px;
-    &--vert{ width: 189px; height: 130px; flex-direction: column; justify-content: center; padding: 25px 16px 16px; text-align: center;
+  &__services-item{width: calc(100%/3); height: 80px; box-shadow: inset -1px 0 0 0 #e6e6e6;  display: flex; justify-content: flex-start; align-items: center; padding: 16px;
+    &--vert{ width: calc(100%/3); height: 130px; flex-direction: column; justify-content: center; padding: 25px 16px 16px; text-align: center;
       .stone__services-img{ margin-right: 0; width: auto; margin-bottom: 13px;}
     }
     &:last-child{box-shadow: none;}
@@ -1057,14 +1069,19 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
   }
 }
 .card{
+  &__mobile-title{display: none; font-size: 12px; font-weight: bold; text-transform: uppercase; line-height: 1.33; letter-spacing: 2.2px; text-align: left; color: #575757; padding: 0 0; margin: 0;}
   &__nothing{display: flex; margin: 23px -4px 11px;
     input{width: 158px;}
     .button{margin: 0 4px;}
   }
+  &__like{border-radius: 2px; width: 48px; height: 48px; display: none; border: 1px solid rgba(55, 119, 179, 0.4); background: none;
+    svg{width: 20px; height: 20px; fill: #3777b3;}
+    &.active{border-color: #3777b3;}
+  }
   &__wrap{ display: flex; justify-content: space-between; align-items: flex-start; padding-top: 21px;}
   &__slider-wrap{ width: 520px;}
   &__slide{ position: relative;
-    .tovar__like{ display: flex; width: 40px; height: 40px; z-index: 99;}
+    .tovar__like{ display: flex; opacity: 1; width: 40px; height: 40px; z-index: 99;}
     .tovar__present{ display: flex; width: 40px; height: 40px; top: 68px;}
   }
   &__slider{border:1px solid #e6e6e6; border-radius:2px;}
@@ -1118,7 +1135,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
     .jq-selectbox__trigger-arrow{ right: 9px;}
   }
   &__select-count{font-size: 16px; font-weight: bold;  line-height: 1.38; text-align: left; color: #51b37b;}
-  &__form-but{
+  &__form-but{display: flex; flex-wrap: wrap;
     .button__yellow{ width: auto;
       span{ width: auto;}
     }
@@ -1131,7 +1148,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
     p{ margin: 0;}
     b{color: #808080; font-weight: normal; margin-right: 4px;}
   }
-  .stone__services{ margin-top: 7px; margin-bottom: 10px; display: inline-flex;}
+  .stone__services{width: 100%; border-radius: 2px; border: 1px solid #e6e6e6; margin-top: 7px; margin-bottom: 10px; display: inline-flex;}
   &-percent{cursor: default; margin-left: 8px; width: 24px; position: relative; height: 24px; border-radius: 50%; background: #51b37b; display: flex; align-items: center; justify-content: center; 
     &:hover{
       .card-percent__pop{display: block;}
@@ -1188,7 +1205,7 @@ ul.awesomplete-list{ list-style-type: none; position: absolute; left: 0; top: 10
     input[type=checkbox]:checked + i:before{ opacity: 1;}
 
   }
-  &__result{ width: 280px;  height: 274px; border-radius: 2px;  background-color: #ffffff; border: solid 1px #e6e6e6; display: flex; padding: 28px; justify-content: center; align-items: center; flex-direction: column;
+  &__result{ width: 280px;  height: 200px; border-radius: 2px;  background-color: #ffffff; border: solid 1px #e6e6e6; display: flex; padding: 28px; justify-content: center; align-items: center; flex-direction: column;
     strike{font-size: 24px; line-height: 1.33; text-align: left;  color: #eb3838; margin-bottom: 4px;}
     strong{font-size: 32px; line-height: 1.25; text-align: left;  color: #000000; margin-bottom: 22px;}
     .button__yellow span{ height: 48px;}
@@ -1757,6 +1774,8 @@ ul.footer__social-links{ justify-content: flex-start; padding-top: 14px;}
   .profile__card p{ padding: 0;}
   .agree-pay__row,
   .agree-pay__submit{ padding: 0 49px;}
+  .agree-pay__submit{ justify-content: space-between;}
+  .agree-pay__price{display: flex; flex-wrap: wrap; }
   .order-payment{ max-width: 100%;}
   &__row{ flex-direction: column; align-items: flex-start;
     &.active{background-color: #f5f5f5;
@@ -1777,17 +1796,4 @@ ul.footer__social-links{ justify-content: flex-start; padding-top: 14px;}
       }
     }
   }
-}
-
-.last-recent__slider{margin-bottom: 28px;}
-
-.last-recent__slider, .card__slider-wrap, .items-slider__wrap{
-  .slick-next, .slick-prev{width: 48px; height: 48px; transform: translate(0, -43%);
-    &:before{width: 14px; height: 34px; background-size: 14px 34px;}
-  }
-}
-
-.items-slider__wrap{
-  .slick-next, .slick-prev{width: 48px; height: 48px; transform: translate(0, -50%);}
-  .tovar{margin-bottom: 38px;}
 }
